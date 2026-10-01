@@ -2,6 +2,7 @@ import UtilBar from '@/components/UtilBar';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
+import VolverArriba from '@/components/VolverArriba';
 import CookieBanner from '@/components/CookieBanner';
 import Analitica from '@/components/Analitica';
 import CapturaVisita from '@/components/CapturaVisita';
@@ -16,6 +17,7 @@ export default function EsLayout({ children }: { children: React.ReactNode }) {
       <main>{children}</main>
       <Footer lang="es" />
       <ChatWidget lang="es" />
+      <VolverArriba lang="es" />
       <CookieBanner lang="es" />
       <Analitica />
       <CapturaVisita />

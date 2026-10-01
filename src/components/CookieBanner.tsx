@@ -182,7 +182,7 @@ export default function CookieBanner({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   }
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[130] border-t border-linea bg-papel p-4 shadow-2xl md:p-5" role="region" aria-label={t.region}>
+    <div data-cookies-barra className="fixed inset-x-0 bottom-0 z-[130] border-t border-linea bg-papel p-4 shadow-2xl md:p-5" role="region" aria-label={t.region}>
       <div className="mx-auto flex max-w-web flex-col gap-4 md:flex-row md:items-center md:gap-8">
         <div className="flex flex-1 items-start gap-3">
           <IconoGalleta className="mt-0.5 h-8 w-8 shrink-0 text-marca-texto" />
