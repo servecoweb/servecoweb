@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco | Asesores y abogados de empresa — Región de Murcia</title>
+<meta name="description" content="Serveco es una firma de asesoramiento integral fundada en 1977, con seis despachos en la Región de Murcia y la costa de Alicante. Fiscal, jurídico, laboral, contable, financiero y auditoría.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 09 — "FIRMA / LAS PERSONAS PRIMERO"
+     Referencia: robinsonbradshaw.com (Firmseek, NYX Award).
+     Lo que se toma prestado NO es la paleta, es la jerarquía:
+       · "Personas" es el primer elemento del menú, no "Servicios"
+       · índice A–Z de profesionales con buscador
+       · testimonio de cliente dentro del hero, no enterrado
+       · mosaico de retratos con una cifra intercalada
+       · servicios agrupados en departamentos, no lista plana
+       · hub de actualidad con fechas reales
+     ========================================================= */
+  :root{
+    --paper:#fdfcfa;
+    --paper-2:#f3f1ed;
+    --ink:#14181c;
+    --ink-70:rgba(20,24,28,.7);
+    --ink-45:rgba(20,24,28,.45);
+    --deep:#1d3c4e;          /* azul petróleo institucional */
+    --deep-2:#2c5872;
+    --line:rgba(20,24,28,.14);
+    --line-2:rgba(20,24,28,.07);
+    --line-inv:rgba(253,252,250,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Public Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.015em}
+  .wrap{max-width:1340px;margin:0 auto;padding:0 44px}
+  ::selection{background:var(--deep);color:#fff}
+  .lbl{font-size:11px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--deep-2);display:block}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;padding:14px 28px;border:1.5px solid var(--deep);color:var(--deep);transition:.22s}
+  .btn:hover{background:var(--deep);color:#fff}
+  .btn-f{background:var(--deep);color:#fff}
+  .btn-f:hover{background:var(--deep-2);border-color:var(--deep-2)}
+  .btn-w{border-color:rgba(255,255,255,.55);color:#fff}
+  .btn-w:hover{background:#fff;color:var(--deep)}
+  .arrowlink{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--deep-2)}
+  .arrowlink span{transition:transform .2s}
+  .arrowlink:hover span{transform:translateX(5px)}
+
+  /* ---------- NAV ---------- */
+  .util{border-bottom:1px solid var(--line-2);font-size:13px;color:var(--ink-45)}
+  .util .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+  .util a:hover{color:var(--deep)}
+  .util .r{display:flex;gap:22px}
+  header{position:sticky;top:0;z-index:200;background:var(--paper);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .logo strong{font-family:'Source Serif 4',serif;font-size:29px;font-weight:600;letter-spacing:.01em;color:var(--deep)}
+  .logo span{display:block;font-size:9.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--ink-45);font-weight:700;margin-top:-4px}
+  .mainnav{display:flex;height:100%;list-style:none}
+  .mainnav>li{position:relative;display:flex;align-items:center}
+  .mainnav>li>a{padding:0 18px;font-size:15px;font-weight:600;height:100%;display:flex;align-items:center;border-bottom:3px solid transparent}
+  .mainnav>li:hover>a{color:var(--deep);border-bottom-color:var(--deep)}
+  .drop{position:absolute;top:100%;left:0;min-width:290px;background:var(--paper);border:1px solid var(--line);box-shadow:0 22px 50px rgba(20,24,28,.12);padding:22px;display:none}
+  .mainnav>li:hover .drop{display:block}
+  .drop.people{width:min(640px,86vw)}
+  .drop h5{font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--ink-45);font-weight:700;margin-bottom:12px}
+  .az{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:20px}
+  .az a{width:28px;height:28px;display:grid;place-items:center;font-size:13px;font-weight:600;border:1px solid var(--line-2);transition:.15s}
+  .az a:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
+  .searchrow{display:flex;gap:8px;margin-bottom:18px}
+  .searchrow input{flex:1;border:1px solid var(--line);padding:11px 14px;font-family:inherit;font-size:14.5px;background:#fff}
+  .searchrow input:focus{outline:none;border-color:var(--deep)}
+  .searchrow button{background:var(--deep);color:#fff;border:none;padding:0 20px;font-family:inherit;font-weight:600;font-size:14px;cursor:pointer}
+  .drop ul{list-style:none}
+  .drop li a{display:block;padding:8px 0;font-size:14.5px;font-weight:500;border-bottom:1px solid var(--line-2)}
+  .drop li a:hover{color:var(--deep);padding-left:6px;transition:padding .15s}
+  .drop .two{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}
+  .burger{display:none;background:none;border:1.5px solid var(--ink);padding:9px 14px;font-weight:600;font-size:13px;cursor:pointer;font-family:inherit}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:min(78vh,660px);display:flex;align-items:flex-end;background:linear-gradient(160deg,#16303f 0%,var(--deep) 55%,#25506a 100%);color:#fff;overflow:hidden}
+  .hero::before{content:"FOTOGRAFÍA DE PORTADA — EDIFICIO O EQUIPO";position:absolute;inset:0;display:grid;place-items:center;font-size:12px;letter-spacing:3px;color:rgba(255,255,255,.13);font-weight:700}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,26,.72) 0%,transparent 62%)}
+  .hero-in{position:relative;z-index:2;padding:96px 0 66px;width:100%}
+  .hero h1{font-size:clamp(40px,5.8vw,76px);max-width:16ch;margin:18px 0 30px}
+  .hero blockquote{font-family:'Source Serif 4',serif;font-size:clamp(17px,1.9vw,21px);line-height:1.5;max-width:60ch;color:rgba(255,255,255,.86);border-left:2px solid rgba(255,255,255,.4);padding-left:22px;margin-bottom:12px}
+  .hero cite{font-style:normal;font-size:13.5px;color:rgba(255,255,255,.6);padding-left:24px;display:block;margin-bottom:34px}
+  .hero .lbl{color:rgba(255,255,255,.65)}
+
+  /* ---------- MOSAICO PERSONAS ---------- */
+  .people{padding:0}
+  .mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+  .tile{aspect-ratio:1/1.16;background:var(--paper-2);display:grid;place-items:center;color:var(--ink-45);font-size:11px;letter-spacing:1.4px;text-transform:uppercase;position:relative;overflow:hidden;transition:.3s}
+  .tile:hover{background:var(--deep);color:rgba(255,255,255,.55)}
+  .tile.stat{background:var(--deep);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:26px;text-transform:none;letter-spacing:0}
+  .tile.stat strong{font-family:'Source Serif 4',serif;font-size:clamp(38px,4vw,58px);line-height:1;font-weight:600}
+  .tile.stat span{font-size:13.5px;color:rgba(255,255,255,.75);margin-top:10px;line-height:1.4}
+  .tile.copy{background:var(--paper);grid-column:span 2;aspect-ratio:auto;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:34px 34px 34px 0;text-transform:none;letter-spacing:0;color:var(--ink)}
+  .tile.copy:hover{background:var(--paper);color:var(--ink)}
+  .tile.copy h2{font-size:clamp(26px,3vw,38px);margin-bottom:14px}
+  .tile.copy p{font-size:15.5px;color:var(--ink-70);margin-bottom:20px}
+
+  /* ---------- SECCIONES ---------- */
+  section{padding:96px 0}
+  .shead{display:flex;justify-content:space-between;align-items:flex-end;gap:36px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:44px}
+  .shead h2{font-size:clamp(30px,4vw,48px)}
+  .shead p{color:var(--ink-70);max-width:56ch;margin-top:14px}
+
+  /* DEPARTAMENTOS */
+  .depts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-left:1px solid var(--line-2)}
+  .dept{border-right:1px solid var(--line-2);padding:0 30px 0 0;margin-left:30px;transition:.22s}
+  .dept:first-child{margin-left:0}
+  .dept .num{font-family:'Source Serif 4',serif;font-size:15px;color:var(--deep-2);margin-bottom:14px;display:block}
+  .dept h3{font-size:25px;margin-bottom:12px}
+  .dept p{font-size:15px;color:var(--ink-70);margin-bottom:18px}
+  .dept ul{list-style:none;margin-bottom:20px}
+  .dept li{font-size:14.5px;color:var(--ink-70);padding:7px 0;border-top:1px solid var(--line-2)}
+  .dept li:hover{color:var(--deep)}
+
+  /* HERRAMIENTAS — banda oscura */
+  .band{background:var(--deep);color:#fff}
+  .band h2{color:#fff}
+  .band .shead{border-color:var(--line-inv)}
+  .band .shead p{color:rgba(255,255,255,.68)}
+  .band .lbl{color:rgba(255,255,255,.55)}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .tool{padding:0 34px 0 0;border-right:1px solid var(--line-inv);margin-left:34px}
+  .tool:first-child{margin-left:0}
+  .tool:last-child{border-right:none;padding-right:0}
+  .tool .tag{font-family:'Source Serif 4',serif;font-size:36px;line-height:1;margin-bottom:16px;font-weight:600}
+  .tool h3{font-size:18px;font-family:'Public Sans';font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+  .tool p{font-size:15px;color:rgba(255,255,255,.68)}
+
+  /* ACTUALIDAD */
+  .news{display:grid;grid-template-columns:1.25fr 1fr;gap:44px}
+  .feature .img{aspect-ratio:16/9;background:var(--paper-2);display:grid;place-items:center;color:var(--ink-45);font-size:12px;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:20px;transition:.25s}
+  .feature:hover .img{background:var(--deep);color:rgba(255,255,255,.5)}
+  .date{font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--deep-2)}
+  .feature h3{font-size:clamp(23px,2.6vw,32px);margin:10px 0 12px}
+  .feature p{color:var(--ink-70)}
+  .newslist{border-top:1px solid var(--line)}
+  .newsitem{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line-2);transition:.2s}
+  .newsitem:hover{padding-left:10px}
+  .newsitem .thumb{aspect-ratio:1/1;background:var(--paper-2);display:grid;place-items:center;font-size:9.5px;color:var(--ink-45);letter-spacing:1px}
+  .newsitem h4{font-size:17px;font-family:'Source Serif 4',serif;font-weight:500;line-height:1.28;margin-top:6px}
+  .newsitem:hover h4{color:var(--deep)}
+
+  /* DESPACHOS */
+  .offices{background:var(--paper-2)}
+  .ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+  .office{background:var(--paper-2);padding:28px 26px;transition:.22s}
+  .office:hover{background:#fff}
+  .office h4{font-family:'Source Serif 4',serif;font-size:24px;margin-bottom:6px}
+  .office p{font-size:14.5px;color:var(--ink-70)}
+  .office a{display:inline-block;margin-top:12px;font-weight:600;font-size:14.5px;color:var(--deep-2)}
+
+  /* NEWSLETTER */
+  .sub{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sub-in{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:60px 0}
+  .sub h2{font-size:clamp(26px,3.2vw,38px);margin-bottom:10px}
+  .sub p{color:var(--ink-70)}
+  .subform{display:flex;gap:10px;flex-wrap:wrap}
+  .subform input{flex:1;min-width:220px;border:1.5px solid var(--line);padding:14px 16px;font-family:inherit;font-size:15px;background:#fff}
+  .subform input:focus{outline:none;border-color:var(--deep)}
+
+  footer{background:var(--ink);color:rgba(253,252,250,.6);padding:64px 0 26px}
+  .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px;padding-bottom:44px;border-bottom:1px solid var(--line-inv)}
+  footer h5{color:#fff;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+  footer ul{list-style:none}
+  footer li{margin-bottom:9px;font-size:14px}
+  footer a:hover{color:#fff}
+  .fb{display:flex;justify-content:space-between;padding-top:24px;font-size:12.5px;flex-wrap:wrap;gap:10px}
+
+  @media(max-width:1150px){
+    .depts{grid-template-columns:1fr 1fr;row-gap:36px}
+    .mosaic{grid-template-columns:repeat(4,1fr)}
+    .ogrid{grid-template-columns:1fr 1fr}
+    .fg{grid-template-columns:1fr 1fr 1fr}
+  }
+  @media(max-width:900px){
+    .wrap{padding:0 22px}
+    .mainnav,.util .r{display:none}
+    .burger{display:block}
+    .hero{min-height:auto}
+    .hero-in{padding:60px 0 44px}
+    .mosaic{grid-template-columns:1fr 1fr}
+    .tile.copy{grid-column:span 2;padding:30px 0}
+    .depts{grid-template-columns:1fr;border-left:none}
+    .dept{margin-left:0;border-right:none;border-top:1px solid var(--line-2);padding-top:24px}
+    .tools{grid-template-columns:1fr}
+    .tool{margin-left:0;border-right:none;padding:24px 0;border-top:1px solid var(--line-inv)}
+    .news,.sub-in{grid-template-columns:1fr;gap:34px}
+    .ogrid{grid-template-columns:1fr}
+    .fg{grid-template-columns:1fr 1fr}
+    section{padding:60px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span>Serveco Asesores · Firma independiente desde 1977</span>
+    <div class="r">
+      <a href="#">Portal del cliente</a>
+      <a href="#">Buscador de subvenciones</a>
+      <a href="#">English</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" class="logo"><strong>SERVECO</strong><span>Asesores y abogados</span></a>
+    <ul class="mainnav">
+      <li><a href="#personas">Personas</a>
+        <div class="drop people">
+          <h5>Buscar profesional</h5>
+          <div class="searchrow">
+            <input type="text" placeholder="Nombre o apellido">
+            <button type="button">Buscar</button>
+          </div>
+          <div class="az">
+            <a href="#">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a href="#">E</a><a href="#">F</a><a href="#">G</a><a href="#">H</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a href="#">M</a><a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a href="#">S</a><a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a href="#">Y</a><a href="#">Z</a>
+          </div>
+          <div class="two">
+            <ul>
+              <li><a href="#">Todo el equipo</a></li>
+              <li><a href="#">Dirección de la firma</a></li>
+              <li><a href="#">Por área de práctica</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Por despacho</a></li>
+              <li><a href="#">Búsqueda avanzada</a></li>
+              <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="#servicios">Servicios</a>
+        <div class="drop">
+          <h5>Departamentos</h5>
+          <ul>
+            <li><a href="#">Fiscal y contable</a></li>
+            <li><a href="#">Jurídico y mercantil</a></li>
+            <li><a href="#">Laboral</a></li>
+            <li><a href="#">Financiero y auditoría</a></li>
+            <li><a href="#">I+D+i, subvenciones y formación</a></li>
+            <li><a href="#">Todas las áreas de práctica</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#firma">La firma</a>
+        <div class="drop">
+          <h5>Sobre nosotros</h5>
+          <ul>
+            <li><a href="#">Nuestro enfoque</a></li>
+            <li><a href="#">Historia desde 1977</a></li>
+            <li><a href="#">Reconocimientos</a></li>
+            <li><a href="#">Punto PAE</a></li>
+            <li><a href="#">Compromiso con la Región</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#actualidad">Actualidad</a>
+        <div class="drop">
+          <h5>Contenidos</h5>
+          <ul>
+            <li><a href="#">Novedades fiscales</a></li>
+            <li><a href="#">Circulares</a></li>
+            <li><a href="#">Jornadas y eventos</a></li>
+            <li><a href="#">Descargables</a></li>
+            <li><a href="#">Suscribirse al boletín</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#despachos">Despachos</a></li>
+    </ul>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="#contacto" class="btn btn-f">Contactar</a>
+      <button class="burger">Menú</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <span class="lbl">Asesores y abogados de empresa · Desde 1977</span>
+    <h1>Un criterio construido durante cuarenta y nueve años</h1>
+    <blockquote>“Saben lo que es una campaña y lo que es un cierre. Cuando llamas, alguien coge el teléfono y ya conoce tu expediente.”</blockquote>
+    <cite>— Cliente del despacho de Jumilla, bodega familiar</cite>
+    <a href="#firma" class="btn btn-w">Conozca la firma</a>
+  </div>
+</section>
+
+<section class="people" id="personas" style="padding-top:0">
+  <div class="wrap" style="padding-top:0">
+    <div class="mosaic">
+      <div class="tile copy">
+        <span class="lbl" style="margin-bottom:14px">El equipo</span>
+        <h2>Economistas. Abogados. Personas.</h2>
+        <p>Nuestros profesionales combinan conocimiento técnico con criterio de negocio. Por su vocación y su dedicación, el equipo es el principal activo de la firma.</p>
+        <a href="#" class="arrowlink">Conocer al equipo <span>→</span></a>
+      </div>
+      <div class="tile">Retrato</div>
+      <div class="tile">Retrato</div>
+      <div class="tile stat"><strong>30+</strong><span>Profesionales dedicados a nuestros clientes</span></div>
+      <div class="tile">Retrato</div>
+      <div class="tile">Retrato</div>
+      <div class="tile">Retrato</div>
+      <div class="tile stat"><strong>1977</strong><span>Año de fundación de la firma</span></div>
+      <div class="tile">Retrato</div>
+      <div class="tile">Retrato</div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <span class="lbl">Servicios</span>
+        <h2 style="margin-top:14px">Ocho áreas de práctica en cuatro departamentos</h2>
+        <p>Nuestros profesionales trabajan de forma coordinada entre departamentos: la información entra una vez y sirve para todas las áreas.</p>
+      </div>
+      <a href="#" class="btn">Ver todos los servicios</a>
+    </div>
+    <div class="depts">
+      <div class="dept">
+        <span class="num">01</span>
+        <h3>Fiscal y contable</h3>
+        <p>Planificación e impuestos, contabilidad y cierre.</p>
+        <ul>
+          <li>Impuesto sobre sociedades</li>
+          <li>IRPF, IVA y sucesiones</li>
+          <li>Renta de no residentes</li>
+          <li>Cuentas anuales</li>
+        </ul>
+        <a href="#" class="arrowlink">Ver departamento <span>→</span></a>
+      </div>
+      <div class="dept">
+        <span class="num">02</span>
+        <h3>Jurídico y mercantil</h3>
+        <p>Contratación, sociedades y defensa ante los tribunales.</p>
+        <ul>
+          <li>Mercantil y societario</li>
+          <li>Civil y contratación</li>
+          <li>Reclamaciones</li>
+          <li>Cliente internacional</li>
+        </ul>
+        <a href="#" class="arrowlink">Ver departamento <span>→</span></a>
+      </div>
+      <div class="dept">
+        <span class="num">03</span>
+        <h3>Laboral</h3>
+        <p>Relaciones laborales y gestión de plantillas.</p>
+        <ul>
+          <li>Nóminas y seguros sociales</li>
+          <li>Contratación</li>
+          <li>Inspecciones de trabajo</li>
+          <li>Negociación colectiva</li>
+        </ul>
+        <a href="#" class="arrowlink">Ver departamento <span>→</span></a>
+      </div>
+      <div class="dept">
+        <span class="num">04</span>
+        <h3>Financiero y auditoría</h3>
+        <p>Análisis, financiación, auditoría e incentivos.</p>
+        <ul>
+          <li>Auditoría de cuentas</li>
+          <li>Planes de viabilidad</li>
+          <li>I+D+i y Patent Box</li>
+          <li>Subvenciones y formación</li>
+        </ul>
+        <a href="#" class="arrowlink">Ver departamento <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="herramientas">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <span class="lbl">Herramientas propias</span>
+        <h2 style="margin-top:14px">Sistemas A.D.</h2>
+        <p>Desarrollamos en el despacho nuestro propio control financiero. Permite un diagnóstico en tiempo real del estado de salud de la empresa, sin esperar al cierre del ejercicio.</p>
+      </div>
+    </div>
+    <div class="tools">
+      <div class="tool"><div class="tag">A.D.I</div><h3>Análisis Dinámico Intermensual</h3><p>Lectura mes a mes de la situación real del negocio.</p></div>
+      <div class="tool"><div class="tag">A.D.P</div><h3>Análisis Dinámico Presupuestario</h3><p>Proyecciones a uno o varios años: necesidad de financiación, viabilidad de inversiones y tendencia.</p></div>
+      <div class="tool"><div class="tag">A.D.A</div><h3>Análisis Dinámico Analítico</h3><p>Costes de elaboración, precios de venta, existencias y presupuestos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="actualidad">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <span class="lbl">Actualidad</span>
+        <h2 style="margin-top:14px">Novedades y análisis</h2>
+      </div>
+      <a href="#" class="btn">Ver toda la actualidad</a>
+    </div>
+    <div class="news">
+      <a class="feature" href="#">
+        <div class="img">Imagen destacada</div>
+        <span class="date">20 de agosto de 2026</span>
+        <h3>Cómo saber si su empresa puede aplicar la deducción por I+D+i</h3>
+        <p>Más compañías de las que creen cumplen los requisitos, y no solo las tecnológicas. Repasamos el análisis previo, el informe motivado y los errores más frecuentes al cuantificar el gasto.</p>
+      </a>
+      <div class="newslist">
+        <a class="newsitem" href="#">
+          <div class="thumb">Imagen</div>
+          <div><span class="date">31 ago. 2026</span><h4>Ayudas abiertas para pymes en la Región de Murcia</h4></div>
+        </a>
+        <a class="newsitem" href="#">
+          <div class="thumb">Imagen</div>
+          <div><span class="date">13 ago. 2026</span><h4>Novedades en la tributación de la empresa familiar</h4></div>
+        </a>
+        <a class="newsitem" href="#">
+          <div class="thumb">Imagen</div>
+          <div><span class="date">12 ago. 2026</span><h4>Comprar vivienda en España siendo no residente: NIE, impuestos y retenciones</h4></div>
+        </a>
+        <a class="newsitem" href="#">
+          <div class="thumb">Imagen</div>
+          <div><span class="date">1 jul. 2026</span><h4>Serveco amplía el equipo del área laboral en Yecla</h4></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offices" id="despachos">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <span class="lbl">Despachos</span>
+        <h2 style="margin-top:14px">Seis sedes en Murcia y la costa</h2>
+      </div>
+    </div>
+    <div class="ogrid">
+      <div class="office"><h4>Murcia</h4><p>Gran Vía, 28 — 5º<br>Sede central</p><a href="tel:+34968909020">968 909 020 →</a></div>
+      <div class="office"><h4>Yecla</h4><p>C/ Pío Baroja, 7<br>C/ Esteban Díaz, 53</p><a href="tel:+34968753640">968 753 640 →</a></div>
+      <div class="office"><h4>Jumilla</h4><p>C/ Valencia, 2</p><a href="tel:+34968780040">968 780 040 →</a></div>
+      <div class="office"><h4>Lorca</h4><p>Antigua Plaza de Abastos, 15<br>Local 10</p><a href="tel:+34968471431">968 471 431 →</a></div>
+      <div class="office"><h4>Murcia</h4><p>C/ Acisclo Díaz, 2</p><a href="tel:+34968284766">968 284 766 →</a></div>
+      <div class="office"><h4>Balsicas</h4><p>Avda. Cdad. de Murcia, 90<br>Bajo</p><a href="tel:+34968909020">968 909 020 →</a></div>
+      <div class="office"><h4>Benidorm</h4><p>Calle Jaén, 1<br>Esq. Avda. de Europa</p><a href="tel:+34665912758">665 912 758 →</a></div>
+      <div class="office" style="display:flex;flex-direction:column;justify-content:center">
+        <p style="margin-bottom:14px">Atención presencial con equipo propio en cada sede.</p>
+        <a href="#contacto" class="arrowlink">Cómo llegar <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sub" id="contacto" style="padding:0">
+  <div class="wrap sub-in">
+    <div>
+      <span class="lbl">Manténgase informado</span>
+      <h2 style="margin-top:12px">Novedades fiscales y laborales, sin ruido</h2>
+      <p>Un correo cuando hay algo que de verdad afecta a su empresa. Ni uno más.</p>
+    </div>
+    <div>
+      <div class="subform">
+        <input type="email" placeholder="Su correo electrónico">
+        <button class="btn btn-f" type="button">Suscribirse</button>
+      </div>
+      <p style="font-size:13px;color:var(--ink-45);margin-top:14px">O escríbanos a <a href="mailto:serveco@serveco.es" style="color:var(--deep-2);font-weight:600">serveco@serveco.es</a> · Teléfono <a href="tel:+34968909020" style="color:var(--deep-2);font-weight:600">968 90 90 20</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logo" style="margin-bottom:14px"><strong style="color:#fff">SERVECO</strong><span>Asesores y abogados</span></div>
+        <p style="font-size:14px;max-width:280px">Firma independiente de asesoramiento integral fundada en 1977. Región de Murcia y costa de Alicante.</p>
+      </div>
+      <div><h5>Personas</h5><ul><li><a href="#">Todo el equipo</a></li><li><a href="#">Dirección</a></li><li><a href="#">Por despacho</a></li><li><a href="#">Empleo</a></li></ul></div>
+      <div><h5>Servicios</h5><ul><li><a href="#">Fiscal y contable</a></li><li><a href="#">Jurídico</a></li><li><a href="#">Laboral</a></li><li><a href="#">Financiero</a></li><li><a href="#">I+D+i</a></li></ul></div>
+      <div><h5>La firma</h5><ul><li><a href="#">Nuestro enfoque</a></li><li><a href="#">Historia</a></li><li><a href="#">Punto PAE</a></li><li><a href="#">Actualidad</a></li></ul></div>
+      <div><h5>Legal</h5><ul><li><a href="#">Mapa del sitio</a></li><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li><li><a href="#">Canal de denuncias</a></li></ul></div>
+    </div>
+    <div class="fb">
+      <span>© 2026 Serveco Asesores S.L.P.</span>
+      <span>Propuesta 09 · Firma / Las personas primero</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

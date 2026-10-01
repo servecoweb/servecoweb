@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco — Encuentre el asesoramiento que necesita</title>
+<meta name="description" content="Serveco Asesores desde 1977. Seleccione su perfil y descubra qué servicios fiscales, jurídicos, laborales y financieros le corresponden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 08 — "MATRIZ"
+     Doble entrada perfil × necesidad, como en las grandes firmas
+     pero resuelto en la propia portada y de forma interactiva.
+     ========================================================= */
+  :root{
+    --bone:#faf8f5;
+    --bone-2:#f0ece6;
+    --ink:#161514;
+    --ink-70:rgba(22,21,20,.7);
+    --ink-45:rgba(22,21,20,.45);
+    --wine:#7d2136;
+    --wine-2:#a13148;
+    --line:rgba(22,21,20,.13);
+    --line-2:rgba(22,21,20,.07);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bone);color:var(--ink);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:1.06}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  ::selection{background:var(--wine);color:#fff}
+  .lbl{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--wine)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:14px 26px;border:1.5px solid transparent;transition:.2s;cursor:pointer}
+  .btn-w{background:var(--wine);color:#fff}
+  .btn-w:hover{background:var(--wine-2)}
+  .btn-o{border-color:var(--ink);color:var(--ink)}
+  .btn-o:hover{background:var(--ink);color:var(--bone)}
+
+  header{position:sticky;top:0;z-index:120;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo strong{font-size:23px;font-weight:800;letter-spacing:.02em}
+  .logo span{font-family:'IBM Plex Mono';font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--wine);display:block;margin-top:-4px}
+  nav.links{display:flex;gap:28px}
+  nav.links a{font-size:14.5px;font-weight:600;color:var(--ink-70)}
+  nav.links a:hover{color:var(--wine)}
+  .burger{display:none;background:none;border:1px solid var(--line);padding:9px 13px;font-weight:700;font-size:13px;cursor:pointer}
+
+  /* HERO + SELECTOR */
+  .hero{padding:72px 0 0}
+  .hero h1{font-size:clamp(36px,5.4vw,66px);max-width:17ch;margin:16px 0 20px}
+  .hero>.wrap>p{font-size:18px;color:var(--ink-70);max-width:52ch;margin-bottom:44px}
+
+  .matrix{border:1.5px solid var(--ink);background:#fff}
+  .mrow{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--line)}
+  .mrow:last-of-type{border-bottom:none}
+  .mkey{background:var(--bone-2);padding:22px 22px;border-right:1px solid var(--line);display:flex;align-items:center}
+  .mkey span{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink-45)}
+  .mopts{display:flex;flex-wrap:wrap;gap:8px;padding:18px 22px}
+  .opt{border:1px solid var(--line);padding:10px 18px;font-size:14.5px;font-weight:600;cursor:pointer;background:none;font-family:inherit;transition:.18s}
+  .opt:hover{border-color:var(--ink)}
+  .opt.on{background:var(--wine);color:#fff;border-color:var(--wine)}
+  .mout{background:var(--ink);color:var(--bone);padding:30px 22px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
+  .mout h3{font-size:clamp(20px,2.6vw,28px);margin-bottom:8px}
+  .mout p{color:rgba(250,248,245,.7);font-size:15.5px;max-width:60ch}
+  .mout .go{background:var(--bone);color:var(--ink);padding:14px 24px;font-weight:700;font-size:15px;white-space:nowrap}
+  .mout .go:hover{background:var(--wine);color:#fff}
+
+  .figs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .figs div{background:var(--bone);padding:26px 20px 26px 0}
+  .figs strong{display:block;font-size:40px;font-weight:800;letter-spacing:-.04em}
+  .figs span{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-45)}
+
+  section{padding:82px 0}
+  .shead{max-width:640px;margin-bottom:44px}
+  .shead h2{font-size:clamp(27px,3.4vw,40px);margin:14px 0}
+  .shead p{color:var(--ink-70)}
+
+  /* SERVICIOS EN LISTA GRANDE */
+  .list{border-top:1px solid var(--line)}
+  .item{display:grid;grid-template-columns:50px 1fr 1.2fr 30px;gap:26px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:.22s}
+  .item:hover{background:#fff;padding-left:16px;padding-right:16px}
+  .item .n{font-family:'IBM Plex Mono';font-size:12.5px;color:var(--wine)}
+  .item h3{font-size:clamp(20px,2.5vw,27px)}
+  .item p{color:var(--ink-70);font-size:15px}
+  .item .ar{font-size:22px;color:var(--ink-45);transition:transform .22s}
+  .item:hover .ar{transform:translateX(6px);color:var(--wine)}
+
+  /* BANDA */
+  .band{background:var(--bone-2)}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+  .tool{background:var(--bone-2);padding:32px 28px}
+  .tool .tag{font-family:'IBM Plex Mono';font-size:14px;color:var(--wine);letter-spacing:1.6px;margin-bottom:12px}
+  .tool h3{font-size:20px;margin-bottom:10px}
+  .tool p{font-size:15px;color:var(--ink-70)}
+
+  /* SEDES MAPA-LISTA */
+  .offs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1.5px solid var(--ink)}
+  .off{padding:24px 26px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);transition:.2s}
+  .off:hover{background:#fff}
+  .off:nth-child(2n){border-right:none}
+  .off:nth-last-child(-n+2){border-bottom:none}
+  .off h4{font-size:19px;margin-bottom:4px}
+  .off p{font-size:14.5px;color:var(--ink-70)}
+  .off a{font-family:'IBM Plex Mono';font-size:13.5px;color:var(--wine);display:inline-block;margin-top:8px}
+
+  .cta{background:var(--wine);color:#fff}
+  .cta-in{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+  .cta h2{color:#fff;font-size:clamp(28px,3.6vw,44px)}
+  .cta p{color:rgba(255,255,255,.8);margin-top:8px}
+  .cta .btn-o{border-color:#fff;color:#fff}
+  .cta .btn-o:hover{background:#fff;color:var(--wine)}
+
+  footer{padding:58px 0 24px;border-top:1px solid var(--line)}
+  .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;padding-bottom:36px}
+  footer h5{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink-45);margin-bottom:14px;font-weight:500}
+  footer ul{list-style:none}
+  footer li{margin-bottom:8px;font-size:14.5px;color:var(--ink-70)}
+  footer li a:hover{color:var(--wine)}
+  .fb{border-top:1px solid var(--line-2);padding-top:20px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono';font-size:11.5px;color:var(--ink-45);flex-wrap:wrap;gap:10px}
+
+  @media(max-width:900px){
+    .wrap{padding:0 22px}
+    nav.links{display:none}
+    .burger{display:block}
+    .mrow{grid-template-columns:1fr}
+    .mkey{border-right:none;border-bottom:1px solid var(--line);padding:14px 20px}
+    .mout{grid-template-columns:1fr}
+    .figs{grid-template-columns:1fr 1fr}
+    .item{grid-template-columns:36px 1fr;row-gap:8px}
+    .item p{grid-column:2/3}
+    .item .ar{display:none}
+    .tools,.offs{grid-template-columns:1fr}
+    .off{border-right:none}
+    .fg{grid-template-columns:1fr 1fr}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" class="logo"><strong>SERVECO</strong><span>Asesores 1977</span></a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#firma">La firma</a>
+      <a href="#despachos">Despachos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="#contacto" class="btn btn-w">Consultar</a>
+      <button class="burger">Menú</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="lbl">Asesoría integral de empresas · Desde 1977</span>
+    <h1>Dígame qué es y qué necesita. Yo le digo con quién hablar.</h1>
+    <p>Ocho áreas, seis despachos y treinta profesionales. En lugar de un catálogo, empiece por su caso.</p>
+
+    <div class="matrix">
+      <div class="mrow">
+        <div class="mkey"><span>Soy…</span></div>
+        <div class="mopts" id="perfil">
+          <button class="opt on" data-v="pyme">Una pyme</button>
+          <button class="opt" data-v="autonomo">Autónomo</button>
+          <button class="opt" data-v="familiar">Empresa familiar</button>
+          <button class="opt" data-v="noresidente">No residente</button>
+          <button class="opt" data-v="emprendedor">Emprendedor</button>
+        </div>
+      </div>
+      <div class="mrow">
+        <div class="mkey"><span>Y necesito…</span></div>
+        <div class="mopts" id="necesidad">
+          <button class="opt on" data-v="impuestos">Ordenar mis impuestos</button>
+          <button class="opt" data-v="personal">Gestionar personal</button>
+          <button class="opt" data-v="financiacion">Financiación o inversión</button>
+          <button class="opt" data-v="contrato">Un contrato o un pleito</button>
+          <button class="opt" data-v="ayudas">Ayudas y deducciones</button>
+        </div>
+      </div>
+      <div class="mout">
+        <div>
+          <h3 id="outTitle">Asesoramiento fiscal y contable</h3>
+          <p id="outText">Planificación, presentación de impuestos y contabilidad revisada, conectadas con el día a día de la actividad. Un mismo equipo lleva el cierre y la declaración, así que los números cuadran antes de presentarse.</p>
+        </div>
+        <a class="go" href="#contacto">Hablar con el área →</a>
+      </div>
+    </div>
+
+    <div class="figs">
+      <div><strong>1977</strong><span>Fundación</span></div>
+      <div><strong>30+</strong><span>Profesionales</span></div>
+      <div><strong>6</strong><span>Despachos</span></div>
+      <div><strong>8</strong><span>Áreas</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">01 — Áreas de práctica</span>
+      <h2>Todo el catálogo, por si prefiere mirarlo entero</h2>
+      <p>Coordinadas entre sí: la información entra una vez y sirve para todas.</p>
+    </div>
+    <div class="list">
+      <a class="item" href="#"><span class="n">01</span><h3>Asesoramiento fiscal</h3><p>Planificación, sociedades, IRPF, IVA, sucesiones y no residentes.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">02</span><h3>Asesoramiento jurídico</h3><p>Mercantil, civil, contratación, reclamaciones y defensa judicial.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">03</span><h3>Asesoramiento laboral</h3><p>Nóminas, seguros sociales, contratación e inspecciones de trabajo.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">04</span><h3>Contabilidad</h3><p>Contabilidad, cuentas anuales y cierre fiscal con revisión continua.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">05</span><h3>Asesoramiento financiero</h3><p>Análisis, financiación, planes de viabilidad y cuadros de mando.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">06</span><h3>Auditoría</h3><p>Auditoría de cuentas anuales y trabajos de revisión limitada.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">07</span><h3>I+D+i y Patent Box</h3><p>Deducciones fiscales con análisis individualizado de cada proyecto.</p><span class="ar">→</span></a>
+      <a class="item" href="#"><span class="n">08</span><h3>Subvenciones y formación</h3><p>Buscador de convocatorias, tramitación y cursos 100% bonificables.</p><span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="herramientas">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">02 — Herramientas propias</span>
+      <h2>Sistemas A.D.</h2>
+      <p>Control financiero desarrollado en el despacho, no software de terceros.</p>
+    </div>
+    <div class="tools">
+      <div class="tool"><div class="tag">A.D.I</div><h3>Intermensual</h3><p>Diagnóstico en tiempo real del estado de salud de la empresa, mes a mes.</p></div>
+      <div class="tool"><div class="tag">A.D.P</div><h3>Presupuestario</h3><p>Proyecciones a uno o varios años: financiación, inversiones y tendencia del negocio.</p></div>
+      <div class="tool"><div class="tag">A.D.A</div><h3>Analítico</h3><p>Costes de elaboración, precios de venta, existencias y presupuestos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="firma">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">03 — La firma</span>
+      <h2>Fundada en 1977, y todavía respondiendo el teléfono</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px">
+      <p style="color:var(--ink-70)">Serveco presta desde su origen un servicio de consultoría y asesoramiento integral a empresas y autónomos, con la finalidad de cubrir todas las facetas de su actividad empresarial. Ese enfoque nos ha dado un crecimiento continuado y una posición sólida en nuestro ámbito.</p>
+      <p style="color:var(--ink-70)">Para cada área contamos con un equipo coordinado de profesionales cualificados: economistas, abogados, ingenieros y técnicos superiores. Por su vocación y dedicación, ese equipo es nuestro principal activo, y la confianza de nuestros clientes el mayor incentivo para seguir mejorando.</p>
+    </div>
+  </div>
+</section>
+
+<section id="despachos">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">04 — Despachos</span>
+      <h2>Seis sedes en Murcia y la costa</h2>
+    </div>
+    <div class="offs">
+      <div class="off"><h4>Murcia · Sede central</h4><p>Gran Vía, 28 — 5º</p><a href="tel:+34968909020">968 909 020</a></div>
+      <div class="off"><h4>Murcia</h4><p>C/ Acisclo Díaz, 2</p><a href="tel:+34968284766">968 284 766</a></div>
+      <div class="off"><h4>Yecla</h4><p>C/ Pío Baroja, 7 · C/ Esteban Díaz, 53</p><a href="tel:+34968753640">968 753 640</a></div>
+      <div class="off"><h4>Jumilla</h4><p>C/ Valencia, 2</p><a href="tel:+34968780040">968 780 040</a></div>
+      <div class="off"><h4>Lorca</h4><p>Antigua Plaza de Abastos, 15 — Local 10</p><a href="tel:+34968471431">968 471 431</a></div>
+      <div class="off"><h4>Balsicas · Benidorm</h4><p>Avda. Cdad. de Murcia, 90 · Calle Jaén, 1</p><a href="tel:+34665912758">665 912 758</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap cta-in">
+    <div>
+      <h2>¿Empezamos por su caso?</h2>
+      <p>Presupuesto sin compromiso desde el despacho más cercano.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="tel:+34968909020" class="btn btn-o">968 90 90 20</a>
+      <a href="mailto:serveco@serveco.es" class="btn" style="background:#fff;color:var(--wine)">serveco@serveco.es</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><strong>SERVECO</strong><span>Asesores 1977</span></div>
+        <p style="font-size:14.5px;color:var(--ink-70);max-width:290px">Asesoría integral de empresas desde 1977 en la Región de Murcia y la costa de Alicante.</p>
+      </div>
+      <div><h5>Servicios</h5><ul><li><a href="#">Fiscal</a></li><li><a href="#">Jurídico</a></li><li><a href="#">Laboral</a></li><li><a href="#">I+D+i</a></li></ul></div>
+      <div><h5>Firma</h5><ul><li><a href="#firma">Quiénes somos</a></li><li><a href="#">Equipo</a></li><li><a href="#despachos">Despachos</a></li><li><a href="#">Empleo</a></li></ul></div>
+      <div><h5>Legal</h5><ul><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li><li><a href="#">Canal de denuncias</a></li></ul></div>
+    </div>
+    <div class="fb">
+      <span>© 2026 Serveco Asesores S.L.P.</span>
+      <span>Propuesta 08 · Matriz</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const RES = {
+    impuestos:{t:"Asesoramiento fiscal y contable",d:"Planificación, presentación de impuestos y contabilidad revisada, conectadas con el día a día de la actividad. Un mismo equipo lleva el cierre y la declaración, así que los números cuadran antes de presentarse."},
+    personal:{t:"Asesoramiento laboral",d:"Nóminas, seguros sociales, contratación, expedientes disciplinarios e inspecciones. Le avisamos de los cambios normativos antes de que le afecten, no después."},
+    financiacion:{t:"Asesoramiento financiero y sistemas A.D.",d:"Análisis financiero, búsqueda de financiación y planes de viabilidad, apoyados en nuestras herramientas propias de control intermensual y presupuestario."},
+    contrato:{t:"Asesoramiento jurídico",d:"Mercantil, civil y contratación, reclamaciones judiciales y extrajudiciales, y constitución o reestructuración de sociedades."},
+    ayudas:{t:"Subvenciones, I+D+i y Patent Box",d:"Buscador propio de convocatorias, tramitación completa de ayudas y gestión de deducciones fiscales por innovación con análisis individualizado de cada proyecto."}
+  };
+  const EXTRA = {
+    noresidente:" Si además no reside en España, incluimos NIE, impuesto sobre la renta de no residentes, testamentos y sucesiones, con atención en inglés desde Benidorm.",
+    emprendedor:" Como Punto PAE oficial, podemos constituirle la sociedad y dejar el alta hecha antes de empezar.",
+    familiar:" En empresa familiar añadimos protocolo, estructura holding y planificación de la sucesión.",
+    autonomo:" Adaptado al volumen de un autónomo: cuota fija, sin sorpresas y con la declaración explicada.",
+    pyme:""
+  };
+  let perfil="pyme", nec="impuestos";
+  function pintar(){
+    const r=RES[nec];
+    document.getElementById('outTitle').textContent=r.t;
+    document.getElementById('outText').textContent=r.d+(EXTRA[perfil]||"");
+  }
+  function grupo(id,set){
+    document.getElementById(id).addEventListener('click',e=>{
+      const b=e.target.closest('.opt'); if(!b)return;
+      document.querySelectorAll('#'+id+' .opt').forEach(o=>o.classList.remove('on'));
+      b.classList.add('on'); set(b.dataset.v); pintar();
+    });
+  }
+  grupo('perfil',v=>perfil=v);
+  grupo('necesidad',v=>nec=v);
+  pintar();
+</script>
+</body>
+</html>

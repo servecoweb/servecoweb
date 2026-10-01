@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco — Asesores de empresa desde 1977</title>
+<meta name="description" content="Serveco. Asesoría integral de empresas fundada en 1977. Fiscal, jurídico, laboral, contable, financiero, auditoría e I+D+i. Seis despachos en la Región de Murcia y la costa de Alicante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 10 — "ÍNDICE"
+     Modelo: dragonfly.xyz (Studio Freight, Awwwards SOTD 22/07/2026)
+       · una sola página en capítulos numerados
+       · equipo con biografía que se despliega en sitio
+       · contenido filtrable por tipo
+       · directorio largo como índice filtrable, no como menú
+     + navegación lateral con progreso, de mont-fort.com
+       (Immersive Garden, Awwwards SOTM jun 2025)
+     ========================================================= */
+  :root{
+    --bg:#eceae6;
+    --bg-2:#e2dfda;
+    --card:#f6f5f3;
+    --ink:#101113;
+    --ink-70:rgba(16,17,19,.68);
+    --ink-45:rgba(16,17,19,.45);
+    --ink-25:rgba(16,17,19,.25);
+    --accent:#2540e8;
+    --line:rgba(16,17,19,.15);
+    --line-2:rgba(16,17,19,.08);
+    --rail:210px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Schibsted Grotesk',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer}
+  h1,h2,h3{font-weight:600;letter-spacing:-.035em;line-height:1.03}
+  .mono{font-family:'DM Mono',monospace}
+  ::selection{background:var(--accent);color:#fff}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 44px}
+
+  /* ---------- CABECERA ---------- */
+  .top{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;mix-blend-mode:normal}
+  .top::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,var(--bg) 40%,transparent);z-index:-1}
+  .brand strong{font-size:20px;font-weight:700;letter-spacing:-.02em}
+  .brand span{font-family:'DM Mono';font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-45);display:block;margin-top:-3px}
+  .top .cta{font-family:'DM Mono';font-size:12px;letter-spacing:.6px;text-transform:uppercase;border:1px solid var(--ink);padding:9px 18px;background:none;transition:.2s}
+  .top .cta:hover{background:var(--ink);color:var(--bg)}
+
+  /* ---------- RAÍL LATERAL CON PROGRESO ---------- */
+  .rail{position:fixed;top:50%;transform:translateY(-50%);left:44px;z-index:150;display:flex;flex-direction:column;gap:2px}
+  .rail a{display:flex;align-items:center;gap:12px;padding:5px 0;font-family:'DM Mono';font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-25);transition:color .25s}
+  .rail a .bar{width:20px;height:1px;background:currentColor;transition:width .3s,background .25s}
+  .rail a:hover{color:var(--ink-70)}
+  .rail a.on{color:var(--accent)}
+  .rail a.on .bar{width:40px}
+  .progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);z-index:250;width:0}
+
+  main{margin-left:var(--rail)}
+  section{padding:100px 0;border-bottom:1px solid var(--line)}
+  .chap{display:flex;align-items:baseline;gap:16px;margin-bottom:40px}
+  .chap .n{font-family:'DM Mono';font-size:12px;color:var(--accent)}
+  .chap h2{font-size:clamp(26px,3.4vw,40px)}
+
+  /* ---------- HERO ---------- */
+  .hero{border-bottom:1px solid var(--line);padding:180px 0 80px}
+  .hero .kicker{font-family:'DM Mono';font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-45);margin-bottom:34px;display:block}
+  .hero h1{font-size:clamp(38px,6.2vw,80px);max-width:17ch}
+  .hero h1 i{font-style:normal;color:var(--accent)}
+  .hero .sub{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:52px;padding-top:30px;border-top:1px solid var(--line)}
+  .hero .sub p{color:var(--ink-70);max-width:44ch}
+  .hero .figs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .hero .figs div strong{display:block;font-size:34px;font-weight:600;letter-spacing:-.04em;line-height:1}
+  .hero .figs div span{font-family:'DM Mono';font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-45)}
+
+  /* ---------- 01 FIRMA ---------- */
+  .firma{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .firma p{color:var(--ink-70);margin-bottom:18px;max-width:52ch}
+  .firma p b{color:var(--ink);font-weight:600}
+  .note{border-left:2px solid var(--accent);padding-left:18px;font-family:'DM Mono';font-size:12.5px;line-height:2;color:var(--ink-70)}
+
+  /* ---------- 02 ÍNDICE DE SERVICIOS ---------- */
+  .filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px}
+  .filters button{font-family:'DM Mono';font-size:11px;letter-spacing:.8px;text-transform:uppercase;border:1px solid var(--line);background:none;padding:8px 15px;color:var(--ink-45);transition:.18s}
+  .filters button:hover{border-color:var(--ink);color:var(--ink)}
+  .filters button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .index{border-top:1px solid var(--line)}
+  .ix{display:grid;grid-template-columns:26px 1fr auto 22px;gap:20px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line-2);transition:.2s}
+  .ix:hover{padding-left:12px;background:var(--card)}
+  .ix .k{font-family:'DM Mono';font-size:12px;color:var(--ink-25)}
+  .ix .name{font-size:17.5px;font-weight:500;letter-spacing:-.015em}
+  .ix .tag{font-family:'DM Mono';font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-45)}
+  .ix .ar{color:var(--ink-25);transition:.2s}
+  .ix:hover .ar{color:var(--accent);transform:translateX(4px)}
+  .ix.hide{display:none}
+  .count{font-family:'DM Mono';font-size:11.5px;color:var(--ink-45);margin-top:18px}
+
+  /* ---------- 03 EQUIPO ---------- */
+  .team{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+  .p{background:var(--bg);padding:0;transition:background .25s}
+  .p:hover{background:var(--card)}
+  .p .ph{aspect-ratio:1/1.2;background:var(--bg-2);display:grid;place-items:center;font-family:'DM Mono';font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-25)}
+  .p .meta{padding:16px 18px 18px}
+  .p h4{font-size:16px;font-weight:600;letter-spacing:-.015em}
+  .p .role{font-family:'DM Mono';font-size:10.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-45);margin-top:3px}
+  .p .togg{margin-top:12px;background:none;border:none;padding:0;font-family:'DM Mono';font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:7px}
+  .p .togg .s{transition:transform .25s;display:inline-block}
+  .p.open .togg .s{transform:rotate(45deg)}
+  .p .bio{max-height:0;overflow:hidden;transition:max-height .35s ease;font-size:14px;color:var(--ink-70)}
+  .p.open .bio{max-height:280px;margin-top:12px}
+
+  /* ---------- 04 ACTUALIDAD ---------- */
+  .posts{border-top:1px solid var(--line)}
+  .post{display:grid;grid-template-columns:100px 1fr 130px 22px;gap:22px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line-2);transition:.2s}
+  .post:hover{padding-left:12px;background:var(--card)}
+  .post .d{font-family:'DM Mono';font-size:11.5px;color:var(--ink-45)}
+  .post h3{font-size:clamp(17px,2vw,22px);font-weight:500;max-width:44ch}
+  .post .t{font-family:'DM Mono';font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);text-align:right}
+  .post .ar{color:var(--ink-25);text-align:right}
+  .post:hover .ar{color:var(--accent)}
+  .post.hide{display:none}
+
+  /* ---------- 05 DESPACHOS ---------- */
+  .offs{border-top:1px solid var(--line)}
+  .of{display:grid;grid-template-columns:170px 1fr 150px 22px;gap:22px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line-2);transition:.2s}
+  .of:hover{padding-left:12px;background:var(--card)}
+  .of .city{font-size:19px;font-weight:600;letter-spacing:-.02em}
+  .of .addr{color:var(--ink-70);font-size:15px}
+  .of .tel{font-family:'DM Mono';font-size:12.5px;text-align:right}
+  .of .tel:hover{color:var(--accent)}
+  .of .flag{font-family:'DM Mono';font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--ink-25);text-align:right}
+
+  /* ---------- 06 CONTACTO ---------- */
+  .contacto{border-bottom:none}
+  .contacto h2.big{font-size:clamp(38px,7.4vw,96px);letter-spacing:-.045em;margin-bottom:36px;max-width:14ch}
+  .contacto h2.big i{font-style:normal;color:var(--accent)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .cta-row a{font-family:'DM Mono';font-size:13px;letter-spacing:.6px;padding:15px 26px;border:1px solid var(--ink);transition:.2s}
+  .cta-row a:hover{background:var(--ink);color:var(--bg)}
+  .cta-row a.fill{background:var(--accent);border-color:var(--accent);color:#fff}
+  .cta-row a.fill:hover{background:var(--ink);border-color:var(--ink)}
+
+  footer{margin-left:var(--rail);padding:34px 0;border-top:1px solid var(--line)}
+  .fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'DM Mono';font-size:11px;color:var(--ink-45)}
+  .fb a:hover{color:var(--accent)}
+  .fb .links{display:flex;gap:20px}
+
+  @media(max-width:1080px){
+    :root{--rail:0px}
+    .rail{display:none}
+    .team{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:820px){
+    .wrap{padding:0 22px}
+    .top{padding:16px 22px}
+    .hero{padding:120px 0 56px}
+    .hero .sub,.firma{grid-template-columns:1fr;gap:28px}
+    section{padding:62px 0}
+    .ix{grid-template-columns:22px 1fr;row-gap:4px}
+    .ix .tag{grid-column:2/3}
+    .ix .ar{display:none}
+    .post{grid-template-columns:1fr;row-gap:6px}
+    .post .t{text-align:left}
+    .post .ar{display:none}
+    .of{grid-template-columns:1fr;row-gap:4px}
+    .of .tel,.of .flag{text-align:left}
+    .team{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+
+<header class="top">
+  <a href="#hero" class="brand"><strong>SERVECO</strong><span>Asesores · 1977</span></a>
+  <a href="#contacto" class="cta">Contactar</a>
+</header>
+
+<nav class="rail" id="rail">
+  <a href="#firma"><span class="bar"></span>01 La firma</a>
+  <a href="#servicios"><span class="bar"></span>02 Servicios</a>
+  <a href="#equipo"><span class="bar"></span>03 Equipo</a>
+  <a href="#actualidad"><span class="bar"></span>04 Actualidad</a>
+  <a href="#despachos"><span class="bar"></span>05 Despachos</a>
+  <a href="#contacto"><span class="bar"></span>06 Contacto</a>
+</nav>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <span class="kicker">Asesoría integral de empresas · Región de Murcia</span>
+      <h1>Cuarenta y nueve años poniendo <i>orden</i> en los números de otros.</h1>
+      <div class="sub">
+        <p>Fiscal, jurídico, laboral, contable, financiero y auditoría, coordinados entre sí. Un solo interlocutor para toda la actividad de su empresa, desde 1977.</p>
+        <div class="figs">
+          <div><strong>1977</strong><span>Fundación</span></div>
+          <div><strong>30+</strong><span>Profesionales</span></div>
+          <div><strong>6</strong><span>Despachos</span></div>
+          <div><strong>8</strong><span>Áreas de práctica</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="firma">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">01</span><h2>La firma</h2></div>
+      <div class="firma">
+        <div>
+          <p><b>Serveco</b> es una asesoría de empresas fundada en 1977. Presta desde su origen un servicio profesional de consultoría y asesoramiento integral a empresas y autónomos, con la finalidad de cubrir todas las facetas de su actividad empresarial.</p>
+          <p>Ese enfoque nos ha permitido un crecimiento continuado y una posición de liderazgo en nuestro ámbito de actuación. Para cada área contamos con un equipo coordinado y numeroso de profesionales cualificados, con alto nivel de especialización en su materia.</p>
+          <p>Por su vocación, responsabilidad y dedicación, <b>ese equipo es nuestro principal activo</b>. A él sumamos instalaciones y herramientas de última generación con las que optimizar el nivel de prestaciones.</p>
+        </div>
+        <div>
+          <div class="note">
+            Fundada en 1977<br>
+            Sede central en Gran Vía, Murcia<br>
+            Punto PAE oficial<br>
+            Formación 100% bonificable<br>
+            Atención en español e inglés<br>
+            Sistemas propios A.D.I · A.D.P · A.D.A
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">02</span><h2>Servicios</h2></div>
+      <div class="filters" id="fServ">
+        <button class="on" data-f="all">Todo</button>
+        <button data-f="area">Áreas de práctica</button>
+        <button data-f="sector">Sectores</button>
+        <button data-f="tramite">Trámites</button>
+        <button data-f="intl">Internacional</button>
+      </div>
+      <div class="index" id="ixList">
+        <a class="ix" href="#" data-c="area"><span class="k mono">01</span><span class="name">Asesoramiento fiscal</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">02</span><span class="name">Asesoramiento jurídico y mercantil</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">03</span><span class="name">Asesoramiento laboral</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">04</span><span class="name">Contabilidad y cuentas anuales</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">05</span><span class="name">Asesoramiento financiero</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">06</span><span class="name">Auditoría de cuentas</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">07</span><span class="name">I+D+i y Patent Box</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="area"><span class="k mono">08</span><span class="name">Formación de empresas</span><span class="tag">Área</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">09</span><span class="name">Agroalimentario</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">10</span><span class="name">Vitivinícola</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">11</span><span class="name">Transporte y logística</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">12</span><span class="name">Industria del mueble</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">13</span><span class="name">Construcción e inmobiliario</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">14</span><span class="name">Comercio y distribución</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">15</span><span class="name">Hostelería y turismo</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="sector"><span class="k mono">16</span><span class="name">Empresa familiar</span><span class="tag">Sector</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="tramite"><span class="k mono">17</span><span class="name">Constitución de sociedades · Punto PAE</span><span class="tag">Trámite</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="tramite"><span class="k mono">18</span><span class="name">Buscador de subvenciones y ayudas</span><span class="tag">Trámite</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="tramite"><span class="k mono">19</span><span class="name">Nóminas y seguros sociales</span><span class="tag">Trámite</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="tramite"><span class="k mono">20</span><span class="name">Inspecciones de trabajo</span><span class="tag">Trámite</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="intl"><span class="k mono">21</span><span class="name">Obtención del NIE</span><span class="tag">Internacional</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="intl"><span class="k mono">22</span><span class="name">Impuesto sobre la renta de no residentes</span><span class="tag">Internacional</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="intl"><span class="k mono">23</span><span class="name">Testamentos y sucesiones</span><span class="tag">Internacional</span><span class="ar">→</span></a>
+        <a class="ix" href="#" data-c="intl"><span class="k mono">24</span><span class="name">Compraventa de inmuebles</span><span class="tag">Internacional</span><span class="ar">→</span></a>
+      </div>
+      <div class="count mono" id="cServ"></div>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">03</span><h2>Equipo</h2></div>
+      <p style="color:var(--ink-70);max-width:50ch;margin-bottom:34px">Economistas, abogados, ingenieros y técnicos superiores. Treinta profesionales repartidos en seis despachos, trabajando sobre el mismo expediente.</p>
+      <div class="team" id="team">
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Socio · Fiscal</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Economista. Responsable del área fiscal desde 2004. Especializado en tributación de la empresa familiar y planificación sucesoria.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Socia · Jurídico</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Abogada. Mercantil y societario, reestructuraciones y contratación. Ejerce ante los tribunales de la Región desde hace veinte años.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Dirección laboral</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Graduado social. Coordina nóminas, seguros sociales e inspecciones para los seis despachos.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Auditoría</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Auditor de cuentas inscrito en el ROAC. Auditoría de cuentas anuales y trabajos de revisión limitada.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">I+D+i</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Ingeniero industrial. Cuantificación de proyectos, informes motivados y aplicación de deducciones y Patent Box.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Financiero</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Desarrolla y mantiene los sistemas A.D.I, A.D.P y A.D.A, y acompaña a los clientes en la lectura de sus cuadros de mando.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Despacho de Yecla</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Responsable del despacho de Yecla. Atiende principalmente a industria del mueble y bodegas del Altiplano.</div></div></div>
+        <div class="p"><div class="ph">Retrato</div><div class="meta"><h4>Nombre Apellido</h4><div class="role">Cliente internacional</div><button class="togg">Ver bio <span class="s">+</span></button><div class="bio">Atiende desde Benidorm a residentes y no residentes: NIE, IRNR, testamentos, sucesiones y compraventa. Español e inglés.</div></div></div>
+      </div>
+      <div class="count mono">Mostrando 8 de 30+ · <a href="#" style="color:var(--accent)">Ver todo el equipo →</a></div>
+    </div>
+  </section>
+
+  <section id="actualidad">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">04</span><h2>Actualidad</h2></div>
+      <div class="filters" id="fPost">
+        <button class="on" data-f="all">Todo</button>
+        <button data-f="fiscal">Fiscal</button>
+        <button data-f="laboral">Laboral</button>
+        <button data-f="ayudas">Ayudas</button>
+        <button data-f="internacional">Internacional</button>
+        <button data-f="firma">La firma</button>
+      </div>
+      <div class="posts" id="postList">
+        <a class="post" href="#" data-c="fiscal"><span class="d mono">31 ago 2026</span><h3>Cómo saber si su empresa puede aplicar la deducción por I+D+i</h3><span class="t">Fiscal</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="ayudas"><span class="d mono">24 ago 2026</span><h3>Convocatorias abiertas para pymes en la Región de Murcia</h3><span class="t">Ayudas</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="internacional"><span class="d mono">12 ago 2026</span><h3>Comprar vivienda en España siendo no residente: NIE, impuestos y retenciones</h3><span class="t">Internacional</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="laboral"><span class="d mono">30 jul 2026</span><h3>Qué mira realmente una inspección de trabajo en una campaña agrícola</h3><span class="t">Laboral</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="fiscal"><span class="d mono">14 jul 2026</span><h3>Empresa familiar: la reducción en el impuesto sobre sucesiones, paso a paso</h3><span class="t">Fiscal</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="firma"><span class="d mono">01 jul 2026</span><h3>Serveco amplía el equipo del área laboral en el despacho de Yecla</h3><span class="t">La firma</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="ayudas"><span class="d mono">18 jun 2026</span><h3>Formación bonificada: cuánto crédito tiene su empresa y cómo no perderlo</h3><span class="t">Ayudas</span><span class="ar">→</span></a>
+        <a class="post" href="#" data-c="laboral"><span class="d mono">03 jun 2026</span><h3>Registro de jornada: errores frecuentes en pymes de menos de 25 empleados</h3><span class="t">Laboral</span><span class="ar">→</span></a>
+      </div>
+      <div class="count mono" id="cPost"></div>
+    </div>
+  </section>
+
+  <section id="despachos">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">05</span><h2>Despachos</h2></div>
+      <div class="offs">
+        <a class="of" href="tel:+34968909020"><span class="city">Murcia</span><span class="addr">Gran Vía, 28 — 5º</span><span class="tel mono">968 909 020</span><span class="flag">Sede central</span></a>
+        <a class="of" href="tel:+34968284766"><span class="city">Murcia</span><span class="addr">C/ Acisclo Díaz, 2</span><span class="tel mono">968 284 766</span><span class="flag"></span></a>
+        <a class="of" href="tel:+34968753640"><span class="city">Yecla</span><span class="addr">C/ Pío Baroja, 7 · C/ Esteban Díaz, 53</span><span class="tel mono">968 753 640</span><span class="flag">Dos sedes</span></a>
+        <a class="of" href="tel:+34968780040"><span class="city">Jumilla</span><span class="addr">C/ Valencia, 2</span><span class="tel mono">968 780 040</span><span class="flag"></span></a>
+        <a class="of" href="tel:+34968471431"><span class="city">Lorca</span><span class="addr">Antigua Plaza de Abastos, 15 — Local 10</span><span class="tel mono">968 471 431</span><span class="flag"></span></a>
+        <a class="of" href="tel:+34968909020"><span class="city">Balsicas</span><span class="addr">Avda. Cdad. de Murcia, 90 — Bajo</span><span class="tel mono">968 909 020</span><span class="flag"></span></a>
+        <a class="of" href="tel:+34665912758"><span class="city">Benidorm</span><span class="addr">Calle Jaén, 1 (esq. Avda. de Europa)</span><span class="tel mono">665 912 758</span><span class="flag">Internacional</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <div class="chap"><span class="n mono">06</span><h2>Contacto</h2></div>
+      <h2 class="big">Cuéntenos <i>su caso</i>.</h2>
+      <div class="cta-row">
+        <a class="fill" href="tel:+34968909020">968 90 90 20</a>
+        <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+        <a href="#despachos">Ver despachos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap fb">
+    <span>© 2026 Serveco Asesores S.L.P.</span>
+    <span class="links">
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Cookies</a>
+      <a href="#">Canal de denuncias</a>
+    </span>
+    <span>Propuesta 10 · Índice</span>
+  </div>
+</footer>
+
+<script>
+  /* barra de progreso */
+  const prog=document.getElementById('prog');
+  addEventListener('scroll',()=>{
+    const h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.width=(scrollY/h*100)+'%';
+  });
+
+  /* raíl activo por sección */
+  const links=[...document.querySelectorAll('.rail a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  const so=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      links.forEach(l=>l.classList.remove('on'));
+      const i=secs.indexOf(e.target);
+      if(i>-1)links[i].classList.add('on');
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(s=>s&&so.observe(s));
+
+  /* filtros reutilizables */
+  function filtro(btnId,listId,countId,label){
+    const wrap=document.getElementById(btnId);
+    const items=[...document.getElementById(listId).children];
+    const out=countId?document.getElementById(countId):null;
+    function pinta(f){
+      let n=0;
+      items.forEach(it=>{
+        const ok=(f==='all'||it.dataset.c===f);
+        it.classList.toggle('hide',!ok);
+        if(ok)n++;
+      });
+      if(out)out.textContent=n+' '+(n===1?label[0]:label[1]);
+    }
+    wrap.addEventListener('click',e=>{
+      const b=e.target.closest('button'); if(!b)return;
+      [...wrap.children].forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); pinta(b.dataset.f);
+    });
+    pinta('all');
+  }
+  filtro('fServ','ixList','cServ',['resultado','resultados']);
+  filtro('fPost','postList','cPost',['entrada','entradas']);
+
+  /* biografías del equipo */
+  document.getElementById('team').addEventListener('click',e=>{
+    const b=e.target.closest('.togg'); if(!b)return;
+    b.closest('.p').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

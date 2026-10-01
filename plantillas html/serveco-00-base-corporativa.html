@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Serveco Asesores | Asesoría fiscal, laboral, jurídica y contable desde 1977</title>
+<meta name="description" content="Asesoría integral de empresas desde 1977. Fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación. Despachos en Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   SERVECO · BASE CORPORATIVA (plantilla 00)
+   Punto de partida para la web real (Next). Sustituye a las demos 01–13.
+
+   Decisiones:
+   · Registro corporativo genérico (molde 06) que escala a más sedes
+     (Madrid u otras): las sedes salen de un array JS, no del diseño.
+   · Piel = solo estas variables. Cambiar marca = cambiar :root.
+   · Lo único "con carácter": el router del hero (Soy… / Necesito…),
+     heredado de la demo 08. Lo demás, sobrio.
+   · Naranja y gris sacados a ojo del logo PNG. CONFIRMAR HEX con el
+     cliente (pedir logo principal "Serveco Asesores" en SVG).
+   · Naranja sobre blanco no llega a contraste AA en texto pequeño:
+     los botones naranjas llevan texto oscuro; los enlaces usan
+     --naranja-texto (versión oscurecida).
+   ===================================================================== */
+:root{
+  --naranja:#EE7D22;          /* marca · fondos y botones        */
+  --naranja-texto:#B4560C;    /* marca · enlaces y texto (AA)    */
+  --naranja-suave:#FDF1E6;    /* fondos de acento                */
+  --gris-marca:#7F7F7F;       /* gris del logo                   */
+  --tinta:#232527;            /* texto principal                 */
+  --tinta-2:#55595E;          /* texto secundario                */
+  --niebla:#F3F3F2;           /* bandas claras                   */
+  --papel:#FFFFFF;
+  --linea:#DEDEDC;
+  --radio:6px;
+  --ancho:1240px;
+  --fuente:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--fuente);font-size:17px;line-height:1.6;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,h4{line-height:1.12;letter-spacing:-.02em;font-weight:700}
+h2{font-size:clamp(28px,3.2vw,40px)}
+h3{font-size:20px}
+p{max-width:68ch}
+:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.wrap{max-width:var(--ancho);margin:0 auto;padding:0 32px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 16px/1 var(--fuente);padding:15px 24px;border-radius:var(--radio);border:2px solid transparent;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-marca{background:var(--naranja);color:var(--tinta)}
+.btn-marca:hover{background:#F59A4F}
+.btn-linea{border-color:var(--tinta);color:var(--tinta);background:transparent}
+.btn-linea:hover{background:var(--tinta);color:#fff}
+.btn-claro{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-claro:hover{background:#fff;color:var(--tinta)}
+.enlace{color:var(--naranja-texto);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.enlace:hover{text-decoration-thickness:2px}
+
+/* ---------- Barra superior ---------- */
+.util{background:var(--tinta);color:rgba(255,255,255,.78);font-size:14px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;min-height:40px;gap:16px}
+.util nav{display:flex;gap:22px}
+.util a{text-decoration:none}
+.util a:hover{color:#fff}
+.idioma{display:flex;gap:2px}
+.idioma a{padding:2px 7px;border-radius:4px}
+.idioma a[aria-current]{background:rgba(255,255,255,.14);color:#fff}
+
+/* ---------- Cabecera + mega-menú ---------- */
+header.cab{position:sticky;top:0;z-index:100;background:var(--papel);border-bottom:1px solid var(--linea)}
+.cab .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font-size:23px;font-weight:800;letter-spacing:.02em;color:var(--gris-marca)}
+.logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--tinta-2);margin-top:-2px}
+.menu{display:flex;list-style:none;height:78px}
+.menu>li{display:flex;align-items:stretch}
+.menu>li>a,.menu>li>button{display:flex;align-items:center;gap:6px;padding:0 15px;font:600 15.5px var(--fuente);color:var(--tinta);background:none;border:0;border-bottom:3px solid transparent;cursor:pointer;text-decoration:none}
+.menu>li>button::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-3px)}
+.menu>li:hover>a,.menu>li:hover>button,.menu>li>button[aria-expanded="true"]{border-bottom-color:var(--naranja)}
+.mega{position:absolute;left:0;right:0;top:100%;background:var(--papel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);box-shadow:0 18px 40px rgba(35,37,39,.10);display:none}
+.menu>li:hover .mega,.mega.abierto{display:block}
+.mega .wrap{display:grid;grid-template-columns:repeat(3,1fr) 300px;gap:36px;height:auto;padding-top:34px;padding-bottom:38px;align-items:start}
+.mega h4{font-size:14px;color:var(--tinta-2);font-weight:600;margin-bottom:10px}
+.mega ul{list-style:none}
+.mega li a{display:block;padding:8px 0;font-size:15.5px;font-weight:500;text-decoration:none;border-bottom:1px solid var(--niebla)}
+.mega li a:hover{color:var(--naranja-texto)}
+.mega .destacado{background:var(--naranja-suave);border-radius:var(--radio);padding:24px}
+.mega .destacado h4{color:var(--tinta);font-size:18px;font-weight:700}
+.mega .destacado p{font-size:15px;color:var(--tinta-2);margin-bottom:14px}
+.cab-acciones{display:flex;gap:10px;align-items:center}
+.hamb{display:none;background:none;border:1px solid var(--linea);border-radius:var(--radio);padding:10px 14px;font:600 15px var(--fuente);cursor:pointer}
+
+/* ---------- Hero con enrutador ---------- */
+.hero{background:var(--niebla);border-bottom:1px solid var(--linea)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;padding-top:84px;padding-bottom:84px;align-items:center}
+.hero h1{font-size:clamp(36px,4.8vw,60px);font-weight:800;letter-spacing:-.03em;margin-bottom:22px;max-width:15ch}
+.hero .entrada{font-size:19px;color:var(--tinta-2);margin-bottom:30px;max-width:46ch}
+.hero .acciones{display:flex;gap:12px;flex-wrap:wrap}
+.hero .datos{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid var(--linea);font-size:15px;color:var(--tinta-2)}
+.hero .datos b{display:block;font-size:26px;color:var(--tinta);font-weight:800;letter-spacing:-.02em}
+
+.router{background:var(--papel);border-radius:10px;border:1px solid var(--linea);box-shadow:0 20px 50px rgba(35,37,39,.08);padding:30px}
+.router h2{font-size:22px;margin-bottom:4px}
+.router>p{font-size:15px;color:var(--tinta-2);margin-bottom:22px}
+.router fieldset{border:0;margin-bottom:20px}
+.router legend{font-size:14px;font-weight:600;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0}
+.chips span{display:inline-block;padding:9px 15px;border:1px solid var(--linea);border-radius:99px;font-size:15px;font-weight:500;transition:border-color .15s,background .15s}
+.chips label:hover span{border-color:var(--tinta)}
+.chips input:checked+span{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.chips input:focus-visible+span{outline:3px solid var(--naranja);outline-offset:2px}
+.resultado{margin-top:6px;padding:18px 20px;background:var(--naranja-suave);border-left:4px solid var(--naranja);border-radius:4px}
+.resultado strong{display:block;font-size:17px}
+.resultado p{font-size:15px;color:var(--tinta-2);margin:4px 0 12px}
+
+/* ---------- Secciones ---------- */
+section{padding:92px 0}
+.cabecera{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:44px}
+.cabecera p{color:var(--tinta-2);margin-top:12px;max-width:56ch}
+
+/* Áreas */
+.areas{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--linea);border-left:1px solid var(--linea)}
+.area{display:flex;flex-direction:column;gap:10px;padding:30px 26px 28px;border-right:1px solid var(--linea);border-bottom:1px solid var(--linea);text-decoration:none;min-height:230px;transition:background .15s}
+.area:hover{background:var(--niebla)}
+.area h3{position:relative;padding-top:18px}
+.area h3::before{content:"";position:absolute;top:0;left:0;width:28px;height:3px;background:var(--naranja)}
+.area p{font-size:15.5px;color:var(--tinta-2);flex:1}
+.area .ir{font-size:15px;font-weight:600;color:var(--naranja-texto)}
+
+/* Sistemas A.D. */
+.ad{background:var(--tinta);color:#fff}
+.ad .cabecera p{color:rgba(255,255,255,.72)}
+.ad-lista{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ad-item{border-top:3px solid var(--naranja);padding-top:22px}
+.ad-item b{font-size:30px;font-weight:800;letter-spacing:.02em;color:var(--naranja)}
+.ad-item h3{margin:6px 0 10px}
+.ad-item p{font-size:15.5px;color:rgba(255,255,255,.72)}
+
+/* Sectores */
+.sectores{display:flex;flex-wrap:wrap;gap:10px}
+.sectores a{padding:12px 18px;border:1px solid var(--linea);border-radius:var(--radio);text-decoration:none;font-weight:500;transition:border-color .15s}
+.sectores a:hover{border-color:var(--tinta)}
+
+/* Internacional */
+.intl{background:var(--naranja-suave)}
+.intl .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.intl ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.intl li{background:var(--papel);border-radius:var(--radio);padding:16px 18px;font-weight:600;font-size:16px}
+.intl li span{display:block;font-weight:400;font-size:14.5px;color:var(--tinta-2)}
+
+/* Equipo */
+.equipo{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.persona .foto{aspect-ratio:4/5;background:var(--niebla);border-radius:var(--radio);display:grid;place-items:center;color:var(--gris-marca);font-size:14px;margin-bottom:14px}
+.persona h3{font-size:18px}
+.persona p{font-size:15px;color:var(--tinta-2)}
+
+/* Despachos */
+.despachos-intro{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.despachos-intro button{font:500 15px var(--fuente);padding:9px 16px;border:1px solid var(--linea);border-radius:99px;background:var(--papel);cursor:pointer}
+.despachos-intro button[aria-pressed="true"]{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.despachos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.despacho{border:1px solid var(--linea);border-radius:var(--radio);padding:24px}
+.despacho .zona{font-size:14px;color:var(--tinta-2)}
+.despacho h3{font-size:21px;margin:2px 0 10px}
+.despacho address{font-style:normal;font-size:15.5px;color:var(--tinta-2);margin-bottom:12px}
+.despacho .tel{font-weight:700;text-decoration:none;font-size:17px}
+.despacho .tel:hover{color:var(--naranja-texto)}
+.despacho .central{display:inline-block;font-size:13px;font-weight:600;background:var(--naranja-suave);color:var(--naranja-texto);padding:3px 9px;border-radius:99px;margin-left:8px;vertical-align:3px}
+
+/* Actualidad */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.post{text-decoration:none;display:flex;flex-direction:column;gap:10px}
+.post .portada{aspect-ratio:16/10;background:var(--niebla);border-radius:var(--radio);display:grid;place-items:center;color:var(--gris-marca);font-size:14px}
+.post .cat{font-size:14px;font-weight:600;color:var(--naranja-texto)}
+.post h3{font-size:19px;line-height:1.3}
+.post:hover h3{text-decoration:underline;text-underline-offset:3px}
+.post p{font-size:15.5px;color:var(--tinta-2)}
+
+/* Contacto */
+.contacto{background:var(--niebla)}
+.contacto .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px}
+.contacto .via{margin-top:28px;display:grid;gap:14px}
+.contacto .via a{font-size:20px;font-weight:700;text-decoration:none}
+.contacto .via a:hover{color:var(--naranja-texto)}
+form.lead{background:var(--papel);border:1px solid var(--linea);border-radius:10px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.campo{display:flex;flex-direction:column;gap:6px}
+.campo.ancho{grid-column:1/-1}
+.campo label,.campo legend{font-size:14.5px;font-weight:600}
+.campo input,.campo select,.campo textarea{font:400 16px var(--fuente);padding:13px 14px;border:1px solid #C9C9C6;border-radius:var(--radio);background:var(--papel);color:var(--tinta)}
+.campo textarea{min-height:120px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus{outline:2px solid var(--naranja);outline-offset:0;border-color:var(--naranja)}
+.campo fieldset{border:0}
+.campo .chips span{padding:10px 16px}
+.gdpr{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--tinta-2)}
+.gdpr input{margin-top:4px;width:18px;height:18px;accent-color:var(--naranja)}
+.hp{position:absolute;left:-9999px}
+.enviado{grid-column:1/-1;display:none;padding:16px 18px;background:var(--naranja-suave);border-left:4px solid var(--naranja);border-radius:4px}
+
+/* Pie */
+footer{background:var(--tinta);color:rgba(255,255,255,.7);padding:64px 0 28px;font-size:15px}
+.pie{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer h4{color:#fff;font-size:15px;margin-bottom:14px}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .logo b{color:#fff}
+footer .logo small{color:rgba(255,255,255,.6)}
+.pie-base{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:14px}
+
+/* Chatbot (partida 05) · solo el lanzador en esta maqueta */
+.chat{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:120;display:flex;align-items:center;gap:10px;background:var(--tinta);color:#fff;border:0;border-radius:99px;padding:13px 20px 13px 14px;font:600 15px var(--fuente);cursor:pointer;box-shadow:0 10px 30px rgba(35,37,39,.25)}
+.chat i{width:28px;height:28px;border-radius:50%;background:var(--naranja);display:grid;place-items:center;font-style:normal;color:var(--tinta);font-weight:800}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1100px){
+  .areas{grid-template-columns:repeat(2,1fr)}
+  .equipo{grid-template-columns:repeat(2,1fr)}
+  .despachos,.posts{grid-template-columns:repeat(2,1fr)}
+  .pie{grid-template-columns:1fr 1fr 1fr}
+  .mega .wrap{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .wrap{padding:0 20px}
+  .util nav{display:none}
+  .menu{display:none}
+  .menu.abierto{display:block;position:absolute;top:78px;left:0;right:0;height:auto;max-height:calc(100vh - 78px);overflow:auto;background:var(--papel);border-bottom:1px solid var(--linea);padding:8px 0 20px}
+  .menu.abierto>li{display:block}
+  .menu.abierto>li>a,.menu.abierto>li>button{width:100%;padding:16px 20px;border-bottom:1px solid var(--niebla);justify-content:space-between}
+  .menu.abierto .mega{position:static;box-shadow:none;border:0}
+  .menu>li:hover .mega{display:none}
+  .menu.abierto .mega.abierto{display:block}
+  .mega .wrap{grid-template-columns:1fr;padding-top:10px;padding-bottom:10px;gap:18px}
+  .hamb{display:block}
+  .cab-acciones .btn{display:none}
+  .hero .wrap,.intl .wrap,.contacto .wrap{grid-template-columns:1fr;gap:40px}
+  .hero .wrap{padding-top:52px;padding-bottom:56px}
+  section{padding:64px 0}
+  .areas,.ad-lista,.despachos,.posts{grid-template-columns:1fr}
+  .area{min-height:0}
+  form.lead{grid-template-columns:1fr;padding:22px}
+  .pie{grid-template-columns:1fr 1fr}
+  .chat span{display:none}
+  .chat{padding:13px}
+}
+@media(max-width:560px){
+  .equipo,.intl ul,.pie{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== BARRA SUPERIOR ===================== -->
+<div class="util">
+  <div class="wrap">
+    <span>Asesoría integral de empresas desde 1977</span>
+    <nav aria-label="Accesos rápidos">
+      <a href="https://serveco.fandit.es" target="_blank" rel="noopener">Buscador de subvenciones</a>
+      <a href="/punto-pae/">Punto PAE</a>
+      <a href="tel:+34968909020">968 90 90 20</a>
+    </nav>
+    <div class="idioma" aria-label="Idioma">
+      <a href="/" aria-current="true" lang="es">ES</a>
+      <a href="/en/" lang="en">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="cab">
+  <div class="wrap">
+    <a href="/" class="logo" aria-label="Serveco Asesores, inicio">
+      <!-- Marca aproximada. Sustituir por el SVG oficial. -->
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="6" fill="#7F7F7F"/>
+        <path d="M0 22h40v12a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6z" fill="#EE7D22"/>
+        <path d="M9 18l11 14L33 8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span><b>SERVECO</b><small>ASESORES</small></span>
+    </a>
+
+    <ul class="menu" id="menu">
+      <li>
+        <button type="button" aria-expanded="false" aria-controls="mega-areas">Áreas</button>
+        <div class="mega" id="mega-areas">
+          <div class="wrap">
+            <div>
+              <h4>Empresa y fiscalidad</h4>
+              <ul>
+                <li><a href="/fiscal/">Fiscal</a></li>
+                <li><a href="/contable/">Contable</a></li>
+                <li><a href="/financiero/">Financiero</a></li>
+                <li><a href="/auditoria/">Auditoría</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Personas y contratos</h4>
+              <ul>
+                <li><a href="/laboral/">Laboral</a></li>
+                <li><a href="/juridico/">Jurídico</a></li>
+                <li><a href="/formacion/">Formación bonificada</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Crecimiento</h4>
+              <ul>
+                <li><a href="/idi-patent-box/">I+D+i y Patent Box</a></li>
+                <li><a href="/subvenciones/">Subvenciones y ayudas</a></li>
+                <li><a href="/punto-pae/">Punto PAE · crear empresa</a></li>
+              </ul>
+            </div>
+            <div class="destacado">
+              <h4>Sistemas A.D.</h4>
+              <p>Nuestras herramientas propias para seguir la salud financiera de su empresa mes a mes.</p>
+              <a class="enlace" href="/financiero/#sistemas-ad">Conocer los sistemas</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button type="button" aria-expanded="false" aria-controls="mega-clientes">Para quién</button>
+        <div class="mega" id="mega-clientes">
+          <div class="wrap">
+            <div>
+              <h4>Por perfil</h4>
+              <ul>
+                <li><a href="/pymes/">Pymes</a></li>
+                <li><a href="/empresa-familiar/">Empresa familiar</a></li>
+                <li><a href="/autonomos/">Autónomos</a></li>
+                <li><a href="/internacional/">No residentes</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Por sector</h4>
+              <ul>
+                <li><a href="#sectores">Agroalimentario</a></li>
+                <li><a href="#sectores">Vitivinícola</a></li>
+                <li><a href="#sectores">Industria del mueble</a></li>
+                <li><a href="#sectores">Hostelería y turismo</a></li>
+              </ul>
+            </div>
+            <div></div>
+            <div class="destacado">
+              <h4>International clients</h4>
+              <p>NIE, non-resident tax, wills and property purchases. We work in English.</p>
+              <a class="enlace" href="/en/international/" lang="en">Go to the English site</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="/la-firma/">La firma</a></li>
+      <li><a href="/despachos/">Despachos</a></li>
+      <li><a href="/actualidad/">Actualidad</a></li>
+    </ul>
+
+    <div class="cab-acciones">
+      <a href="#contacto" class="btn btn-marca">Pedir cita</a>
+      <button type="button" class="hamb" id="hamb" aria-expanded="false" aria-controls="menu">Menú</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <h1>Su asesoría fiscal, laboral y jurídica, bajo un mismo techo</h1>
+      <p class="entrada">Más de treinta profesionales llevan la fiscalidad, las nóminas, la contabilidad y los contratos de su empresa de forma coordinada. Un solo interlocutor, desde 1977.</p>
+      <div class="acciones">
+        <a href="#contacto" class="btn btn-marca">Pedir cita</a>
+        <a href="#despachos" class="btn btn-linea">Ver despachos</a>
+      </div>
+      <div class="datos">
+        <div><b>1977</b>Año de fundación</div>
+        <div><b>30+</b>Profesionales</div>
+        <div><b id="n-sedes">6</b>Despachos</div>
+      </div>
+    </div>
+
+    <form class="router" id="router" onsubmit="return false">
+      <h2>¿Qué necesita resolver?</h2>
+      <p>Elija dos opciones y le indicamos el área que le atiende.</p>
+      <fieldset>
+        <legend>Soy</legend>
+        <div class="chips">
+          <label><input type="radio" name="perfil" value="empresa" checked><span>Empresa</span></label>
+          <label><input type="radio" name="perfil" value="autonomo"><span>Autónomo</span></label>
+          <label><input type="radio" name="perfil" value="particular"><span>Particular</span></label>
+          <label><input type="radio" name="perfil" value="noresidente"><span>No residente</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Necesito</legend>
+        <div class="chips">
+          <label><input type="radio" name="tema" value="impuestos" checked><span>Impuestos</span></label>
+          <label><input type="radio" name="tema" value="personal"><span>Contratar o despedir</span></label>
+          <label><input type="radio" name="tema" value="contabilidad"><span>Llevar la contabilidad</span></label>
+          <label><input type="radio" name="tema" value="legal"><span>Un asunto legal</span></label>
+          <label><input type="radio" name="tema" value="ayudas"><span>Ayudas o financiación</span></label>
+          <label><input type="radio" name="tema" value="crear"><span>Crear una empresa</span></label>
+        </div>
+      </fieldset>
+      <div class="resultado" aria-live="polite">
+        <strong id="r-area">Área fiscal</strong>
+        <p id="r-texto">Impuesto de sociedades, IVA, planificación fiscal y operaciones societarias.</p>
+        <a class="enlace" id="r-link" href="/fiscal/">Ver área fiscal</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== ÁREAS ===================== -->
+<section id="areas">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2>Ocho áreas que trabajan juntas</h2>
+        <p>Economistas, abogados, graduados sociales e ingenieros comparten el expediente de su empresa. No hace falta repetir la historia en cada departamento.</p>
+      </div>
+    </div>
+    <div class="areas">
+      <a class="area" href="/fiscal/"><h3>Fiscal</h3><p>Sociedades, IRPF, IVA, planificación fiscal, sucesiones y no residentes.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/laboral/"><h3>Laboral</h3><p>Nóminas, seguros sociales, contratos, despidos e inspecciones de trabajo.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/juridico/"><h3>Jurídico</h3><p>Mercantil, civil, contratación, reclamaciones y defensa en tribunales.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/contable/"><h3>Contable</h3><p>Contabilidad, cuentas anuales, libros oficiales y cierre del ejercicio.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/financiero/"><h3>Financiero</h3><p>Financiación, viabilidad, presupuestos y cuadros de mando con los sistemas A.D.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/auditoria/"><h3>Auditoría</h3><p>Auditoría de cuentas anuales y trabajos de revisión limitada.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/idi-patent-box/"><h3>I+D+i y Patent Box</h3><p>Deducciones por innovación con informe motivado y cuantificación de cada proyecto.</p><span class="ir">Ver el área</span></a>
+      <a class="area" href="/formacion/"><h3>Formación</h3><p>Cursos para su plantilla, bonificables al 100 % con el crédito de formación.</p><span class="ir">Ver el área</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SISTEMAS A.D. ===================== -->
+<section class="ad" id="sistemas-ad">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2>Sistemas A.D.: su empresa en cifras, cada mes</h2>
+        <p>Herramientas desarrolladas por Serveco para que las decisiones no esperen al cierre del año.</p>
+      </div>
+    </div>
+    <div class="ad-lista">
+      <div class="ad-item"><b>A.D.I</b><h3>Análisis Dinámico Intermensual</h3><p>Cómo va la empresa este mes frente al anterior: márgenes, tesorería y desviaciones.</p></div>
+      <div class="ad-item"><b>A.D.P</b><h3>Análisis Dinámico Presupuestario</h3><p>Proyecciones a uno o varios años para decidir inversiones y financiación.</p></div>
+      <div class="ad-item"><b>A.D.A</b><h3>Análisis Dinámico Analítico</h3><p>Costes de producción, precios de venta y existencias, producto a producto.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SECTORES ===================== -->
+<section id="sectores">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2>Conocemos su sector</h2>
+        <p>Una bodega, un taller de mueble y un hotel no tributan ni contratan igual. Trabajamos con el criterio de cada actividad.</p>
+      </div>
+    </div>
+    <div class="sectores">
+      <a href="#">Agroalimentario</a><a href="#">Vitivinícola</a><a href="#">Industria del mueble</a>
+      <a href="#">Transporte y logística</a><a href="#">Construcción e inmobiliario</a><a href="#">Comercio y distribución</a>
+      <a href="#">Hostelería y turismo</a><a href="#">Empresa familiar</a><a href="#">Autónomos y profesionales</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTERNACIONAL (puerta EN) ===================== -->
+<section class="intl" id="internacional">
+  <div class="wrap">
+    <div>
+      <h2>¿Vive fuera de España o acaba de llegar?</h2>
+      <p style="color:var(--tinta-2);margin:14px 0 24px">Atendemos a residentes extranjeros y no residentes con bienes en España, en español y en inglés.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="/internacional/" class="btn btn-linea">Ver servicios internacionales</a>
+        <a href="/en/international/" class="btn btn-marca" lang="en">Read in English</a>
+      </div>
+    </div>
+    <ul>
+      <li>NIE<span>Obtención y renovación</span></li>
+      <li>IRNR<span>Impuesto de no residentes</span></li>
+      <li>Testamentos<span>Y sucesiones en España</span></li>
+      <li>Inmuebles<span>Compra y venta de vivienda</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== EQUIPO ===================== -->
+<section id="equipo">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2>Las personas que llevarán su caso</h2>
+        <p>Cada área tiene un responsable con nombre y cara. Pendiente: fotos y datos reales del equipo.</p>
+      </div>
+      <a href="/la-firma/equipo/" class="btn btn-linea">Ver todo el equipo</a>
+    </div>
+    <div class="equipo">
+      <div class="persona"><div class="foto">Retrato</div><h3>Nombre y apellidos</h3><p>Responsable del área fiscal</p></div>
+      <div class="persona"><div class="foto">Retrato</div><h3>Nombre y apellidos</h3><p>Responsable del área laboral</p></div>
+      <div class="persona"><div class="foto">Retrato</div><h3>Nombre y apellidos</h3><p>Responsable del área jurídica</p></div>
+      <div class="persona"><div class="foto">Retrato</div><h3>Nombre y apellidos</h3><p>Despacho de Benidorm</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DESPACHOS (salen del array SEDES) ===================== -->
+<section id="despachos" style="background:var(--niebla)">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2 id="t-sedes">Seis ciudades, un mismo equipo</h2>
+        <p>Acuda al que le quede más cerca. Su expediente es el mismo en todos.</p>
+      </div>
+    </div>
+    <div class="despachos-intro" id="filtro-zona" aria-label="Filtrar por zona"></div>
+    <div class="despachos" id="lista-sedes"></div>
+  </div>
+</section>
+
+<!-- ===================== ACTUALIDAD ===================== -->
+<section id="actualidad">
+  <div class="wrap">
+    <div class="cabecera">
+      <div>
+        <h2>Actualidad</h2>
+        <p>Cambios normativos, plazos y ayudas explicados por el equipo.</p>
+      </div>
+      <a href="/actualidad/" class="btn btn-linea">Ver todos los artículos</a>
+    </div>
+    <div class="posts">
+      <a class="post" href="#"><div class="portada">Portada</div><span class="cat">Fiscal</span><h3>Cómo saber si su empresa puede aplicar la deducción por I+D+i</h3><p>Requisitos, informe motivado y errores habituales al cuantificar el gasto.</p></a>
+      <a class="post" href="#"><div class="portada">Portada</div><span class="cat">Ayudas</span><h3>Convocatorias abiertas para pymes en la Región de Murcia</h3><p>Plazos, requisitos y documentación para presentarse.</p></a>
+      <a class="post" href="#"><div class="portada">Portada</div><span class="cat">Internacional</span><h3>Comprar vivienda en España siendo no residente</h3><p>NIE, impuestos de la compra y retenciones en la venta.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO (partida 06) ===================== -->
+<section class="contacto" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Cuéntenos qué necesita</h2>
+      <p style="color:var(--tinta-2);margin-top:14px">Le responde el área que corresponde, desde el despacho que elija. Normalmente en el mismo día laborable.</p>
+      <div class="via">
+        <a href="tel:+34968909020">968 90 90 20</a>
+        <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+      </div>
+    </div>
+
+    <form class="lead" id="lead" novalidate>
+      <div class="campo ancho">
+        <fieldset>
+          <legend>Escribe como</legend>
+          <div class="chips" style="margin-top:6px">
+            <label><input type="radio" name="tipo" value="particular" checked><span>Particular</span></label>
+            <label><input type="radio" name="tipo" value="empresa"><span>Empresa o autónomo</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
+      <div class="campo" id="c-empresa" hidden><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization"></div>
+      <div class="campo"><label for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="campo"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
+      <div class="campo">
+        <label for="f-area">Área</label>
+        <select id="f-area" name="area">
+          <option>Fiscal</option><option>Laboral</option><option>Jurídico</option><option>Contable</option>
+          <option>Financiero</option><option>Auditoría</option><option>I+D+i y Patent Box</option><option>Formación</option>
+          <option>Internacional / no residentes</option><option>No lo sé</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="f-sede">Despacho</label>
+        <select id="f-sede" name="sede"></select>
+      </div>
+      <div class="campo ancho"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" required></textarea></div>
+      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="gdpr"><input type="checkbox" required> <span>He leído la <a class="enlace" href="/politica-de-privacidad/">política de privacidad</a> y acepto que Serveco use estos datos para responder a mi consulta.</span></label>
+      <div class="ancho" style="grid-column:1/-1"><button class="btn btn-marca" type="submit">Enviar consulta</button></div>
+      <p class="enviado" id="enviado" role="status">Consulta enviada. Le escribiremos a su correo en cuanto el área la revise.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== PIE (columna Legal, molde Furgocasa) ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="pie">
+      <div>
+        <a href="/" class="logo" style="margin-bottom:16px">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#7F7F7F"/><path d="M0 22h40v12a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6z" fill="#EE7D22"/><path d="M9 18l11 14L33 8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><b>SERVECO</b><small>ASESORES</small></span>
+        </a>
+        <p>Serveco Asesores S.L.P. Asesoría integral de empresas desde 1977.</p>
+      </div>
+      <div><h4>Áreas</h4><ul><li><a href="/fiscal/">Fiscal</a></li><li><a href="/laboral/">Laboral</a></li><li><a href="/juridico/">Jurídico</a></li><li><a href="/contable/">Contable</a></li><li><a href="/financiero/">Financiero</a></li><li><a href="/auditoria/">Auditoría</a></li></ul></div>
+      <div><h4>Firma</h4><ul><li><a href="/la-firma/">Quiénes somos</a></li><li><a href="/la-firma/equipo/">Equipo</a></li><li><a href="/despachos/">Despachos</a></li><li><a href="/actualidad/">Actualidad</a></li><li><a href="/en/" lang="en">English</a></li></ul></div>
+      <div><h4>Despachos</h4><ul id="pie-sedes"></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="/aviso-legal/">Aviso legal</a></li><li><a href="/politica-de-privacidad/">Política de privacidad</a></li><li><a href="/politica-de-cookies/">Política de cookies</a></li><li><a href="#" id="cfg-cookies">Configurar cookies</a></li></ul></div>
+    </div>
+    <div class="pie-base">
+      <span>© <span id="anio">2026</span> Serveco Asesores S.L.P.</span>
+      <span>Hecho con ❤️ en Murcia · Web desarrollada por <a href="https://www.eskaladigital.com" target="_blank" rel="noopener" style="text-decoration:underline">ESKALA Agencia de Marketing Digital</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Chatbot (partida 05): en Next será el widget molde Laura/Nora -->
+<button class="chat" type="button" aria-label="Abrir el asistente"><i>S</i><span>¿Le ayudamos?</span></button>
+
+<script>
+/* ============================================================
+   SEDES — fuente única. En Next: tabla `offices` de Supabase.
+   Abrir Madrid = añadir una fila. Nada del diseño cambia.
+   PENDIENTE verificar: tel. de Balsicas (hoy igual que la central)
+   y segundo teléfono de Yecla (968 790 408).
+   ============================================================ */
+const SEDES = [
+  {slug:'murcia',   ciudad:'Murcia',   zona:'Región de Murcia', dir:'Gran Vía, 28, 5.º',                          tel:'968 909 020', central:true},
+  {slug:'murcia',   ciudad:'Murcia',   zona:'Región de Murcia', dir:'C/ Acisclo Díaz, 2',                         tel:'968 284 766'},
+  {slug:'yecla',    ciudad:'Yecla',    zona:'Región de Murcia', dir:'C/ Pío Baroja, 7 y C/ Esteban Díaz, 53',     tel:'968 753 640'},
+  {slug:'jumilla',  ciudad:'Jumilla',  zona:'Región de Murcia', dir:'C/ Valencia, 2',                             tel:'968 780 040'},
+  {slug:'lorca',    ciudad:'Lorca',    zona:'Región de Murcia', dir:'Antigua Plaza de Abastos, 15, local 10',     tel:'968 471 431'},
+  {slug:'balsicas', ciudad:'Balsicas', zona:'Región de Murcia', dir:'Avda. Ciudad de Murcia, 90, bajo',           tel:'968 909 020'},
+  {slug:'benidorm', ciudad:'Benidorm', zona:'Costa de Alicante', dir:'Calle Jaén, 1 (esq. Avda. de Europa)',      tel:'665 912 758'}
+  /* Ejemplo futuro (solo cuando haya despacho real):
+  ,{slug:'madrid', ciudad:'Madrid', zona:'Madrid', dir:'…', tel:'…'} */
+];
+
+const NUM = ['cero','un','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce'];
+const ciudades = [...new Set(SEDES.map(s=>s.ciudad))];
+const zonas = [...new Set(SEDES.map(s=>s.zona))];
+document.getElementById('n-sedes').textContent = ciudades.length;
+const cap = t => t.charAt(0).toUpperCase()+t.slice(1);
+document.getElementById('t-sedes').textContent =
+  cap(NUM[ciudades.length] || ciudades.length) + (ciudades.length===1?' despacho':' ciudades') + ', un mismo equipo';
+
+function pintaSedes(zona){
+  const lista = document.getElementById('lista-sedes');
+  lista.innerHTML = SEDES.filter(s=>!zona||s.zona===zona).map(s=>`
+    <article class="despacho">
+      <span class="zona">${s.zona}</span>
+      <h3>${s.ciudad}${s.central?'<span class="central">Sede central</span>':''}</h3>
+      <address>${s.dir}</address>
+      <a class="tel" href="tel:+34${s.tel.replace(/\s/g,'')}">${s.tel}</a>
+    </article>`).join('');
+}
+const filtro = document.getElementById('filtro-zona');
+if (zonas.length > 1){
+  filtro.innerHTML = ['Todas', ...zonas].map((z,i)=>
+    `<button type="button" aria-pressed="${i===0}" data-z="${i===0?'':z}">${z}</button>`).join('');
+  filtro.addEventListener('click', e=>{
+    const b = e.target.closest('button'); if(!b) return;
+    filtro.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b));
+    pintaSedes(b.dataset.z);
+  });
+}
+pintaSedes('');
+document.getElementById('f-sede').innerHTML =
+  ciudades.map(c=>`<option>${c}</option>`).join('') + '<option>Me es indiferente</option>';
+document.getElementById('pie-sedes').innerHTML =
+  ciudades.map(c=>`<li><a href="/despachos/${c.toLowerCase()}/">${c}</a></li>`).join('');
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* ============================================================
+   ROUTER DEL HERO — Soy… / Necesito… → área
+   ============================================================ */
+const AREAS = {
+  impuestos:   {area:'Área fiscal',    link:'/fiscal/',     txt:'Impuesto de sociedades, IVA, planificación fiscal y operaciones societarias.'},
+  personal:    {area:'Área laboral',   link:'/laboral/',    txt:'Contratos, nóminas, despidos, ERTE e inspecciones de trabajo.'},
+  contabilidad:{area:'Área contable',  link:'/contable/',   txt:'Contabilidad al día, cuentas anuales y libros oficiales.'},
+  legal:       {area:'Área jurídica',  link:'/juridico/',   txt:'Contratos, reclamaciones, sociedades y defensa en tribunales.'},
+  ayudas:      {area:'Área financiera y subvenciones', link:'/subvenciones/', txt:'Buscador de ayudas, financiación y planes de viabilidad.'},
+  crear:       {area:'Punto PAE',      link:'/punto-pae/',  txt:'Constitución de su sociedad o alta de autónomo, con trámites telemáticos.'}
+};
+const AJUSTES = {
+  particular:{impuestos:{area:'Área fiscal · particulares', link:'/fiscal/', txt:'Declaración de la renta, herencias, donaciones y compraventa de vivienda.'}},
+  noresidente:{impuestos:{area:'Internacional', link:'/internacional/', txt:'IRNR, NIE, testamentos y compraventa de inmuebles, en español o inglés.'},
+               legal:{area:'Internacional', link:'/internacional/', txt:'Testamentos, sucesiones y compraventa de inmuebles para no residentes.'}},
+  autonomo:{crear:{area:'Punto PAE', link:'/punto-pae/', txt:'Alta como autónomo o paso a sociedad, con los trámites hechos por nosotros.'}}
+};
+const router = document.getElementById('router');
+function enruta(){
+  const p = router.perfil.value, t = router.tema.value;
+  const r = (AJUSTES[p] && AJUSTES[p][t]) || AREAS[t];
+  document.getElementById('r-area').textContent = r.area;
+  document.getElementById('r-texto').textContent = r.txt;
+  const a = document.getElementById('r-link');
+  a.href = r.link; a.textContent = 'Ver ' + r.area.split(' · ')[0].toLowerCase();
+}
+router.addEventListener('change', enruta); enruta();
+
+/* ============================================================
+   MENÚ: mega-menús accesibles + móvil
+   ============================================================ */
+document.querySelectorAll('.menu > li > button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const panel = document.getElementById(b.getAttribute('aria-controls'));
+    const abrir = b.getAttribute('aria-expanded') !== 'true';
+    document.querySelectorAll('.menu > li > button').forEach(o=>{
+      o.setAttribute('aria-expanded','false');
+      document.getElementById(o.getAttribute('aria-controls')).classList.remove('abierto');
+    });
+    b.setAttribute('aria-expanded', abrir);
+    panel.classList.toggle('abierto', abrir);
+  });
+});
+document.addEventListener('keydown', e=>{
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('.mega.abierto').forEach(m=>m.classList.remove('abierto'));
+  document.querySelectorAll('.menu > li > button').forEach(o=>o.setAttribute('aria-expanded','false'));
+});
+const hamb = document.getElementById('hamb'), menu = document.getElementById('menu');
+hamb.addEventListener('click', ()=>{
+  const abrir = !menu.classList.contains('abierto');
+  menu.classList.toggle('abierto', abrir);
+  hamb.setAttribute('aria-expanded', abrir);
+  hamb.textContent = abrir ? 'Cerrar' : 'Menú';
+});
+
+/* ============================================================
+   FORMULARIO (maqueta): en Next → Server Action + contact_submissions
+   + par de correos SMTP OVH + filtro silencioso (honeypot + tiempo)
+   ============================================================ */
+const lead = document.getElementById('lead');
+lead.addEventListener('change', e=>{
+  if (e.target.name === 'tipo') document.getElementById('c-empresa').hidden = e.target.value !== 'empresa';
+});
+lead.addEventListener('submit', e=>{
+  e.preventDefault();
+  if (!lead.checkValidity()){ lead.reportValidity(); return; }
+  document.getElementById('enviado').style.display = 'block';
+  lead.querySelector('button[type=submit]').textContent = 'Consulta enviada';
+});
+</script>
+</body>
+</html>

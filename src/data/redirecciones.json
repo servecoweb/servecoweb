@@ -1,0 +1,7627 @@
+[
+  {
+    "source": "/25-millones-de-euros-para-autonomos-emprendedores-y-pymes",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/3-claves-para-mejorar-la-productividad-de-tu-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/5-blogs-sobre-negocios-que-debes-leer-casi-todos-los-dias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/5-oficinas-que-te-encantarian-para-tu-empresa",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/about-video-ad-formats-youtube-help",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/accion-de-reembolso-entre-progenitores-por-los-gastos-del-hijo-comun-asumidos-en-exclusiva-por-uno-de-ellos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/adios-a-aportar-3-000-euros-para-crear-empresas",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/agricultores-en-modulos-jubilados-y-ayudas-de-la-pac-como-tributar",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/amnistia-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/andalucia-eliminara-el-impuesto-de-sucesiones-a-partir-del-1-de-enero-de-2018",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/andalucia-rebaja-el-irpf-y-bonifica-el-impuesto-de-sucesiones-al-99",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/aplazamiento-y-fraccionamientos-especialmente-en-relacion-con-el-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/aplicacion-de-la-normativa-autonomica-o-no-en-el-caso-de-no-residentes-en-patrimonio-y-sucesiones",
+    "destination": "/es/internacional/impuesto-no-residentes",
+    "permanent": true
+  },
+  {
+    "source": "/aplicacion-de-la-normativa-autonomica-o-no-en-el-caso-de-no-residentes-en-patrimonio-y-sucesiones-2",
+    "destination": "/es/internacional/impuesto-no-residentes",
+    "permanent": true
+  },
+  {
+    "source": "/aportaciones-en-un-plan-de-pensiones-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/aportaciones-plan-pensiones-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/app-para-presentar-la-declaracion-de-la-renta-en-un-clic",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/aprendiendo-a-emprender",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/aprobacion-de-la-ley-11-2021-de-prevencion-contra-el-fraude-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/asi-deberan-recuperar-los-autonomos-las-cuotas-por-cese-de-actividad-mal-cobradas-de-la-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/avis-en-compagnie-de-crowngreen-salle-de-jeu-machines-a",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/aviso-legal",
+    "destination": "/es/aviso-legal",
+    "permanent": true
+  },
+  {
+    "source": "/avtorizatsiya-i-vosstanovlenie-dostupa-k-lichnomu-kabinetu",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-a-empresas-que-acojan-las-practicas-no-laborales-de-un-joven-de-entre-18-y-25-anos",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-a-proyectos-de-inversion-en-activos-fijos",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-emprendedores-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-industria-manufacturera",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-info-para-el-apoyo-al-mantenimiento-de-la-actividad-empresarial-covid-19",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-info-para-incentivar-la-transformacion-digital-de-las-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-para-actuaciones-de-reindustrializacion-en-la-comarca-del-lorca-en-el-ano-2012",
+    "destination": "/es/la-firma/despachos/lorca",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-para-la-promocion-internacional-y-la-innovacion-de-empresas-regionales",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-para-la-reindustrializacion-y-fomento-de-la-competitividad-industrial",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-pyme-fiware",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/ayudas-subvenciones-contratacion-trabajadores-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/beneficios-fiscales-de-las-familias-numerosas-cuando-los-puedo-aplicar",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/beneficios-fiscales-de-perder-un-juicio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/beneficios-fiscales-en-el-impuesto-sobre-sucesiones-y-donaciones-a-la-transmision-de-empresas-y-viviendas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/besplatno-mozhno-skachat-prilozhenie-bukmekerskoy-kontory",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/besplatno-mozhno-zagruzit-ofitsialnoe-prilozhenie",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/besplatno-zagruzit-ofitsialnoe-prilozhenie-bukmekerskoy",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/besplatno-zagruzit-ofitsialnoe-prilozhenie-bukmekerskoy-2",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/blog",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/bruselas-multiplica-los-datos-a-incluir-en-los-contratos-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/cambios-en-la-ley-sucesoria-de-los-extranjeros-residentes-en-espana",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/campana-de-renta-y-patrimonio-2013",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/canvas-model-emprender-conociendo-tu-idea",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/capitalizacion-del-pago-unico-de-la-prestacion-de-desempleo-para-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/category/2012",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2013",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2014",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2015",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2016",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2017",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2018",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2019",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2020",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2021",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2022",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2023",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2024",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/2025",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/conferencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/jornada-formativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/category/news-serveco",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/newsletters",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/noticias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/charla-campana-irpf-2015-novedades-tras-la-reforma-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/claves-para-deducir-en-la-declaracion-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/comercio-electronico-e-iva-nuevos-tiempos-nuevas-reglas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/como-aplazar-las-notificaciones-de-la-agencia-tributaria-para-vacaciones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/como-descargarse-la-vida-laboral-al-momento-con-el-telefono",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/como-incluyo-en-mi-renta-la-vivienda-que-me-ha-puesto-a-disposicion-la-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/concurso-de-emprendedores-de-iebs",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/conferencia-novedades-fiscales-2023",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/consecuencias-fiscales-de-comprar-un-cuadro-falso",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/consejos-para-ahorrar-dinero-en-la-renta-2017",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/consejos-para-montar-tu-propia-oficina-en-casa",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/consulta-el-estado-de-la-devolucion-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/consumers-deal-with-hard-time-advising-legal-grass-away-from",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/contabilidad-en-la-nube",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/contacto",
+    "destination": "/es/contacto",
+    "permanent": true
+  },
+  {
+    "source": "/convocatoria-de-concesion-de-subvenciones-a-emprendedores-del-municipio-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/convocatoria-de-subvenciones-de-fomento-de-la-contratacion-indefinida-y-en-practicas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/cuanto-tiempo-pasamos-en-la-oficina-y-cuanto-somos-productivos",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/declaracion-de-bienes-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/declaracion-de-la-renta-2015-tengo-que-presentarla",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deduccion-del-iva-soportado-en-adquisicion-de-vehiculos-por-la-empresa-para-sus-comerciales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deduccion-por-inversion-de-beneficios-en-el-impuesto-de-la-renta-de-las-personas-fisicas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deduccion-por-inversion-de-beneficios-en-el-impuesto-de-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deducciones-ahorro-fiscal-declaracion-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deducciones-para-conseguir-ahorro-fiscal-en-la-declaracion-sobre-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deducibilidad-en-el-iva-de-bienes-destinados-a-atenciones-a-clientes",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/deduction-for-rental-contracts-on-habitual-dwellings-prior-to-2015",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/desarrollo-reglamentario-del-regimen-especial-del-criterio-de-caja-en-el-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/descarga-el-calendario-laboral-de-serveco-para-2016",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/descubre-con-serveco-el-buscador-de-subvenciones-para-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/documentacion-renta-2011",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/donde-estamos",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/efectos-del-cumplimiento-de-una-condicion-resolutoria-en-irpf-e-impuesto-de-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-30-de-septiembre-termina-el-plazo-para-dar-de-alta-a-los-becarios-de-las-empresas-en-la-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/el-banco-sabadell-se-suma-al-proyecto-inicia-para-favorecer-el-emprendimiento-en-jumilla-murcia",
+    "destination": "/es/la-firma/despachos/jumilla",
+    "permanent": true
+  },
+  {
+    "source": "/el-boe-publica-la-primera-convocatoria-de-ayudas-para-la-digitalizacion-de-pymes-mediante-el-kit-digital",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/el-boe-publica-los-terminos-y-condiciones-de-la-linea-de-avales-a-financiacion-para-autonomos-y-empresas",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/el-cloud-incubator-hub-de-cartagena-mejor-vivero-de-empresas-de-espana-en-2016",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/el-fisco-deja-de-exigir-el-modelo-de-informacion-fiscal-sobre-pisos-turisticos",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-aprueba-la-extension-de-las-ayudas-a-autonomos",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-de-la-region-de-murcia-aprobo-el-pasado-19-de-junio-varias-deducciones-de-caracter-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-de-la-region-de-murcia-ofrece-ayudas-a-los-autonomos-por-el-covid-19",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-de-la-region-de-murcia-proporciona-nuevas-ayudas-al-sector-turistico-y-hostelero",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-incluye-el-impuesto-a-las-grandes-fortunas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-plantea-una-serie-de-propuestas-para-la-racionalizacion-de-horarios-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/el-gobierno-prorroga-en-2020-el-impuesto-de-patrimonio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-instituto-de-fomento-ofrece-ayudas-para-la-transformacion-digita",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/el-iva-de-los-gastos-de-desplazamiento-en-los-servicios-de-profesionales-a-sus-clientes",
+    "destination": "/es/la-firma/equipo",
+    "permanent": true
+  },
+  {
+    "source": "/el-ministerio-de-industria-publica-las-lineas-de-financiacion-reindus",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/el-rd-ley-19-2020-introduce-novedades-que-afectan-a-los-intereses-de-demora-en-aplazamientos-covid-y-a-la-declaracion-del-impuesto-sobre-sociedades-2019",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-retraso-por-factura-en-el-nuevo-iva-se-sancionara-con-el-05-del-importe",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-sujeto-pasivo-en-el-impuesto-de-actos-juridicos-documentados-ajd-es-el-cliente-prestatario-y-no-la-entidad-financiera",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/el-supremo-decidira-si-el-autonomo-puede-deducirse-el-100-del-iva-de-los-vehiculos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-supremo-no-acepta-que-los-autonomos-se-deduzcan-todo-el-iva-por-la-compra-de-un-coche",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-supremo-prohibe-a-hacienda-retener-devoluciones-fiscales-injustificadamente",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-teac-anula-una-nueva-sancion-por-declarar-tarde-bienes-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/el-tjue-anula-las-sanciones-del-modelo-720-para-declarar-bienes-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/el-tribunal-constitucional-avala-el-despido-por-faltar-varios-dias-con-justificacion",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/el-tribunal-supremo-aclara-cuestiones-juridicas-sobre-las-clausulas-suelo",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/el-tribunal-supremo-decide-que-el-cliente-pague-el-impuesto-de-las-hipotecas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-tribunal-supremo-pone-fin-a-la-discriminacion-en-el-impuesto-sobre-sucesiones-entre-espanoles-europeos-y-no-europeos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/el-ts-condena-al-estado-a-indemnizar-a-un-contribuyente-por-la-plusvalia-pagada-en-virtud-de-normas-inconstitucionales",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/el-ts-determina-quien-debe-pagar-el-impuesto-de-actos-juridicos-documentados-en-los-prestamos-hipotecarios",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/emprendedor-de-responsabilidad-limitada",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/emprender-desde-la-escuela",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/en-2016-trabaje-en-el-extranjero-como-lo-declaro",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/enisa-apoyo-financiero-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/exaccta-tax-app-contabilidad-autonomos",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/exoneracion-de-presentar-el-modelo-390-del-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-del-idi",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-empresarial-de-operaciones-de-credito-avaladas-por-s-g-r",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-enisa-jovenes-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-para-el-pago-a-los-proveedores-de-las-entidades-locales",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-para-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/financiacion-publica-para-empresas-y-emprendedores-a-traves-de-enisa",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/fintonic-una-app-financiera-para-que-no-se-te-escape-nada",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/fiscalidad-de-algunos-productos-financieros-tras-la-reforma-fiscal-para-2015",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/folleto-servicios",
+    "destination": "/es/servicios",
+    "permanent": true
+  },
+  {
+    "source": "/formas-juridicas-de-la-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/franquicia-emprender-con-un-modelo-de-negocio-seguro",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/fuerte-rebaja-fiscal-en-la-sucesion-de-la-empresa-familiar-y-de-patrimonios",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/gastos-de-deducibles-en-el-impuesto-de-sociedades-segun-la-doctrina-administrativa-y-la-jurisprudencia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/gastos-de-funeral-e-impuesto-sobre-sucesiones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/guia-de-las-novedades-de-la-campana-de-la-renta-de-abril",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/guia-practica-para-planificar-mejor-la-declaracion-de-la-renta-de-2016",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-aprobara-un-cheque-fiscal-para-los-mayores",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-debera-devolver-a-los-autonomos-el-iva-de-las-facturas-impagadas-a-partir-de-50-euros",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-incluye-una-casilla-concreta-para-las-criptomonedas-en-la-declaracion-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-modificara-el-reglamento-de-iva-para-bienes-intracomunitarios",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-prepara-las-inspecciones-fiscales-con-otros-paises-para-2024",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-revisara-el-impuesto-de-la-plusvalia-municipal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hacienda-sube-los-impuestos-a-la-segunda-residencia-en-la-campana-2015",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/hay-mas-emprendedores-en-espana-pero-dificilmente-sobreviviran-a-largo-plazo",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/herramientas-para-gestionar-la-contabilidad-de-tu-empresa-en-la-nube",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/igry-i-prilozheniya-dlya-android-mobilnoe-prilozhenie-ot",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/il-meglio-dei-casa-rolino-da-gioco-legali-aams-in-italia",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/ilp-la-recogida-de-firmas-con-validez-juridica",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/implicaciones-fiscales-de-un-brexit-duro",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/impuesto-de-sucesiones-y-libertad-de-movimientos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/impuesto-municipal-sobre-el-incremento-del-valor-de-los-terrenos-de-naturaleza-urbana",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/impuesto-sobre-el-valor-de-la-produccion-de-la-energia-electrica",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/impulsando-pymes-aterriza-en-lorca",
+    "destination": "/es/la-firma/despachos/lorca",
+    "permanent": true
+  },
+  {
+    "source": "/imputacion-de-rentas-inmobiliarias-en-caso-de-viviendas-ocupadas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/incentivos-a-emprendedores-en-el-impuesto-de-la-renta",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/incentivos-a-emprendedores-en-el-impuesto-de-sociedades",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/incentivos-fiscales-en-el-irpf",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/incorporacion-a-red-inpact-international",
+    "destination": "/en",
+    "permanent": true
+  },
+  {
+    "source": "/incorporation-in-inpact-international-network",
+    "destination": "/en",
+    "permanent": true
+  },
+  {
+    "source": "/incubadoras-de-proyectos-que-pueden-financiar-tus-ideas-de-negocio",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-bienes-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-movimientos-cuentas-bancarias-en-modelo-196",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-sobre-bienes-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-sobre-compras-mediantes-tarjetas",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-sobre-el-programa-kit-digital-acelera-pyme",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/informacion-sobre-los-intereses-de-demora-en-prestamos-bancarios",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/instituto-fomento-region-murcia-aprueba-plan-pago-subvenciones",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/intentos-de-fraude-durante-la-campana-de-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/interes-legal-del-dinero-iprem-y-salario-minimo-interprofesional-2013",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/intervencion-de-las-comunicaciones-por-la-agencia-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/inversion-del-sujeto-pasivo-en-el-iva-de-las-obras-inmobiliarias-preguntas-y-respuestas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/iva-de-caja-y-devolucion-de-recibos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/iva-de-la-transmision-de-inmuebles-en-ejecucion-de-garantias-reales-inversion-del-sujeto-pasivo",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/iva-de-servicios-de-telecomunicaciones-de-radio-difusion-o-television-y-electronicos-a-particulares",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/iva-en-servicios-mixtos-de-restauracion-y-hosteleria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/jornada-informativa-para-el-dia-17-de-diciembre-consideraciones-en-torno-al-cierre-del-ano-fiscal-e-implementacion-de-la-administracion-electronica",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/jornada-sobre-novedades-en-la-campana-irpf-2016-en-cetem-de-yecla",
+    "destination": "/es/la-firma/despachos/yecla",
+    "permanent": true
+  },
+  {
+    "source": "/jornadas-laborales-mas-reducidas-pero-mas-productivas",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/jovenes-emprendedores-con-ideas",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/la-aeat-pondra-en-marcha-el-sistema-inmediato-de-informacion-en-materia-de-iva-en-2017",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-alerta-de-intentos-phishing-a-traves-de-internet",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-controla-facturas-falsas-mediante-herramientas-basadas-en-ia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-lanza-el-primer-borrador-del-iva-para-13-000-empresas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-permitira-el-pago-de-impuestos-con-tarjeta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-pondra-el-foco-sobre-las-empresas-fantasma",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-agencia-tributaria-pone-en-marcha-el-nuevo-sistema-para-gestionar-el-iva-suministro-inmediato-de-informacion-sii",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/la-asociacion-espanola-de-asesores-fiscales-aedaf-pide-menos-diferencias-en-la-tributacion-de-las-cc-aa-para-evitar-la-competencia-fiscal-desleal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-audiencia-nacional-cancela-las-ayudas-estatales-a-formacion-de-2014",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/la-audiencia-nacional-permite-que-las-empresas-puedan-descontar-de-la-nomina-por-llegar-tarde",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/la-banca-pagara-los-impuestos-de-la-hipoteca-y-el-cliente-la-tasacion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-carm-aprueba-ayudas-al-alquiler-para-familias-necesitadas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/la-comunidad-autonoma-de-murcia-dota-con-50-millones-de-euros-la-linea-de-credito-info-reactiva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-escasez-de-empleo-a-tiempo-parcial-y-los-hogares-monoparentales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-fiscalidad-de-los-business-angels",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-fundacion-everis-lanza-el-premio-emprendedores-2013",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/la-guerra-fiscal-entre-ccaa-deja-mas-ricos-en-madrid-y-menos-en-el-resto-de-espana",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-mejor-solucion-empresarial-para-el-almacenamiento-de-informacion-en-internet",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/la-recaudacion-por-el-impuesto-de-sucesiones-y-donaciones-se-desploma-un-30-en-andalucia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-reclamaciones-tributarias-de-hacienda-podrian-quedar-sin-eecto-si-no-avisa-por-email",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-reforma-laboral-exigira-a-los-trabajadores-fichar-a-diario",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/la-seguridad-social-pone-en-cuarentena-las-bajas-de-los-fijos-discontinuos",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/la-subida-de-impuestos-en-espana-aumenta-el-numero-de-consultas-sobre-el-modelo-fiscal-de-andorra",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-tasa-google-gravara-un-5-los-servicios-digitales",
+    "destination": "/es/servicios",
+    "permanent": true
+  },
+  {
+    "source": "/la-tributacion-de-las-opciones-de-compra-en-el-irpf",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-tributacion-de-las-plusvalias-en-el-irpf-a-partir-de-2015",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-vuelta-al-cole-desgrava-en-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/la-web-de-la-serveco-nominada-entre-las-mejores-webs-de-la-provincia-de-murcia",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/las-empresas-estrenan-el-jueves-los-nuevos-contratos-de-la-reforma-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/las-estafas-de-phishing-pueden-computar-como-perdida-patrimonial-en-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/las-pymes-innovadoras-pagaran-menos-a-la-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/las-reducciones-en-el-alquiler-por-covid-estan-exentas-de-tributacion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/legale-anbieter-im-vergleich",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/legalizacion-de-libros-de-los-empresarios",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/legalizacion-libros-de-los-empresarios",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/les-plateformes-les-plus-fiables-et-rentables-pour-2026-ont",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/ley-apoyo-emprendedor-murcia",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/ley-del-impuesto-sobre-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/ley-medidas-tributarias-murcia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/liberalizacion-del-comercio-minorista-y-determinados-servicios",
+    "destination": "/es/servicios",
+    "permanent": true
+  },
+  {
+    "source": "/llegan-las-nuevas-reglas-en-el-regimen-del-iva-de-las-compras-online",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/los-arrendadores-no-tributaran-por-las-reducciones-de-alquiler-pactadas-en-la-pandemia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/los-asesores-fiscales-denuncian-los-cambios-efectuados-en-los-formularios-de-presentacion-de-cuentas-anuales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/los-auditores-de-la-ue-alertan-de-la-falta-de-control-del-fraude-en-iva-y-tasas-en-el-comercio-on-line",
+    "destination": "/es/servicios/auditoria",
+    "permanent": true
+  },
+  {
+    "source": "/los-nuevos-trabajadores-autonomos-de-murcia-optaran-a-ayudas-de-57-millones",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/los-perfiles-profesionales-mas-demandados-para-2016",
+    "destination": "/es/la-firma/equipo",
+    "permanent": true
+  },
+  {
+    "source": "/los-retos-de-la-economia-espanola-formacion-y-productividad",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/los-riders-de-deliveroo-estan-sujetos-a-una-relacion-laboral-con-la-empresa-segun-el-juez",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/mapa-emprendedores-espana",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/me-puedo-deducir-integramente-la-amortizacion-de-los-activos-de-mi-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/metodo-kaizen-aplicado-a-la-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/minusvalidos-e-impuesto-de-sucesiones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/modelos-303-322-y-390-para-2015-e-iva-importacion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/moviebox-hdwatch-tvampshort-apps-on-google-play-privacy",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/murcia-busca-a-los-emprendedores-del-mes",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/na-ofitsialnom-resurse-melbetru-predstavlena-legalnaya",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/notess-sistema-de-notificaciones-telematicas-de-la-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/notificaciones-tributarias-novedades-importantes",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/notificaciones-tributarias-por-via-telematica",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/notificaciones-tributarias-por-via-telematica-2022",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/notificaciones-tributarias-via-telematica",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-aprobadas-con-la-ley-1-2023-y-la-condicion-de-familia-monoparental-en-la-region-de-murcia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-de-la-campana-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-de-la-campana-de-la-renta-2018",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-el-347-y-el-regimen-del-criterio-de-caja-en-el-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-el-impuesto-de-sucesiones-y-donaciones-de-andalucia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-impuestos-actos-juridicos-documentados-y-sucesiones",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-la-reforma-de-la-ley-general-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-la-tributacion-de-participaciones-preferentes",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-en-materia-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-2018-materia-suministro-informacion",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-de-la-ley-de-presupuestos-generales-del-estado",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-de-la-region-de-murcia-en-el-impuesto-de-sucesiones-y-donaciones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-fin-de-ano-2016",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-mecenazgo-en-la-region-de-murcia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-fiscales-para-el-ano-2018-en-materia-de-irpf",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-importante-sobre-las-notificaciones-tributarias",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-impuesto-sociedades-irpf-renta-no-residentes",
+    "destination": "/es/internacional/impuesto-no-residentes",
+    "permanent": true
+  },
+  {
+    "source": "/novedades-impuesto-sucesiones-y-donaciones-region-de-murcia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/nuestro-equipo",
+    "destination": "/es/la-firma/equipo",
+    "permanent": true
+  },
+  {
+    "source": "/nueva-ley-del-impuesto-sobre-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/nueva-prorroga-a-las-ayudas-de-400e-para-parados-de-larga-duracion",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/nuevas-ayudas-info-para-inversiones",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/nuevas-medidas-fiscales-de-apoyo-a-los-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/nuevo-contrato-de-trabajo-indefinido-de-apoyo-a-los-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/nuevo-impuesto-sobre-los-gases-fluorados-de-efecto-invernadero",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/nuevo-modelo-fiscal-viviendas-turisticas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/nuevo-modelos-del-iva-para-el-ejercicio-2014",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/nuevos-espacios-coworking-publicos-en-murcia-y-cartagena",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/nulidad-de-clausulas-suelo-implicaciones-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/obligacion-registro-jornada-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/pago-de-actos-juridicos-documentados-en-hipotecas-a-favor-de-la-agencia-tributaria",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/periodo-en-que-se-aplica-el-incentivo-fiscal-de-la-reserva-de-capitalizacion-en-el-iso",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/planeacion-financiera",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/planemprende",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/plazos-campana-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/plazos-del-irpf-e-impuesto-del-patrimonio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/plazos-del-irpf-e-impuesto-del-patrimonio-2014",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/plusvalia-municipal-y-crisis-inmobiliaria-se-abre-la-puerta-a-la-justicia-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/politica-de-cookies",
+    "destination": "/es/cookies",
+    "permanent": true
+  },
+  {
+    "source": "/politica-de-privacidad",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/portamerica-emprendimiento-musica-y-cultura-en-el-paraiso",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/precierre-contable-del-ejercicio-2016",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/prestamos-participativos-de-enisa-jornada-informativa-en-cartajena",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/privacy-policy",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/programa-de-subvencion-de-fomento-del-autoempleo-para-jovenes-beneficiarios-del-sistema-nacional-de-garantia-juvenil",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/programa-renace-para-la-recuperacion-social-y-el-fomento-del-reemprendimiento-empresarial",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/proyecto-columbus-el-erasmus-de-los-jovenes-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/que-documentacion-aportar-declaracion-renta-2011",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/que-impuestos-se-han-de-pagar-al-cobrar-una-herencia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/que-impuestos-tengo-que-pagar-si-me-toca-la-loteria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/que-incentivos-ofrece-la-seguridad-social-para-trabajadores-autonomos",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/quien-debe-encargarse-de-la-proteccion-de-datos-dentro-de-una-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/quienes-somos",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/reclamacion-de-las-ccaa-del-iva-al-estado",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/rectificacion-de-facturas-de-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/recuperacion-iva-impagados",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/recuperar-iva-impagados",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/reforma-de-la-tributacion-de-las-plusvalias",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/reforma-de-medidas-tributarias-en-castilla-la-mancha",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/reforma-laboral-2012",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/reformas-en-el-iva-los-espectaculos-en-vivo-y-las-monturas-de-gafas-pasan-a-tributar-al-10",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/regimen-especial-del-criterio-de-caja-en-el-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/reglamento-general-de-proteccion-de-datos-rgpd-2016679",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/regularizacion-de-cuotas-soportadas-iva-si-no-se-recibe-la-factura-rectificativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/reinversion-de-ganancias-por-transmision-de-vivienda-el-teac-enmienda-a-la-agencia-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/renta-2024-fechas-novedades-y-claves-para-hacer-la-declaracion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/responabilidad-social-corporativa-responsabilidad-social-empresarial",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/responsabilidad-tributaria-en-caso-de-pluralidad-de-deudores",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/resumen-de-novedades-de-la-nueva-ley-de-patentes",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/retencion-15-para-determinados-profesionales",
+    "destination": "/es/la-firma/equipo",
+    "permanent": true
+  },
+  {
+    "source": "/revision-de-rentas-2012-al-2015-por-prestacion-por-maternidad",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/revolucion-para-las-empresas-en-el-iva-del-comercio-online",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/serveco-aportara-inversores-y-asesorara-a-empresas-y-emprendedores-de-la-red-murcia-ban",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/serveco-inaugura-oficina-en-lorca",
+    "destination": "/es/la-firma/despachos/lorca",
+    "permanent": true
+  },
+  {
+    "source": "/serveco-participara-en-el-proximo-foro-de-internacionalizacion-de-la-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/servicios",
+    "destination": "/es/servicios",
+    "permanent": true
+  },
+  {
+    "source": "/servicios-empresas-incentivos-innovacion",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/investigacion-desarrollo-innovacion",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicio-de-formacion-de-empresas",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-contables",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-de-asesoramiento-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-de-auditoria",
+    "destination": "/es/servicios/auditoria",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-financieros",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-juridicos",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/servicios-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/servicios/sistema-a-d-i",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/site-de-jeux-en-ligne-legal-et-reconnu",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/skachat-prilozhenie-parimatch-na-android-i-ayfon-besplatno",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/sobre-la-ley-de-emprendedores-y-otras-novedades-legislativas-importantes",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/sposoby-avtorizatsii-i-vosstanovlenie-dostupa-v-lichnyy",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/sravnenie-veb-raznovidnost-ili-skachat-mobilnoe-addenda",
+    "destination": "/es/internacional/nie",
+    "permanent": true
+  },
+  {
+    "source": "/subida-de-impuestos-en-2013",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/subida-de-irpf-y-sociedades-en-2021-y-mas-de-8-200-millones-en-alzas-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/subida-del-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-a-la-innovacion-del-instituto-de-fomento-de-la-region-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-concedidas-y-pendientes-de-pago-por-el-info",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-de-fomento-de-la-contratacion-indefinida-de-mujeres-con-hijos-menores-de-3-anos-en-la-region-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-destinadas-al-fomento-de-la-eficiencia-energetica-por-parte-de-las-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-empleo-juvenil-carm",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-fomento-de-autoempleo-cuota-cero",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-para-emprendedores-del-ayuntamiento-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-para-empresas-de-la-region-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/subvenciones-servicio-de-empleo-en-el-ambito-de-la-comunidad-de-la-region-de-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/suministro-inmediato-de-informacion-en-iva-sistema-s-i-i",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/swaps-o-permutas-financieras",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2006",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2011",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2013",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2015",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2018",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2022",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/2025",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/347",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/abogados",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/acciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/acelera-pyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aceleradora-de-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/actividades-de-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/actos-juridicos-documentados",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/actualidad-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/adicto-al-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/administracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/administracion-electronica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aeat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aedaf",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aepd",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aeropuerto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/agencia-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aguilas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ahorrar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ahorro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/airbnb",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/almacenamiento-datos-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquiler-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquiler-habitacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquiler-social",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquiler-turistico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquileres",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/alquileres-turisticos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/amnistia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/amortizacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/analisis-de-mercado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ancianos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/andalucia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/andorra",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ano-nuevo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aplazamiento-fraccionado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aplazamientos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aplicacion-movil",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aplicaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/apoyo-a-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/apoyo-a-inversiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/apoyo-financiero-a-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/app",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/apps",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/apps-para-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/arrendamiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/arrendamiento-habitaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/arrendamiento-local-de-negocio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/arrendamientos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoramiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesores-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-en-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-financiera",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-judicial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-juridica",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesoria-legal",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asesorias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asistencia-gratuita",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/asociaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/audiencia-nacional",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/auditoria",
+    "destination": "/es/servicios/auditoria",
+    "permanent": true
+  },
+  {
+    "source": "/tag/autoempleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/autoliquidacion-extemporanea-voluntaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/automotivacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/autonomo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/autonomos-societarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/aval",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/avalam",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/avisos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayuda-400e",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayuda-450e",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayuda-al-emprendedor",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayuda-inversiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-a-autonomos",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-a-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-a-los-huelguistas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-al-alquiler-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-alquiler",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-alquiler-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-carm",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-desempleados",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-emprendedor",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-emprendedores",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-financieras",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-investigacion",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-modernizacion",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-para-emprendedores-murcia",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-para-la-contratacion",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-para-negocios",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-para-reformar-locales-comerciales",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-publicas-enisa",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ayudas-pymes",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/baja",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/baja-medica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/balance",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/balances",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/barcelona",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/base-imponible",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/becarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/beneficios-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bienes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bienes-inmuebles",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bisiness-angels",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/blogs",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/boe",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bolsa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bonificaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/bonificaciones-pymes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/borm",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/borrador",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/borrador-irpf",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/brexit-blando",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/brexit-blando-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/brexit-duro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/brexit-duro-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/brexit-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/burbuja-inmobiliaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/buscador-de-subvenciones-para-empresas",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/business",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/business-angel",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/business-angels",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/business-premises",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/calcetines",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/calendario-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/camaras",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/campana-2015",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/campana-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/campana-renta-2013",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/campana-renta-2024",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/canvas-model",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/capital-riesgo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/carm",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/castilla-la-mancha",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/centimo-sanitario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/centros-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cepyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/certificacion-energetica-edificios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/certificacion-negativa-del-nombre",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/certificado-digital",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/certificados-inversion-del-sujeto-pasivo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cese-de-actividad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cese-por-actividad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/charla",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cheque-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cierre-ejercicio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cif",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/clase-media",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/clausula-suelo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/clausulas-suelo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cloud",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cnmv",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobrar-el-100-del-paro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobrar-el-imv",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobrar-herencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobro-de-deudas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobro-deudas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobro-morosos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cobros",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/coche",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/codigos-iban",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/comercio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/comercio-electronico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/comercio-online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/commissions",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/companias-electricas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compatibilidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/competencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/complemento-infantil",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compra-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compra-de-vivienda-en-espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compra-vehiculo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compra-venta-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compras",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/compras-online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/comunicacion-previa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/comunidades-autonomas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/concurso",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/conferencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/confiscatoriedad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/consejo-de-administracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/consejos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/constitucion-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/construccion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/consultoria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/consumo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contabilidad",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contabilidad-en-la-nube",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contasimple",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/content-curator",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratacion-estable",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratacion-indefinida",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrataciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato-de-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato-de-arrendamiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato-indefinido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato-temporal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contrato-unico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratos-fijos-discontinuos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratos-indefinidos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratos-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contratos-temporales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/contribuyente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/convenios-de-colaboracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cookies",
+    "destination": "/es/cookies",
+    "permanent": true
+  },
+  {
+    "source": "/tag/coronavirus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/corralito",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/correo-electronico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/costas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cotizacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cotizacion-investigadores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cotizacion-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cotizacion-trabajadores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cotizaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/couta-de-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/covid-19",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/coworking",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/coworking-cartagena",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/coworking-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creacion-de-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creacion-de-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creacion-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crear-una-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crear-una-start-up",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creatividad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crecimiento-economico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creditos-a-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creditos-al-consumo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creditos-para-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creditos-para-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/creditos-para-pymes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/criptomonedas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crisis",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crisis-economica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/crowdfunding",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuadro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuantia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuentas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuentas-anuales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuentas-bancarias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cuotas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/curador-de-contenidos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/curiosidades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/cursos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/custodia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dacion-en-pago",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/datos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/debitoor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaracion-conjunta-divorciados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaracion-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaracion-de-operaciones-con-terceros",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaracion-sobre-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/declaraciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/decreto-ley",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion-irpf",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion-por-alquiler-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion-por-asesoramiento-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion-por-asesoramiento-juridico",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deduccion-por-asesoramiento-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducciones-beneficios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducciones-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducciones-ley-de-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducciones-por-contratar-trabajadores-discapacitados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deducibilidad-vehiculos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deductions",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deductions-2014",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/default-interest",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/departamento-financiero",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/departamento-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/departamento-juridico",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/departamento-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/derecho-a-la-intimidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/derechos-consumidor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/derechos-de-los-trabajadores-temporales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desahucio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desarrollo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desarrollo-industrial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/descansos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desempleados-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desempleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desgravacion-dietas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desgravacion-gastos-de-transporte",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desgravar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desgravar-irpf",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desheredar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despido-disciplinario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despido-improcedente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despido-procedente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despidos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/despidos-pactados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/desventajas-del-teletrabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deuda-hipotecaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deudas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/deudas-comunidades-autonomas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/devolucion-de-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/devoluciones-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dgt",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dia-de-la-madre",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dietas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/diferenciarse-competencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/digitales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/digitalizacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/direccion-de-trafico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/direccion-general-de-tributos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/directiva-europea",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/disabled",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/discuros-del-ascensor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dividendos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dni",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dni-e",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/documentacion-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/documentos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/doing-business",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/donde-buscar-trabajo-estas-navidades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/dos-pensiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/drive-for-work",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/e-administracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/e-commerce",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ecologismo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ecommerce",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/economia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/economia-espanola",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/economia-europea",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/economia-sumergida",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/edad-jubilacion-anticipada-a-que-edad-puedo-jubilarme-anticipadamente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/educacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/efectivo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ejecuciones-hipotecarias-e-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ejecutivos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ejercicios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/el-labradorcico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/electrodomesticos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/elevator-speach",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emigracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleada-de-hogar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleadas-de-hogar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleados-de-hogar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleados-del-hogar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empleo-irregular",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedor",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedor-de-responsabilidad-limitada",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedores-e-irpf",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedores-en-espana",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendedores-murcia",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprender",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprender-en-mi-escuela",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprendimiento",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresa-familiar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-en-la-red",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-espanolas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-estadounidenses",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-fantasma",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-innovadoras",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-mas-grandes-del-mundo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-mas-innovadoras-europa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-y-autonomos-2027",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/empresas-zombis",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/emprese",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/enajenaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/enel",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/enel-lab",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/energia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/enisa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/entrepeneurs",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/entrevistas-de-trabajo-curiosas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/entrevistas-de-trabajo-online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/entrevistas-online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/envejecimiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/equipaje",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/erasmus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/erte",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ertes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/espacio-de-trabajo-en-casa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/espectaculos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/espectaculos-en-vivo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/especulacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/estado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/estafas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/estartupbus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/estimacion-directa-simplificada",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/estudio-mercado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/european-union-law",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/evaluacion-del-estres",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/evasion-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/eventos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/evernote",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/exaccta-tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/exactta-tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/exenciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/existencias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/exito",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/exoneration-vat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/tag/factura-electronica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/factura-telematica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/facturacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/facturas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/facturas-administracion-publica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/facua",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/falso",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/falsos-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/faltas-intermitentes-justificadas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/familia-monoparental",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/familia-numerosa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/familia-numerosa-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/families",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fechas-presentacion-de-la-renta-2024",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fichar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiestas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fijos-discontinuos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/filmijob",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/financiacion",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/financiacion-industria",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/financial-fund-for-aids-to-domestic-trade",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/financiero",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/finanzas-personales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/firmas-con-validez-juridica",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiscal-en",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiscalidad",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiscalidad-ambiental",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fiware",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/floor-clauses",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fondo-de-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/form-347",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/forma-judirica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/formacion",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/formas-juridicas-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/formulario-web-aeat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/foro-de-inversion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraccionamientos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/franquicia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/franquiciado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/franquiciador",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraude",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraude-al-inem",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraude-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraude-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fraude-seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/frc",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fuga-de-cerebros",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/funciones-ejecutivas-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fundacion-botin",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fundacion-everis",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fundacion-principe-de-girona",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/fundaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/funeral",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ganancias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/garantias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-de-desplazamiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-de-viaje",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-deducibles",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-deducibles-sociedades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-notaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gastos-vehiculos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gdpr",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/general-tax-on-hydrocarbons",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gestion-emociones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/go2work",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gobierno",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/golpe-de-calor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/grandes-impuestos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/gravamen",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/habitos-consumo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hacer-negocios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hacienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/happy-socks",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hard-brexit",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/health-cent",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/heineken",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/help",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/herencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/herencias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/herramientas-gestion-pyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hijos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hipoteca",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hipotecas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hipotecas-unilaterales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hitask",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hogares-monomarentales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hogares-monoparentales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/horas-extra",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/horas-extraordinarias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/hosteleria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iajd",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iban",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ibi",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ibi-tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ideas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ideas-creativas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/idi",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/tag/igualdad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iivtnau",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iivtnu",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ilp",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/imagen-de-marca",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impago",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impagos-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/importacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/importation",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-a-extranjeros",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-al-plastico",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-bienes-inmuebles",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-actos-juridicos-documentados",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-donaciones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-donaciones-en",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-la-plusvalia",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-patrimonio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-sucesiones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-sucesiones-en",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-sucesiones-y-donaciones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-transmisiones-patrimoniales-y-actos-juridicos",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-de-transmisiones-patrimoniales-y-actos-juridicos-documentados",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-donaciones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-especial-sobre-la-electricidad",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-municipal-sobre-el-incremento-del-valor-de-los-terrenos-de-naturaleza-urbana",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-consumo",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-incremento-de-valor-de-los-terrenos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-incremento-del-valor-de-los-terrenos-de-naturaleza-urbana",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-patrimonio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-patrimonio-en",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-el-valor-anadido",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-patrimonio",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sobre-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-sucesiones",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuesto-valor-anadido",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuestos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuestos-de-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuestos-medioambientales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/impuestos-por-comunidades-autonomas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/imv",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/incapacidad-permanente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/incentivos-a-la-innovacion-para-empresas",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/tag/incentivos-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/incentivos-fiscales-a-la-contratacion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/income-tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/income-tax-returns",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/indefinido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/indemnizacion-por-despido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/indemnizaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/indemnizaciones-por-despido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/indice-de-referencia-de-prestamos-hipotecarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/industria-creativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/industria-manufacturera",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ine",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inflacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/info",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/info-reactiva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/informacion-economica",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/informe-ipyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ingreso-minimo-vital",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inicitiva-legislativa-popular",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inland-revenue",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inmuebles",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/innovacion",
+    "destination": "/es/servicios/idi-patent-box",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inpact-internacional",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inpact-international",
+    "destination": "/en",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inscripcion-registro-mercantil",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inspeccion-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inspecciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inspecciones-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inspecciones-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/instituto-de-fomento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/instituto-de-fomento-de-la-region-de-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/instituto-fomento-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inteligencia-artificial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inteligencia-emocional",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/intereses",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/intereses-actas-inspeccion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/intereses-de-demora",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/internacional",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/internacionalizacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/internet",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inventario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversion-del-sujeto-pasivo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversion-empresarial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversion-inmobiliaria-extranjera",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversion-sujeto-pasivo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/inversores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/investigacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irpf",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irpf-2016",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irpf-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irpf-divorciados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irpf-y-custodia-compartida",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/irph",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-alquiler-local",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-arrendadores-locales-comerciales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-bailes-de-salon",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-cultural",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-en",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-facturas-abonadas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-flamenco",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-inmobiliarias",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/iva-morosos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-formativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-laboral-de-6-horas",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-laboral-suecia",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornada-reducida",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornadas-gratuitas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jornadas-informativas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jovenes-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jovenes-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jubilacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/jubilacion-anticipada",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/juego",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/juicios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/juridico",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/kaizen",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/kit-digital",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/law-of-spanish-commerce-chambers",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/legal-department",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/legislacion-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-1-2023",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-11-2021",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-122012",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-162013",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-7-2022",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-72012",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-cookies",
+    "destination": "/es/cookies",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-22015",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-apoyo-al-emprendedor",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-arrendamientos-urbanos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-camaras-de-comercio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-costas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-desindexacion-de-la-economia-espanola",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-empleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-del-impuesto-sobre-sociedades",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-general-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-hipotecaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-presupuestos-generales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ley-rehabilitacion-de-viviendas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libertad-de-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libertad-economica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libro-de-actas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libros-de-facturas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libros-de-texto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/libros-texto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/licencia-express",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/licencias-de-apertura",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/lider",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/limitaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/lineas-financiacion-reindus",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/locales-comerciales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/loteria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/lurker",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/macroeconomia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/maletas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/man-in-the-middle",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mancomunada",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/marca-personal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/marketing",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/marketing-verde",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/material-escolar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/maternidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mayores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mecenazgo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medidas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medidas-de-proteccion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medidas-economicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medidas-fomento-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medidas-sociales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/medio-ambiente",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mejor-web-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mejora-empleabilidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mejores-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/menores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mercado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mercado-inmobiliario-espanol",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/metas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/metodo-kaizen",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/metodos-de-planificacion-financiera",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/millenials",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/minijob",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/minijobs",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/mochila-austriaca",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-179",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-196",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-347",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-390",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-583",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-600",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-720",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-720-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-de-informacion",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelo-de-negocio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelos-de-negocio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modelos-fiscal-de-andorra",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modificaciones-impuesto-sobre-sociedades-2015",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/modulos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/monopolio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/montar-empresa-espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/montura-de-gafas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/moratorias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/morosos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/multas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/multinacionales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/murcia-ban",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/murcia-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/murciaban",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/navidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/necesidades-del-emprendedor",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/negocio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/negocios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/network",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/networking",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nicho-de-mercado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/normativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/normativas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/notariado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/notario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/noticaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/notificaciones-electronicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/notificaciones-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/notificaciones-telematicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/novedades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/novedades-fiscales",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/novedades-fiscales-2023",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/novedades-legales",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tag/novedades-renta-2024",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nueva-york",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevas-iniciativas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevas-leyes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevas-medidas-economicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevas-tecnologias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevo-sistema-de-facturacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevos-contratos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/nuevos-modelos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/obligacion-facturacion-hacienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/obra-de-arte",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/obra-y-servicio",
+    "destination": "/es/servicios",
+    "permanent": true
+  },
+  {
+    "source": "/tag/obras",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ocde",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ocupacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ofertas-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ofertas-falsas-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/oficinas",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/tag/oficinas-compartidas",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/tag/okupa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ola-de-calor",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/opciones-de-compra",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/oportunidades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/optimizar-el-tiempo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/orden",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/orden-ministerial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pago-unico-desempleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pago-unico-paro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pagos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pagos-fraccionados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pandemia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/parados-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/paro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/parque-empresarial-porto-de-molle",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/participaciones-preferentes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/patrimoniales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/patrimonio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pension",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pension-de-incapacidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pension-de-jubilacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pension-de-viudedad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pensiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pequena-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/perfiles-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/permisos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/personal-de-reparto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/personas-fisicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/phishing",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/phising",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pin-24-horas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-anual-de-control-tributario-y-adueanero",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-igualdad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-marketing",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-negocio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-pago-a-proveedores-deudas-ayuntamientos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-pagos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-de-pensiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-estatal-de-vivienda-2018-2021",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-estrategico-de-la-region-de-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-industrial-de-la-region-de-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-pive-2",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plan-prepara",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/planeacion-financiera",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/tag/planificacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plataformas-de-reparto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plazos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plusvalia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plusvalia-municipal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/plusvalias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pocket",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pompeii",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/portamerica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/posesiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/practicas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/precariedad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/precios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prejubilacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/premios-innovadores-menores-de-35",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/preparar-la-maleta",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prescripcion-de-deudas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/presion-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestacion-por-desempleo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos-hipotecarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos-hipotecarios-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos-para-el-comercio-minorista",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos-participativos-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prestamos-particulares",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/presupuestos-generales-del-estado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/privacy-of-the-communications",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/tag/problemas-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/problemas-arrendamiento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/procedimiento-administrativo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/procedimientos-tributarios",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/procuradores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/productividad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/productos-sanitarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/programa-acelerador-fiware",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/programa-talento-solidario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prolongacion-vida-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/promocionar-tu-empresa-sin-internet",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/promotores-inmobiliarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/prorroga",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proteccion-datos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proteccion-de-datos",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proveedores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proyecto-columbus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proyecto-inicia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/proyectos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/pymes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/que-es-enisa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/racionalizacion-horarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reactiva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto-ley",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto-ley-19-2020",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto-ley-28-2020",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto-ley-35-2020",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/real-decreto-ley-52013",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/rebaja-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/recaudacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reclamacion-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reclamaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reclamar-multas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/recuperar-dinero",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/red-de-asesorias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/red-de-asesorias-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/red-innova",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/redeme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/redes-sociales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reduccion-de-impuestos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reducciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reducciones-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reducciones-autonomos-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reducciones-de-alquiler",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reemprendimiento",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reforma-de-las-plusvalias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reforma-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reforma-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reforma-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reformas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/regalos-para-empresarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/regimen-de-caja-del-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/regimen-de-caja-en-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/regimen-de-devolucion-mensual",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/regimen-especial-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/region-de-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/region-of-murcia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro-contable-lite",
+    "destination": "/es/servicios/contable",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro-horario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro-jornada-de-trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro-mercantil",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/registro-publico-concursal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reindus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reindustrializacion-y-fomento-de-la-competitividad-industrial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reino-unido",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reino-unido-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reinversion-de-beneficios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/reinversion-de-ganancias-por-transmision-de-vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/remuneracion-administradores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2013",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2016",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2017",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2018",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2020",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2021",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/renta-2025",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/rental-activity",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/repsol",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/request-of-days-off-to-receive-notifications-from-the-tax-office",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/requisitos-de-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/residuos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/responsabilidad",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/responsabilidad-social-corporativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/responsabilidad-social-empresarial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/responsabilidad-tributaria",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/restauracion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/retencion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/retenciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/retentions",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/retraso-verifactu",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/retribucion-flexible",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/revenues-from-economic-activities",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/revision",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/rgpd",
+    "destination": "/es/privacidad",
+    "permanent": true
+  },
+  {
+    "source": "/tag/riders",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/salario",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/salario-minimo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/salarios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/salarios-de-los-directivos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sanciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sanciones-disciplnarias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/secreto-de-las-telecomunicaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sector-electrico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sectores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sectores-empresariales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sede-electronica",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sede-electronica-agencia-tributaria",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sede-electronica-en",
+    "destination": "/es/la-firma/despachos",
+    "permanent": true
+  },
+  {
+    "source": "/tag/seguridad-social",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/seguridad-social-jovenes",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/seguro-de-impago",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sentencia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sentencia-458-2021",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sentencia-ibi",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/separacion-de-poderes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/separacion-matrimonial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sepe",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/serveco",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sgr",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sii",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/siniestralidad-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sistema-inmediato-de-informacion-en-materia-de-iva",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sistema-red",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/smi",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedad-limitada",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedades",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedades-cooperativas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedades-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedades-fantasma",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sociedades-laborales",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/soft-brexit",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/software-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/solicitud-del-borrador",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/solidaria",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/spain-tax-office",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/spanish-tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/start-up",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/start-ups",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/startup-espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/startupbus",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/startups",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/steve-jobs",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sturtup",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subida",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subida-de-impuestos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subida-del-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subsides",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subsidio",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subvenciones",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subvenciones-carm",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subvenciones-empleo-juvenil",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/subvenciones-empresariales",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sucesion-de-la-empresa-familiar",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sucesiones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sueldo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sueldo-neto",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/sueldos-administradores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/suelos-contaminados",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/suministro-de-informacion",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/suministro-inmediato-de-informacion",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/system-of-immediate-exchange-of-information-in-vat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tags-ley-72012",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/target",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tarifa-plana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tarifa-plana-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tarifas-electricas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tarjeta",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tasa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tasa-google",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tasas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tasas-judiciales",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax-consultancy",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax-devolution",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax-over-real-estate-goods",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax-reform",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tax-reform-spain",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/taxation",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/taxation-spain",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/taxes",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tear",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/technology-review",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tecnologia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/teletrabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tendencias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tendencias-de-mercado",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/terreno",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/testamento",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tic",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tiempo-parcial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tipos-de-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tipos-de-iva-medicinas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tjue",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajador",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajadores",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajadores-3-0",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajadores-autonomos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajadores-hibridos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajar-de-madrugada",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajar-en-la-union-europea",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-a-distancia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-a-tiempo-parcial",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-desde-casa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-en-casa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-en-el-extranjero",
+    "destination": "/es/internacional",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-mas-duro-del-mundo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-ong",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-por-cuenta-propia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-temporal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajo-tercer-sector",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/trabajos-mejor-pagados-en-espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tramites",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/transformacion-digital",
+    "destination": "/es/servicios/formacion",
+    "permanent": true
+  },
+  {
+    "source": "/tag/transicion-digital-pyme",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/transmisiones-inmobiliarias",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal-constitucional",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal-de-justicia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal-justicia-de-la-union-europea",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal-medico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tribunal-supremo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion-business-angels",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion-maletines",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion-primas-a-terceros",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributacion-regalos-de-boda",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributar",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tributos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ts",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/tugestionline",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/turismo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ue",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ugt",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/undemur",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/unemployed",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/union-europea",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/united-kingdom",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/urbanizacion",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vacaciones",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vat-en",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vat-entrepeneurs",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vat-income-tax-spain",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vat-lessors",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vehiculo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vehiculos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/venta-online",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ventajas-del-teletrabajo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ventajas-fiscales-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ventajas-montar-empresa-espana",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ventajas-trabajar-en-casa",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/ventas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/verifactu-2027",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/verifica-aeat",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/verify",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/via-telematica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/viaje-de-negocios",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vida-laboral",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/tag/videos",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/videovigilancia",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vivero-empresas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vivienda",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vivienda-turistica",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vivienda-y-derecho-europeo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/viviendas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/viviendas-turisticas",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/viviendas-uso-turistico",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/vuelta-al-cole",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/wayra",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/workaholic",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/xero",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/yendo",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/youtubers",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/yuzz",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/tag/zinc-shower-2013",
+    "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/taxation-on-other-financial-products-after-tax-reform-for-2015",
+    "destination": "/es/servicios/financiero",
+    "permanent": true
+  },
+  {
+    "source": "/taxation-rental-2015-tax-reform",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/termina-la-campana-de-la-renta-2013",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/the-supreme-court-ts-clarifies-certain-legal-controversies-about-floor-clauses",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tipos-de-iva-de-productos-sanitarios",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tipos-reducidos-de-iva",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/toda-la-informacion-que-necesitas-sobre-las-ayudas-al-alquiler-2016",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/todas-las-novedades-de-la-campana-de-la-renta-2021",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/todos-los-empresarios-son-emprendedores",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/top-10-legalnykh-bukmekerskikh-kontor-rossii-2026-goda-s",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tramites-para-constituir-una-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-curiosa-aportaciones-huelguistas",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-la-nulidad-de-las-clausulas-suelo",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-las-ayudas-para-adquisicion-de-libros-de-texto",
+    "destination": "/es/subvenciones",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-las-comunidades-de-bienes-a-partir-de-2016-como-sera",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-las-empresas-de-reducida-dimension-edr",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-los-salarios-en-la-renta",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-de-particulares-adscritos-a-programas-de-urbanizacion-de-terrenos",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-en-irpf-de-la-venta-de-ropa-de-propiedad-del-contribuyente-adquirida-en-los-anos-ochenta-y-noventa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-en-iva-de-los-servicios-de-asistencia-gratuita-de-abogados-y-procuradores",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-iva-bailes-de-salon",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributacion-regalos-boda",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributos-alquiler-2015-tras-reforma-fiscal",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/tributos-y-separacion-de-poderes",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/v-2026-godu-v-rossii-predstavleny-10-luchshikh-legalnykh",
+    "destination": "/es/servicios/juridico",
+    "permanent": true
+  },
+  {
+    "source": "/vacaciones-decido-yo-las-fechas-o-le-corresponde-a-la-empresa",
+    "destination": "/es/la-firma",
+    "permanent": true
+  },
+  {
+    "source": "/valor-a-efectos-fiscales-de-las-facturas-en-formato-pdf-remitidas-a-traves-de-e-mail-sin-firma-digital",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  },
+  {
+    "source": "/variaciones-fiscales-y-laborales-para-2025",
+    "destination": "/es/servicios/laboral",
+    "permanent": true
+  },
+  {
+    "source": "/video-vigilancia-laboral-nueva-doctrina-del-tribunal-constitucional",
+    "destination": "/es/punto-pae",
+    "permanent": true
+  },
+  {
+    "source": "/zinc-shower-2013-el-meeting-show-de-la-industria-creativa",
+    "destination": "/es/servicios/fiscal",
+    "permanent": true
+  }
+]

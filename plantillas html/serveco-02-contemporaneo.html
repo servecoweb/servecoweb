@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SERVECO — Asesores desde 1977</title>
+<meta name="description" content="Serveco Asesores. Asesoramiento jurídico, fiscal, laboral, contable y financiero para empresas y autónomos en la Región de Murcia desde 1977.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 02 — "CONTEMPORÁNEO / SEÑAL"
+     Cambiar --signal por el azul exacto del logo si se prefiere.
+     ========================================================= */
+  :root{
+    --black:#0b0e12;
+    --white:#f9f8f4;
+    --signal:#1f5fc4;      /* azul señal */
+    --signal-soft:#7ea8ea;
+    --gray:#84878c;
+    --line:rgba(11,14,18,.14);
+    --line-inv:rgba(249,248,244,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--white);color:var(--black);font-family:'Space Grotesk',Arial,sans-serif;font-size:16px;line-height:1.5;overflow-x:hidden;cursor:none}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'Space Mono',monospace}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 40px}
+  ::selection{background:var(--signal);color:var(--white)}
+
+  .cursor{position:fixed;top:0;left:0;width:16px;height:16px;border-radius:50%;background:var(--black);pointer-events:none;z-index:9999;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
+  .cursor.big{width:64px;height:64px;background:var(--white)}
+  @media(hover:none),(pointer:coarse){.cursor{display:none}body{cursor:auto}}
+
+  .grid-lines{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+    background-image:repeating-linear-gradient(to right,rgba(11,14,18,.055) 0,rgba(11,14,18,.055) 1px,transparent 1px,transparent calc(100%/12))}
+
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:300;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:var(--white);border-bottom:2px solid var(--black)}
+  .topbar .logo{font-weight:700;font-size:21px;letter-spacing:-.02em}
+  .topbar .logo span{color:var(--signal)}
+  .menu-btn{display:flex;align-items:center;gap:14px;background:none;border:none;cursor:none;font-family:'Space Mono';font-size:12px;letter-spacing:2px;text-transform:uppercase}
+  .menu-btn .bars{width:28px;height:14px;position:relative}
+  .menu-btn .bars span{position:absolute;left:0;width:100%;height:2px;background:var(--black);transition:.25s}
+  .menu-btn .bars span:nth-child(1){top:0}
+  .menu-btn .bars span:nth-child(2){top:12px}
+  .menu-open .menu-btn .bars span:nth-child(1){top:6px;transform:rotate(45deg)}
+  .menu-open .menu-btn .bars span:nth-child(2){top:6px;transform:rotate(-45deg)}
+
+  .overlay{position:fixed;inset:0;z-index:250;background:var(--black);color:var(--white);transform:translateY(-100%);transition:transform .55s cubic-bezier(.77,0,.18,1);display:flex;flex-direction:column;justify-content:space-between;padding:120px 40px 50px}
+  .menu-open .overlay{transform:translateY(0)}
+  .overlay-links{display:flex;flex-direction:column}
+  .overlay-links a{font-size:clamp(32px,6vw,74px);font-weight:700;padding:8px 0;border-bottom:1px solid var(--line-inv);display:flex;justify-content:space-between;align-items:center;letter-spacing:-.02em;transition:.3s}
+  .overlay-links a:hover{padding-left:24px;color:var(--signal-soft)}
+  .overlay-links a .idx{font-family:'Space Mono';font-size:13px;color:var(--gray)}
+  .overlay-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-family:'Space Mono';font-size:13px;color:var(--gray)}
+  .overlay-foot a{color:var(--white)}
+  .overlay-foot a:hover{color:var(--signal-soft)}
+
+  .marquee{border-top:2px solid var(--black);border-bottom:2px solid var(--black);overflow:hidden;white-space:nowrap;padding:15px 0;background:var(--white)}
+  .marquee-track{display:inline-block;animation:sl 26s linear infinite}
+  .marquee span{font-family:'Space Mono';font-size:13.5px;letter-spacing:2px;text-transform:uppercase;padding:0 24px}
+  .marquee span:nth-child(even){color:var(--signal)}
+  @keyframes sl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+  [data-reveal].in{opacity:1;transform:translateY(0)}
+
+  .hero{position:relative;padding:186px 0 66px;overflow:hidden}
+  .hero-watermark{position:absolute;top:-5vw;right:-4vw;font-weight:700;font-size:clamp(200px,34vw,470px);color:rgba(11,14,18,.05);line-height:1;z-index:0;user-select:none}
+  .hero-tag{font-family:'Space Mono';font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--signal);margin-bottom:26px;position:relative;z-index:2}
+  .hero h1{position:relative;z-index:2;font-size:clamp(42px,7.6vw,102px);font-weight:700;line-height:.97;letter-spacing:-.03em;max-width:1120px}
+  .hero h1 .out{-webkit-text-stroke:2px var(--black);color:var(--white)}
+  .hero-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:64px;padding-top:38px;border-top:2px solid var(--black);flex-wrap:wrap}
+  .hero-lead{max-width:440px;font-size:16.5px;color:#3a3d42}
+  .hero-cta{display:inline-flex;align-items:center;gap:14px;font-family:'Space Mono';font-size:13px;letter-spacing:1.5px;text-transform:uppercase;padding:16px 28px;background:var(--black);color:var(--white);border:2px solid var(--black);transition:.25s}
+  .hero-cta:hover{background:var(--white);color:var(--black)}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:54px}
+  .hero-stats div strong{display:block;font-size:30px;font-weight:700}
+  .hero-stats div span{font-family:'Space Mono';font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gray)}
+
+  .about{background:var(--black);color:var(--white);padding:116px 0}
+  .about .hero-tag{color:var(--signal-soft)}
+  .about h2{font-size:clamp(28px,4.6vw,54px);font-weight:700;line-height:1.12;letter-spacing:-.02em;max-width:1000px}
+  .about h2 b{color:var(--signal-soft)}
+  .spec{margin-top:74px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-inv);border-left:1px solid var(--line-inv)}
+  .spec div{border-right:1px solid var(--line-inv);border-bottom:1px solid var(--line-inv);padding:28px 24px}
+  .spec strong{display:block;font-size:42px;font-weight:700}
+  .spec span{font-family:'Space Mono';font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--gray)}
+
+  .services{padding:116px 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:54px;flex-wrap:wrap;gap:20px;border-bottom:2px solid var(--black);padding-bottom:24px}
+  .sec-head h2{font-size:clamp(28px,4.4vw,50px);font-weight:700;letter-spacing:-.02em}
+  .svc-row{display:flex;align-items:center;gap:32px;padding:30px 10px;border-bottom:1px solid var(--line);transition:.3s;cursor:none;position:relative}
+  .svc-row:hover{background:var(--black);color:var(--white);padding-left:26px}
+  .svc-idx{font-family:'Space Mono';font-size:13.5px;color:var(--signal);width:40px;flex-shrink:0}
+  .svc-row:hover .svc-idx{color:var(--signal-soft)}
+  .svc-title{font-size:clamp(20px,3vw,36px);font-weight:600;flex:1;letter-spacing:-.01em}
+  .svc-desc{max-width:340px;font-size:14px;color:var(--gray);max-height:0;overflow:hidden;opacity:0;transition:.35s}
+  .svc-row:hover .svc-desc{max-height:120px;opacity:1}
+  .svc-arrow{font-size:24px;transition:transform .3s}
+  .svc-row:hover .svc-arrow{transform:rotate(45deg)}
+
+  .tools{background:var(--signal);color:var(--white);padding:140px 0;clip-path:polygon(0 5vw,100% 0,100% calc(100% - 5vw),0 100%);margin:56px 0}
+  .tools .sec-head{border-color:rgba(249,248,244,.45)}
+  .tools .sec-head h2,.tools .sec-head span{color:var(--white)}
+  .tool-strip{display:flex;flex-wrap:wrap}
+  .tool-item{flex:1;min-width:230px;padding:18px 30px 0 0;border-right:1px solid rgba(249,248,244,.3)}
+  .tool-item:last-child{border-right:none}
+  .tool-item .num{font-family:'Space Mono';font-size:13px}
+  .tool-item h3{font-size:clamp(24px,3.2vw,38px);font-weight:700;margin:16px 0 12px;letter-spacing:-.02em}
+  .tool-item p{max-width:270px;font-size:14.5px;color:rgba(249,248,244,.78)}
+
+  .coverage{padding:96px 0 126px}
+  .cloud{font-size:clamp(20px,3.8vw,48px);font-weight:600;line-height:1.28;letter-spacing:-.01em;max-width:1180px}
+  .cloud .w:hover{color:var(--signal)}
+  .cloud .dim{color:var(--gray);font-weight:500}
+  .cloud .sep{color:var(--gray);font-weight:400;padding:0 4px}
+
+  .cta{background:var(--black);color:var(--white);padding:140px 0 100px;position:relative;overflow:hidden}
+  .cta .hero-tag{color:var(--signal-soft)}
+  .cta h2{font-size:clamp(50px,10vw,166px);font-weight:700;letter-spacing:-.03em;line-height:.92;-webkit-text-stroke:2px var(--white);color:transparent;transition:color .4s;cursor:none}
+  .cta h2:hover{color:var(--white)}
+  .cta-links{display:flex;gap:56px;flex-wrap:wrap;margin-top:66px;padding-top:38px;border-top:1px solid var(--line-inv)}
+  .cta-links a{font-family:'Space Mono';font-size:17px;background-image:linear-gradient(var(--signal-soft),var(--signal-soft));background-repeat:no-repeat;background-size:0 2px;background-position:0 100%;transition:background-size .3s;padding-bottom:8px}
+  .cta-links a:hover{background-size:100% 2px}
+
+  footer{background:var(--white)}
+  .foot-cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:56px 0 38px;border-bottom:2px solid var(--black)}
+  .foot-cols h4{font-family:'Space Mono';font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-bottom:16px}
+  .foot-cols p{max-width:290px;font-size:14px;color:#3a3d42}
+  .foot-cols ul{list-style:none}
+  .foot-cols li{margin-bottom:9px;font-size:14.5px}
+  .foot-cols li a:hover{color:var(--signal)}
+  .foot-bottom{display:flex;justify-content:space-between;padding:20px 0;font-family:'Space Mono';font-size:11px;color:var(--gray);flex-wrap:wrap;gap:8px}
+
+  @media(max-width:900px){
+    .wrap{padding:0 22px}
+    .topbar{padding:0 22px}
+    .hero{padding:146px 0 46px}
+    .hero-bottom{flex-direction:column;align-items:flex-start;gap:28px}
+    .spec{grid-template-columns:1fr 1fr}
+    .svc-row{gap:16px}
+    .svc-desc{display:none}
+    .tool-strip{flex-direction:column}
+    .tool-item{border-right:none;border-bottom:1px solid rgba(249,248,244,.3);padding:22px 0}
+    .foot-cols{grid-template-columns:1fr}
+    .overlay{padding:100px 22px 40px}
+    .tools{clip-path:polygon(0 4vw,100% 0,100% calc(100% - 4vw),0 100%)}
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="grid-lines"></div>
+
+<header class="topbar">
+  <a href="#inicio" class="logo">SERVECO<span>·</span>ASESORES</a>
+  <button class="menu-btn" id="menuBtn"><span>Menú</span><span class="bars"><span></span><span></span></span></button>
+</header>
+
+<nav class="overlay" id="overlay">
+  <div class="overlay-links">
+    <a href="#inicio" data-close><span>Inicio</span><span class="idx mono">01</span></a>
+    <a href="#empresa" data-close><span>Quiénes somos</span><span class="idx mono">02</span></a>
+    <a href="#servicios" data-close><span>Servicios</span><span class="idx mono">03</span></a>
+    <a href="#herramientas" data-close><span>Herramientas</span><span class="idx mono">04</span></a>
+    <a href="#despachos" data-close><span>Despachos</span><span class="idx mono">05</span></a>
+    <a href="#contacto" data-close><span>Contacto</span><span class="idx mono">06</span></a>
+  </div>
+  <div class="overlay-foot">
+    <a href="tel:+34968909020">968 90 90 20</a>
+    <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+    <span>Murcia · Yecla · Jumilla · Lorca · Balsicas · Benidorm</span>
+  </div>
+</nav>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>ASESORÍA INTEGRAL DE EMPRESAS</span><span>DESDE 1977</span><span>PUNTO PAE</span><span>I+D+i · PATENT BOX</span><span>REGIÓN DE MURCIA</span><span>ASESORÍA INTEGRAL DE EMPRESAS</span><span>DESDE 1977</span><span>PUNTO PAE</span><span>I+D+i · PATENT BOX</span><span>REGIÓN DE MURCIA</span>
+  </div>
+</div>
+
+<section class="hero" id="inicio">
+  <div class="hero-watermark">77</div>
+  <div class="wrap">
+    <div class="hero-tag mono">Asesores jurídicos y financieros — Región de Murcia</div>
+    <h1 data-reveal>Su empresa no<br>improvisa. <span class="out">Su asesoría</span><br>tampoco.</h1>
+    <div class="hero-bottom">
+      <p class="hero-lead">Fiscal, laboral, contable, jurídico, auditoría e I+D+i. Un equipo multidisciplinar de 30 profesionales trabajando sobre el mismo expediente, no seis proveedores distintos.</p>
+      <a href="#contacto" class="hero-cta">Hablemos →</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>1977</strong><span>Fundación</span></div>
+      <div><strong>30+</strong><span>Profesionales</span></div>
+      <div><strong>6</strong><span>Despachos</span></div>
+      <div><strong>8</strong><span>Áreas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="empresa">
+  <div class="wrap">
+    <div class="hero-tag mono">02 — Quiénes somos</div>
+    <h2 data-reveal>Fundados en 1977. Casi cincuenta años después, seguimos ofreciendo <b>asesoramiento integral en todas las facetas</b> de su actividad empresarial.</h2>
+    <div class="spec">
+      <div><strong>1977</strong><span>Fundación en Murcia</span></div>
+      <div><strong>PAE</strong><span>Punto de atención al emprendedor</span></div>
+      <div><strong>A.D.I</strong><span>Herramienta propia</span></div>
+      <div><strong>100%</strong><span>Cursos bonificables</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Lo que<br>hacemos</h2>
+      <span class="mono" style="font-size:12px;letter-spacing:1.5px;color:var(--gray);text-transform:uppercase">03 — Áreas de servicio</span>
+    </div>
+    <div class="svc-row" data-reveal><div class="svc-idx">01</div><div class="svc-title">Servicios jurídicos</div><div class="svc-desc">Mercantil, civil, contratación y defensa ante los tribunales.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">02</div><div class="svc-title">Asesoramiento fiscal</div><div class="svc-desc">Planificación, sociedades, IRPF, IVA y no residentes.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">03</div><div class="svc-title">Servicios laborales</div><div class="svc-desc">Nóminas, seguros sociales, contratación e inspecciones.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">04</div><div class="svc-title">Servicios contables</div><div class="svc-desc">Contabilidad, cuentas anuales y cierre fiscal.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">05</div><div class="svc-title">Servicios financieros</div><div class="svc-desc">Análisis, financiación, viabilidad y cuadros de mando.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">06</div><div class="svc-title">Auditoría</div><div class="svc-desc">Auditoría de cuentas y revisión limitada.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">07</div><div class="svc-title">I+D+i y Patent Box</div><div class="svc-desc">Deducciones fiscales con análisis individualizado.</div><div class="svc-arrow">↗</div></div>
+    <div class="svc-row" data-reveal><div class="svc-idx">08</div><div class="svc-title">Formación y subvenciones</div><div class="svc-desc">Cursos bonificables y buscador de ayudas.</div><div class="svc-arrow">↗</div></div>
+  </div>
+</section>
+
+<section class="tools" id="herramientas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Herramientas<br>propias</h2>
+      <span class="mono" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase">04 — Sistemas A.D.</span>
+    </div>
+    <div class="tool-strip">
+      <div class="tool-item" data-reveal><div class="num mono">A.D.I</div><h3>Intermensual</h3><p>Diagnóstico en tiempo real del estado de salud de su empresa, mes a mes.</p></div>
+      <div class="tool-item" data-reveal><div class="num mono">A.D.P</div><h3>Presupuestario</h3><p>Proyecciones a uno o varios años: financiación, inversiones y tendencia del negocio.</p></div>
+      <div class="tool-item" data-reveal><div class="num mono">A.D.A</div><h3>Analítico</h3><p>Costes de producción, precios de venta, existencias y presupuestos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="coverage" id="despachos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Dónde<br>estamos</h2>
+      <span class="mono" style="font-size:12px;letter-spacing:1.5px;color:var(--gray);text-transform:uppercase">05 — Seis despachos</span>
+    </div>
+    <p class="cloud">
+      <span class="w">Murcia</span><span class="sep">·</span> <span class="w">Yecla</span><span class="sep">·</span> <span class="w">Jumilla</span><span class="sep">·</span> <span class="w">Lorca</span><span class="sep">·</span> <span class="w">Balsicas</span> <span class="dim">y</span> <span class="w">Benidorm</span><span class="dim">. Atención presencial en toda la Región de Murcia y la costa de Alicante, con equipo propio en cada sede.</span>
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="hero-tag mono">06 — Contacto</div>
+    <h2 data-reveal>Hablemos</h2>
+    <div class="cta-links">
+      <a href="tel:+34968909020">968 90 90 20</a>
+      <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>SERVECO ASESORES</span><span>MURCIA</span><span>YECLA</span><span>JUMILLA</span><span>LORCA</span><span>BALSICAS</span><span>BENIDORM</span><span>SERVECO ASESORES</span><span>MURCIA</span><span>YECLA</span><span>JUMILLA</span><span>LORCA</span><span>BALSICAS</span><span>BENIDORM</span>
+  </div>
+</div>
+
+<footer id="contacto">
+  <div class="wrap foot-cols">
+    <div>
+      <h4>Serveco Asesores</h4>
+      <p>Asesoría integral de empresas fundada en 1977. Economistas, abogados, ingenieros y técnicos superiores al servicio de empresas y autónomos.</p>
+    </div>
+    <div>
+      <h4>Índice</h4>
+      <ul>
+        <li><a href="#empresa">Quiénes somos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#herramientas">Herramientas</a></li>
+        <li><a href="#despachos">Despachos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+        <li><a href="#">Canal de denuncias</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Serveco Asesores S.L.P.</span>
+    <span>Propuesta 02 · Contemporáneo / Señal</span>
+  </div>
+</footer>
+
+<script>
+  const cursor=document.getElementById('cursor');
+  window.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+  document.querySelectorAll('a,button,.svc-row').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cursor.classList.add('big'));
+    el.addEventListener('mouseleave',()=>cursor.classList.remove('big'));
+  });
+  document.getElementById('menuBtn').addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+  document.querySelectorAll('[data-close]').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.15});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

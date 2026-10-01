@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco — Asesores de empresa en la Región de Murcia desde 1977</title>
+<meta name="description" content="Serveco. Asesoría integral de empresas fundada en 1977. Seis despachos en la Región de Murcia y la costa de Alicante. Fiscal, jurídico, laboral, contable, financiero y auditoría.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Azeret+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 11 — "TERRITORIO"
+     Referencia: tresmarescapital.com
+       (Dgrees · Awwwards Site of the Day 12/06/2026, 7.25
+        + Developer Award 7.36 · firma española de inversión
+        alternativa participada por Banco Santander)
+
+     Lo que se toma prestado:
+       · DOS TINTAS y nada más. Tresmares usa #D81413 y blanco.
+         Aquí: --tinta y blanco. Todos los grises son la tinta
+         a baja opacidad. Cambiar --tinta = cambiar la web entera.
+       · Un accidente geográfico como eje de la identidad
+         (allí el Pico Tres Mares; aquí el territorio de las
+         seis sedes, en curvas de nivel SVG).
+       · Sección de servicios animada al hacer scroll.
+       · Trazo SVG dibujándose con el scroll.
+     ========================================================= */
+  :root{
+    --tinta:#be1622;            /* ← única tinta. Sustituir por el hex corporativo */
+    --ink:#1a0b0d;              /* negro derivado de la tinta */
+    --ink-60:rgba(26,11,13,.6);
+    --ink-35:rgba(26,11,13,.35);
+    --ink-15:rgba(26,11,13,.15);
+    --ink-07:rgba(26,11,13,.07);
+    --paper:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:'Familjen Grotesk',system-ui,sans-serif;font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-weight:600;letter-spacing:-.04em;line-height:.98}
+  .mono{font-family:'Azeret Mono',monospace}
+  ::selection{background:var(--tinta);color:#fff}
+  .wrap{max-width:1300px;margin:0 auto;padding:0 46px}
+  .lbl{font-family:'Azeret Mono';font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--tinta)}
+
+  /* ---------- CABECERA ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:22px 46px;transition:.3s}
+  header.solid{background:var(--paper);border-bottom:1px solid var(--ink-15);padding-top:14px;padding-bottom:14px}
+  .logo strong{font-size:22px;font-weight:700;letter-spacing:-.03em}
+  .logo em{font-style:normal;color:var(--tinta)}
+  nav.n{display:flex;gap:26px}
+  nav.n a{font-size:14.5px;font-weight:500;color:var(--ink-60);transition:color .2s}
+  nav.n a:hover{color:var(--tinta)}
+  .call{font-family:'Azeret Mono';font-size:12px;background:var(--tinta);color:#fff;padding:11px 20px;transition:.2s}
+  .call:hover{background:var(--ink)}
+  .burger{display:none;border:1px solid var(--ink-15);background:none;font-family:'Azeret Mono';font-size:11px;padding:9px 13px;cursor:pointer}
+
+  /* ---------- HERO ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;padding:132px 0 60px;position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center;width:100%}
+  .hero h1{font-size:clamp(44px,7.4vw,120px);letter-spacing:-.055em}
+  .hero h1 em{font-style:normal;color:var(--tinta)}
+  .hero .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:34px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--ink-15)}
+  .hero .meta p{max-width:38ch;color:var(--ink-60);font-size:16.5px}
+  .hero .meta .yr{font-size:clamp(46px,6.2vw,100px);font-weight:700;letter-spacing:-.06em;color:var(--tinta);line-height:.8}
+  .hero .meta .yr span{display:block;font-family:'Azeret Mono';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--ink-35);margin-top:12px;font-weight:400}
+
+  /* ---------- MAPA DE LA REGIÓN ---------- */
+  .mapa{width:100%;display:block;overflow:visible}
+  .mapa .region{fill:rgba(190,22,34,.045);stroke:var(--tinta);stroke-width:2.2;stroke-linejoin:round;fill-rule:evenodd}
+  .mapa .draw{stroke-dasharray:4000;stroke-dashoffset:4000;animation:draw 3.1s cubic-bezier(.35,0,.15,1) forwards .25s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .mapa .fade{opacity:0;animation:fade .8s ease forwards}
+  @keyframes fade{to{opacity:1}}
+  .pin{cursor:pointer}
+  .pin circle.halo{fill:var(--tinta);opacity:0;transition:.24s}
+  .pin circle.p{fill:var(--paper);stroke:var(--tinta);stroke-width:2.6;transition:.24s}
+  .pin text{font-family:'Azeret Mono';font-size:13px;fill:var(--ink-60);letter-spacing:.8px;transition:.24s}
+  .pin:hover circle.p,.pin.on circle.p{fill:var(--tinta)}
+  .pin:hover circle.halo,.pin.on circle.halo{opacity:.13}
+  .pin:hover text,.pin.on text{fill:var(--tinta)}
+
+  /* ---------- SECCIONES ---------- */
+  section{padding:120px 0;border-top:1px solid var(--ink-15)}
+  .head{display:grid;grid-template-columns:170px 1fr;gap:40px;margin-bottom:56px;align-items:start}
+  .head h2{font-size:clamp(30px,5vw,64px)}
+  .head h2 em{font-style:normal;color:var(--tinta)}
+
+  [data-r]{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+  [data-r].in{opacity:1;transform:none}
+
+  /* firma */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .cols p{color:var(--ink-60);margin-bottom:18px;max-width:52ch}
+  .cols p b{color:var(--ink);font-weight:600}
+  .figs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink-15);margin-top:60px}
+  .figs div{padding:28px 22px 28px 0;border-right:1px solid var(--ink-07)}
+  .figs div:last-child{border-right:none}
+  .figs strong{display:block;font-size:46px;font-weight:700;letter-spacing:-.05em;line-height:1;color:var(--tinta)}
+  .figs span{font-family:'Azeret Mono';font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-35);margin-top:8px;display:block}
+
+  /* servicios animados */
+  .svc{border-top:1px solid var(--ink-15)}
+  .s{display:grid;grid-template-columns:56px 1fr 1fr;gap:26px;align-items:center;padding:34px 0;border-bottom:1px solid var(--ink-07);position:relative;overflow:hidden}
+  .s::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--tinta);transition:width .5s}
+  .s.in::after{width:100%}
+  .s .n{font-family:'Azeret Mono';font-size:11.5px;color:var(--tinta)}
+  .s h3{font-size:clamp(24px,4vw,46px);letter-spacing:-.045em}
+  .s p{color:var(--ink-60);font-size:15.5px;max-width:42ch}
+  .s:hover h3{color:var(--tinta)}
+
+  /* territorio */
+  .terr{display:grid;grid-template-columns:1fr minmax(220px,300px);gap:52px;align-items:start}
+  .terr-list{display:flex;flex-direction:column;border-top:1px solid var(--ink-15)}
+  .terr-list button{display:flex;justify-content:space-between;align-items:baseline;gap:16px;width:100%;text-align:left;font-family:inherit;border:none;border-bottom:1px solid var(--ink-07);background:none;padding:18px 0;cursor:pointer;transition:.18s;color:var(--ink-60)}
+  .terr-list button:hover{color:var(--tinta)}
+  .terr-list button.on{color:var(--tinta)}
+  .terr-list button strong{font-size:22px;font-weight:600;letter-spacing:-.03em}
+  .terr-list button span{font-family:'Azeret Mono';font-size:10.5px;letter-spacing:.8px;text-transform:uppercase}
+  .terr-osm{border:1px solid var(--ink-15);background:var(--ink-07);aspect-ratio:4/3;overflow:hidden;width:100%;max-width:300px}
+  .terr-osm iframe{width:100%;height:100%;border:0;display:block}
+  .terr-info{margin-top:22px}
+  .terr-info .lbl{margin-bottom:10px;display:block}
+  .terr-info h3{font-size:clamp(28px,3.6vw,44px);margin-bottom:10px}
+  .terr-info .addr{color:var(--ink-60);margin-bottom:6px}
+  .terr-info .tel{font-family:'Azeret Mono';font-size:15px;color:var(--tinta)}
+
+  /* herramientas */
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink-15)}
+  .tool{padding:36px 30px 36px 0;border-right:1px solid var(--ink-07)}
+  .tool:last-child{border-right:none}
+  .tool .tag{font-size:40px;font-weight:700;letter-spacing:-.05em;color:var(--tinta);line-height:1}
+  .tool h3{font-size:18px;font-weight:600;margin:14px 0 10px;letter-spacing:-.02em}
+  .tool p{font-size:15px;color:var(--ink-60)}
+
+  /* contacto */
+  .cta{background:var(--tinta);color:#fff;border-top:none}
+  .cta h2{font-size:clamp(44px,10vw,150px);letter-spacing:-.055em;margin-bottom:40px}
+  .cta .lbl{color:rgba(255,255,255,.7)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .cta-row a{font-family:'Azeret Mono';font-size:13px;padding:15px 26px;border:1px solid rgba(255,255,255,.55);transition:.2s}
+  .cta-row a:hover{background:#fff;color:var(--tinta);border-color:#fff}
+
+  footer{padding:30px 0;border-top:1px solid var(--ink-15)}
+  .fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Azeret Mono';font-size:11px;color:var(--ink-35)}
+  .fb .l{display:flex;gap:18px}
+  .fb a:hover{color:var(--tinta)}
+
+  @media(max-width:900px){
+    .wrap{padding:0 22px}
+    header{padding:16px 22px}
+    nav.n,.call{display:none}
+    .burger{display:block}
+    .hero{min-height:auto;padding:110px 0 0}
+    .hero .meta{flex-direction:column;align-items:flex-start;gap:22px}
+    .head{grid-template-columns:1fr;gap:18px}
+    .cols,.terr{grid-template-columns:1fr;gap:26px}
+    .figs{grid-template-columns:1fr 1fr}
+    .s{grid-template-columns:34px 1fr;row-gap:8px}
+    .s p{grid-column:2/3}
+    .tools{grid-template-columns:1fr}
+    .tool{border-right:none;border-bottom:1px solid var(--ink-07);padding:26px 0}
+    section{padding:70px 0}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="#top" class="logo"><strong>SERVECO<em>.</em></strong></a>
+  <nav class="n">
+    <a href="#firma">La firma</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#territorio">Territorio</a>
+    <a href="#herramientas">Herramientas</a>
+  </nav>
+  <a class="call" href="#contacto">968 90 90 20</a>
+  <button class="burger">Menú</button>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="lbl">Asesores de empresa · Región de Murcia</span>
+      <h1>Del Altiplano<br>al <em>mar</em>.</h1>
+      <div class="meta">
+        <p>Seis despachos, treinta profesionales y un solo criterio. Asesoramiento fiscal, jurídico, laboral, contable, financiero y de auditoría desde 1977.</p>
+        <div class="yr">1977<span>Desde</span></div>
+      </div>
+    </div>
+
+    <!-- Región de Murcia + Benidorm al noreste, fuera de la silueta. -->
+    <svg class="mapa" viewBox="-24 -40 1020 940" role="img" aria-label="Mapa de la Región de Murcia y Benidorm con los despachos de Serveco">
+      <defs>
+        <path id="silueta-murcia" fill-rule="evenodd" d="M578,0L570,0L564,6L540,12L522,32L508,38L500,46L494,46L486,34L478,34L454,50L444,66L442,108L424,120L418,138L428,176L428,238L400,258L390,270L376,278L362,278L354,282L336,280L326,268L328,246L320,240L308,244L296,236L284,238L282,244L272,244L272,252L266,254L258,266L242,268L216,290L198,292L178,300L164,288L146,284L138,290L128,312L114,326L90,332L64,350L62,362L48,384L44,402L8,434L4,446L0,448L0,462L24,476L24,486L32,502L42,508L48,518L76,534L84,546L110,540L122,554L132,556L136,552L144,552L156,558L174,554L180,558L168,600L172,648L168,650L166,682L170,694L178,700L182,716L194,728L196,740L240,800L250,820L264,830L268,820L280,824L300,824L316,840L338,852L350,866L356,866L372,850L396,846L396,842L408,832L416,832L424,838L430,832L426,822L434,802L450,788L466,784L470,776L494,754L504,750L534,754L540,752L540,746L546,740L552,740L554,744L560,742L574,746L582,762L612,768L604,754L608,748L618,746L626,738L640,738L656,744L662,736L668,736L680,744L678,752L706,754L732,740L754,742L772,730L798,726L814,708L820,706L818,702L812,704L806,696L794,666L794,642L802,636L790,626L794,618L786,602L788,586L784,584L782,572L772,574L764,564L750,562L706,512L684,468L654,428L648,390L672,352L680,320L680,294L670,274L648,262L624,256L622,208L628,206L628,198L658,166L654,144L664,120L658,94L658,76L652,72L652,64L638,56L608,28L608,12L580,4ZM774,590L780,590L784,596L782,610L790,626L790,638L792,640L790,660L796,682L788,684L792,690L800,692L800,702L798,704L790,704L788,700L780,696L774,696L760,688L736,656L740,636L746,630L750,630L764,612L762,602Z"/>
+      </defs>
+      <use href="#silueta-murcia" class="region draw"/>
+
+      <g class="fade" style="animation-delay:1.6s">
+        <g class="pin on" data-i="0" transform="translate(626,482)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="15" y="5">MURCIA</text></g>
+        <g class="pin" data-i="1" transform="translate(634,92)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="15" y="5">YECLA</text></g>
+        <g class="pin" data-i="2" transform="translate(526,178)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="-15" y="5" text-anchor="end">JUMILLA</text></g>
+        <g class="pin" data-i="3" transform="translate(332,684)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="-15" y="5" text-anchor="end">LORCA</text></g>
+        <g class="pin" data-i="4" transform="translate(716,590)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="-15" y="5" text-anchor="end">BALSICAS</text></g>
+        <g class="pin" data-i="5" transform="translate(888,48)"><circle class="halo" r="26"/><circle class="p" r="7"/><text x="15" y="5">BENIDORM</text></g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section id="firma">
+  <div class="wrap">
+    <div class="head">
+      <span class="lbl">01 / La firma</span>
+      <h2 data-r>Cuarenta y nueve años en el <em>mismo</em> sitio.</h2>
+    </div>
+    <div class="cols">
+      <div data-r>
+        <p><b>Serveco</b> es una asesoría de empresas fundada en 1977. Presta desde su origen un servicio profesional de consultoría y asesoramiento integral a empresas y autónomos, con la finalidad de cubrir todas las facetas de su actividad empresarial.</p>
+        <p>Ese enfoque nos ha permitido un crecimiento continuado y una posición sólida en nuestro ámbito de actuación.</p>
+      </div>
+      <div data-r>
+        <p>Para cada área contamos con un equipo coordinado y numeroso de profesionales cualificados: economistas, abogados, ingenieros y técnicos superiores. Por su vocación y dedicación, <b>ese equipo es nuestro principal activo</b>.</p>
+        <p>A él sumamos instalaciones y herramientas de última generación con las que optimizar el nivel de prestaciones.</p>
+      </div>
+    </div>
+    <div class="figs" data-r>
+      <div><strong>1977</strong><span>Fundación</span></div>
+      <div><strong>30+</strong><span>Profesionales</span></div>
+      <div><strong>6</strong><span>Despachos</span></div>
+      <div><strong>8</strong><span>Áreas de práctica</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="head">
+      <span class="lbl">02 / Servicios</span>
+      <h2 data-r>Ocho áreas. Un <em>expediente</em>.</h2>
+    </div>
+    <div class="svc">
+      <a class="s" href="#" data-r><span class="n">01</span><h3>Fiscal</h3><p>Planificación e impuestos de sociedades, IRPF, IVA, sucesiones y renta de no residentes.</p></a>
+      <a class="s" href="#" data-r><span class="n">02</span><h3>Jurídico</h3><p>Mercantil, civil, contratación, reclamaciones y defensa ante los tribunales.</p></a>
+      <a class="s" href="#" data-r><span class="n">03</span><h3>Laboral</h3><p>Nóminas, seguros sociales, contratación e inspecciones de trabajo.</p></a>
+      <a class="s" href="#" data-r><span class="n">04</span><h3>Contable</h3><p>Contabilidad, cuentas anuales y cierre fiscal con revisión permanente.</p></a>
+      <a class="s" href="#" data-r><span class="n">05</span><h3>Financiero</h3><p>Análisis, financiación, planes de viabilidad y cuadros de mando a medida.</p></a>
+      <a class="s" href="#" data-r><span class="n">06</span><h3>Auditoría</h3><p>Auditoría de cuentas anuales y trabajos de revisión limitada.</p></a>
+      <a class="s" href="#" data-r><span class="n">07</span><h3>I+D+i</h3><p>Deducciones fiscales y Patent Box, con análisis individualizado de cada proyecto.</p></a>
+      <a class="s" href="#" data-r><span class="n">08</span><h3>Subvenciones</h3><p>Buscador propio de convocatorias, tramitación y formación 100% bonificable.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="territorio">
+  <div class="wrap">
+    <div class="head">
+      <span class="lbl">03 / Territorio</span>
+      <h2 data-r>Seis despachos, una <em>región</em>.</h2>
+    </div>
+    <div class="terr">
+      <div class="terr-list" id="tList" data-r>
+        <button class="on" data-i="0"><strong>Murcia</strong><span>Sede central</span></button>
+        <button data-i="1"><strong>Yecla</strong><span>Altiplano</span></button>
+        <button data-i="2"><strong>Jumilla</strong><span>Altiplano</span></button>
+        <button data-i="3"><strong>Lorca</strong><span>Guadalentín</span></button>
+        <button data-i="4"><strong>Balsicas</strong><span>Campo de Cartagena</span></button>
+        <button data-i="5"><strong>Benidorm</strong><span>Costa</span></button>
+      </div>
+      <div data-r>
+        <div class="terr-osm">
+          <iframe id="tOsm" title="Mapa de la sede" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-1.1437,37.9756,-1.1197,37.9916&amp;layer=mapnik&amp;marker=37.9836,-1.1317"></iframe>
+        </div>
+        <div class="terr-info">
+          <span class="lbl" id="tLbl">Sede central</span>
+          <h3 id="tCity">Murcia</h3>
+          <p class="addr" id="tAddr">Gran Vía, 28 — 5º · y C/ Acisclo Díaz, 2</p>
+          <a class="tel" id="tTel" href="tel:+34968909020">968 909 020</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="herramientas">
+  <div class="wrap">
+    <div class="head">
+      <span class="lbl">04 / Herramientas</span>
+      <h2 data-r>Sistemas <em>A.D.</em></h2>
+    </div>
+    <div class="tools">
+      <div class="tool" data-r><div class="tag">A.D.I</div><h3>Análisis Dinámico Intermensual</h3><p>Diagnóstico en tiempo real del estado de salud de la empresa, mes a mes, sin esperar al cierre.</p></div>
+      <div class="tool" data-r><div class="tag">A.D.P</div><h3>Análisis Dinámico Presupuestario</h3><p>Proyecciones a uno o varios años: necesidad de financiación, viabilidad de inversiones y tendencia.</p></div>
+      <div class="tool" data-r><div class="tag">A.D.A</div><h3>Análisis Dinámico Analítico</h3><p>Costes de elaboración, precios de venta, control de existencias y cálculo de presupuestos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap">
+    <span class="lbl">05 / Contacto</span>
+    <h2 data-r style="margin-top:22px">Hablemos.</h2>
+    <div class="cta-row">
+      <a href="tel:+34968909020">968 90 90 20</a>
+      <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+      <a href="#territorio">Ver despachos</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fb">
+    <span>© 2026 Serveco Asesores S.L.P.</span>
+    <span class="l"><a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a><a href="#">Canal de denuncias</a></span>
+    <span>Propuesta 11 · Territorio</span>
+  </div>
+</footer>
+
+<script>
+  /* cabecera sólida al bajar */
+  const hdr=document.getElementById('hdr');
+  addEventListener('scroll',()=>hdr.classList.toggle('solid',scrollY>60));
+
+  /* revelados */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+  }),{threshold:.18});
+  document.querySelectorAll('[data-r]').forEach(el=>io.observe(el));
+
+  /* territorio */
+  const SEDES=[
+    {lbl:'Sede central',city:'Murcia',addr:'Gran Vía, 28 — 5º · y C/ Acisclo Díaz, 2',tel:'968 909 020',h:'+34968909020',lat:37.9836,lon:-1.1317},
+    {lbl:'Altiplano',city:'Yecla',addr:'C/ Pío Baroja, 7 · C/ Esteban Díaz, 53',tel:'968 753 640',h:'+34968753640',lat:38.6165,lon:-1.1193},
+    {lbl:'Altiplano',city:'Jumilla',addr:'C/ Valencia, 2',tel:'968 780 040',h:'+34968780040',lat:38.4720,lon:-1.3260},
+    {lbl:'Guadalentín',city:'Lorca',addr:'Antigua Plaza de Abastos, 15 — Local 10',tel:'968 471 431',h:'+34968471431',lat:37.6752,lon:-1.6994},
+    {lbl:'Campo de Cartagena',city:'Balsicas',addr:'Avda. Cdad. de Murcia, 90 — Bajo',tel:'968 909 020',h:'+34968909020',lat:37.8203,lon:-0.9635},
+    {lbl:'Costa · Cliente internacional',city:'Benidorm',addr:'Calle Jaén, 1 (esq. Avda. de Europa)',tel:'665 912 758',h:'+34665912758',lat:38.5410,lon:-0.1196}
+  ];
+  const el={l:document.getElementById('tLbl'),c:document.getElementById('tCity'),a:document.getElementById('tAddr'),t:document.getElementById('tTel')};
+  const tOsm=document.getElementById('tOsm');
+  const pines=[...document.querySelectorAll('.hero .pin')];
+  function osmSrc(lat,lon){
+    const dLon=.012,dLat=.008;
+    return 'https://www.openstreetmap.org/export/embed.html?bbox='+(lon-dLon)+','+(lat-dLat)+','+(lon+dLon)+','+(lat+dLat)+'&layer=mapnik&marker='+lat+','+lon;
+  }
+  function sede(i){
+    const s=SEDES[i];
+    el.l.textContent=s.lbl; el.c.textContent=s.city; el.a.textContent=s.addr;
+    el.t.textContent=s.tel; el.t.href='tel:'+s.h;
+    document.querySelectorAll('#tList button').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));
+    pines.forEach(p=>p.classList.toggle('on',+p.dataset.i===i));
+    if(tOsm) tOsm.src=osmSrc(s.lat,s.lon);
+  }
+  document.getElementById('tList').addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(b)sede(+b.dataset.i);
+  });
+  pines.forEach(p=>{
+    p.addEventListener('click',()=>{
+      sede(+p.dataset.i);
+      document.getElementById('territorio').scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>

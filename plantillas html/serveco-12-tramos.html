@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco — Asesores de empresa desde 1977</title>
+<meta name="description" content="Serveco. Asesoría integral de empresas fundada en 1977. Seis despachos en la Región de Murcia y la costa de Alicante.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 12 — "TRAMOS"
+     Referencia: collabcapitolium.fr
+       (Supercolor + Local Studio · Awwwards Site of the Day
+        18/05/2026, nota 7,4 + Developer Award · GSAP y Nuxt)
+
+     Lo que se toma prestado:
+       · RECORRIDO HORIZONTAL. Paneles a pantalla completa que
+         avanzan de lado. Cambia el eje, no solo la paleta.
+       · Dos colores y nada más (allí #F0E3CF y #58595B).
+       · Navegación que se despliega con el avance.
+       · Contenido a sangre, sin contenedor centrado.
+
+     AVISO: en Awwwards este sitio saca 7,6 en diseño pero
+     6,85 en usabilidad y 6,2 en accesibilidad. El scroll
+     horizontal penaliza siempre. Vale para una PORTADA;
+     las páginas interiores del silo SEO deben ser verticales.
+     ========================================================= */
+  :root{
+    --negro:#0e0e0e;
+    --naranja:#d9541a;
+    --n-70:rgba(232,228,222,.7);
+    --n-40:rgba(232,228,222,.4);
+    --n-18:rgba(232,228,222,.18);
+    --claro:#e8e4de;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--negro);color:var(--claro);font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow:hidden}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-weight:800;letter-spacing:-.045em;line-height:.94}
+  .mono{font-family:'Martian Mono',monospace}
+  ::selection{background:var(--naranja);color:var(--negro)}
+  .lbl{font-family:'Martian Mono';font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--naranja)}
+
+  /* ---------- MARCO FIJO ---------- */
+  .top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px 34px;pointer-events:none}
+  .top>*{pointer-events:auto}
+  .brand{font-size:19px;font-weight:800;letter-spacing:-.03em}
+  .brand em{font-style:normal;color:var(--naranja)}
+  .top .tel{font-family:'Martian Mono';font-size:11px;border:1px solid var(--n-18);padding:9px 16px;transition:.2s}
+  .top .tel:hover{background:var(--naranja);border-color:var(--naranja);color:var(--negro)}
+
+  /* pista de progreso + navegación desplegable */
+  .foot{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:0 34px 22px}
+  .track{height:2px;background:var(--n-18);position:relative;margin-bottom:14px}
+  .track i{position:absolute;left:0;top:0;bottom:0;background:var(--naranja);width:0;transition:width .25s}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+  .steps{display:flex;gap:4px;flex-wrap:wrap}
+  .steps button{background:none;border:none;cursor:pointer;font-family:'Martian Mono';font-size:10px;letter-spacing:.8px;text-transform:uppercase;color:var(--n-40);padding:7px 10px;transition:.2s;position:relative}
+  .steps button:hover{color:var(--claro)}
+  .steps button.on{color:var(--naranja)}
+  .steps button .t{max-width:0;overflow:hidden;display:inline-block;vertical-align:bottom;white-space:nowrap;transition:max-width .4s ease,opacity .3s;opacity:0}
+  .steps button.on .t,.steps button:hover .t{max-width:160px;opacity:1}
+  .counter{font-family:'Martian Mono';font-size:11px;color:var(--n-40);white-space:nowrap}
+  .counter b{color:var(--claro);font-weight:400}
+  .hint{position:fixed;right:34px;top:50%;transform:translateY(-50%);z-index:40;font-family:'Martian Mono';font-size:9.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--n-40);writing-mode:vertical-rl}
+
+  /* ---------- PISTA HORIZONTAL ---------- */
+  .viewport{position:fixed;inset:0;overflow:hidden}
+  .rail{display:flex;height:100%;will-change:transform}
+  .panel{flex:0 0 100vw;height:100vh;padding:104px 34px 96px;display:flex;flex-direction:column;justify-content:center;position:relative;border-right:1px solid var(--n-18)}
+  .panel .num{position:absolute;top:96px;left:34px;font-family:'Martian Mono';font-size:10px;color:var(--n-40);letter-spacing:1.4px}
+
+  /* portada */
+  .p0 h1{font-size:clamp(52px,11vw,190px);max-width:14ch}
+  .p0 h1 em{font-style:normal;color:var(--naranja)}
+  .p0 .sub{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid var(--n-18)}
+  .p0 .sub p{max-width:42ch;color:var(--n-70)}
+
+  /* firma */
+  .p1{justify-content:center}
+  .p1 .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:end}
+  .p1 h2{font-size:clamp(30px,5.4vw,78px);max-width:14ch}
+  .p1 h2 em{font-style:normal;color:var(--naranja)}
+  .p1 p{color:var(--n-70);max-width:46ch;margin-bottom:16px}
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--n-18);border:1px solid var(--n-18)}
+  .figs div{background:var(--negro);padding:22px}
+  .figs strong{display:block;font-size:38px;font-weight:800;letter-spacing:-.05em;color:var(--naranja);line-height:1}
+  .figs span{font-family:'Martian Mono';font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--n-40);margin-top:8px;display:block}
+
+  /* servicios */
+  .p2 h2{font-size:clamp(28px,4.4vw,58px);margin-bottom:30px}
+  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px;border-top:1px solid var(--n-18)}
+  .svc a{display:grid;grid-template-columns:36px 1fr auto;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--n-18);transition:.2s}
+  .svc a:hover{padding-left:12px;color:var(--naranja)}
+  .svc .n{font-family:'Martian Mono';font-size:10px;color:var(--naranja)}
+  .svc h3{font-size:clamp(18px,2.1vw,27px);font-weight:600;letter-spacing:-.03em}
+  .svc .ar{color:var(--n-40)}
+  .svc a:hover .ar{color:var(--naranja)}
+
+  /* territorio */
+  .p3 h2{font-size:clamp(28px,4.4vw,58px);margin-bottom:34px}
+  .offs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--n-18);border:1px solid var(--n-18)}
+  .off{background:var(--negro);padding:24px 20px;transition:.22s}
+  .off:hover{background:var(--naranja);color:var(--negro)}
+  .off:hover .lbl,.off:hover .t{color:var(--negro)}
+  .off h3{font-size:23px;font-weight:800;letter-spacing:-.035em;margin:8px 0 6px}
+  .off p{font-size:13.5px;color:var(--n-70)}
+  .off:hover p{color:rgba(14,14,14,.75)}
+  .off .t{font-family:'Martian Mono';font-size:11px;color:var(--naranja);display:block;margin-top:10px}
+
+  /* herramientas */
+  .p4 h2{font-size:clamp(28px,4.4vw,58px);margin-bottom:34px}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .tool{padding:0 40px 0 0;border-right:1px solid var(--n-18);margin-left:40px}
+  .tool:first-child{margin-left:0}
+  .tool:last-child{border-right:none;padding-right:0}
+  .tool .tag{font-size:44px;font-weight:800;letter-spacing:-.05em;color:var(--naranja);line-height:1}
+  .tool h3{font-size:17px;font-weight:600;margin:14px 0 10px;letter-spacing:-.02em}
+  .tool p{font-size:14.5px;color:var(--n-70);max-width:34ch}
+
+  /* actualidad */
+  .p5 h2{font-size:clamp(28px,4.4vw,58px);margin-bottom:30px}
+  .posts{border-top:1px solid var(--n-18)}
+  .posts a{display:grid;grid-template-columns:120px 1fr 140px;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--n-18);transition:.2s}
+  .posts a:hover{padding-left:12px;color:var(--naranja)}
+  .posts .d{font-family:'Martian Mono';font-size:10.5px;color:var(--n-40)}
+  .posts h3{font-size:clamp(16px,1.8vw,23px);font-weight:600;letter-spacing:-.025em}
+  .posts .t{font-family:'Martian Mono';font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--naranja);text-align:right}
+
+  /* contacto */
+  .p6{background:var(--naranja);color:var(--negro);border-right:none}
+  .p6 .lbl{color:rgba(14,14,14,.65)}
+  .p6 .num{color:rgba(14,14,14,.5)}
+  .p6 h2{font-size:clamp(52px,12vw,200px);letter-spacing:-.055em;margin-bottom:34px}
+  .p6 .row{display:flex;gap:12px;flex-wrap:wrap}
+  .p6 .row a{font-family:'Martian Mono';font-size:12px;border:1px solid rgba(14,14,14,.5);padding:14px 24px;transition:.2s}
+  .p6 .row a:hover{background:var(--negro);color:var(--naranja);border-color:var(--negro)}
+  .p6 .legal{margin-top:48px;font-family:'Martian Mono';font-size:10px;color:rgba(14,14,14,.6);display:flex;gap:18px;flex-wrap:wrap}
+
+  /* ---------- MÓVIL: vuelve a vertical ---------- */
+  @media(max-width:900px){
+    body{overflow:auto}
+    .viewport{position:static;overflow:visible}
+    .rail{display:block;transform:none!important;height:auto}
+    .panel{flex:none;width:100%;height:auto;min-height:auto;padding:96px 20px 56px;border-right:none;border-bottom:1px solid var(--n-18)}
+    .panel .num{position:static;display:block;margin-bottom:18px}
+    .foot{position:static;padding:0}
+    .track,.steps,.hint{display:none}
+    .nav{display:none}
+    .p1 .grid,.svc,.offs,.tools,.posts a{grid-template-columns:1fr;gap:22px}
+    .offs{gap:1px}
+    .tool{margin-left:0;border-right:none;border-top:1px solid var(--n-18);padding:22px 0}
+    .posts a{gap:6px}
+    .posts .t{text-align:left}
+    .top{position:sticky;background:var(--negro);padding:16px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="brand" onclick="ir(0);return false">SERVECO<em>.</em></a>
+  <a class="tel" href="tel:+34968909020">968 90 90 20</a>
+</header>
+
+<div class="hint">Avance →</div>
+
+<div class="viewport">
+  <div class="rail" id="rail">
+
+    <!-- 00 PORTADA -->
+    <section class="panel p0">
+      <span class="num">00 / Portada</span>
+      <span class="lbl">Asesores de empresa · Región de Murcia</span>
+      <h1 style="margin-top:20px">Desde <em>1977</em>, el mismo criterio.</h1>
+      <div class="sub">
+        <p>Fiscal, jurídico, laboral, contable, financiero y auditoría. Seis despachos, treinta profesionales y un solo interlocutor para toda la actividad de su empresa.</p>
+        <span class="mono" style="font-size:10px;color:var(--n-40);letter-spacing:1.4px">DESPLACE O USE LAS FLECHAS →</span>
+      </div>
+    </section>
+
+    <!-- 01 LA FIRMA -->
+    <section class="panel p1">
+      <span class="num">01 / La firma</span>
+      <div class="grid">
+        <div>
+          <span class="lbl">Quiénes somos</span>
+          <h2 style="margin:18px 0 26px">Cuarenta y nueve años en el <em>mismo</em> sitio.</h2>
+          <p>Serveco es una asesoría de empresas fundada en 1977. Presta desde su origen un servicio de consultoría y asesoramiento integral a empresas y autónomos, cubriendo todas las facetas de su actividad.</p>
+          <p>Economistas, abogados, ingenieros y técnicos superiores trabajando de forma coordinada sobre el mismo expediente. Ese equipo es nuestro principal activo.</p>
+        </div>
+        <div class="figs">
+          <div><strong>1977</strong><span>Fundación</span></div>
+          <div><strong>30+</strong><span>Profesionales</span></div>
+          <div><strong>6</strong><span>Despachos</span></div>
+          <div><strong>8</strong><span>Áreas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 SERVICIOS -->
+    <section class="panel p2">
+      <span class="num">02 / Servicios</span>
+      <span class="lbl">Áreas de práctica</span>
+      <h2 style="margin-top:16px">Ocho áreas. Un expediente.</h2>
+      <div class="svc">
+        <a href="#"><span class="n">01</span><h3>Fiscal</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">05</span><h3>Financiero</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">02</span><h3>Jurídico</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">06</span><h3>Auditoría</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">03</span><h3>Laboral</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">07</span><h3>I+D+i y Patent Box</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">04</span><h3>Contable</h3><span class="ar">→</span></a>
+        <a href="#"><span class="n">08</span><h3>Subvenciones y formación</h3><span class="ar">→</span></a>
+      </div>
+    </section>
+
+    <!-- 03 TERRITORIO -->
+    <section class="panel p3">
+      <span class="num">03 / Despachos</span>
+      <span class="lbl">Del Altiplano al mar</span>
+      <h2 style="margin-top:16px">Seis sedes, una región.</h2>
+      <div class="offs">
+        <a class="off" href="tel:+34968909020"><span class="lbl">Sede central</span><h3>Murcia</h3><p>Gran Vía, 28 — 5º<br>C/ Acisclo Díaz, 2</p><span class="t">968 909 020</span></a>
+        <a class="off" href="tel:+34968753640"><span class="lbl">Altiplano</span><h3>Yecla</h3><p>C/ Pío Baroja, 7<br>C/ Esteban Díaz, 53</p><span class="t">968 753 640</span></a>
+        <a class="off" href="tel:+34968780040"><span class="lbl">Altiplano</span><h3>Jumilla</h3><p>C/ Valencia, 2</p><span class="t">968 780 040</span></a>
+        <a class="off" href="tel:+34968471431"><span class="lbl">Guadalentín</span><h3>Lorca</h3><p>Antigua Plaza de Abastos, 15 — Local 10</p><span class="t">968 471 431</span></a>
+        <a class="off" href="tel:+34968909020"><span class="lbl">Campo de Cartagena</span><h3>Balsicas</h3><p>Avda. Cdad. de Murcia, 90 — Bajo</p><span class="t">968 909 020</span></a>
+        <a class="off" href="tel:+34665912758"><span class="lbl">Costa · Internacional</span><h3>Benidorm</h3><p>Calle Jaén, 1<br>Esq. Avda. de Europa</p><span class="t">665 912 758</span></a>
+        <a class="off" href="#"><span class="lbl">Servicio</span><h3>Punto PAE</h3><p>Constitución de sociedades y alta de emprendedores.</p><span class="t">Ver más →</span></a>
+        <a class="off" href="#"><span class="lbl">Servicio</span><h3>Internacional</h3><p>NIE, IRNR, testamentos, sucesiones y compraventa. Español e inglés.</p><span class="t">Ver más →</span></a>
+      </div>
+    </section>
+
+    <!-- 04 HERRAMIENTAS -->
+    <section class="panel p4">
+      <span class="num">04 / Herramientas</span>
+      <span class="lbl">Desarrollo propio</span>
+      <h2 style="margin-top:16px">Sistemas A.D.</h2>
+      <div class="tools">
+        <div class="tool"><div class="tag">A.D.I</div><h3>Análisis Dinámico Intermensual</h3><p>Diagnóstico en tiempo real del estado de salud de la empresa, mes a mes, sin esperar al cierre.</p></div>
+        <div class="tool"><div class="tag">A.D.P</div><h3>Análisis Dinámico Presupuestario</h3><p>Proyecciones a uno o varios años: financiación, viabilidad de inversiones y tendencia.</p></div>
+        <div class="tool"><div class="tag">A.D.A</div><h3>Análisis Dinámico Analítico</h3><p>Costes de elaboración, precios de venta, existencias y presupuestos.</p></div>
+      </div>
+    </section>
+
+    <!-- 05 ACTUALIDAD -->
+    <section class="panel p5">
+      <span class="num">05 / Actualidad</span>
+      <span class="lbl">Novedades y análisis</span>
+      <h2 style="margin-top:16px">Lo que conviene saber.</h2>
+      <div class="posts">
+        <a href="#"><span class="d">31 AGO 2026</span><h3>Cómo saber si su empresa puede aplicar la deducción por I+D+i</h3><span class="t">Fiscal</span></a>
+        <a href="#"><span class="d">24 AGO 2026</span><h3>Convocatorias abiertas para pymes en la Región de Murcia</h3><span class="t">Ayudas</span></a>
+        <a href="#"><span class="d">12 AGO 2026</span><h3>Comprar vivienda en España siendo no residente</h3><span class="t">Internacional</span></a>
+        <a href="#"><span class="d">30 JUL 2026</span><h3>Qué mira una inspección de trabajo en una campaña agrícola</h3><span class="t">Laboral</span></a>
+        <a href="#"><span class="d">14 JUL 2026</span><h3>Empresa familiar: la reducción en sucesiones, paso a paso</h3><span class="t">Fiscal</span></a>
+      </div>
+    </section>
+
+    <!-- 06 CONTACTO -->
+    <section class="panel p6">
+      <span class="num">06 / Contacto</span>
+      <span class="lbl">Hablemos</span>
+      <h2 style="margin-top:16px">Cuéntenos su caso.</h2>
+      <div class="row">
+        <a href="tel:+34968909020">968 90 90 20</a>
+        <a href="mailto:serveco@serveco.es">serveco@serveco.es</a>
+      </div>
+      <div class="legal">
+        <span>© 2026 Serveco Asesores S.L.P.</span>
+        <a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a><a href="#">Canal de denuncias</a>
+        <span>Propuesta 12 · Tramos</span>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div class="foot">
+  <div class="track"><i id="bar"></i></div>
+  <div class="nav">
+    <div class="steps" id="steps"></div>
+    <div class="counter"><b id="cur">01</b> / <span id="tot">07</span></div>
+  </div>
+</div>
+
+<script>
+  const NOMBRES=['Portada','La firma','Servicios','Despachos','Herramientas','Actualidad','Contacto'];
+  const rail=document.getElementById('rail');
+  const paneles=[...rail.children];
+  const bar=document.getElementById('bar');
+  const stepsEl=document.getElementById('steps');
+  const curEl=document.getElementById('cur');
+  document.getElementById('tot').textContent=String(paneles.length).padStart(2,'0');
+
+  NOMBRES.forEach((n,i)=>{
+    const b=document.createElement('button');
+    b.innerHTML=String(i).padStart(2,'0')+'<span class="t"> · '+n+'</span>';
+    b.addEventListener('click',()=>ir(i));
+    stepsEl.appendChild(b);
+  });
+  const botones=[...stepsEl.children];
+
+  let destino=0, actual=0, idx=0;
+  const movil=()=>matchMedia('(max-width:900px)').matches;
+  const maxX=()=>rail.scrollWidth-innerWidth;
+
+  function ir(i){
+    idx=Math.max(0,Math.min(paneles.length-1,i));
+    if(movil()){paneles[idx].scrollIntoView({behavior:'smooth'});pintar();return;}
+    destino=Math.min(idx*innerWidth,maxX());
+  }
+  window.ir=ir;
+
+  function pintar(){
+    botones.forEach((b,i)=>b.classList.toggle('on',i===idx));
+    curEl.textContent=String(idx+1).padStart(2,'0');
+    bar.style.width=((idx)/(paneles.length-1)*100)+'%';
+  }
+
+  /* rueda / trackpad → avance horizontal */
+  let bloqueo=false;
+  addEventListener('wheel',e=>{
+    if(movil())return;
+    e.preventDefault();
+    if(bloqueo)return;
+    const d=Math.abs(e.deltaX)>Math.abs(e.deltaY)?e.deltaX:e.deltaY;
+    if(Math.abs(d)<12)return;
+    bloqueo=true; setTimeout(()=>bloqueo=false,520);
+    ir(idx+(d>0?1:-1));
+  },{passive:false});
+
+  addEventListener('keydown',e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key))ir(idx+1);
+    if(['ArrowLeft','PageUp'].includes(e.key))ir(idx-1);
+    if(e.key==='Home')ir(0);
+    if(e.key==='End')ir(paneles.length-1);
+  });
+
+  /* arrastre táctil en escritorio */
+  let x0=null;
+  addEventListener('pointerdown',e=>x0=e.clientX);
+  addEventListener('pointerup',e=>{
+    if(x0===null||movil())return;
+    const d=x0-e.clientX;
+    if(Math.abs(d)>70)ir(idx+(d>0?1:-1));
+    x0=null;
+  });
+
+  /* interpolación suave */
+  (function bucle(){
+    if(!movil()){
+      actual+=(destino-actual)*0.11;
+      rail.style.transform='translate3d('+(-actual)+'px,0,0)';
+    }
+    requestAnimationFrame(bucle);
+  })();
+
+  addEventListener('resize',()=>{if(!movil())destino=Math.min(idx*innerWidth,maxX())});
+
+  /* en móvil, el panel visible marca el paso */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting&&movil()){idx=paneles.indexOf(e.target);pintar();}
+  }),{threshold:.5});
+  paneles.forEach(p=>io.observe(p));
+
+  pintar();
+</script>
+</body>
+</html>

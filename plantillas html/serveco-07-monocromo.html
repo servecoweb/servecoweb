@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serveco — Asesores de empresa desde 1977</title>
+<meta name="description" content="Serveco. Asesoría integral de empresas fundada en 1977. Fiscal, jurídico, laboral, contable, financiero, auditoría e I+D+i en la Región de Murcia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     PROPUESTA 07 — "MONOCROMO"
+     Negro, blanco y un solo gris. Sin color de acento.
+     La jerarquía la llevan la escala tipográfica, las filetes
+     de 1px y la inversión de bandas.
+     Estructura: la de Carrillo (testimonios, equipo, FAQ,
+     sectores) con otra piel completamente distinta.
+     ========================================================= */
+  :root{
+    --black:#0c0c0c;
+    --white:#fff;
+    --gray:#8a8a8a;          /* el único gris */
+    --surface:#f2f2f1;
+    --line:rgba(12,12,12,.16);
+    --line-2:rgba(12,12,12,.08);
+    --line-inv:rgba(255,255,255,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--white);color:var(--black);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-weight:600;letter-spacing:-.035em;line-height:1.04}
+  .ser{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+  .ser-i{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  ::selection{background:var(--black);color:var(--white)}
+  .lbl{font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;color:var(--gray);display:block}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;padding:15px 28px;border:1.5px solid var(--black);transition:.2s}
+  .btn-f{background:var(--black);color:var(--white)}
+  .btn-f:hover{background:var(--white);color:var(--black)}
+  .btn-o:hover{background:var(--black);color:var(--white)}
+  .btn-w{border-color:var(--white);color:var(--white)}
+  .btn-w:hover{background:var(--white);color:var(--black)}
+  .btn-fw{background:var(--white);color:var(--black);border-color:var(--white)}
+  .btn-fw:hover{background:transparent;color:var(--white)}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:120;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--black)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo strong{font-size:25px;font-weight:700;letter-spacing:-.02em}
+  .logo span{display:block;font-size:9.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gray);font-weight:600;margin-top:-3px}
+  nav.links{display:flex;gap:30px}
+  nav.links a{font-size:15px;font-weight:500;position:relative;padding:4px 0}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--black);transition:width .22s}
+  nav.links a:hover::after{width:100%}
+  .burger{display:none;background:none;border:1.5px solid var(--black);padding:9px 14px;font-weight:600;font-size:13px;cursor:pointer;font-family:inherit}
+
+  /* HERO */
+  .hero{padding:80px 0 0}
+  .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:end}
+  .hero h1{font-size:clamp(42px,6.4vw,88px);margin:20px 0 0}
+  .hero h1 .ser-i{font-size:.95em}
+  .hero-side p{font-size:17.5px;color:var(--gray);margin-bottom:28px;max-width:38ch}
+  .hero-side p b{color:var(--black);font-weight:500}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-img{margin-top:56px;aspect-ratio:21/8;background:var(--black);display:grid;place-items:center;color:rgba(255,255,255,.35);font-size:14px;letter-spacing:.4px;position:relative;overflow:hidden}
+  .hero-img::after{content:"1977";position:absolute;right:2vw;bottom:-3vw;font-family:'Instrument Serif',serif;font-size:clamp(90px,17vw,240px);color:rgba(255,255,255,.09);line-height:1}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--black);border-bottom:1px solid var(--line);margin-top:0}
+  .strip div{padding:26px 24px 26px 0;border-right:1px solid var(--line-2)}
+  .strip div:last-child{border-right:none}
+  .strip strong{display:block;font-family:'Instrument Serif',serif;font-size:40px;line-height:1}
+  .strip span{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gray);font-weight:600;margin-top:8px;display:block}
+
+  section{padding:96px 0}
+  .shead{display:grid;grid-template-columns:180px 1fr;gap:40px;margin-bottom:52px;align-items:start}
+  .shead h2{font-size:clamp(30px,4.2vw,52px);max-width:20ch}
+  .shead h2 .ser-i{font-size:1.02em}
+  .shead .sub{color:var(--gray);margin-top:16px;max-width:56ch;font-size:16.5px}
+
+  /* SERVICIOS */
+  .svcs{border-top:1px solid var(--black)}
+  .svc{display:grid;grid-template-columns:56px 1fr 1.15fr 40px;gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:.24s}
+  .svc:hover{background:var(--black);color:var(--white);padding-left:20px;padding-right:20px;border-color:var(--black)}
+  .svc:hover .n,.svc:hover p{color:rgba(255,255,255,.6)}
+  .svc .n{font-size:12.5px;font-weight:600;color:var(--gray);letter-spacing:1.2px}
+  .svc h3{font-size:clamp(21px,2.7vw,30px)}
+  .svc p{color:var(--gray);font-size:15px}
+  .svc .ar{font-size:22px;text-align:right;transition:transform .24s}
+  .svc:hover .ar{transform:translateX(8px)}
+
+  /* CHIPS */
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+  .chip{border:1px solid var(--line);padding:9px 18px;font-size:14px;font-weight:500;transition:.18s}
+  .chip:hover{background:var(--black);color:var(--white);border-color:var(--black)}
+
+  /* BANDA NEGRA — HERRAMIENTAS */
+  .band{background:var(--black);color:var(--white)}
+  .band .shead h2{color:var(--white)}
+  .band .lbl{color:var(--gray)}
+  .band .sub{color:rgba(255,255,255,.6)}
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-inv)}
+  .tool{padding:34px 32px 34px 0;border-right:1px solid var(--line-inv)}
+  .tool:last-child{border-right:none;padding-right:0}
+  .tool .tag{font-family:'Instrument Serif',serif;font-size:34px;line-height:1;margin-bottom:14px}
+  .tool h3{font-size:18px;font-weight:600;margin-bottom:10px;letter-spacing:-.01em}
+  .tool p{font-size:15px;color:rgba(255,255,255,.6);max-width:34ch}
+
+  /* TESTIMONIOS */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--black)}
+  .quote{padding:34px 34px 34px 0;border-right:1px solid var(--line)}
+  .quote:last-child{border-right:none;padding-right:0}
+  .quote blockquote{font-family:'Instrument Serif',serif;font-size:23px;line-height:1.32;margin-bottom:24px}
+  .quote .who{font-size:13.5px;font-weight:600}
+  .quote .who span{display:block;color:var(--gray);font-weight:400}
+
+  /* EQUIPO */
+  .team{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .member .ph{aspect-ratio:3/4;background:var(--surface);display:grid;place-items:center;color:var(--gray);font-size:12px;filter:grayscale(1);transition:.25s}
+  .member:hover .ph{background:var(--black);color:rgba(255,255,255,.4)}
+  .member h4{font-size:15.5px;font-weight:600;margin-top:14px}
+  .member span{font-size:13px;color:var(--gray)}
+
+  /* FAQ */
+  .faq{border-top:1px solid var(--black)}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:26px;align-items:baseline;padding:26px 0;font-size:clamp(19px,2.3vw,26px);font-weight:500;letter-spacing:-.025em;transition:padding .22s}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{padding-left:14px}
+  .faq .pl{font-family:'Instrument Serif',serif;font-size:30px;color:var(--gray);transition:transform .25s;line-height:1}
+  .faq details[open] .pl{transform:rotate(45deg);color:var(--black)}
+  .faq .a{padding:0 0 28px 0;color:var(--gray);max-width:74ch;font-size:16px}
+
+  /* SEDES */
+  .offs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--black);border-left:1px solid var(--line-2)}
+  .off{padding:28px 26px;border-right:1px solid var(--line-2);border-bottom:1px solid var(--line-2);transition:.2s}
+  .off:hover{background:var(--surface)}
+  .off h4{font-family:'Instrument Serif',serif;font-size:26px;margin-bottom:8px}
+  .off p{font-size:14.5px;color:var(--gray)}
+  .off a{display:inline-block;margin-top:10px;font-weight:600;font-size:14.5px;border-bottom:1.5px solid var(--black);padding-bottom:2px}
+
+  /* CTA */
+  .cta{background:var(--black);color:var(--white);text-align:center;padding:130px 0}
+  .cta h2{font-size:clamp(38px,7vw,96px);margin-bottom:14px}
+  .cta p{color:var(--gray);margin-bottom:40px;font-size:17px}
+  .cta .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  footer{padding:64px 0 26px;border-top:1px solid var(--black)}
+  .fg{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:36px;padding-bottom:42px}
+  footer h5{font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gray);font-weight:600;margin-bottom:16px}
+  footer ul{list-style:none}
+  footer li{margin-bottom:9px;font-size:14.5px}
+  footer li a{border-bottom:1px solid transparent}
+  footer li a:hover{border-color:var(--black)}
+  .fb{border-top:1px solid var(--line-2);padding-top:22px;display:flex;justify-content:space-between;font-size:12px;color:var(--gray);flex-wrap:wrap;gap:10px}
+
+  @media(max-width:1040px){
+    .team{grid-template-columns:repeat(3,1fr)}
+    .quotes,.tools,.offs{grid-template-columns:1fr}
+    .quote,.tool{border-right:none;border-bottom:1px solid var(--line);padding-right:0}
+    .tool{border-bottom-color:var(--line-inv)}
+    .quote:last-child,.tool:last-child{border-bottom:none}
+    .off{border-right:none}
+  }
+  @media(max-width:820px){
+    .wrap{padding:0 22px}
+    nav.links{display:none}
+    .burger{display:block}
+    .hero{padding-top:44px}
+    .hero-grid{grid-template-columns:1fr;gap:32px;align-items:start}
+    .hero-img{aspect-ratio:16/9;margin-top:36px}
+    .strip{grid-template-columns:1fr 1fr}
+    .shead{grid-template-columns:1fr;gap:16px}
+    .svc{grid-template-columns:40px 1fr;row-gap:8px}
+    .svc p{grid-column:2/3}
+    .svc .ar{display:none}
+    .team{grid-template-columns:1fr 1fr}
+    section{padding:62px 0}
+    .cta{padding:84px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#" class="logo"><strong>SERVECO</strong><span>Asesores · 1977</span></a>
+    <nav class="links">
+      <a href="#firma">La firma</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#despachos">Despachos</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a href="#contacto" class="btn btn-f">Haga su consulta</a>
+      <button class="burger">Menú</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="firma">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="lbl">Asesoría integral de empresas</span>
+        <h1>Cuarenta y nueve años <span class="ser-i">leyendo</span> los números de otros</h1>
+      </div>
+      <div class="hero-side">
+        <p>Fiscal, jurídico, laboral, contable, financiero y auditoría. <b>Un solo interlocutor</b> para toda la actividad de su empresa, desde 1977.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-f">Solicitar presupuesto</a>
+          <a href="#servicios" class="btn btn-o">Ver servicios</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">Fotografía del equipo — despacho de Gran Vía, Murcia</div>
+    <div class="strip">
+      <div><strong>30+</strong><span>Profesionales</span></div>
+      <div><strong>6</strong><span>Despachos</span></div>
+      <div><strong>8</strong><span>Áreas de práctica</span></div>
+      <div><strong>PAE</strong><span>Punto de atención al emprendedor</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">01 / Servicios</span>
+      <div>
+        <h2>Todas las facetas de su actividad, bajo un <span class="ser-i">mismo</span> criterio</h2>
+        <p class="sub">Economistas, abogados, ingenieros y técnicos superiores trabajando de forma coordinada sobre el mismo expediente. La información entra una vez y sirve para todas las áreas.</p>
+      </div>
+    </div>
+    <div class="svcs">
+      <a class="svc" href="#"><span class="n">01</span><h3>Asesoramiento fiscal</h3><p>Planificación e impuestos de sociedades, IRPF, IVA, sucesiones y renta de no residentes.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">02</span><h3>Asesoramiento jurídico</h3><p>Mercantil, civil, contratación, reclamaciones y defensa ante los tribunales.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">03</span><h3>Asesoramiento laboral</h3><p>Nóminas, seguros sociales, contratación e inspecciones de trabajo.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">04</span><h3>Contabilidad</h3><p>Contabilidad, cuentas anuales y cierre fiscal con revisión permanente.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">05</span><h3>Asesoramiento financiero</h3><p>Análisis, financiación, planes de viabilidad y cuadros de mando a medida.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">06</span><h3>Auditoría</h3><p>Auditoría de cuentas anuales y trabajos de revisión limitada.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">07</span><h3>I+D+i y Patent Box</h3><p>Deducciones fiscales con análisis individualizado de cada proyecto.</p><span class="ar">→</span></a>
+      <a class="svc" href="#"><span class="n">08</span><h3>Subvenciones y formación</h3><p>Buscador de convocatorias, tramitación y cursos 100% bonificables.</p><span class="ar">→</span></a>
+    </div>
+    <div class="chips">
+      <a class="chip" href="#">Agroalimentario</a><a class="chip" href="#">Vitivinícola</a><a class="chip" href="#">Transporte y logística</a>
+      <a class="chip" href="#">Construcción</a><a class="chip" href="#">Comercio</a><a class="chip" href="#">Hostelería y turismo</a>
+      <a class="chip" href="#">Industria del mueble</a><a class="chip" href="#">Empresa familiar</a><a class="chip" href="#">Autónomos</a>
+      <a class="chip" href="#">No residentes</a><a class="chip" href="#">Emprendedores · Punto PAE</a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="herramientas">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">02 / Herramientas propias</span>
+      <div>
+        <h2>Diagnóstico en <span class="ser-i">tiempo real</span> del estado de su empresa</h2>
+        <p class="sub">La innovación es cada vez más determinante para la competitividad. Por eso desarrollamos en el despacho nuestro propio sistema de control financiero, en lugar de revender software de terceros.</p>
+      </div>
+    </div>
+    <div class="tools">
+      <div class="tool"><div class="tag">A.D.I</div><h3>Análisis Dinámico Intermensual</h3><p>Lectura mes a mes de la situación real del negocio, sin esperar al cierre del ejercicio.</p></div>
+      <div class="tool"><div class="tag">A.D.P</div><h3>Análisis Dinámico Presupuestario</h3><p>Proyecciones a uno o varios años: necesidad de financiación, viabilidad de inversiones y tendencia.</p></div>
+      <div class="tool"><div class="tag">A.D.A</div><h3>Análisis Dinámico Analítico</h3><p>Costes de elaboración, precios de venta, control de existencias y cálculo de presupuestos.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">03 / Clientes</span>
+      <div><h2>Qué dicen de nosotros</h2></div>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <blockquote>“Llevamos con ellos desde que montamos la bodega. Saben lo que es una campaña y lo que es un cierre.”</blockquote>
+        <div class="who">Nombre del cliente<span>Bodega · Jumilla</span></div>
+      </div>
+      <div class="quote">
+        <blockquote>“Nos ordenaron la contabilidad y, sobre todo, nos explicaron qué significaba. Eso no lo hacía nadie antes.”</blockquote>
+        <div class="who">Nombre del cliente<span>Industria auxiliar · Yecla</span></div>
+      </div>
+      <div class="quote">
+        <blockquote>“Compramos siendo no residentes y se ocuparon de todo, del NIE a la escritura.”</blockquote>
+        <div class="who">Nombre del cliente<span>Particular · Benidorm</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">04 / Equipo</span>
+      <div>
+        <h2>Nuestro principal <span class="ser-i">activo</span></h2>
+        <p class="sub">Un equipo coordinado y numeroso de profesionales cualificados, con alto nivel de especialización en cada materia.</p>
+      </div>
+    </div>
+    <div class="team">
+      <div class="member"><div class="ph">Retrato b/n</div><h4>Nombre Apellido</h4><span>Socio · Fiscal</span></div>
+      <div class="member"><div class="ph">Retrato b/n</div><h4>Nombre Apellido</h4><span>Socia · Jurídico</span></div>
+      <div class="member"><div class="ph">Retrato b/n</div><h4>Nombre Apellido</h4><span>Dtor. Laboral</span></div>
+      <div class="member"><div class="ph">Retrato b/n</div><h4>Nombre Apellido</h4><span>Auditoría</span></div>
+      <div class="member"><div class="ph">Retrato b/n</div><h4>Nombre Apellido</h4><span>I+D+i</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">05 / Dudas frecuentes</span>
+      <div><h2>Preguntas que nos hacen a menudo</h2></div>
+    </div>
+    <div class="faq">
+      <details open><summary>¿Qué incluye una asesoría integral?<span class="pl">+</span></summary><div class="a">Fiscal, contable, laboral y jurídico gestionados por el mismo despacho y con la misma información. Eso evita duplicar documentación y que cada área tome decisiones sin conocer las de las demás.</div></details>
+      <details><summary>¿Trabajan con autónomos o solo con empresas?<span class="pl">+</span></summary><div class="a">Con ambos. Buena parte de nuestros clientes son autónomos y pymes de la Región, y desde 1977 hemos acompañado a muchos de ellos en su paso a sociedad.</div></details>
+      <details><summary>¿Puede mi empresa aplicar deducciones por I+D+i?<span class="pl">+</span></summary><div class="a">Más empresas de las que creen pueden hacerlo, no solo las tecnológicas. Hacemos un análisis individualizado del proyecto y gestionamos la deducción y, si procede, el informe motivado.</div></details>
+      <details><summary>Soy extranjero y quiero comprar en España, ¿me ayudan?<span class="pl">+</span></summary><div class="a">Sí. Obtención del NIE, impuesto sobre la renta de no residentes, testamentos, sucesiones y asesoramiento legal en la compraventa. Atendemos en español e inglés, también desde el despacho de Benidorm.</div></details>
+      <details><summary>¿Cuánto cuesta el servicio?<span class="pl">+</span></summary><div class="a">Depende del volumen, del número de impuestos a presentar y de la complejidad del caso. Le preparamos un presupuesto cerrado sin compromiso tras una primera conversación.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="despachos">
+  <div class="wrap">
+    <div class="shead">
+      <span class="lbl">06 / Despachos</span>
+      <div><h2>Seis sedes, atención de <span class="ser-i">cerca</span></h2></div>
+    </div>
+    <div class="offs">
+      <div class="off"><h4>Murcia</h4><p>Gran Vía, 28 — 5º · Sede central</p><a href="tel:+34968909020">968 909 020</a></div>
+      <div class="off"><h4>Murcia</h4><p>C/ Acisclo Díaz, 2</p><a href="tel:+34968284766">968 284 766</a></div>
+      <div class="off"><h4>Yecla</h4><p>C/ Pío Baroja, 7 · C/ Esteban Díaz, 53</p><a href="tel:+34968753640">968 753 640</a></div>
+      <div class="off"><h4>Jumilla</h4><p>C/ Valencia, 2</p><a href="tel:+34968780040">968 780 040</a></div>
+      <div class="off"><h4>Lorca</h4><p>Antigua Plaza de Abastos, 15 — Local 10</p><a href="tel:+34968471431">968 471 431</a></div>
+      <div class="off"><h4>Balsicas · Benidorm</h4><p>Avda. Cdad. de Murcia, 90 · Calle Jaén, 1</p><a href="tel:+34665912758">665 912 758</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contacto">
+  <div class="wrap">
+    <span class="lbl">07 / Contacto</span>
+    <h2 style="margin-top:24px">Cuéntenos <span class="ser-i">su caso</span></h2>
+    <p>Presupuesto sin compromiso desde el despacho más cercano.</p>
+    <div class="links">
+      <a href="tel:+34968909020" class="btn btn-fw">968 90 90 20</a>
+      <a href="mailto:serveco@serveco.es" class="btn btn-w">serveco@serveco.es</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logo" style="margin-bottom:14px"><strong>SERVECO</strong><span>Asesores · 1977</span></div>
+        <p style="font-size:14.5px;color:var(--gray);max-width:300px">Asesoría integral de empresas desde 1977. Economistas, abogados, ingenieros y técnicos superiores al servicio de empresas y autónomos.</p>
+      </div>
+      <div><h5>Servicios</h5><ul><li><a href="#">Fiscal</a></li><li><a href="#">Jurídico</a></li><li><a href="#">Laboral</a></li><li><a href="#">Auditoría</a></li><li><a href="#">I+D+i</a></li></ul></div>
+      <div><h5>Firma</h5><ul><li><a href="#firma">Quiénes somos</a></li><li><a href="#equipo">Equipo</a></li><li><a href="#despachos">Despachos</a></li><li><a href="#">Bolsa de trabajo</a></li></ul></div>
+      <div><h5>Legal</h5><ul><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li><li><a href="#">Canal de denuncias</a></li></ul></div>
+    </div>
+    <div class="fb">
+      <span>© 2026 Serveco Asesores S.L.P.</span>
+      <span>Propuesta 07 · Monocromo</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
