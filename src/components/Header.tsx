@@ -60,7 +60,7 @@ export default function Header({ lang }: { lang: 'es' | 'en' }) {
     return (
       <header className="cab">
         <div className="wrap">
-          <Logo href={EN.home} />
+          <Logo href={EN.home} imagen />
           <ul className={`menu${movil ? ' abierto' : ''}${sinHover ? ' sin-hover' : ''}`} id="menu" onClick={cerrarSiEnlace} onMouseLeave={() => setSinHover(false)}>
             <li><Link href={EN.services}>Services</Link></li>
             <li><Link href={EN.international}>International clients</Link></li>
@@ -81,7 +81,7 @@ export default function Header({ lang }: { lang: 'es' | 'en' }) {
   return (
     <header className="cab">
       <div className="wrap">
-        <Logo href={ES.home} />
+        <Logo href={ES.home} imagen />
 
         <ul className={`menu${movil ? ' abierto' : ''}${sinHover ? ' sin-hover' : ''}`} id="menu" onClick={cerrarSiEnlace} onMouseLeave={() => setSinHover(false)}>
           <li>

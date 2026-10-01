@@ -28,7 +28,7 @@ npm run dev          # http://localhost:3000 → /es
 
 | Partida PDF | Estado |
 |---|---|
-| 01 Web corporativa | Páginas, diseño, escenas, sitemap, robots, cookies, mapa web. **Al nivel SEO:** 8 áreas, internacional, 6 fichas, PAE, subvenciones, hub de servicios (todo `validado: false`). Metadatos de la home, marcado de la organización, `/llms.txt`, borradores legales ES/EN, script de redirecciones. Falta: revisión visual (Cursor), datos legales de Serveco, H1 de la home, ejecutar y revisar redirecciones, DNS |
+| 01 Web corporativa | Páginas, diseño, escenas, sitemap, robots, cookies, mapa web. **Al nivel SEO:** 8 áreas, internacional, 6 fichas, PAE, subvenciones, hub de servicios (todo `validado: false`). Metadatos de la home, marcado de la organización, `/llms.txt`, borradores legales ES/EN, script de redirecciones. Falta: revisión visual (Cursor), datos legales de Serveco, H1 de la home, ejecutar y revisar redirecciones, apuntar el dominio a esta web. La zona viva (1 oct, funciona) está en `../DNS-ZONA-OVH.md`: correo en Microsoft 365 y web actual en Arsys |
 | 02 12 landings | **Las 12 redactadas** con el reparto propuesto (fiscal ×5, laboral ×5, jurídico ×2), `src/data/landings-*.ts`, aviso «pendiente de reparto». Falta que Rafael lo confirme |
 | 03 Inglés | 22 páginas; 8 áreas EN, internacional EN y hub EN al nivel SEO (contenido propio); legales EN. Chat multilingüe |
 | 04 Blog | Público desde Supabase + panel, probado en local. Falta el rediseño (Cursor, `docs/ENCARGO-CURSOR-DISENO.md` Tarea B) y la formación |
@@ -103,7 +103,7 @@ Tablas: `offices`, `office_locations`, `service_areas`, `seo_landings`, `intl_pa
 
 ## Variables (`.env.local`, nunca al repo; nombres en `.env.example`)
 
-`NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` · `NEXT_PUBLIC_SUPABASE_ANON_KEY` · `SUPABASE_SECRET_KEY` · `SUPABASE_SERVICE_ROLE_KEY` · `OPENAI_API_KEY` · `ADMIN_EMAILS` (rellenar) · `NEXT_PUBLIC_GA_ID` (vacío) · **SMTP del formulario: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_TO`, `SMTP_FROM`** (vacíos: la consulta se guarda pero no hay correos) · opcionales: `CHAT_MAX_DIARIO`, `CHAT_MODEL`, `CHAT_AUDITOR_MODEL`, `BLOG_REDACTOR_MODEL`, `BLOG_PORTADA_MODEL`, `BLOG_PORTADA_CALIDAD`, `SUPABASE_DB_URL`.
+`NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` · `NEXT_PUBLIC_SUPABASE_ANON_KEY` · `SUPABASE_SECRET_KEY` · `SUPABASE_SERVICE_ROLE_KEY` · `OPENAI_API_KEY` · `ADMIN_EMAILS` (rellenar) · `NEXT_PUBLIC_GA_ID` (`G-4KFYS5D4JF`, Consent Mode: sin cookies hasta aceptar) · **SMTP del formulario: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_TO`, `SMTP_FROM`** (vacíos: la consulta se guarda pero no hay correos) · opcionales: `CHAT_MAX_DIARIO`, `CHAT_MODEL`, `CHAT_AUDITOR_MODEL`, `BLOG_REDACTOR_MODEL`, `BLOG_PORTADA_MODEL`, `BLOG_PORTADA_CALIDAD`, `SUPABASE_DB_URL`.
 `NODE_TLS_REJECT_UNAUTHORIZED=0` **solo en este PC** (Norton / proxy). **Nunca en Vercel.**
 Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas antes de producción.**
 
@@ -112,7 +112,7 @@ Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas ante
 - **Blog vacío en público:** los 3 artículos de ejemplo se están reescribiendo y quedan en borrador hasta que un abogado los firme.
 - Textos de las 8 áreas: redacción de Eskala, `validado: false`. **Auditoría:** confirmar que Serveco está en el ROAC.
 - Landings: 2 de ejemplo con relleno.
-- Logo: SVG aproximado (`components/Logo.tsx`). Colores a ojo del PNG.
+- Logo de cabecera: `public/images/logo-serveco-asesores.jpg`. El pie sigue con la marca dibujada (el JPG tiene fondo blanco).
 - H1 de la home: pendiente de la línea del informe de Rafael.
 - Sectores de la home y equipo: ejemplo / a validar. Sin retratos ni fachadas (no se generan con IA).
 - Home `/en`: sin las tres escenas de sector.

@@ -120,6 +120,7 @@
   .cab > .wrap { display: flex; align-items: center; justify-content: space-between; height: 78px; gap: 24px; }
   .logo { display: flex; align-items: center; gap: 12px; min-height: 44px; }
   .logo svg { width: 44px; height: 44px; flex: none; }
+  .logo-imagen img { height: 58px; width: auto; display: block; }
   .logo b { font-size: 22px; font-weight: 800; letter-spacing: 0.04em; color: var(--tinta); display: block; line-height: 1; }
   .logo small { display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; color: var(--tinta-2); margin-top: 3px; }
   .menu { display: flex; height: 78px; }
@@ -490,6 +491,7 @@
     .mega .wrap { grid-template-columns: 1fr; padding-top: 10px; padding-bottom: 10px; gap: 18px; }
     .hamb { display: block; min-height: 44px; }
     .logo svg { width: 40px; height: 40px; }
+    .logo-imagen img { height: 48px; }
     .logo b { font-size: 20px; }
     .cab-acciones .btn { display: none; }
     .hero .wrap, .contacto > .wrap, .dos { grid-template-columns: 1fr; gap: 40px; }
