@@ -155,14 +155,14 @@ export default async function HomeEs() {
           <div className="cabecera">
             <div>
               <h2>Las personas que llevarán su caso</h2>
-              <p>Cada área tiene un responsable con nombre y cara.</p>
+              <p>Los socios fundadores. El resto del equipo, por departamentos.</p>
             </div>
             <Link href={ES.equipo} className="btn btn-linea">Ver todo el equipo</Link>
           </div>
           <div className="equipo">
-            {EQUIPO.map((p, i) => (
-              <Link className="persona" href={ES.equipo} key={i}>
-                <div className="foto">Retrato</div>
+            {EQUIPO.filter((p) => p.destacado).map((p) => (
+              <Link className="persona" href={ES.equipo} key={p.nombre}>
+                <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
                 <div>
                   <h3>{p.nombre}</h3>
                   <p>{p.cargo}</p>

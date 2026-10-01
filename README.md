@@ -114,7 +114,7 @@ Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas ante
 - Landings: 2 de ejemplo con relleno.
 - Logo de cabecera: `public/images/logo-serveco-asesores.jpg`. El pie sigue con la marca dibujada (el JPG tiene fondo blanco).
 - H1 de la home: pendiente de la línea del informe de Rafael.
-- Sectores de la home y equipo: ejemplo / a validar. Sin retratos ni fachadas (no se generan con IA).
+- Sectores de la home: ejemplo / a validar. Equipo: 54 personas y fotos tomadas de serveco.es/nuestro-equipo/ (1 oct). Sin despacho asignado. Tres artículos del blog antiguo en borrador (no publicados). Retratos: los de la web actual, no generados con IA.
 - Home `/en`: sin las tres escenas de sector.
 - Teléfono de Balsicas (= central) y reparto de Yecla: verificar. Slug `juridico` vs `legal`: decidir.
 - Chatbot: nombre y avatar provisionales.

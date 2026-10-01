@@ -107,7 +107,7 @@ export default function About() {
           <h2>Offices and team</h2>
           <p>
             Murcia is the head office. Yecla, Jumilla, Lorca, Balsicas and Benidorm use the same file. Names and
-            photographs of the team are published once Serveco confirms them.
+            photographs are those Serveco publishes on its current website.
           </p>
           <p className="aviso">Draft by Eskala, from the current website and the firm’s own report. Pending Serveco’s review.</p>
           <div className="acciones-fila">

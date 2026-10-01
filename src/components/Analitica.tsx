@@ -3,7 +3,7 @@ import Script from 'next/script';
 /**
  * Google Analytics 4 con Consent Mode v2 (H1.5 + H1.4). Solo en la web pública (layouts /es y /en),
  * nunca en /administrator.
- *  · Solo se carga si existe NEXT_PUBLIC_GA_ID (ahora vacío: no carga nada de Google).
+ *  · Solo se carga si existe NEXT_PUBLIC_GA_ID (local: G-4KFYS5D4JF). En Vercel hay que poner la misma variable y volver a desplegar.
  *  · En la cola de dataLayer va PRIMERO «consent default = denied», luego la elección guardada
  *    y DESPUÉS el config: gtag.js procesa la cola en orden, llegue cuando llegue.
  *  · Sin consentimiento, GA no instala cookies.

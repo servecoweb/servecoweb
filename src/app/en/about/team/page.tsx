@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import PageHead from '@/components/PageHead';
-import { EQUIPO } from '@/data/team';
-import { SEDES } from '@/data/offices';
+import { DEPARTAMENTOS, EQUIPO } from '@/data/team';
 import { ES, EN } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Our team',
-  description: 'The people at Serveco: heads of each practice area and office.',
+  description: 'The people at Serveco, by department: tax, financial, legal, employment and administration.',
   alternates: { canonical: EN.team, languages: { es: ES.equipo, en: EN.team } },
 };
 
@@ -16,23 +15,27 @@ export default function Team() {
       <PageHead
         migas={[{ label: 'Home', href: EN.home }, { label: 'About us', href: EN.about }, { label: 'Our team' }]}
         titulo="The people who will handle your case"
-        lead="Economists, lawyers, engineers and specialists across our offices."
+        lead="The team Serveco publishes today, in the same departments as on its current website."
       />
       <section>
         <div className="wrap">
-          <p className="aviso">Sample team. Names, roles and photos pending.</p>
-          <div className="equipo">
-            {EQUIPO.map((p, i) => {
-              const sede = SEDES.find((s) => s.slug === p.sedeSlug);
-              return (
-                <div className="persona" key={i}>
-                  <div className="foto">Portrait</div>
-                  <h3>{p.nombre}</h3>
-                  <p>{p.cargo}{sede ? ` · ${sede.ciudad}` : ''}</p>
+          {DEPARTAMENTOS.map((d) => {
+            const gente = EQUIPO.filter((p) => p.departamento === d.id);
+            return (
+              <div className="equipo-bloque" key={d.id}>
+                <h2>{d.en}</h2>
+                <div className="equipo equipo-fichas">
+                  {gente.map((p) => (
+                    <div className="persona" key={p.nombre}>
+                      <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                      <h3>{p.nombre}</h3>
+                      <p>{p.cargoEn}</p>
+                    </div>
+                  ))}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

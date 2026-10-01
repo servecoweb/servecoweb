@@ -151,8 +151,8 @@ export default function LaFirma() {
             </p>
             <p>
               Las ocho áreas —fiscal, laboral, jurídica, contable, financiera, auditoría, I+D+i y formación— están en{' '}
-              <Link className="enlace" href={ES.servicios}>servicios</Link>. Los nombres y las fotos del equipo se
-              publican cuando Serveco los confirme; mientras, el organigrama de cargos está en{' '}
+              <Link className="enlace" href={ES.servicios}>servicios</Link>. Los nombres y las fotos son los que
+              Serveco tiene hoy en su web; un cargo o una foto se corrigen en{' '}
               <Link className="enlace" href={ES.equipo}>equipo</Link>.
             </p>
             <p className="aviso">
