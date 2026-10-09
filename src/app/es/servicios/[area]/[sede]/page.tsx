@@ -9,7 +9,7 @@ import { AREAS, getArea } from '@/data/areas';
 import { ESCENA_AREA } from '@/data/escenas';
 import { SEDES, getSede } from '@/data/offices';
 import { LANDINGS, getLanding } from '@/data/landings';
-import { EMPRESA, SITE_URL, telHref } from '@/data/site';
+import { AVISO_INTERNO, EMPRESA, SITE_URL, telHref } from '@/data/site';
 import { ES } from '@/lib/rutas';
 
 /**
@@ -81,7 +81,7 @@ export default async function LandingPage({ params }: { params: Params }) {
         <div className="wrap dos">
           <div className="texto">
             {ESCENA_AREA[a.slug] && <EscenaFoto id={ESCENA_AREA[a.slug]} />}
-            {l.pendienteReparto && (
+            {AVISO_INTERNO && l.pendienteReparto && (
               <p className="aviso">Página propuesta: pendiente de que Serveco confirme el reparto de las 12 landings.</p>
             )}
             <ContenidoSeo pagina={l} tituloFaqs={`Preguntas frecuentes: ${a.nombre.toLowerCase()} en ${s.ciudad}`} />

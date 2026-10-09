@@ -5,7 +5,7 @@ import BotonCookies from '@/components/BotonCookies';
 import { EMPRESA } from '@/data/site';
 import { EN } from '@/lib/rutas';
 
-export const metadata: Metadata = { title: 'Privacy policy', robots: { index: false } };
+export const metadata: Metadata = { title: 'Privacy policy', robots: { index: false, follow: true } };
 
 /**
  * DRAFT privacy policy (EN), same content as /es/privacidad. Written by Eskala (25 sep 2026).

@@ -35,17 +35,30 @@ export function leerConsentimiento(): Consentimiento | null {
   }
 }
 
-export function aplicarAGoogle(c: Pick<Consentimiento, 'analiticas' | 'marketing'>) {
+export function aplicarAGoogle(c: Pick<Consentimiento, 'analiticas' | 'marketing'>, opciones?: { pageView?: boolean }) {
   if (typeof window === 'undefined') return;
-  const gtag = (window as unknown as { gtag?: Gtag }).gtag;
-  if (!gtag) return;
   const ads = c.marketing ? 'granted' : 'denied';
-  gtag('consent', 'update', {
-    analytics_storage: c.analiticas ? 'granted' : 'denied',
-    ad_storage: ads,
-    ad_user_data: ads,
-    ad_personalization: ads,
-  });
+  const aplicar = () => {
+    const gtag = (window as unknown as { gtag?: Gtag }).gtag;
+    if (!gtag) return false;
+    gtag('consent', 'update', {
+      analytics_storage: c.analiticas ? 'granted' : 'denied',
+      ad_storage: ads,
+      ad_user_data: ads,
+      ad_personalization: ads,
+    });
+    // El page_view del primer pintado salió con analytics «denied»: sin este, la visita en la que
+    // se acepta no cuenta (Tiempo real a cero aunque se haya aceptado).
+    if (opciones?.pageView && c.analiticas) {
+      gtag('event', 'page_view', { page_location: window.location.href, page_title: document.title });
+    }
+    return true;
+  };
+  // gtag.js carga afterInteractive: si aún no está, se reintenta.
+  if (aplicar()) return;
+  window.setTimeout(aplicar, 100);
+  window.setTimeout(aplicar, 500);
+  window.setTimeout(aplicar, 1500);
 }
 
 function borrarCookie(nombre: string) {
@@ -61,7 +74,7 @@ export function guardarConsentimiento(eleccion: { analiticas: boolean; funcional
   } catch {
     // sin almacenamiento: la elección vale para esta visita
   }
-  aplicarAGoogle(c);
+  aplicarAGoogle(c, { pageView: true });
   // Si retira el consentimiento, se borran las cookies ya puestas.
   if (!c.analiticas) {
     borrarCookie('_ga');

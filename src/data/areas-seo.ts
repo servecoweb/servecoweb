@@ -1,7 +1,7 @@
 /**
  * CONTENIDO SEO DE LAS 8 PÁGINAS DE ÁREA (money pages). Plantilla: W - SERVECO/PLAN-SEO-PAGINAS.md § 3.1.
  * Redacción de Eskala (24 sep 2026). **validado: false** hasta que cada área lo revise en Serveco:
- * mientras sea false, la página muestra un aviso (solo se ve en local: la web lleva noindex hasta producción).
+ * mientras sea false, el aviso solo se pinta en local (`AVISO_INTERNO`). En producción la página se indexa.
  * Reglas: sin cifras legales sin vigencia, sin promesas, sin honorarios (PLAN-SEO-PAGINAS.md § 4).
  * Mañana: columna `seo` (jsonb) de `service_areas` en Supabase.
  */

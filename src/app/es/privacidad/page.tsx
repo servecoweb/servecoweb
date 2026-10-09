@@ -3,7 +3,7 @@ import LegalPage from '@/components/LegalPage';
 import BotonCookies from '@/components/BotonCookies';
 import { EMPRESA } from '@/data/site';
 
-export const metadata: Metadata = { title: 'Política de privacidad', robots: { index: false } };
+export const metadata: Metadata = { title: 'Política de privacidad', robots: { index: false, follow: true } };
 
 /**
  * BORRADOR redactado por Eskala (24 sep 2026) para cubrir el formulario de contacto y su seguimiento (mini-CRM).

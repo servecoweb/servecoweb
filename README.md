@@ -43,7 +43,7 @@ npm run dev          # http://localhost:3000 → /es
 src/
   proxy.ts                sesión de Supabase en /administrator (Next 16: sustituye a middleware)
   app/
-    layout.tsx            html raíz; fuente con <link> (next/font falla detrás del proxy); noindex hasta producción
+    layout.tsx            html raíz; fuente con <link> (next/font falla detrás del proxy); indexable en producción
     globals.css           PIEL: tokens + @theme de Tailwind 4 + capas
     es/  en/              web pública (layout con .web, chat, banner cookies, Analytics)
     administrator/        login + (panel)/ inicio (dashboard) · contactos · blog · chatbot
@@ -120,4 +120,4 @@ Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas ante
 - Chatbot: nombre y avatar provisionales.
 - Política de privacidad: **borrador** (`/es/privacidad`) que cubre el formulario y su seguimiento; la valida Serveco. La inglesa sigue siendo plantilla.
 - `public/hero-sala-src.mp4`: vídeo retirado del hero, se puede borrar.
-- `robots.ts` bloquea todo (`EN_PRODUCCION = false`) y `layout.tsx` lleva `noindex`: quitar al publicar.
+- Indexación abierta desde el 9 oct 2026: `robots.ts` permite el rastreo (panel y API, no) y el `noindex` global de `layout.tsx` está quitado. Las previews de Vercel siguen cerradas. Las legales llevan `noindex`.

@@ -9,7 +9,7 @@ import { getAreaSeo } from '@/data/areas-seo';
 import { ESCENA_AREA } from '@/data/escenas';
 import { SEDES } from '@/data/offices';
 import { LANDINGS } from '@/data/landings';
-import { EMPRESA, SITE_URL } from '@/data/site';
+import { AVISO_INTERNO, EMPRESA, SITE_URL } from '@/data/site';
 import { articulosPublicados } from '@/lib/blog/publico';
 import { ES, EN } from '@/lib/rutas';
 
@@ -100,7 +100,7 @@ export default async function AreaPage({ params }: { params: Params }) {
         <div className="wrap dos">
           <div className="texto">
             {ESCENA_AREA[a.slug] && <EscenaFoto id={ESCENA_AREA[a.slug]} />}
-            {seo && !seo.validado && (
+            {AVISO_INTERNO && seo && !seo.validado && (
               <p className="aviso">Texto pendiente de validar por el área {a.nombre.toLowerCase()} de Serveco.</p>
             )}
 

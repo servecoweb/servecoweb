@@ -1,4 +1,5 @@
 import type { SeccionSeo } from '@/data/areas-seo';
+import { AVISO_INTERNO } from '@/data/site';
 
 /**
  * Pinta el contenido SEO de una página (plantilla de PLAN-SEO-PAGINAS.md): apartados con H2 descriptivos,
@@ -20,7 +21,7 @@ export function ContenidoSeo({ pagina, lang = 'es', tituloFaqs }: { pagina: Pagi
   const en = lang === 'en';
   return (
     <>
-      {!pagina.validado && (
+      {AVISO_INTERNO && !pagina.validado && (
         <p className="aviso">{en ? 'Draft text, pending review by Serveco.' : 'Texto pendiente de validar por Serveco.'}</p>
       )}
       {pagina.secciones.map((s) => (

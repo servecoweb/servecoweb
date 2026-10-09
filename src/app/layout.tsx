@@ -10,8 +10,11 @@ export const metadata: Metadata = {
   },
   description:
     'Asesoría integral de empresas desde 1977. Fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación.',
-  // Mientras no esté en producción, que no se indexe nada.
-  robots: { index: false, follow: false },
+  openGraph: {
+    type: 'website',
+    siteName: 'Serveco Asesores',
+    locale: 'es_ES',
+  },
 };
 
 export const viewport: Viewport = {

@@ -4,6 +4,9 @@
  */
 export const SITE_URL = 'https://www.serveco.es';
 
+/** Aviso «pendiente de validar». Solo en local: en producción Google lo indexaría. */
+export const AVISO_INTERNO = process.env.NODE_ENV !== 'production';
+
 export const EMPRESA = {
   razonSocial: 'Serveco Asesores S.L.P.',
   marca: 'SERVECO',

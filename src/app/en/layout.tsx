@@ -7,6 +7,11 @@ import CookieBanner from '@/components/CookieBanner';
 import Analitica from '@/components/Analitica';
 import CapturaVisita from '@/components/CapturaVisita';
 import DatosOrganizacion from '@/components/DatosOrganizacion';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  openGraph: { type: 'website', siteName: 'Serveco Asesores', locale: 'en_GB' },
+};
 
 // El <html> raíz es lang="es". Aquí marcamos el bloque en inglés.
 export default function EnLayout({ children }: { children: React.ReactNode }) {

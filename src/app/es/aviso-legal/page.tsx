@@ -4,7 +4,7 @@ import LegalPage from '@/components/LegalPage';
 import { EMPRESA, SITE_URL } from '@/data/site';
 import { ES } from '@/lib/rutas';
 
-export const metadata: Metadata = { title: 'Aviso legal', robots: { index: false } };
+export const metadata: Metadata = { title: 'Aviso legal', robots: { index: false, follow: true } };
 
 /**
  * BORRADOR de aviso legal (LSSI-CE, art. 10) redactado por Eskala (25 sep 2026).

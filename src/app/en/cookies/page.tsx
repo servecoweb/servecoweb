@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LegalPage from '@/components/LegalPage';
 import BotonCookies from '@/components/BotonCookies';
 
-export const metadata: Metadata = { title: 'Cookie policy', robots: { index: false } };
+export const metadata: Metadata = { title: 'Cookie policy', robots: { index: false, follow: true } };
 
 /** DRAFT cookie policy (EN): same table as /es/cookies, based on what the site actually uses (checked 25 sep 2026). */
 const ROWS: { name: string; type: string; purpose: string; duration: string; owner: string }[] = [

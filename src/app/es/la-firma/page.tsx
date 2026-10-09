@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
-import { EMPRESA, telHref } from '@/data/site';
+import { AVISO_INTERNO, EMPRESA, telHref } from '@/data/site';
 import { EQUIPO } from '@/data/team';
 import { ES } from '@/lib/rutas';
 
@@ -159,10 +159,12 @@ export default function LaFirma() {
               Serveco tiene hoy en su web; un cargo o una foto se corrigen en{' '}
               <Link className="enlace" href={ES.equipo}>equipo</Link>.
             </p>
-            <p className="aviso">
-              Texto de Eskala a partir de la web actual y del informe de la firma. Pendiente de que los socios cierren
-              la propuesta de valor en una frase.
-            </p>
+            {AVISO_INTERNO && (
+              <p className="aviso">
+                Texto de Eskala a partir de la web actual y del informe de la firma. Pendiente de que los socios cierren
+                la propuesta de valor en una frase.
+              </p>
+            )}
             <div className="acciones-fila">
               <Link href={ES.contacto} className="btn btn-marca">Pedir cita</Link>
               <Link href={ES.equipo} className="btn btn-linea">Ver el equipo</Link>

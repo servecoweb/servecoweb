@@ -3,7 +3,7 @@ import Link from 'next/link';
 import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
-import { EMPRESA } from '@/data/site';
+import { AVISO_INTERNO, EMPRESA } from '@/data/site';
 import { EN } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -112,7 +112,9 @@ export default function About() {
             Murcia is the head office. Yecla, Jumilla, Lorca, Balsicas and Benidorm use the same file. Names and
             photographs are those Serveco publishes on its current website.
           </p>
-          <p className="aviso">Draft by Eskala, from the current website and the firm’s own report. Pending Serveco’s review.</p>
+          {AVISO_INTERNO && (
+            <p className="aviso">Draft by Eskala, from the current website and the firm’s own report. Pending Serveco’s review.</p>
+          )}
           <div className="acciones-fila">
             <Link href={EN.contact} className="btn btn-marca">Contact us</Link>
             <Link href={EN.offices} className="btn btn-linea">Offices</Link>

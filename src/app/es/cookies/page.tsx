@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import LegalPage from '@/components/LegalPage';
 import BotonCookies from '@/components/BotonCookies';
 
-export const metadata: Metadata = { title: 'Política de cookies', robots: { index: false } };
+export const metadata: Metadata = { title: 'Política de cookies', robots: { index: false, follow: true } };
 
 /**
  * BORRADOR de política de cookies (LSSI-CE art. 22.2 + Guía de cookies de la AEPD) con lo que la web USA DE VERDAD

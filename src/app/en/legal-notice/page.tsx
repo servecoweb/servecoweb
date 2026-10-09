@@ -4,7 +4,7 @@ import LegalPage from '@/components/LegalPage';
 import { EMPRESA, SITE_URL } from '@/data/site';
 import { EN } from '@/lib/rutas';
 
-export const metadata: Metadata = { title: 'Legal notice', robots: { index: false } };
+export const metadata: Metadata = { title: 'Legal notice', robots: { index: false, follow: true } };
 
 /** DRAFT legal notice (EN), same content as /es/aviso-legal. Items in brackets pending from Serveco. */
 export default function LegalNotice() {
