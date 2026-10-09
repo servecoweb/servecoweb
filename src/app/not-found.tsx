@@ -1,16 +1,36 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
+import UtilBar from '@/components/UtilBar';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ChatWidget from '@/components/ChatWidget';
+import VolverArriba from '@/components/VolverArriba';
+import CookieBanner from '@/components/CookieBanner';
+import Analitica from '@/components/Analitica';
+import CapturaVisita from '@/components/CapturaVisita';
+import DatosOrganizacion from '@/components/DatosOrganizacion';
+import NoEncontrada from '@/components/NoEncontrada';
 
+export const metadata: Metadata = {
+  title: 'Página no encontrada',
+  robots: { index: false, follow: true },
+};
+
+/** URL que no casa con ninguna ruta. /es y /en tienen el suyo, dentro de su layout. */
 export default function NotFound() {
   return (
-    <main className="page-head" style={{ minHeight: '70vh' }}>
-      <div className="wrap">
-        <h1>No encontramos esta página</h1>
-        <p className="lead">Puede que la dirección haya cambiado con la web nueva. Empiece desde el inicio o escríbanos.</p>
-        <p style={{ marginTop: 28, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link href="/es" className="btn btn-marca">Ir al inicio</Link>
-          <Link href="/es/contacto" className="btn btn-linea">Contactar</Link>
-        </p>
-      </div>
-    </main>
+    <div className="web">
+      <UtilBar lang="es" />
+      <Header lang="es" />
+      <main>
+        <NoEncontrada />
+      </main>
+      <Footer lang="es" />
+      <ChatWidget lang="es" />
+      <VolverArriba lang="es" />
+      <CookieBanner lang="es" />
+      <Analitica />
+      <CapturaVisita />
+      <DatosOrganizacion />
+    </div>
   );
 }

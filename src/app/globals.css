@@ -411,6 +411,26 @@
   .page-head { background: var(--niebla); border-bottom: 1px solid var(--linea); padding: 60px 0 52px; }
   .page-head h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; letter-spacing: -0.03em; max-width: 22ch; }
   .page-head .lead { font-size: 19px; color: var(--tinta-2); margin-top: 16px; max-width: 62ch; }
+  .no-encontrada { background: var(--niebla); border-bottom: 1px solid var(--linea); }
+  .no-encontrada-codigo {
+    margin: 0 0 8px; max-width: none;
+    font-size: clamp(72px, 12vw, 120px); font-weight: 800;
+    letter-spacing: -0.06em; line-height: 0.85; color: var(--naranja);
+  }
+  .no-encontrada h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 800; letter-spacing: -0.03em; max-width: 16ch; }
+  .no-encontrada .lead { font-size: 19px; color: var(--tinta-2); margin-top: 16px; max-width: 46ch; }
+  .no-encontrada-vias {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+    list-style: none; margin: 48px 0 0; padding: 0;
+  }
+  .no-encontrada-vias a {
+    display: block; height: 100%; background: var(--papel);
+    border: 1px solid var(--linea); border-top: 3px solid var(--naranja);
+    border-radius: var(--radio); padding: 18px 18px 16px;
+    text-decoration: none; color: var(--tinta); font-weight: 700; font-size: 17px;
+  }
+  .no-encontrada-vias a span { display: block; margin-top: 6px; font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--tinta-2); }
+  .no-encontrada-vias a:hover { border-color: var(--naranja); }
   .pilares { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: pilar; }
   .pilar {
     background: var(--papel); border: 1px solid var(--linea); border-top: 3px solid var(--naranja);
@@ -537,7 +557,7 @@
   /* ---------- Responsive ---------- */
   @media (max-width: 1100px) {
     .areas { grid-template-columns: repeat(2, 1fr); }
-    .equipo { grid-template-columns: repeat(2, 1fr); }
+    .equipo, .no-encontrada-vias { grid-template-columns: repeat(2, 1fr); }
     .despachos, .posts, .escenas-tres { grid-template-columns: repeat(2, 1fr); }
     .pie { grid-template-columns: 1fr 1fr 1fr; }
     .mega .wrap { grid-template-columns: 1fr 1fr; }
@@ -595,6 +615,7 @@
     .page-head .datos { grid-template-columns: 1fr 1fr; }
     .router { padding: 22px; }
     .page-head { padding: 44px 0 38px; }
-    .page-head .lead { font-size: 17px; }
+    .page-head .lead, .no-encontrada .lead { font-size: 17px; }
+    .no-encontrada-vias { grid-template-columns: 1fr; }
   }
 }
