@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import OfficesList from '@/components/OfficesList';
 import { SEDES, ciudadesEnLetra } from '@/data/offices';
+import { EMPRESA, telHref } from '@/data/site';
 import { ES } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -21,6 +23,16 @@ export default function Despachos() {
       <section>
         <div className="wrap">
           <OfficesList sedes={SEDES} />
+          <div className="despachos-ayuda">
+            <p>
+              <strong>¿Duda entre dos despachos?</strong>
+              <span>Llame a la sede central y le orientamos.</span>
+            </p>
+            <div className="acciones-fila">
+              <a className="btn btn-linea" href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>
+              <Link className="btn btn-marca" href={ES.contacto}>Pedir cita</Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

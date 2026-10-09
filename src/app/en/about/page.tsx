@@ -58,14 +58,17 @@ export default function About() {
             <article className="pilar">
               <h3>The file stays in one piece</h3>
               <p>Tax, employment, accounting and legal read the same facts. A decision in one area does not arrive late to the others.</p>
+              <Link className="ir" href={EN.services}>See the practice areas <span aria-hidden="true">→</span></Link>
             </article>
             <article className="pilar">
               <h3>Close to the business</h3>
               <p>Offices in Murcia, Yecla, Jumilla, Lorca, Balsicas and Benidorm. The standard of service is the same in all six.</p>
+              <Link className="ir" href={EN.offices}>Offices <span aria-hidden="true">→</span></Link>
             </article>
             <article className="pilar">
               <h3>Figures every month</h3>
               <p>The firm’s own A.D. systems track financial health month by month, instead of waiting for the year-end.</p>
+              <Link className="ir" href={EN.area('financial')}>Financial advice <span aria-hidden="true">→</span></Link>
             </article>
           </div>
         </div>

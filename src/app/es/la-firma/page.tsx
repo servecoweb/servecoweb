@@ -3,7 +3,8 @@ import Link from 'next/link';
 import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
-import { EMPRESA } from '@/data/site';
+import { EMPRESA, telHref } from '@/data/site';
+import { EQUIPO } from '@/data/team';
 import { ES } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -65,6 +66,7 @@ export default function LaFirma() {
                 Fiscal, laboral, contable y jurídico leen los mismos datos. Una decisión en un área no llega tarde a
                 las demás.
               </p>
+              <Link className="ir" href={ES.servicios}>Ver las áreas <span aria-hidden="true">→</span></Link>
             </article>
             <article className="pilar">
               <h3>Cerca de la empresa</h3>
@@ -72,6 +74,7 @@ export default function LaFirma() {
                 Hay despacho en Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm. El estándar de servicio es el mismo
                 en los seis.
               </p>
+              <Link className="ir" href={ES.despachos}>Ver despachos <span aria-hidden="true">→</span></Link>
             </article>
             <article className="pilar">
               <h3>Cifras cada mes</h3>
@@ -79,6 +82,7 @@ export default function LaFirma() {
                 Los sistemas A.D. siguen la salud financiera de la empresa mes a mes, sin esperar al cierre del año
                 para ver si algo se tuerce.
               </p>
+              <Link className="ir" href={ES.area('financiero')}>Ver el área financiera <span aria-hidden="true">→</span></Link>
             </article>
           </div>
         </div>
@@ -98,7 +102,7 @@ export default function LaFirma() {
           </div>
           <ul className="red-sedes">
             {SEDES.map((s) => (
-              <li key={s.slug}>
+              <li key={s.slug} className={s.central ? 'es-central' : undefined}>
                 <Link href={ES.sede(s.slug)}>
                   <strong>{s.ciudad}</strong>
                   <span>{s.central ? 'Sede central' : s.zona}</span>
@@ -165,6 +169,17 @@ export default function LaFirma() {
             </div>
           </div>
           <aside>
+            <div className="firma-socios">
+              {EQUIPO.filter((p) => p.destacado).map((p) => (
+                <Link className="persona" href={ES.equipo} key={p.nombre}>
+                  <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                  <div>
+                    <h3>{p.nombre}</h3>
+                    <p>{p.cargo}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
             <div className="caja">
               <h3>En la práctica</h3>
               <ul className="lista-simple">
@@ -175,6 +190,18 @@ export default function LaFirma() {
               </ul>
             </div>
           </aside>
+        </div>
+        <div className="wrap">
+          <div className="despachos-ayuda">
+            <p>
+              <strong>Hable con la firma</strong>
+              <span>Le atiende el área que corresponde, desde el despacho que le quede más cerca.</span>
+            </p>
+            <div className="acciones-fila">
+              <a className="btn btn-linea" href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>
+              <Link className="btn btn-marca" href={ES.contacto}>Pedir cita</Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

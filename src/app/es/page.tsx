@@ -40,16 +40,15 @@ export default async function HomeEs() {
   const ultimos = await articulosPublicados(3);
   return (
     <>
-      {/* HERO — PENDIENTE: H1 en la línea del informe de Rafael (firma regional, no «asesoría fiscal…») */}
+      {/* HERO — texto pedido por el cliente (9 oct): consultoría y asesoría legal integral. */}
       <section className="hero con-video" style={{ padding: 0 }}>
         <HeroFondo />
         <div className="hero-velo" aria-hidden="true" />
         <div className="wrap">
           <div>
-            <h1>Su asesoría fiscal, laboral y jurídica, bajo un mismo techo</h1>
+            <h1>Consultoría y asesoría legal para empresas</h1>
             <p className="entrada">
-              Más de treinta profesionales llevan la fiscalidad, las nóminas, la contabilidad y los contratos de su
-              empresa de forma coordinada. Un solo interlocutor, desde 1977.
+              Servicio integral: compraventas, fusiones, adquisiciones y el día a día fiscal, laboral y jurídico.
             </p>
             <div className="acciones">
               <Link href={ES.contacto} className="btn btn-marca">Pedir cita</Link>

@@ -194,7 +194,7 @@ Devuelve SOLO JSON válido:
   "faqs": [{"q": "pregunta real de búsqueda", "a": "1-3 frases coherentes con el cuerpo"}],
   "fuentes": [{"titulo": "norma o página oficial", "url": "https://… (dominio oficial del dossier)"}],
   "puntos_revision": ["lo que el abogado DEBE comprobar: cada cifra, plazo, artículo o afirmación delicada, citando la frase"],
-  "portada_brief": "escena de la portada (qué se ve), sin texto, sin caras reconocibles, sin mazos ni balanzas",
+  "portada_brief": "una escena concreta y distinta de un despacho con ventanal: lugar, objeto y distancia de cámara. Sin texto, sin caras, sin mazos ni balanzas. No repitas mesa de madera, persona de espaldas, mar o ciudad al fondo, carpeta naranja ni sombrero",
   "portada_alt": "texto alternativo, ≤ 120 caracteres"
 }
 faqs: 3-4, con preguntas DISTINTAS de los títulos de los apartados (dudas complementarias, no un resumen del cuerpo en forma de pregunta). fuentes: todas las oficiales enlazadas en el cuerpo (mínimo 1). puntos_revision: nunca vacío.
@@ -203,15 +203,20 @@ ${dossierEnlaces()}`;
 }
 
 // ── PORTADAS (gpt-image-2) ──────────────────────────────────────────────────
-export function promptPortada(brief: string): string {
-  return `Fotografía editorial realista para el blog de una asesoría de empresas española (Región de Murcia).
-Escena: ${brief}
+/** Escenas ya colgadas en el blog. El prompt las ve para no repetir el mismo plano. */
+export function promptPortada(brief: string, muro: string[] = []): string {
+  const ya = muro.map((s) => s.trim()).filter(Boolean).slice(0, 12);
+  const lista = ya.length
+    ? `\nEl blog se ve junto, como un muro. Estas escenas YA están publicadas:\n${ya.map((s) => `- ${s}`).join('\n')}\nLa nueva es otro lugar, otro objeto y otra distancia de cámara. Si se parece a alguna de la lista, está mal.\n`
+    : '';
+  return `Fotografía editorial realista, formato horizontal, para el blog de una asesoría de empresas.
+La escena manda. No la sustituyas por un despacho genérico:
+${brief}
+${lista}
+La foto de siempre, prohibida: mesa de madera junto a un ventanal, ciudad o mar al fondo, carpeta naranja, persona de espaldas mirando el horizonte, sombrero de paja, portátil y taza de café. Eso ya está repetido en el muro.
 
-Estilo obligatorio:
-- Luz natural suave, composición limpia y sobria, mucho espacio negativo, formato horizontal.
-- Paleta neutra cálida (grises, blancos, madera clara) con UN acento sutil en naranja (#EE7D22) en algún objeto.
-- Entornos reales y creíbles: despacho, taller, nave, comercio, bodega, oficina en casa, calle de ciudad mediterránea.
-- Protagonismo de objetos, manos y espacios. Si aparecen personas: de espaldas, parcialmente fuera de plano o desenfocadas.
+Luz creíble del lugar (nave, calle, interior), paleta sobria. Si hay un acento naranja (#EE7D22), es un objeto pequeño, no el protagonista.
+Personas solo si la escena las pide, y nunca de espaldas mirando un paisaje. Mejor objetos, manos o un espacio vacío.
 
-Prohibido: texto, letras, números, logotipos, marcas, banderas, documentos legibles, pantallas con texto, billetes o monedas en primer plano, mazos de juez, balanzas de la justicia, apretones de manos de stock, estética 3D o ilustración genérica, caras reconocibles.`;
+Prohibido: texto, letras, números, logotipos, marcas, banderas, documentos legibles, pantallas con texto, billetes o monedas en primer plano, mazos de juez, balanzas de la justicia, apretones de manos, estética 3D o ilustración, caras reconocibles, fachada de un despacho profesional.`;
 }

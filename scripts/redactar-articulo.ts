@@ -56,9 +56,14 @@ async function reescribirLosTres(db: SupabaseClient) {
 }
 
 async function portadas(db: SupabaseClient) {
-  const { data, error } = await db.from('blog_articles').select('id, title, cover_prompt').order('title');
+  const { data, error } = await db.from('blog_articles').select('id, title, cover_url, cover_prompt').order('title');
   if (error || !data?.length) throw new Error(error?.message || 'No hay artículos.');
-  for (const art of data) {
+  const faltan = data.filter((art) => !art.cover_url);
+  if (!faltan.length) {
+    console.log('Todos los artículos ya tienen portada.');
+    return;
+  }
+  for (const art of faltan) {
     console.log(`\nPortada: ${art.title}`);
     const brief = art.cover_prompt && !String(art.cover_prompt).startsWith('Fotografía') ? String(art.cover_prompt) : undefined;
     const url = await regenerarPortada(db, String(art.id), brief);

@@ -65,6 +65,10 @@ export const SEDES: Sede[] = [
   // { slug: 'madrid', ciudad: 'Madrid', zona: 'Madrid', locales: [{ direccion: '…', tel: '…' }] },
 ];
 
+/** Enlace a Google Maps en otra pestaña. Nunca incrustar el mapa: instalaría cookies sin consentimiento. */
+export const comoLlegar = (direccion: string, ciudad: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${direccion}, ${ciudad}, España`)}`;
+
 export function getSede(slug: string): Sede | undefined {
   return SEDES.find((s) => s.slug === slug);
 }

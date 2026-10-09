@@ -206,8 +206,8 @@ export async function redactarArticulo(opts: {
   log('6/6 Generando portada…');
   try {
     const brief = ed?.portada_brief || `Escena sobria que ilustre: ${titulo}`;
-    const { url, prompt } = await conReintentos(() => generarPortada(db, slug, brief), log, 2);
-    await db.from('blog_articles').update({ cover_url: url, cover_prompt: prompt }).eq('id', filaId);
+    const { url } = await conReintentos(() => generarPortada(db, slug, brief), log, 2);
+    await db.from('blog_articles').update({ cover_url: url, cover_prompt: brief }).eq('id', filaId);
     portada = true;
   } catch (err) {
     const texto = `No se pudo generar la portada: ${err instanceof Error ? err.message : err}. Se puede regenerar desde el panel.`;

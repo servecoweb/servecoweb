@@ -27,7 +27,7 @@ Línea editorial y temas: `../EDITORIAL-BLOG.md` (en la W).
 | 3 Editor jurídico | Quita consejo personalizado, cifras sin vigencia, relleno; devuelve cuerpo + SEO + FAQs + fuentes + **puntos de revisión** + brief de portada | `gpt-6-sol`, JSON, razonamiento `high` |
 | 4 Controles | Enlaces (internos solo a páginas que existen; externos solo dominios oficiales), longitud 1.000-1.700, ≥ 4 apartados, **> 1 apartado en forma de pregunta** (24 sep), «En resumen», fuentes, frases prohibidas, patrones de riesgo, cifras sin fecha | Código |
 | 5 Guardado | `blog_articles`, **siempre `draft`**, Markdown (`body_md`) + HTML (`body`) | — |
-| 6 Portada | 1536×1024 WebP, guía de estilo (sin texto, sin caras, sin mazos ni balanzas, acento naranja) | **`gpt-image-2.5-sunburst`**, calidad `medium`. Si la cuenta no tiene acceso o rechaza un parámetro, reserva automática `gpt-image-2` (PNG) |
+| 6 Portada | 1536×1024 WebP. La escena del artículo manda. El prompt recibe las escenas ya publicadas para no repetir el mismo plano (mesa, ventanal, persona de espaldas, mar) | **`gpt-image-2.5-sunburst`**, calidad `medium`. Si la cuenta no tiene acceso o rechaza un parámetro, reserva automática `gpt-image-2` (PNG) |
 
 Modelos verificados en developers.openai.com el 24 sep 2026 (antes: `gpt-5.6-terra` + `gpt-image-2`). `gpt-6-sol`: razonamiento más alto, `web_search` en Responses, 2 $ / 10 $ por M tokens.
 Sin `temperature` (GPT-5.x y 6 no la admiten). Cambiables con `BLOG_REDACTOR_MODEL`, `BLOG_PORTADA_MODEL` y `BLOG_PORTADA_CALIDAD` (`low` / `medium` / `high`).

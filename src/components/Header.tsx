@@ -65,6 +65,7 @@ export default function Header({ lang }: { lang: 'es' | 'en' }) {
             <li><Link href={EN.services}>Services</Link></li>
             <li><Link href={EN.international}>International clients</Link></li>
             <li><Link href={EN.about}>About us</Link></li>
+            <li><Link href={EN.team}>Our team</Link></li>
             <li><Link href={EN.offices}>Offices</Link></li>
           </ul>
           <div className="cab-acciones">
@@ -151,6 +152,7 @@ export default function Header({ lang }: { lang: 'es' | 'en' }) {
             </div>
           </li>
           <li><Link href={ES.firma}>La firma</Link></li>
+          <li><Link href={ES.equipo}>Nuestro equipo</Link></li>
           <li><Link href={ES.despachos}>Despachos</Link></li>
           <li><Link href={ES.blog}>Blog</Link></li>
         </ul>

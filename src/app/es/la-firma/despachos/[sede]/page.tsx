@@ -5,7 +5,7 @@ import PageHead from '@/components/PageHead';
 import ContactForm from '@/components/ContactForm';
 import { ContenidoSeo, EsquemasSeo } from '@/components/ContenidoSeo';
 import { AREAS } from '@/data/areas';
-import { SEDES, getSede } from '@/data/offices';
+import { SEDES, comoLlegar, getSede } from '@/data/offices';
 import { SEDES_SEO } from '@/data/sedes-seo';
 import { LANDINGS } from '@/data/landings';
 import { EQUIPO } from '@/data/team';
@@ -37,9 +37,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     alternates: { canonical: ES.sede(s.slug) },
   };
 }
-
-const comoLlegar = (direccion: string, ciudad: string) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${direccion}, ${ciudad}, España`)}`;
 
 export default async function FichaSede({ params }: { params: Params }) {
   const { sede } = await params;
