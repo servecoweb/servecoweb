@@ -18,6 +18,8 @@ export default function DatosOrganizacion() {
     '@id': `${SITE_URL}/#organizacion`,
     name: EMPRESA.razonSocial,
     url: SITE_URL,
+    logo: `${SITE_URL}/images/logo-serveco-asesores.jpg`,
+    image: `${SITE_URL}/images/logo_favicon.jpg`,
     foundingDate: String(EMPRESA.fundacion),
     telephone: `+34 ${EMPRESA.tel}`,
     email: EMPRESA.email,

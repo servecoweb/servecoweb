@@ -5,13 +5,13 @@ import EscenaFoto from '@/components/EscenaFoto';
 import { ContenidoSeo, EsquemasSeo } from '@/components/ContenidoSeo';
 import { PAE_SEO as seo } from '@/data/paginas-seo';
 import { EMPRESA, SITE_URL } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 /** Punto PAE (plantilla PLAN-SEO-PAGINAS.md). Contenido: src/data/paginas-seo.ts. */
 export const metadata: Metadata = {
   title: { absolute: seo.title },
   description: seo.metaDescription,
-  alternates: { canonical: ES.pae },
+  alternates: { canonical: ES.pae, languages: idiomas(ES.pae) },
 };
 
 export default function PuntoPae() {

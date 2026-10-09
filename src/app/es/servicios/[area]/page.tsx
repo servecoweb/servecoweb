@@ -11,7 +11,7 @@ import { SEDES } from '@/data/offices';
 import { LANDINGS } from '@/data/landings';
 import { AVISO_INTERNO, EMPRESA, SITE_URL } from '@/data/site';
 import { articulosPublicados } from '@/lib/blog/publico';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 /**
  * Página de ÁREA (money page). Plantilla SEO: W - SERVECO/PLAN-SEO-PAGINAS.md § 3.1.
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: { absolute: seo?.title ?? `Asesoría ${a.nombre.toLowerCase()} para empresas | Serveco` },
     description: seo?.metaDescription ?? a.resumen,
-    alternates: { canonical: ES.area(a.slug), languages: { es: ES.area(a.slug), en: EN.area(a.slugEn) } },
+    alternates: { canonical: ES.area(a.slug), languages: idiomas(ES.area(a.slug), EN.area(a.slugEn)) },
     openGraph: { title: seo?.title, description: seo?.metaDescription, type: 'website' },
   };
 }

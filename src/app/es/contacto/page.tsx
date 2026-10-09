@@ -4,11 +4,12 @@ import ContactForm from '@/components/ContactForm';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Contacto',
   description: 'Escriba a Serveco Asesores: le responde el área que corresponde desde el despacho que elija.',
-  alternates: { canonical: '/es/contacto', languages: { es: '/es/contacto', en: '/en/contact' } },
+  alternates: { canonical: ES.contacto, languages: idiomas(ES.contacto, EN.contact) },
 };
 
 export default function Contacto() {

@@ -5,13 +5,13 @@ import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA, telHref } from '@/data/site';
 import { EQUIPO } from '@/data/team';
-import { ES } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'La firma desde 1977',
   description:
     'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 30 profesionales y despachos en seis ciudades de Murcia y Alicante.',
-  alternates: { canonical: '/es/la-firma', languages: { es: '/es/la-firma', en: '/en/about' } },
+  alternates: { canonical: ES.firma, languages: idiomas(ES.firma, EN.about) },
 };
 
 export default function LaFirma() {

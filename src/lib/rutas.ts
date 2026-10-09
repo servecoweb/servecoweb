@@ -30,6 +30,14 @@ export const ES = {
   cookies: '/es/cookies',
 } as const;
 
+/**
+ * hreflang. El español es la versión por defecto (la raíz del dominio lleva a /es).
+ * Sin `en` cuando esa página no existe: no se inventa un alternate.
+ */
+export function idiomas(es: string, en?: string) {
+  return en ? { es, en, 'x-default': es } : { es, 'x-default': es };
+}
+
 export const EN = {
   home: '/en',
   services: '/en/services',

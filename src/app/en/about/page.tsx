@@ -4,13 +4,13 @@ import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA } from '@/data/site';
-import { EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'About us',
   description:
     'Serveco: a regional business advisory firm since 1977, with 30+ professionals and offices in six cities across Murcia and Alicante.',
-  alternates: { canonical: '/en/about', languages: { es: '/es/la-firma', en: '/en/about' } },
+  alternates: { canonical: EN.about, languages: idiomas(ES.firma, EN.about) },
 };
 
 export default function About() {

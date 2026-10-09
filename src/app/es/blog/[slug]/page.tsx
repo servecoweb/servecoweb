@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import PageHead from '@/components/PageHead';
 import { articuloPublicado, articulosPublicados, fechaLarga } from '@/lib/blog/publico';
 import { SITE_URL, EMPRESA } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 type Params = Promise<{ slug: string }>;
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: p.seoTitle || p.titulo,
     description: p.meta,
-    alternates: { canonical: ES.post(p.slug) },
+    alternates: { canonical: ES.post(p.slug), languages: idiomas(ES.post(p.slug)) },
     openGraph: {
       type: 'article',
       title: p.titulo,
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       publishedTime: p.fecha,
       ...(p.portada ? { images: [{ url: p.portada, alt: p.portadaAlt }] } : {}),
     },
+    ...(p.portada ? { twitter: { card: 'summary_large_image' as const, images: [p.portada] } } : {}),
   };
 }
 

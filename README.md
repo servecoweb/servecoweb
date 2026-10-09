@@ -103,7 +103,7 @@ Tablas: `offices`, `office_locations`, `service_areas`, `seo_landings`, `intl_pa
 
 ## Variables (`.env.local`, nunca al repo; nombres en `.env.example`)
 
-`NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` · `NEXT_PUBLIC_SUPABASE_ANON_KEY` · `SUPABASE_SECRET_KEY` · `SUPABASE_SERVICE_ROLE_KEY` · `OPENAI_API_KEY` · `ADMIN_EMAILS` (rellenar) · `NEXT_PUBLIC_GA_ID` (`G-4KFYS5D4JF`, Consent Mode: sin cookies hasta aceptar) · **SMTP del formulario: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_TO`, `SMTP_FROM`** (vacíos: la consulta se guarda pero no hay correos) · opcionales: `CHAT_MAX_DIARIO`, `CHAT_MODEL`, `CHAT_AUDITOR_MODEL`, `BLOG_REDACTOR_MODEL`, `BLOG_PORTADA_MODEL`, `BLOG_PORTADA_CALIDAD`, `SUPABASE_DB_URL`.
+`NEXT_PUBLIC_SUPABASE_URL` · `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` · `NEXT_PUBLIC_SUPABASE_ANON_KEY` · `SUPABASE_SECRET_KEY` · `SUPABASE_SERVICE_ROLE_KEY` · `OPENAI_API_KEY` · `ADMIN_EMAILS` (rellenar) · `NEXT_PUBLIC_GA_ID` (o `NEXT_PUBLIC_GA_MEASUREMENT_ID`; Consent Mode v2 en el primer HTML, sin cookies hasta aceptar) · **SMTP del formulario: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_TO`, `SMTP_FROM`** (vacíos: la consulta se guarda pero no hay correos) · opcionales: `CHAT_MAX_DIARIO`, `CHAT_MODEL`, `CHAT_AUDITOR_MODEL`, `BLOG_REDACTOR_MODEL`, `BLOG_PORTADA_MODEL`, `BLOG_PORTADA_CALIDAD`, `SUPABASE_DB_URL`.
 `NODE_TLS_REJECT_UNAUTHORIZED=0` **solo en este PC** (Norton / proxy). **Nunca en Vercel.**
 Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas antes de producción.**
 

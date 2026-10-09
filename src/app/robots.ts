@@ -6,7 +6,21 @@ import { SITE_URL } from '@/data/site';
  * Las páginas legales no van aquí: llevan `noindex` y Google tiene que poder leerlo.
  * Panel y API no se rastrean.
  */
+// /_next/ NO se bloquea: ahí van el CSS, el JS y /_next/image. Sin ellos Google renderiza la web sin estilos
+// y no indexa las imágenes.
 const PRIVADAS = ['/administrator', '/api/'];
+
+/** Previsualizaciones al compartir (molde Optimal). meta-externalagent ya está en los de IA. */
+const RASTREADORES_OG = [
+  'facebookexternalhit',
+  'Facebot',
+  'Twitterbot',
+  'LinkedInBot',
+  'WhatsApp',
+  'Slackbot-LinkExpanding',
+  'TelegramBot',
+  'Discordbot',
+];
 
 const RASTREADORES_IA = [
   'GPTBot',
@@ -32,6 +46,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: '*', ...regla },
       { userAgent: 'Googlebot', ...regla },
+      ...RASTREADORES_OG.map((userAgent) => ({ userAgent, ...regla })),
       ...RASTREADORES_IA.map((userAgent) => ({ userAgent, ...regla })),
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

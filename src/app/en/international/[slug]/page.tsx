@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import IntlPage from '@/components/IntlPage';
 import { INTL, getIntlEn } from '@/data/internacional';
 import { INTL_SEO } from '@/data/intl-seo';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 type Params = Promise<{ slug: string }>;
 
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: { absolute: seo?.title ?? p.tituloEn },
     description: seo?.metaDescription ?? p.leadEn,
-    alternates: { canonical: EN.intl(p.slugEn), languages: { es: ES.intl(p.slug), en: EN.intl(p.slugEn) } },
+    alternates: { canonical: EN.intl(p.slugEn), languages: idiomas(ES.intl(p.slug), EN.intl(p.slugEn)) },
   };
 }
 

@@ -4,11 +4,12 @@ import ContactForm from '@/components/ContactForm';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'Get in touch with Serveco. We reply in English.',
-  alternates: { canonical: '/en/contact', languages: { es: '/es/contacto', en: '/en/contact' } },
+  alternates: { canonical: EN.contact, languages: idiomas(ES.contacto, EN.contact) },
 };
 
 export default function Contact() {

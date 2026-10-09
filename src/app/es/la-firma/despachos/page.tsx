@@ -4,12 +4,12 @@ import PageHead from '@/components/PageHead';
 import OfficesList from '@/components/OfficesList';
 import { SEDES, ciudadesEnLetra } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Despachos',
   description: 'Direcciones y teléfonos de los despachos de Serveco Asesores.',
-  alternates: { canonical: ES.despachos },
+  alternates: { canonical: ES.despachos, languages: idiomas(ES.despachos, EN.offices) },
 };
 
 export default function Despachos() {

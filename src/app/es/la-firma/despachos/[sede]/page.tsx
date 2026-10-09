@@ -10,7 +10,7 @@ import { SEDES_SEO } from '@/data/sedes-seo';
 import { LANDINGS } from '@/data/landings';
 import { EQUIPO } from '@/data/team';
 import { EMPRESA, SITE_URL, telHref } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 /**
  * Ficha de despacho (plantilla PLAN-SEO-PAGINAS.md § 3.3). Contenido: src/data/sedes-seo.ts.
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: { absolute: seo?.title ?? `Asesoría en ${s.ciudad} | Serveco Asesores` },
     description: seo?.metaDescription ?? `Despacho de Serveco Asesores en ${s.ciudad}: ${s.locales.map((l) => l.direccion).join(' y ')}.`,
-    alternates: { canonical: ES.sede(s.slug) },
+    alternates: { canonical: ES.sede(s.slug), languages: idiomas(ES.sede(s.slug)) },
   };
 }
 

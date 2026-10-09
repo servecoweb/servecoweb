@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import { articulosPublicados, fechaLarga } from '@/lib/blog/publico';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Fiscalidad, laboral, jurídico y ayudas para empresas, explicados por el equipo de Serveco.',
-  alternates: { canonical: ES.blog },
+  alternates: { canonical: ES.blog, languages: idiomas(ES.blog) },
 };
 
 // H4.2: listado dinámico (lo que se publica en el panel aparece al momento).

@@ -6,7 +6,7 @@ import BuscadorExterno from '@/components/BuscadorExterno';
 import { ContenidoSeo, EsquemasSeo } from '@/components/ContenidoSeo';
 import { SUBVENCIONES_SEO as seo } from '@/data/paginas-seo';
 import { EMPRESA, SITE_URL } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 /**
  * Subvenciones (plantilla PLAN-SEO-PAGINAS.md). Contenido: src/data/paginas-seo.ts.
@@ -15,7 +15,7 @@ import { ES } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: { absolute: seo.title },
   description: seo.metaDescription,
-  alternates: { canonical: ES.subvenciones },
+  alternates: { canonical: ES.subvenciones, languages: idiomas(ES.subvenciones) },
 };
 
 export default function Subvenciones() {

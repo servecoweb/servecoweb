@@ -18,8 +18,8 @@ function redireccionesWordPress() {
 const nextConfig = {
   async redirects() {
     return [
-      // La raíz del dominio lleva al español. Las URLs públicas son /es/… y /en/…
-      { source: '/', destination: '/es', permanent: false },
+      // La raíz del dominio lleva al español (308: Google consolida la home en /es).
+      { source: '/', destination: '/es', permanent: true },
       ...redireccionesWordPress(),
     ];
   },

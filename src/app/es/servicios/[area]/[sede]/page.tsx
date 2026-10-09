@@ -10,7 +10,7 @@ import { ESCENA_AREA } from '@/data/escenas';
 import { SEDES, getSede } from '@/data/offices';
 import { LANDINGS, getLanding } from '@/data/landings';
 import { AVISO_INTERNO, EMPRESA, SITE_URL, telHref } from '@/data/site';
-import { ES } from '@/lib/rutas';
+import { ES, idiomas } from '@/lib/rutas';
 
 /**
  * Landing área × sede (partida 02). Contenido: src/data/landings-*.ts (plantilla PLAN-SEO-PAGINAS.md).
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: { absolute: l.title },
     description: l.metaDescription,
-    alternates: { canonical: ES.landing(area, sede) },
+    alternates: { canonical: ES.landing(area, sede), languages: idiomas(ES.landing(area, sede)) },
   };
 }
 

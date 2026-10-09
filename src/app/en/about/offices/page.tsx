@@ -3,13 +3,13 @@ import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import OfficesList from '@/components/OfficesList';
 import { SEDES } from '@/data/offices';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: { absolute: 'Our offices in Murcia and Alicante | Serveco' },
   description:
     'Six Serveco offices in the Region of Murcia and on the Costa Blanca. Services for non-residents and expats (NIE, non-resident tax, wills, property) at all of them.',
-  alternates: { canonical: EN.offices, languages: { es: ES.despachos, en: EN.offices } },
+  alternates: { canonical: EN.offices, languages: idiomas(ES.despachos, EN.offices) },
 };
 
 export default function Offices() {

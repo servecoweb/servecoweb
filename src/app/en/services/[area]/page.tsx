@@ -10,7 +10,7 @@ import { AREAS_SEO_EN } from '@/data/areas-seo-en';
 import { ESCENA_AREA } from '@/data/escenas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA, SITE_URL } from '@/data/site';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 /**
  * Área en inglés (plantilla PLAN-SEO-PAGINAS.md § 3.1). Contenido propio en src/data/areas-seo-en.ts
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: { absolute: seo?.title ?? `${a.nombreEn} advice in Spain | Serveco` },
     description: seo?.metaDescription ?? a.resumenEn,
-    alternates: { canonical: EN.area(a.slugEn), languages: { es: ES.area(a.slug), en: EN.area(a.slugEn) } },
+    alternates: { canonical: EN.area(a.slugEn), languages: idiomas(ES.area(a.slug), EN.area(a.slugEn)) },
   };
 }
 

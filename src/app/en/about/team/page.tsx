@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import PageHead from '@/components/PageHead';
 import { DEPARTAMENTOS, EQUIPO } from '@/data/team';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Our team',
   description: 'The people at Serveco, by department: tax, financial, legal, employment and administration.',
-  alternates: { canonical: EN.team, languages: { es: ES.equipo, en: EN.team } },
+  alternates: { canonical: EN.team, languages: idiomas(ES.equipo, EN.team) },
 };
 
 export default function Team() {

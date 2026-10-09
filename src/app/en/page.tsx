@@ -6,13 +6,13 @@ import AccesosIntl from '@/components/AccesosIntl';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA } from '@/data/site';
-import { ES, EN } from '@/lib/rutas';
+import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: { absolute: 'English-speaking business and tax advisers in Spain | Serveco' },
   description:
     'Tax, accounting, payroll and legal advice in Spain, in English, since 1977. NIE, non-resident tax and property for expats. Six offices in Murcia and Alicante.',
-  alternates: { canonical: EN.home, languages: { es: ES.home, en: EN.home } },
+  alternates: { canonical: EN.home, languages: idiomas(ES.home, EN.home) },
 };
 
 export default function HomeEn() {

@@ -149,7 +149,7 @@ export async function obtenerResumen() {
       ok: smtp,
       detalle: smtp ? 'Configurado' : 'Sin configurar: las consultas se guardan, pero no llegan correos',
     },
-    { nombre: 'Google Analytics', ok: Boolean(process.env.NEXT_PUBLIC_GA_ID), detalle: process.env.NEXT_PUBLIC_GA_ID ? 'Activo (con consentimiento)' : 'Sin ID de medición' },
+    { nombre: 'Google Analytics', ok: Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID), detalle: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID ? 'Activo (con consentimiento)' : 'Sin ID de medición' },
     { nombre: 'Bandeja de spam', ok: !spamRes.error, detalle: spamRes.error ? 'Falta la migración 0007' : 'Activa (30 días)' },
     { nombre: 'Administradores', ok: emailsAdmin().length > 0, detalle: `${emailsAdmin().length} con acceso` },
   ];
