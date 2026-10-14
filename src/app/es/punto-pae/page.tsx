@@ -35,13 +35,13 @@ export default function PuntoPae() {
             <EscenaFoto id="laboral" />
             <ContenidoSeo pagina={seo} tituloFaqs="Preguntas frecuentes sobre crear una empresa" />
             <p style={{ marginTop: 28 }}>
-              <Link className="btn btn-marca" href={ES.contacto}>Cuéntenos su proyecto</Link>
+              <Link className="btn btn-marca" href={ES.contacto}>Cuéntanos tu proyecto</Link>
             </p>
           </div>
           <aside>
             <div className="caja">
               <h3>Siguiente paso</h3>
-              <p style={{ marginBottom: 14, color: 'var(--tinta-2)' }}>Cuéntenos su proyecto y le decimos qué forma jurídica le conviene.</p>
+              <p style={{ marginBottom: 14, color: 'var(--tinta-2)' }}>Cuéntanos tu proyecto y te decimos qué forma jurídica te conviene.</p>
               <Link className="btn btn-marca" href={ES.contacto}>Hacer una consulta</Link>
             </div>
             <div className="caja">

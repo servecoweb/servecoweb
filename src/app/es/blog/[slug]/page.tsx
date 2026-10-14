@@ -111,8 +111,8 @@ export default async function Articulo({ params }: { params: Params }) {
 
           <aside>
             <div className="caja">
-              <h3>¿Le afecta a su empresa?</h3>
-              <p style={{ marginBottom: 14, color: 'var(--tinta-2)' }}>Cuéntenos su caso y le responde el área que corresponde.</p>
+              <h3>¿Te afecta a tu empresa?</h3>
+              <p style={{ marginBottom: 14, color: 'var(--tinta-2)' }}>Cuéntanos tu caso y te responde el área que corresponde.</p>
               <Link className="btn btn-marca" href={ES.contacto}>Hacer una consulta</Link>
             </div>
             {otros.length > 0 && (

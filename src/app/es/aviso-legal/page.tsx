@@ -15,7 +15,7 @@ export default function AvisoLegal() {
     <LegalPage titulo="Aviso legal">
       <h2>Titular de la web</h2>
       <p>
-        En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico, le informamos de
+        En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico, te informamos de
         que esta web ({SITE_URL}) pertenece a:
       </p>
       <ul>
@@ -29,15 +29,15 @@ export default function AvisoLegal() {
 
       <h2>Condiciones de uso</h2>
       <p>
-        El acceso a esta web es libre y gratuito. Al usarla, usted se compromete a hacerlo de forma lícita y a no dañar su
+        El acceso a esta web es libre y gratuito. Al usarla, te comprometes a hacerlo de forma lícita y a no dañar su
         funcionamiento ni la información que contiene.
       </p>
 
       <h2>Los contenidos no son asesoramiento</h2>
       <p>
         Los textos de esta web, los artículos del blog y las respuestas del asistente virtual tienen carácter informativo y general.
-        No constituyen asesoramiento fiscal, laboral, jurídico ni de ningún otro tipo, y no sustituyen el estudio de su caso por un
-        profesional. La normativa cambia con frecuencia: antes de tomar una decisión, consúltenos.
+        No constituyen asesoramiento fiscal, laboral, jurídico ni de ningún otro tipo, y no sustituyen el estudio de tu caso por un
+        profesional. La normativa cambia con frecuencia: antes de tomar una decisión, consúltanos.
       </p>
       <p>
         El uso del formulario de contacto o del asistente virtual no crea por sí mismo una relación profesional con {EMPRESA.razonSocial}.
@@ -53,7 +53,7 @@ export default function AvisoLegal() {
       <h2>Enlaces</h2>
       <p>
         Esta web puede enlazar a páginas de terceros, como organismos oficiales. No somos responsables de su contenido ni de su
-        disponibilidad. Algunos servicios de terceros, como el buscador de subvenciones, solo se cargan si usted lo pide.
+        disponibilidad. Algunos servicios de terceros, como el buscador de subvenciones, solo se cargan si tú lo pides.
       </p>
 
       <h2>Responsabilidad</h2>

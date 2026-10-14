@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Redes from './Redes';
 import { EMPRESA, telHref } from '@/data/site';
 
 export default function UtilBar({ lang }: { lang: 'es' | 'en' }) {
@@ -18,9 +19,12 @@ export default function UtilBar({ lang }: { lang: 'es' | 'en' }) {
           )}
           <a href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>
         </nav>
-        <div className="idioma" aria-label={es ? 'Idioma' : 'Language'}>
-          <Link href="/es" lang="es" aria-current={es ? 'true' : undefined}>ES</Link>
-          <Link href="/en" lang="en" aria-current={!es ? 'true' : undefined}>EN</Link>
+        <div className="util-lado">
+          <Redes />
+          <div className="idioma" aria-label={es ? 'Idioma' : 'Language'}>
+            <Link href="/es" lang="es" aria-current={es ? 'true' : undefined}>ES</Link>
+            <Link href="/en" lang="en" aria-current={!es ? 'true' : undefined}>EN</Link>
+          </div>
         </div>
       </div>
     </div>

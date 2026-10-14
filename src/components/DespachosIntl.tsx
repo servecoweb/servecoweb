@@ -11,7 +11,7 @@ export default function DespachosIntl({ lang }: { lang: 'es' | 'en' }) {
   const en = lang === 'en';
   return (
     <div className="caja">
-      <h3>{en ? 'Where we can see you' : 'Dónde le atendemos'}</h3>
+      <h3>{en ? 'Where we can see you' : 'Dónde te atendemos'}</h3>
       <p style={{ marginBottom: 12, color: 'var(--tinta-2)' }}>
         {en
           ? 'At any of our six offices, or remotely if you live abroad.'

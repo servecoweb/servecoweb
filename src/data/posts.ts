@@ -14,7 +14,7 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug: 'deduccion-idi-como-saber-si-su-empresa-puede-aplicarla',
-    titulo: 'Cómo saber si su empresa puede aplicar la deducción por I+D+i',
+    titulo: 'Cómo saber si tu empresa puede aplicar la deducción por I+D+i',
     categoria: 'Fiscal',
     fecha: '2026-09-15',
     extracto: 'Requisitos, informe motivado y errores habituales al cuantificar el gasto.',

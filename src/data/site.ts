@@ -17,6 +17,13 @@ export const EMPRESA = {
   buscadorSubvenciones: 'https://serveco.fandit.es',
 } as const;
 
+/** Perfiles que pasó el cliente (14 oct 2026). El orden es el de la franja y el pie. */
+export const REDES = [
+  { id: 'instagram', nombre: 'Instagram', url: 'https://www.instagram.com/servecoasesores/' },
+  { id: 'linkedin', nombre: 'LinkedIn', url: 'https://www.linkedin.com/company/serveco-asesores-s-l-p' },
+  { id: 'facebook', nombre: 'Facebook', url: 'https://www.facebook.com/SERVECOAsesores' },
+] as const;
+
 /** "968 90 90 20" → "tel:+34968909020" */
 export function telHref(tel: string): string {
   return 'tel:+34' + tel.replace(/\s/g, '');

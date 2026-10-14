@@ -166,8 +166,8 @@ export default async function FichaSede({ params }: { params: Params }) {
       <section className="contacto">
         <div className="wrap">
           <div>
-            <h2>Escriba al despacho de {s.ciudad}</h2>
-            <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>Le responde el área que corresponde desde {s.ciudad}.</p>
+            <h2>Escribe al despacho de {s.ciudad}</h2>
+            <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>Te responde el área que corresponde desde {s.ciudad}.</p>
           </div>
           <ContactForm lang="es" areas={AREAS.map((a) => a.nombre)} sedes={SEDES.map((x) => x.ciudad)} sedeInicial={s.ciudad} />
         </div>

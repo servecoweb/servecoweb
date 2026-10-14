@@ -144,7 +144,7 @@ export default async function AreaPage({ params }: { params: Params }) {
 
           <aside>
             <div className="caja">
-              <h3>¿Dónde le atendemos?</h3>
+              <h3>¿Dónde te atendemos?</h3>
               <p style={{ marginBottom: 10, color: 'var(--tinta-2)' }}>El área {a.nombre.toLowerCase()} trabaja desde todos nuestros despachos:</p>
               <ul className="lista-simple">
                 {SEDES.map((s) => {
@@ -188,9 +188,9 @@ export default async function AreaPage({ params }: { params: Params }) {
       <section className="contacto">
         <div className="wrap">
           <div>
-            <h2>Consulte con el área {a.nombre.toLowerCase()}</h2>
+            <h2>Consulta con el área {a.nombre.toLowerCase()}</h2>
             <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>
-              Cuéntenos qué necesita y desde qué despacho prefiere que le atendamos. Le responde el área que corresponde.
+              Cuéntanos qué necesitas y desde qué despacho prefieres que te atendamos. Te responde el área que corresponde.
             </p>
           </div>
           <ContactForm

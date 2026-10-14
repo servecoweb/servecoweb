@@ -39,7 +39,7 @@ export async function enviarConsulta(_prev: EstadoForm, formData: FormData): Pro
     ok: false,
     error: en
       ? 'We could not send your message. Please call us on +34 968 90 90 20.'
-      : 'No hemos podido enviar la consulta. Llámenos al 968 90 90 20.',
+      : 'No hemos podido enviar la consulta. Llámanos al 968 90 90 20.',
     valores,
   };
 
@@ -63,21 +63,21 @@ export async function enviarConsulta(_prev: EstadoForm, formData: FormData): Pro
   const mensaje = texto('mensaje', 5000);
   const campos: Partial<Record<CampoForm, string>> = {};
   if (nombre.length < 2 || !/\p{L}/u.test(nombre)) {
-    campos.nombre = en ? 'Please tell us your name.' : 'Indíquenos su nombre.';
+    campos.nombre = en ? 'Please tell us your name.' : 'Indícanos tu nombre.';
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
-    campos.email = en ? 'Please enter a valid email address.' : 'Escriba un correo válido (ejemplo: nombre@empresa.es).';
+    campos.email = en ? 'Please enter a valid email address.' : 'Escribe un correo válido (ejemplo: nombre@empresa.es).';
   }
   if (telefono) {
     const digitos = telefono.replace(/\D/g, '').length;
     if (!/^[+\d\s().-]+$/.test(telefono) || digitos < 9 || digitos > 15) {
-      campos.telefono = en ? 'Please check the phone number (or leave it blank).' : 'Revise el teléfono (o déjelo en blanco).';
+      campos.telefono = en ? 'Please check the phone number (or leave it blank).' : 'Revisa el teléfono (o déjalo en blanco).';
     }
   }
   if (mensaje.length < 15) {
     campos.mensaje = en
       ? 'Please tell us a little more about what you need (at least 15 characters).'
-      : 'Cuéntenos algo más sobre lo que necesita (mínimo 15 caracteres).';
+      : 'Cuéntanos algo más sobre lo que necesitas (mínimo 15 caracteres).';
   }
   if (formData.get('gdpr') !== 'on') {
     campos.gdpr = en ? 'Please accept the privacy policy.' : 'Falta aceptar la política de privacidad.';

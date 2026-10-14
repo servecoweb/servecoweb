@@ -42,7 +42,7 @@ export default function ServiciosHub({ lang }: { lang: 'es' | 'en' }) {
           <div className="cabecera" style={{ marginBottom: 20 }}>
             <div>
               <h2>{en ? 'Find the right service for your situation' : 'Encuentre el servicio que necesita'}</h2>
-              <p>{en ? 'Choose the situation closest to yours and go straight to the right page.' : 'Elija la situación que más se parezca a la suya y vaya directamente a la página que le corresponde.'}</p>
+              <p>{en ? 'Choose the situation closest to yours and go straight to the right page.' : 'Elige la situación que más se parezca a la tuya y ve directamente a la página que te corresponde.'}</p>
             </div>
           </div>
           <ul className="intl-accesos">
@@ -83,7 +83,7 @@ export default function ServiciosHub({ lang }: { lang: 'es' | 'en' }) {
             <ContenidoSeo pagina={seo} lang={lang} />
             <p style={{ marginTop: 28 }}>
               <Link className="btn btn-marca" href={en ? EN.contact : ES.contacto}>
-                {en ? 'Tell us about your case' : 'Cuéntenos su caso'}
+                {en ? 'Tell us about your case' : 'Cuéntanos tu caso'}
               </Link>
             </p>
           </div>

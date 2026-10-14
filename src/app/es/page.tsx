@@ -71,7 +71,7 @@ export default async function HomeEs() {
             <div>
               <h2>Ocho áreas que trabajan juntas</h2>
               <p>
-                Economistas, abogados, ingenieros y técnicos superiores comparten el expediente de su empresa. No hace
+                Economistas, abogados, ingenieros y técnicos superiores comparten el expediente de tu empresa. No hace
                 falta repetir la historia en cada departamento.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default async function HomeEs() {
         <div className="wrap">
           <div className="cabecera">
             <div>
-              <h2>Sistemas A.D.: su empresa en cifras, cada mes</h2>
+              <h2>Sistemas A.D.: tu empresa en cifras, cada mes</h2>
               <p>Herramientas desarrolladas por Serveco para que las decisiones no esperen al cierre del año.</p>
             </div>
           </div>
@@ -113,14 +113,14 @@ export default async function HomeEs() {
         <div className="wrap">
           <div className="cabecera">
             <div>
-              <h2>Conocemos su sector</h2>
+              <h2>Conocemos tu sector</h2>
               <p>Cada actividad tributa, contrata y se financia de una forma distinta. Trabajamos con el criterio de cada una.</p>
             </div>
           </div>
           <div className="sectores">
             {/* Carrusel deslizable, sin autoplay. Tarjetas no clicables: no hay páginas por sector. */}
             <SectoresCarrusel sectores={TARJETAS_SECTOR} />
-            <Link href={ES.contacto} className="btn btn-linea">Cuéntenos su actividad</Link>
+            <Link href={ES.contacto} className="btn btn-linea">Cuéntanos tu actividad</Link>
           </div>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default async function HomeEs() {
         <div className="wrap">
           <div className="cabecera">
             <div>
-              <h2>Las personas que llevarán su caso</h2>
+              <h2>Las personas que llevarán tu caso</h2>
               <p>Los socios fundadores. El resto del equipo, por departamentos.</p>
             </div>
             <Link href={ES.equipo} className="btn btn-linea">Ver todo el equipo</Link>
@@ -178,7 +178,7 @@ export default async function HomeEs() {
           <div className="cabecera">
             <div>
               <h2>{ciudadesEnLetra()}, un mismo equipo</h2>
-              <p>Acuda al despacho que le quede más cerca. Su expediente es el mismo en todos.</p>
+              <p>Acude al despacho que te quede más cerca. Tu expediente es el mismo en todos.</p>
             </div>
           </div>
           <OfficesList sedes={SEDES} />
@@ -222,9 +222,9 @@ export default async function HomeEs() {
       <section className="contacto" id="contacto">
         <div className="wrap">
           <div>
-            <h2>Cuéntenos qué necesita</h2>
+            <h2>Cuéntanos qué necesitas</h2>
             <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>
-              Le responde el área que corresponde, desde el despacho que elija.
+              Te responde el área que corresponde, desde el despacho que elijas.
             </p>
             <div className="via">
               <a href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>

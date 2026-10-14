@@ -51,13 +51,13 @@ export const LANDINGS_FISCAL: Landing[] = [
       {
         h2: 'Cómo empezamos',
         parrafos: [
-          'Una primera reunión en cualquiera de nuestros dos despachos de Yecla, o por videollamada, para conocer su empresa. Revisamos sus últimas declaraciones y le proponemos cómo trabajar: una iguala mensual con todo incluido o un trabajo concreto.',
+          'Una primera reunión en cualquiera de nuestros dos despachos de Yecla, o por videollamada, para conocer tu empresa. Revisamos tus últimas declaraciones y te proponemos cómo trabajar: una iguala mensual con todo incluido o un trabajo concreto.',
         ],
       },
     ],
     faqs: [
-      { q: '¿Qué despacho de Yecla lleva la parte fiscal?', a: 'Los dos trabajan sobre los mismos expedientes. Al pedir cita le indicamos en cuál le atenderá la persona que llevará su fiscalidad.' },
-      { q: '¿Mi taller puede aplicar la deducción por innovación?', a: 'Depende del proyecto: no hace falta ser una gran empresa ni tener laboratorio. Lo revisamos con usted y, si encaja, preparamos la documentación.' },
+      { q: '¿Qué despacho de Yecla lleva la parte fiscal?', a: 'Los dos trabajan sobre los mismos expedientes. Al pedir cita te indicamos en cuál te atenderá la persona que llevará tu fiscalidad.' },
+      { q: '¿Mi taller puede aplicar la deducción por innovación?', a: 'Depende del proyecto: no hace falta ser una gran empresa ni tener laboratorio. Lo revisamos contigo y, si encaja, preparamos la documentación.' },
       { q: 'Vendo muebles a otros países de la UE. ¿Cambia algo en el IVA?', a: 'Sí: las ventas a empresas de otros países de la Unión tienen su propio tratamiento y declaraciones informativas. Las revisamos para que estén bien desde la primera factura.' },
       { q: '¿Cuándo me conviene pasar de autónomo a sociedad?', a: 'Depende de sus beneficios, del riesgo de la actividad y de sus planes. Lo calculamos con sus números reales antes de dar el paso.' },
     ],
@@ -87,7 +87,7 @@ export const LANDINGS_FISCAL: Landing[] = [
         parrafos: [],
         lista: [
           { t: 'Agricultores y ganaderos', d: 'Elección y seguimiento del régimen de tributación más adecuado para la explotación, en el IRPF y en el IVA.' },
-          { t: 'Bodegas', d: 'Impuesto de sociedades, IVA y las obligaciones propias del sector del vino, coordinadas con su contabilidad.' },
+          { t: 'Bodegas', d: 'Impuesto de sociedades, IVA y las obligaciones propias del sector del vino, coordinadas con tu contabilidad.' },
           { t: 'Comercios y autónomos', d: 'Impuestos trimestrales, declaración de la renta y paso a sociedad cuando conviene.' },
           { t: 'Ayudas y subvenciones', d: 'Cómo tributan las ayudas agrarias y a la inversión, para que no haya sorpresas en la declaración.' },
           { t: 'Patrimonio familiar', d: 'Tierras, naves y viviendas: herencias y donaciones dentro de la familia, planificadas con tiempo.' },
@@ -97,7 +97,7 @@ export const LANDINGS_FISCAL: Landing[] = [
         h2: 'Elegir bien el régimen fiscal de la explotación',
         parrafos: [
           'Un agricultor puede tributar por distintos regímenes, tanto en la renta como en el IVA, y cada uno tiene ventajas e inconvenientes según el tamaño de la explotación, las inversiones previstas y a quién vende. No siempre el más sencillo es el que más conviene.',
-          'Revisamos su caso con sus números, le explicamos las opciones y le avisamos cuando un cambio en la explotación (una inversión fuerte, una venta a otro cliente, la entrada de un hijo) aconseja cambiar de régimen.',
+          'Revisamos tu caso con tus números, te explicamos las opciones y te avisamos cuando un cambio en la explotación (una inversión fuerte, una venta a otro cliente, la entrada de un hijo) aconseja cambiar de régimen.',
         ],
       },
       {
@@ -109,7 +109,7 @@ export const LANDINGS_FISCAL: Landing[] = [
       {
         h2: 'Cómo empezamos',
         parrafos: [
-          'Llámenos o venga al despacho de la calle Valencia. En una primera reunión revisamos su situación y sus últimas declaraciones, y le proponemos cómo trabajar. También podemos vernos por videollamada.',
+          'Llámanos o ven al despacho de la calle Valencia. En una primera reunión revisamos tu situación y tus últimas declaraciones, y te proponemos cómo trabajar. También podemos vernos por videollamada.',
         ],
       },
     ],
@@ -117,7 +117,7 @@ export const LANDINGS_FISCAL: Landing[] = [
       { q: '¿Las subvenciones agrarias tributan?', a: 'En general sí, aunque la forma de declararlas depende del tipo de ayuda y del régimen de la explotación. Las tenemos en cuenta al preparar su declaración.' },
       { q: '¿Llevan cooperativistas?', a: 'Sí: la fiscalidad del socio de la cooperativa, sus liquidaciones y su declaración de la renta.' },
       { q: 'Mi padre me va a pasar las tierras. ¿Qué impuestos hay?', a: 'Depende de si es donación o herencia, del valor de las tierras y de los requisitos que se cumplan. Conviene revisarlo antes de firmar nada.' },
-      { q: '¿Pueden atenderme sin ir al despacho?', a: 'Sí. Muchas gestiones se resuelven por teléfono, correo o videollamada; al despacho viene cuando le venga bien.' },
+      { q: '¿Podéis atenderme sin ir al despacho?', a: 'Sí. Muchas gestiones se resuelven por teléfono, correo o videollamada; al despacho vienes cuando te venga bien.' },
     ],
     cta: 'Pedir cita con el área fiscal en Jumilla',
     pendienteReparto: true,
@@ -156,7 +156,7 @@ export const LANDINGS_FISCAL: Landing[] = [
         h2: 'Planificar antes de invertir',
         parrafos: [
           'Una nave nueva, una granja ampliada o maquinaria para la campaña: son decisiones con un impacto fiscal que conviene conocer antes. El momento de la compra, la forma de financiarla o si se hace a través de la sociedad o a título personal cambian lo que se paga.',
-          'Revisamos con usted la operación antes de firmar y, si hay ayudas públicas para esa inversión, se lo decimos también: muchas exigen solicitarse antes de empezar.',
+          'Revisamos contigo la operación antes de firmar y, si hay ayudas públicas para esa inversión, se lo decimos también: muchas exigen solicitarse antes de empezar.',
         ],
       },
       {
@@ -167,7 +167,7 @@ export const LANDINGS_FISCAL: Landing[] = [
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en el despacho de Lorca o por videollamada. Revisamos su situación y sus últimas declaraciones y le proponemos cómo trabajar.'],
+        parrafos: ['Pide cita en el despacho de Lorca o por videollamada. Revisamos tu situación y tus últimas declaraciones y te proponemos cómo trabajar.'],
       },
     ],
     faqs: [
@@ -212,23 +212,23 @@ export const LANDINGS_FISCAL: Landing[] = [
         h2: 'Devoluciones de IVA: la tesorería del exportador',
         parrafos: [
           'Una empresa que vende sobre todo fuera de España suele soportar más IVA en sus compras del que repercute en sus ventas, y eso genera derecho a devolución. Cuánto tarda en cobrarse depende de cómo se gestione: hay procedimientos que permiten pedirla con más frecuencia si se cumplen los requisitos.',
-          'Revisamos si su empresa puede acogerse a ellos y llevamos las declaraciones para que el dinero vuelva a su caja cuanto antes.',
+          'Revisamos si tu empresa puede acogerse a ellos y llevamos las declaraciones para que el dinero vuelva a su caja cuanto antes.',
         ],
       },
       {
         h2: 'Extranjeros en el Mar Menor',
         parrafos: [
-          'La costa del Mar Menor tiene muchos residentes y propietarios extranjeros. Si vive aquí, le ayudamos con su declaración de la renta en España; si tiene una vivienda y vive fuera, con el impuesto de no residentes. Todo desde el mismo despacho, sin tener que desplazarse a otra oficina.',
+          'La costa del Mar Menor tiene muchos residentes y propietarios extranjeros. Si vive aquí, te ayudamos con su declaración de la renta en España; si tiene una vivienda y vive fuera, con el impuesto de no residentes. Todo desde el mismo despacho, sin tener que desplazarse a otra oficina.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en el despacho de la avenida Ciudad de Murcia o por videollamada. Revisamos su situación y le proponemos cómo trabajar.'],
+        parrafos: ['Pide cita en el despacho de la avenida Ciudad de Murcia o por videollamada. Revisamos tu situación y te proponemos cómo trabajar.'],
       },
     ],
     faqs: [
       { q: '¿Atienden a empresas de San Javier, Los Alcázares o Fuente Álamo?', a: 'Sí. Desde Balsicas trabajamos con todo el Campo de Cartagena y el Mar Menor.' },
-      { q: '¿Cómo puedo cobrar antes las devoluciones de IVA?', a: 'Si su empresa cumple los requisitos, puede solicitar las devoluciones con más frecuencia. Lo revisamos y, si encaja, tramitamos la inscripción.' },
+      { q: '¿Cómo puedo cobrar antes las devoluciones de IVA?', a: 'Si tu empresa cumple los requisitos, puede solicitar las devoluciones con más frecuencia. Lo revisamos y, si encaja, tramitamos la inscripción.' },
       { q: 'Tengo una casa en Los Alcázares y vivo en el Reino Unido. ¿Me llevan los impuestos?', a: 'Sí: el impuesto de no residentes por su vivienda, también en inglés.' },
       { q: '¿Llevan cooperativas?', a: 'Llevamos la fiscalidad de los socios cooperativistas; para la cooperativa, revisamos cada caso.' },
     ],
@@ -250,7 +250,7 @@ export const LANDINGS_FISCAL: Landing[] = [
         h2: 'Impuestos para una economía turística',
         parrafos: [
           'En Benidorm y la Marina Baixa la mayoría de los negocios viven del turismo: hoteles, apartamentos, restaurantes, bares, comercios y servicios. Tienen ingresos muy concentrados en la temporada, mucho movimiento de caja y, a menudo, propietarios o clientes extranjeros.',
-          'Llevamos su fiscalidad con esa realidad en mente: previsión de los pagos de impuestos en los meses flojos, control del IVA y planificación antes del cierre.',
+          'Llevamos tu fiscalidad con esa realidad en mente: previsión de los pagos de impuestos en los meses flojos, control del IVA y planificación antes del cierre.',
         ],
       },
       {
@@ -269,25 +269,25 @@ export const LANDINGS_FISCAL: Landing[] = [
         h2: 'Benidorm tributa con normativa valenciana',
         parrafos: [
           'Benidorm está en la Comunitat Valenciana, y eso importa: impuestos como el de sucesiones y donaciones o el de transmisiones patrimoniales tienen reglas autonómicas propias, distintas de las de la Región de Murcia. Una herencia o la compra de una vivienda aquí no se calcula igual que en Murcia.',
-          'Trabajamos con las dos normativas a diario, así que le decimos qué aplica en su caso concreto, esté el bien donde esté.',
+          'Trabajamos con las dos normativas a diario, así que te decimos qué aplica en tu caso concreto, esté el bien donde esté.',
         ],
       },
       {
         h2: 'Pisos turísticos: cada caso tributa distinto',
         parrafos: [
-          'Alquilar un apartamento a turistas no siempre tributa igual: depende de si usted reside en España o no, de los servicios que ofrece a los huéspedes y de si lo hace como particular o a través de una empresa. Según el caso, puede haber IVA o no, y los gastos que se pueden deducir cambian.',
-          'Revisamos cómo lo tiene organizado y le decimos cómo declararlo correctamente.',
+          'Alquilar un apartamento a turistas no siempre tributa igual: depende de si resides en España o no, de los servicios que ofreces a los huéspedes y de si lo haces como particular o a través de una empresa. Según el caso, puede haber IVA o no, y los gastos que se pueden deducir cambian.',
+          'Revisamos cómo lo tiene organizado y te decimos cómo declararlo correctamente.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Venga al despacho de la calle Jaén, llámenos o escríbanos. Atendemos en español y en inglés, en persona o por videollamada.'],
+        parrafos: ['Ven al despacho de la calle Jaén, llámenos o escríbenos. Atendemos en español y en inglés, en persona o por videollamada.'],
       },
     ],
     faqs: [
       { q: '¿Atienden en inglés?', a: 'Sí. En Benidorm atendemos en español y en inglés, en persona, por teléfono y por correo.' },
       { q: 'Heredo una vivienda en Benidorm y vivo en Murcia. ¿Qué normativa se aplica?', a: 'Depende de varios factores, entre ellos la residencia de quien fallece. Lo revisamos con los datos concretos antes de presentar nada.' },
-      { q: '¿Tengo que cobrar IVA por mi piso turístico?', a: 'Depende de los servicios que preste a los huéspedes y de cómo lo gestione. Lo revisamos con usted.' },
+      { q: '¿Tengo que cobrar IVA por mi piso turístico?', a: 'Depende de los servicios que preste a los huéspedes y de cómo lo gestione. Lo revisamos contigo.' },
       { q: 'Me instalo a vivir en Benidorm. ¿Cuándo empiezo a declarar la renta en España?', a: 'En general, cuando pasa a ser residente fiscal. Lo revisamos al llegar para que el cambio de residencia quede bien hecho en los dos países.' },
     ],
     cta: 'Pedir cita con el área fiscal en Benidorm',

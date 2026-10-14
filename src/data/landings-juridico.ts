@@ -19,7 +19,7 @@ export const LANDINGS_JURIDICO: Landing[] = [
         h2: 'Derecho de empresa para la industria de Yecla',
         parrafos: [
           'Las empresas de Yecla venden en toda España y fuera, trabajan con agentes comerciales y distribuidores y, muchas veces, son empresas familiares con varios hermanos o primos en el accionariado. Son situaciones en las que un buen contrato o un buen pacto evita años de conflicto.',
-          'Nuestros abogados trabajan desde la prevención y, cuando el conflicto ya existe, le defienden, con la ventaja de que su expediente fiscal, contable y laboral está en la misma firma.',
+          'Nuestros abogados trabajan desde la prevención y, cuando el conflicto ya existe, te defienden, con la ventaja de que tu expediente fiscal, contable y laboral está en la misma firma.',
         ],
       },
       {
@@ -49,14 +49,14 @@ export const LANDINGS_JURIDICO: Landing[] = [
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en cualquiera de los dos despachos de Yecla o por videollamada. Nos cuenta el asunto, revisamos la documentación y le decimos cómo lo abordaríamos.'],
+        parrafos: ['Pide cita en cualquiera de los dos despachos de Yecla o por videollamada. Nos cuentas el asunto, revisamos la documentación y te decimos cómo lo abordaríamos.'],
       },
     ],
     faqs: [
-      { q: 'Un cliente de otra provincia no me paga. ¿Qué hago?', a: 'Primero, un requerimiento formal; si no paga, hay procedimientos judiciales pensados para reclamar deudas. Le decimos cuál encaja según el importe y la documentación.' },
-      { q: '¿Necesito un protocolo familiar?', a: 'Si hay varias ramas de la familia en la empresa o se acerca el relevo, suele ser muy recomendable. Lo vemos con usted.' },
+      { q: 'Un cliente de otra provincia no me paga. ¿Qué hago?', a: 'Primero, un requerimiento formal; si no paga, hay procedimientos judiciales pensados para reclamar deudas. Te decimos cuál encaja según el importe y la documentación.' },
+      { q: '¿Necesito un protocolo familiar?', a: 'Si hay varias ramas de la familia en la empresa o se acerca el relevo, suele ser muy recomendable. Lo vemos contigo.' },
       { q: 'Quiero cambiar de distribuidor. ¿Tengo que indemnizarle?', a: 'Depende del contrato y de la relación. Revíselo con nosotros antes de comunicar nada.' },
-      { q: '¿Pueden defenderme en un juicio?', a: 'Sí. Nuestros abogados le representan en procedimientos civiles y mercantiles.' },
+      { q: '¿Podéis defenderme en un juicio?', a: 'Sí. Nuestros abogados te representan en procedimientos civiles y mercantiles.' },
     ],
     cta: 'Consultar con el área jurídica en Yecla',
     pendienteReparto: true,
@@ -101,18 +101,18 @@ export const LANDINGS_JURIDICO: Landing[] = [
       {
         h2: 'Cobrar a tiempo',
         parrafos: [
-          'En sectores con márgenes ajustados, una factura grande sin cobrar puede poner en apuros a la empresa. Cuanto antes se reclama, más opciones hay de cobrar. Revisamos la documentación de la deuda y le proponemos la vía más rápida según el importe y el deudor.',
+          'En sectores con márgenes ajustados, una factura grande sin cobrar puede poner en apuros a la empresa. Cuanto antes se reclama, más opciones hay de cobrar. Revisamos la documentación de la deuda y te proponemos la vía más rápida según el importe y el deudor.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en el despacho de Lorca o por videollamada. Nos cuenta el asunto, revisamos la documentación y le decimos cómo lo abordaríamos.'],
+        parrafos: ['Pide cita en el despacho de Lorca o por videollamada. Nos cuentas el asunto, revisamos la documentación y te decimos cómo lo abordaríamos.'],
       },
     ],
     faqs: [
       { q: 'Un cliente me debe una factura desde hace meses. ¿Qué puedo hacer?', a: 'Empezar con un requerimiento formal y, si no paga, reclamar judicialmente con el procedimiento que corresponda. Cuanto antes, mejor.' },
       { q: 'Somos varios hermanos y heredamos una finca. ¿Cómo la repartimos?', a: 'Hay varias opciones (dividirla, que uno la adquiera y compense a los demás, mantenerla en común) y cada una tiene efectos jurídicos y fiscales. Las revisamos con todos antes de decidir.' },
-      { q: 'El arrendatario de mi finca no paga. ¿Qué hago?', a: 'Revisamos el contrato y le decimos cómo reclamar la renta y, si procede, recuperar la finca.' },
+      { q: 'El arrendatario de mi finca no paga. ¿Qué hago?', a: 'Revisamos el contrato y te decimos cómo reclamar la renta y, si procede, recuperar la finca.' },
       { q: '¿Atienden asuntos de Águilas o Totana?', a: 'Sí, desde el despacho de Lorca atendemos a todo el Valle del Guadalentín.' },
     ],
     cta: 'Consultar con el área jurídica en Lorca',

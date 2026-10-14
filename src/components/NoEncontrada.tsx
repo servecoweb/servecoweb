@@ -29,7 +29,7 @@ export default function NoEncontrada({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <p className="lead">
           {en
             ? 'The address may have changed with the new website. Start from the home page or write to us.'
-            : 'Puede que la dirección haya cambiado con la web nueva. Empiece desde el inicio o escríbanos.'}
+            : 'Puede que la dirección haya cambiado con la web nueva. Empieza desde el inicio o escríbenos.'}
         </p>
         <div className="acciones-fila">
           <Link href={en ? EN.home : ES.home} className="btn btn-marca">{en ? 'Go to the home page' : 'Ir al inicio'}</Link>

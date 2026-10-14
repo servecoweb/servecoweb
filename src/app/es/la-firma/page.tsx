@@ -196,8 +196,8 @@ export default function LaFirma() {
         <div className="wrap">
           <div className="despachos-ayuda">
             <p>
-              <strong>Hable con la firma</strong>
-              <span>Le atiende el área que corresponde, desde el despacho que le quede más cerca.</span>
+              <strong>Habla con la firma</strong>
+              <span>Te atiende el área que corresponde, desde el despacho que te quede más cerca.</span>
             </p>
             <div className="acciones-fila">
               <a className="btn btn-linea" href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>

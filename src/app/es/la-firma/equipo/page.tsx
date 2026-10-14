@@ -14,7 +14,7 @@ export default function Equipo() {
     <>
       <PageHead
         migas={[{ label: 'Inicio', href: '/es' }, { label: 'La firma', href: '/es/la-firma' }, { label: 'Equipo' }]}
-        titulo="Las personas que llevarán su caso"
+        titulo="Las personas que llevarán tu caso"
         lead="El equipo que Serveco publica hoy, agrupado como en su web: fiscal, financiero, jurídico, laboral y administración."
       />
       <section>

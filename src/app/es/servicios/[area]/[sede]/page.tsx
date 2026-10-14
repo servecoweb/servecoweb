@@ -137,7 +137,7 @@ export default async function LandingPage({ params }: { params: Params }) {
         <div className="wrap">
           <div>
             <h2>{l.cta}</h2>
-            <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>Le atiende el área {a.nombre.toLowerCase()} desde {s.ciudad}.</p>
+            <p style={{ color: 'var(--tinta-2)', marginTop: 14 }}>Te atiende el área {a.nombre.toLowerCase()} desde {s.ciudad}.</p>
           </div>
           <ContactForm
             lang="es"

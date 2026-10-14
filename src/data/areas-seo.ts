@@ -34,14 +34,14 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Asesoría fiscal en Murcia desde 1977: impuesto de sociedades, IVA, IRPF, planificación fiscal y empresa familiar. Seis despachos en la Región y Benidorm.',
     h1: 'Asesoría fiscal en Murcia para empresas y autónomos',
     lead:
-      'Llevamos la fiscalidad de pymes, empresas familiares, autónomos y particulares, y la coordinamos con su contabilidad y su área laboral para que el cierre del año no traiga sorpresas.',
+      'Llevamos la fiscalidad de pymes, empresas familiares, autónomos y particulares, y la coordinamos con tu contabilidad y su área laboral para que el cierre del año no traiga sorpresas.',
     busquedaPrincipal: 'asesoría fiscal en Murcia',
     secciones: [
       {
         h2: 'Una asesoría fiscal que se anticipa, no solo que presenta',
         parrafos: [
-          'Una asesoría fiscal se ocupa de que su empresa cumpla con Hacienda y, sobre todo, de que pague lo que le corresponde y no más. Eso significa presentar bien y a tiempo cada declaración, pero también anticiparse: revisar antes del cierre qué decisiones tienen efecto fiscal y cuáles conviene tomar este año o el siguiente.',
-          'En Serveco la fiscalidad no va sola. El mismo equipo ve su contabilidad, sus nóminas y sus contratos, y eso evita el problema más habitual de las empresas que reparten la gestión entre varios proveedores: que nadie tenga la foto completa hasta que llega un requerimiento.',
+          'Una asesoría fiscal se ocupa de que tu empresa cumpla con Hacienda y, sobre todo, de que pague lo que le corresponde y no más. Eso significa presentar bien y a tiempo cada declaración, pero también anticiparse: revisar antes del cierre qué decisiones tienen efecto fiscal y cuáles conviene tomar este año o el siguiente.',
+          'En Serveco la fiscalidad no va sola. El mismo equipo ve tu contabilidad, sus nóminas y sus contratos, y eso evita el problema más habitual de las empresas que reparten la gestión entre varios proveedores: que nadie tenga la foto completa hasta que llega un requerimiento.',
         ],
       },
       {
@@ -59,19 +59,19 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         ],
       },
       {
-        h2: 'Cuándo conviene revisar la fiscalidad de su empresa',
+        h2: 'Cuándo conviene revisar la fiscalidad de tu empresa',
         parrafos: [
           'Hay momentos en los que una revisión fiscal suele ahorrar dinero o disgustos: cuando un autónomo empieza a ganar lo suficiente como para plantearse crear una sociedad; antes de una inversión importante o de comprar un inmueble; cuando entra un nuevo socio o un hijo en la empresa familiar; al vender la empresa o parte de ella; y, cada año, unas semanas antes del cierre del ejercicio.',
-          'También conviene hacerlo si ha recibido un requerimiento de Hacienda o si su gestoría actual se limita a presentar lo que usted le lleva, sin proponerle nada.',
+          'También conviene hacerlo si has recibido un requerimiento de Hacienda o si tu gestoría actual se limita a presentar lo que tú le llevas, sin proponerte nada.',
         ],
       },
       {
         h2: 'Nuestro método de trabajo',
         parrafos: ['Nuestro método es sencillo y se repite con cada cliente:'],
         lista: [
-          { t: 'Primera reunión', d: 'En el despacho que le quede más cerca o por videollamada. Nos cuenta su actividad y cómo se ha gestionado hasta ahora.' },
-          { t: 'Revisión de partida', d: 'Analizamos sus últimas declaraciones y detectamos riesgos y oportunidades.' },
-          { t: 'Propuesta', d: 'Le proponemos una iguala para la gestión del año o un trabajo concreto, con el alcance por escrito.' },
+          { t: 'Primera reunión', d: 'En el despacho que te quede más cerca o por videollamada. Nos cuentas tu actividad y cómo se ha gestionado hasta ahora.' },
+          { t: 'Revisión de partida', d: 'Analizamos tus últimas declaraciones y detectamos riesgos y oportunidades.' },
+          { t: 'Propuesta', d: 'Te proponemos una iguala para la gestión del año o un trabajo concreto, con el alcance por escrito.' },
           { t: 'Seguimiento', d: 'Un interlocutor fijo, calendario fiscal compartido y una revisión antes de cada cierre.' },
         ],
       },
@@ -79,17 +79,17 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'Por qué elegir Serveco como asesor fiscal en Murcia',
         parrafos: [
           'Llevamos desde 1977 asesorando a empresas de la Región de Murcia. Somos más de treinta profesionales, entre economistas, abogados, ingenieros y técnicos, y trabajamos coordinados sobre el mismo expediente: si una decisión fiscal afecta a sus nóminas o a sus contratos, lo vemos a la vez.',
-          `Tenemos despachos en ${DESPACHOS}, así que puede tratar con nosotros en persona sin desplazarse a la capital. Y contamos con herramientas propias de análisis financiero (los sistemas A.D.) que nos permiten planificar con los números reales de su empresa, mes a mes.`,
+          `Tenemos despachos en ${DESPACHOS}, así que puede tratar con nosotros en persona sin desplazarse a la capital. Y contamos con herramientas propias de análisis financiero (los sistemas A.D.) que nos permiten planificar con los números reales de tu empresa, mes a mes.`,
         ],
       },
     ],
     faqs: [
-      { q: '¿Qué diferencia hay entre una gestoría y una asesoría fiscal?', a: 'Una gestoría se centra en tramitar y presentar declaraciones. Una asesoría fiscal, además, analiza su situación, le propone cómo organizarse para pagar lo justo y le defiende ante Hacienda si hay una comprobación o una inspección.' },
-      { q: '¿Cuándo compensa pasar de autónomo a sociedad limitada?', a: 'Depende de su beneficio, de si va a reinvertir en el negocio y de su situación personal. En general, a partir de cierto nivel de beneficio la sociedad empieza a ser interesante, pero hay que hacer los números con su caso concreto antes de decidir.' },
-      { q: '¿Pueden llevar la fiscalidad si ya tengo otra gestoría para la contabilidad?', a: 'Sí, aunque le recomendamos que la fiscalidad y la contabilidad las lleve el mismo equipo: los impuestos salen de la contabilidad y, si están separados, los errores de una parte se trasladan a la otra.' },
-      { q: '¿Qué hago si recibo un requerimiento de Hacienda?', a: 'No lo deje pasar: los requerimientos tienen plazo. Tráiganoslo cuanto antes; revisamos qué pide, preparamos la documentación y contestamos en su nombre.' },
+      { q: '¿Qué diferencia hay entre una gestoría y una asesoría fiscal?', a: 'Una gestoría se centra en tramitar y presentar declaraciones. Una asesoría fiscal, además, analiza tu situación, te propone cómo organizarse para pagar lo justo y te defiende ante Hacienda si hay una comprobación o una inspección.' },
+      { q: '¿Cuándo compensa pasar de autónomo a sociedad limitada?', a: 'Depende de su beneficio, de si va a reinvertir en el negocio y de tu situación personal. En general, a partir de cierto nivel de beneficio la sociedad empieza a ser interesante, pero hay que hacer los números con tu caso concreto antes de decidir.' },
+      { q: '¿Podéis llevar la fiscalidad si ya tengo otra gestoría para la contabilidad?', a: 'Sí, aunque te recomendamos que la fiscalidad y la contabilidad las lleve el mismo equipo: los impuestos salen de la contabilidad y, si están separados, los errores de una parte se trasladan a la otra.' },
+      { q: '¿Qué hago si recibo un requerimiento de Hacienda?', a: 'No lo deje pasar: los requerimientos tienen plazo. Tráiganoslo cuanto antes; revisamos qué pide, preparamos la documentación y contestamos en tu nombre.' },
       { q: '¿Atienden a particulares o solo a empresas?', a: 'Atendemos a ambos: declaraciones de la renta, herencias, donaciones, compraventas de inmuebles y fiscalidad de no residentes, además de la de empresas y autónomos.' },
-      { q: '¿Tengo que ir al despacho de Murcia?', a: `No. Puede elegir cualquiera de nuestros despachos (${DESPACHOS}) o trabajar con nosotros a distancia; su expediente es el mismo en todos.` },
+      { q: '¿Tengo que ir al despacho de Murcia?', a: `No. Puedes elegir cualquiera de nuestros despachos (${DESPACHOS}) o trabajar con nosotros a distancia; tu expediente es el mismo en todos.` },
     ],
     relacionadas: ['contable', 'laboral', 'financiero', 'idi-patent-box'],
     validado: false,
@@ -102,23 +102,23 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Asesoría laboral en Murcia para empresas: nóminas, seguros sociales, contratos, despidos e inspecciones de trabajo. Serveco, desde 1977, con seis despachos.',
     h1: 'Asesoría laboral en Murcia para empresas',
     lead:
-      'Gestionamos el día a día laboral de su plantilla (nóminas, altas, contratos) y le acompañamos en los momentos delicados: un despido, una inspección de trabajo o un cambio en la organización.',
+      'Gestionamos el día a día laboral de tu plantilla (nóminas, altas, contratos) y te acompañamos en los momentos delicados: un despido, una inspección de trabajo o un cambio en la organización.',
     busquedaPrincipal: 'asesoría laboral en Murcia',
     secciones: [
       {
         h2: 'Una asesoría laboral que va más allá de las nóminas',
         parrafos: [
-          'Una asesoría laboral se encarga de todo lo que tiene que ver con las personas que trabajan en su empresa: que cobren bien y a tiempo, que estén dadas de alta con el contrato adecuado, que se cotice lo que corresponde y que la empresa cumpla con obligaciones como el registro de jornada o los calendarios laborales.',
+          'Una asesoría laboral se encarga de todo lo que tiene que ver con las personas que trabajan en tu empresa: que cobren bien y a tiempo, que estén dadas de alta con el contrato adecuado, que se cotice lo que corresponde y que la empresa cumpla con obligaciones como el registro de jornada o los calendarios laborales.',
           'Pero su valor real está en lo que evita: un contrato mal elegido, un despido mal planteado o una inspección sin preparar pueden costar mucho más que la gestión de todo un año.',
         ],
       },
       {
         h2: 'Servicios de asesoría laboral para empresas',
-        parrafos: ['Nos ocupamos de toda la gestión laboral de su empresa:'],
+        parrafos: ['Nos ocupamos de toda la gestión laboral de tu empresa:'],
         lista: [
           { t: 'Nóminas y seguros sociales', d: 'Cálculo mensual de nóminas, liquidación de cotizaciones y retenciones.' },
           { t: 'Contratación', d: 'Elección del tipo de contrato, altas, bajas y variaciones, y comunicación de contratos.' },
-          { t: 'Convenios colectivos', d: 'Aplicación del convenio de su sector: tablas salariales, pluses, jornada y vacaciones.' },
+          { t: 'Convenios colectivos', d: 'Aplicación del convenio de tu sector: tablas salariales, pluses, jornada y vacaciones.' },
           { t: 'Despidos y extinciones', d: 'Cartas de despido, finiquitos, cálculo de indemnizaciones y conciliaciones.' },
           { t: 'Inspecciones de trabajo', d: 'Preparación de la documentación y asistencia a la empresa durante la inspección.' },
           { t: 'Organización del trabajo', d: 'Registro de jornada, calendarios, turnos, teletrabajo y modificaciones de condiciones.' },
@@ -129,33 +129,33 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'Cuándo necesita apoyo laboral especializado',
         parrafos: [
           'Cuando va a contratar a su primer trabajador; cuando la plantilla crece y el convenio empieza a pesar; en temporadas con muchas altas y bajas, como la agricultura, la hostelería o el comercio; cuando tiene que despedir o reorganizar la empresa; y, por supuesto, cuando llega una citación de la Inspección de Trabajo.',
-          'También es buen momento si su empresa ha cambiado de actividad o de convenio, o si nunca ha revisado si los contratos que usa son los que le convienen.',
+          'También es buen momento si tu empresa ha cambiado de actividad o de convenio, o si nunca ha revisado si los contratos que usa son los que te convienen.',
         ],
       },
       {
-        h2: 'Así llevamos la gestión laboral de su empresa',
-        parrafos: ['Nuestro objetivo es que usted no tenga que pensar en la gestión laboral salvo cuando hay que decidir algo:'],
+        h2: 'Así llevamos la gestión laboral de tu empresa',
+        parrafos: ['Nuestro objetivo es que no tengas que pensar en la gestión laboral salvo cuando hay que decidir algo:'],
         lista: [
-          { t: 'Toma de datos', d: 'Revisamos su plantilla, contratos y convenio aplicable.' },
-          { t: 'Calendario mensual', d: 'Recibimos las incidencias del mes y le devolvemos nóminas y seguros sociales en plazo.' },
-          { t: 'Consulta directa', d: 'Antes de contratar, sancionar o despedir, nos consulta y le decimos cómo hacerlo bien.' },
-          { t: 'Coordinación', d: 'Las nóminas se trasladan a su contabilidad y a su fiscalidad sin que tenga que hacer nada.' },
+          { t: 'Toma de datos', d: 'Revisamos tu plantilla, contratos y convenio aplicable.' },
+          { t: 'Calendario mensual', d: 'Recibimos las incidencias del mes y te devolvemos nóminas y seguros sociales en plazo.' },
+          { t: 'Consulta directa', d: 'Antes de contratar, sancionar o despedir, nos consulta y te decimos cómo hacerlo bien.' },
+          { t: 'Coordinación', d: 'Las nóminas se trasladan a tu contabilidad y a tu fiscalidad sin que tenga que hacer nada.' },
         ],
       },
       {
         h2: 'Por qué elegir Serveco como asesoría laboral en Murcia',
         parrafos: [
-          'En la misma firma están los abogados que le defienden si un despido acaba en el juzgado, los economistas que ven el coste real de su plantilla y el área de formación que puede usar el crédito de formación de su empresa. No tendrá que explicar su caso tres veces.',
+          'En la misma firma están los abogados que te defienden si un despido acaba en el juzgado, los economistas que ven el coste real de tu plantilla y el área de formación que puede usar el crédito de formación de tu empresa. No tendrás que explicar tu caso tres veces.',
           `Llevamos desde 1977 trabajando con empresas de sectores muy distintos de la Región, y tenemos despachos en ${DESPACHOS}.`,
         ],
       },
     ],
     faqs: [
-      { q: '¿Qué contrato me conviene para un trabajador de temporada?', a: 'Depende de si la necesidad se repite cada año o es puntual. Para actividades que se repiten por temporadas suele encajar el contrato fijo discontinuo; para necesidades puntuales, otras modalidades. Lo revisamos con su caso antes de contratar.' },
-      { q: '¿Qué pasa si no llevo el registro de jornada?', a: 'El registro de jornada es obligatorio y es de lo primero que se revisa en una inspección. Le ayudamos a implantar un sistema sencillo que cumpla y que sea fácil de llevar en su empresa.' },
+      { q: '¿Qué contrato me conviene para un trabajador de temporada?', a: 'Depende de si la necesidad se repite cada año o es puntual. Para actividades que se repiten por temporadas suele encajar el contrato fijo discontinuo; para necesidades puntuales, otras modalidades. Lo revisamos con tu caso antes de contratar.' },
+      { q: '¿Qué pasa si no llevo el registro de jornada?', a: 'El registro de jornada es obligatorio y es de lo primero que se revisa en una inspección. Te ayudamos a implantar un sistema sencillo que cumpla y que sea fácil de llevar en tu empresa.' },
       { q: '¿Cómo se calcula la indemnización por despido?', a: 'Depende del tipo de despido, de la antigüedad y del salario del trabajador, y de si el despido se reconoce o se declara improcedente. Antes de despedir, conviene calcularlo y preparar bien la carta.' },
-      { q: '¿Qué hago si recibo una citación de la Inspección de Trabajo?', a: 'Avísenos en cuanto la reciba. Revisamos qué documentación pide, la preparamos con usted y le acompañamos durante el proceso.' },
-      { q: '¿Pueden llevar las nóminas si tengo muy pocos trabajadores?', a: 'Sí. Trabajamos con empresas de todos los tamaños, desde autónomos con su primer empleado hasta plantillas grandes.' },
+      { q: '¿Qué hago si recibo una citación de la Inspección de Trabajo?', a: 'Avísanos en cuanto la reciba. Revisamos qué documentación pide, la preparamos contigo y te acompañamos durante el proceso.' },
+      { q: '¿Podéis llevar las nóminas si tengo muy pocos trabajadores?', a: 'Sí. Trabajamos con empresas de todos los tamaños, desde autónomos con su primer empleado hasta plantillas grandes.' },
       { q: '¿Gestionan la contratación de trabajadores extranjeros?', a: 'Sí, incluidas las personas de fuera de la Unión Europea, coordinándolo con nuestra área jurídica cuando hace falta tramitar autorizaciones.' },
     ],
     relacionadas: ['juridico', 'formacion', 'fiscal', 'contable'],
@@ -169,7 +169,7 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Asesoría jurídica para empresas en Murcia: derecho mercantil y societario, contratos, reclamación de deudas y procedimientos judiciales. Serveco, desde 1977.',
     h1: 'Asesoría jurídica para empresas en Murcia',
     lead:
-      'Abogados para el día a día de su empresa: contratos, sociedades, reclamaciones y, cuando hace falta, defensa en los tribunales. Con la ventaja de trabajar junto a su asesoría fiscal y laboral.',
+      'Abogados para el día a día de tu empresa: contratos, sociedades, reclamaciones y, cuando hace falta, defensa en los tribunales. Con la ventaja de trabajar junto a su asesoría fiscal y laboral.',
     busquedaPrincipal: 'asesoría jurídica para empresas en Murcia',
     secciones: [
       {
@@ -201,8 +201,8 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'Nuestra forma de trabajar',
         parrafos: [],
         lista: [
-          { t: 'Análisis del caso', d: 'Revisamos la documentación y le explicamos, con claridad, sus opciones y riesgos.' },
-          { t: 'Propuesta', d: 'Le indicamos cómo actuar y el alcance del trabajo antes de empezar.' },
+          { t: 'Análisis del caso', d: 'Revisamos la documentación y te explicamos, con claridad, tus opciones y riesgos.' },
+          { t: 'Propuesta', d: 'Te indicamos cómo actuar y el alcance del trabajo antes de empezar.' },
           { t: 'Negociación primero', d: 'Siempre que es posible buscamos un acuerdo antes de ir a los tribunales.' },
           { t: 'Defensa', d: 'Si el conflicto no se resuelve, le representamos en el procedimiento.' },
         ],
@@ -210,14 +210,14 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       {
         h2: 'Abogados que trabajan con su asesor fiscal y laboral',
         parrafos: [
-          'Casi ningún problema legal de empresa es solo legal. La salida de un socio tiene efectos fiscales; un despido tiene una parte laboral y otra judicial; una reclamación de deuda afecta a su contabilidad. En Serveco los abogados trabajan con los economistas y los laboralistas sobre el mismo expediente.',
+          'Casi ningún problema legal de empresa es solo legal. La salida de un socio tiene efectos fiscales; un despido tiene una parte laboral y otra judicial; una reclamación de deuda afecta a tu contabilidad. En Serveco los abogados trabajan con los economistas y los laboralistas sobre el mismo expediente.',
           `Desde 1977, con despachos en ${DESPACHOS}.`,
         ],
       },
     ],
     faqs: [
       { q: '¿Qué debe incluir un pacto de socios?', a: 'Normalmente regula cómo se toman las decisiones importantes, qué pasa si un socio quiere vender o salir, cómo se valoran sus participaciones y cómo se resuelven los bloqueos. Cada empresa necesita el suyo; no conviene usar un modelo genérico.' },
-      { q: '¿Cómo reclamo una factura que un cliente no me paga?', a: 'Lo habitual es empezar con un requerimiento formal de pago. Si no funciona, hay procedimientos judiciales pensados para reclamar deudas. Revisamos su documentación y le decimos cuál encaja mejor.' },
+      { q: '¿Cómo reclamo una factura que un cliente no me paga?', a: 'Lo habitual es empezar con un requerimiento formal de pago. Si no funciona, hay procedimientos judiciales pensados para reclamar deudas. Revisamos su documentación y te decimos cuál encaja mejor.' },
       { q: '¿Me pueden revisar un contrato antes de firmarlo?', a: 'Sí, y es de lo más rentable que puede hacer: revisar un contrato antes de firmar cuesta mucho menos que resolver un conflicto después.' },
       { q: '¿Llevan también asuntos de particulares?', a: 'Sí: herencias, compraventas, arrendamientos y otros asuntos civiles, especialmente de empresarios y familias que ya trabajan con nosotros.' },
       { q: '¿Qué es un protocolo familiar?', a: 'Es un acuerdo entre los miembros de una familia empresaria que regula cómo se relacionan familia, propiedad y empresa: quién puede trabajar en ella, cómo se hace el relevo o qué pasa con las participaciones.' },
@@ -233,7 +233,7 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Asesoría contable en Murcia: contabilidad al día, cuentas anuales, libros oficiales y cierre del ejercicio para pymes y autónomos. Serveco, desde 1977.',
     h1: 'Asesoría contable en Murcia para pymes y autónomos',
     lead:
-      'Llevamos su contabilidad al día para que sepa cómo va su empresa durante el año, no solo al cierre. Y preparamos y depositamos sus cuentas anuales en plazo.',
+      'Llevamos tu contabilidad al día para que sepa cómo va tu empresa durante el año, no solo al cierre. Y preparamos y depositamos sus cuentas anuales en plazo.',
     busquedaPrincipal: 'asesoría contable en Murcia',
     secciones: [
       {
@@ -245,7 +245,7 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       },
       {
         h2: 'Servicios de contabilidad para pymes y autónomos',
-        parrafos: ['Nos encargamos de toda la contabilidad de su empresa:'],
+        parrafos: ['Nos encargamos de toda la contabilidad de tu empresa:'],
         lista: [
           { t: 'Contabilidad periódica', d: 'Registro de facturas, bancos y demás operaciones con la periodicidad que necesite.' },
           { t: 'Informes de situación', d: 'Balance y cuenta de resultados durante el año para que pueda tomar decisiones.' },
@@ -256,35 +256,35 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         ],
       },
       {
-        h2: 'Señales de que su contabilidad necesita otro enfoque',
+        h2: 'Señales de que tu contabilidad necesita otro enfoque',
         parrafos: [
-          'Si solo ve su contabilidad cuando le llaman para firmar las cuentas anuales; si no sabe cuánto ha ganado este año hasta que se presenta el impuesto de sociedades; si le han llegado sanciones por presentar las cuentas tarde; o si su empresa ha crecido y necesita información para decidir, no solo para cumplir.',
+          'Si solo ve tu contabilidad cuando le llaman para firmar las cuentas anuales; si no sabe cuánto ha ganado este año hasta que se presenta el impuesto de sociedades; si le han llegado sanciones por presentar las cuentas tarde; o si tu empresa ha crecido y necesita información para decidir, no solo para cumplir.',
         ],
       },
       {
-        h2: 'Cómo llevamos su contabilidad',
+        h2: 'Cómo llevamos tu contabilidad',
         parrafos: [],
         lista: [
-          { t: 'Envío de documentación', d: 'Nos hace llegar sus facturas y extractos de la forma que le resulte más cómoda.' },
+          { t: 'Envío de documentación', d: 'Nos haces llegar tus facturas y extractos de la forma que te resulte más cómoda.' },
           { t: 'Registro y conciliación', d: 'Contabilizamos y cuadramos bancos, clientes y proveedores.' },
-          { t: 'Información periódica', d: 'Le enviamos la situación de su empresa y se la explicamos.' },
+          { t: 'Información periódica', d: 'Te enviamos la situación de tu empresa y se la explicamos.' },
           { t: 'Cierre coordinado', d: 'El cierre contable y el fiscal los hace el mismo equipo.' },
         ],
       },
       {
         h2: 'Información para dirigir la empresa, no solo para cumplir',
         parrafos: [
-          'Nuestros sistemas propios de análisis (A.D.I, A.D.P y A.D.A) convierten su contabilidad en información para decidir: evolución mes a mes, presupuestos y análisis de costes. Es la diferencia entre saber qué pasó el año pasado y saber qué está pasando ahora.',
+          'Nuestros sistemas propios de análisis (A.D.I, A.D.P y A.D.A) convierten tu contabilidad en información para decidir: evolución mes a mes, presupuestos y análisis de costes. Es la diferencia entre saber qué pasó el año pasado y saber qué está pasando ahora.',
           `Desde 1977, con despachos en ${DESPACHOS}.`,
         ],
       },
     ],
     faqs: [
       { q: '¿Estoy obligado a depositar las cuentas anuales?', a: 'Las sociedades mercantiles tienen que aprobar sus cuentas anuales y depositarlas en el Registro Mercantil dentro de los plazos que marca la ley. Nosotros las preparamos y nos ocupamos del depósito.' },
-      { q: '¿Qué pasa si presento las cuentas anuales tarde?', a: 'No depositarlas en plazo puede impedir inscribir otros actos en el Registro Mercantil y dar lugar a sanciones. Si está en esa situación, le ayudamos a regularizarla.' },
-      { q: '¿Un autónomo tiene que llevar contabilidad?', a: 'Depende de su actividad y de su régimen de tributación. En muchos casos basta con los libros registro de ingresos y gastos. Le decimos qué le corresponde en su caso.' },
-      { q: '¿Cada cuánto tiempo tengo que enviar la documentación?', a: 'Lo acordamos con usted: mensual o trimestralmente, según el volumen de su empresa y la información que quiera recibir.' },
-      { q: '¿Pueden llevar la contabilidad de una empresa que viene de otra gestoría?', a: 'Sí. Revisamos la contabilidad que recibimos, detectamos si hay algo que corregir y continuamos desde ahí.' },
+      { q: '¿Qué pasa si presento las cuentas anuales tarde?', a: 'No depositarlas en plazo puede impedir inscribir otros actos en el Registro Mercantil y dar lugar a sanciones. Si está en esa situación, te ayudamos a regularizarla.' },
+      { q: '¿Un autónomo tiene que llevar contabilidad?', a: 'Depende de tu actividad y de su régimen de tributación. En muchos casos basta con los libros registro de ingresos y gastos. Te decimos qué le corresponde en tu caso.' },
+      { q: '¿Cada cuánto tiempo tengo que enviar la documentación?', a: 'Lo acordamos contigo: mensual o trimestralmente, según el volumen de tu empresa y la información que quiera recibir.' },
+      { q: '¿Podéis llevar la contabilidad de una empresa que viene de otra gestoría?', a: 'Sí. Revisamos la contabilidad que recibimos, detectamos si hay algo que corregir y continuamos desde ahí.' },
     ],
     relacionadas: ['fiscal', 'financiero', 'auditoria', 'laboral'],
     validado: false,
@@ -297,14 +297,14 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Asesoramiento financiero para pymes en Murcia: financiación, planes de viabilidad, presupuestos y cuadros de mando con los sistemas A.D. de Serveco.',
     h1: 'Asesoramiento financiero para empresas en Murcia',
     lead:
-      'Analizamos la salud financiera de su empresa con nuestros propios sistemas A.D. y le ayudamos a conseguir financiación, preparar presupuestos y decidir inversiones con números reales.',
+      'Analizamos la salud financiera de tu empresa con nuestros propios sistemas A.D. y te ayudamos a conseguir financiación, preparar presupuestos y decidir inversiones con números reales.',
     busquedaPrincipal: 'asesoramiento financiero para empresas',
     secciones: [
       {
         h2: 'Asesoramiento financiero pensado para pymes',
         parrafos: [
-          'El asesoramiento financiero le ayuda a responder preguntas que la contabilidad sola no responde: ¿puedo permitirme esta inversión?, ¿qué clientes o productos me hacen ganar dinero?, ¿cuánta caja necesitaré el año que viene?, ¿con qué financiación me conviene crecer?',
-          'Para eso usamos la información de su contabilidad, pero la trabajamos de otra manera: mes a mes, por centros de coste y proyectando el futuro.',
+          'El asesoramiento financiero te ayuda a responder preguntas que la contabilidad sola no responde: ¿puedo permitirme esta inversión?, ¿qué clientes o productos me hacen ganar dinero?, ¿cuánta caja necesitaré el año que viene?, ¿con qué financiación me conviene crecer?',
+          'Para eso usamos la información de tu contabilidad, pero la trabajamos de otra manera: mes a mes, por centros de coste y proyectando el futuro.',
         ],
       },
       {
@@ -330,22 +330,22 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       {
         h2: 'Cuándo conviene un análisis financiero',
         parrafos: [
-          'Antes de pedir un préstamo o renovar sus líneas de crédito; antes de una inversión importante; cuando las ventas crecen pero la caja no; si no sabe qué parte de su actividad es rentable; y cuando la empresa pasa por un momento difícil y hay que tomar decisiones rápido.',
+          'Antes de pedir un préstamo o renovar sus líneas de crédito; antes de una inversión importante; cuando las ventas crecen pero la caja no; si no sabe qué parte de tu actividad es rentable; y cuando la empresa pasa por un momento difícil y hay que tomar decisiones rápido.',
         ],
       },
       {
         h2: 'Su análisis financiero, con los datos que ya llevamos',
         parrafos: [
-          'El análisis financiero se apoya en su contabilidad y en su fiscalidad, que ya llevamos nosotros: no hay que empezar de cero ni pedirle la información dos veces. Y nuestras herramientas son propias, pensadas para pymes, no hojas de cálculo genéricas.',
+          'El análisis financiero se apoya en tu contabilidad y en tu fiscalidad, que ya llevamos nosotros: no hay que empezar de cero ni pedirle la información dos veces. Y nuestras herramientas son propias, pensadas para pymes, no hojas de cálculo genéricas.',
           `Desde 1977, con despachos en ${DESPACHOS}.`,
         ],
       },
     ],
     faqs: [
-      { q: '¿Qué información pide un banco para conceder financiación a una empresa?', a: 'Normalmente las cuentas de los últimos ejercicios, la situación actual y una previsión de cómo se devolverá el préstamo. Le ayudamos a prepararla de forma ordenada y creíble.' },
+      { q: '¿Qué información pide un banco para conceder financiación a una empresa?', a: 'Normalmente las cuentas de los últimos ejercicios, la situación actual y una previsión de cómo se devolverá el préstamo. Te ayudamos a prepararla de forma ordenada y creíble.' },
       { q: '¿Qué es un plan de viabilidad?', a: 'Es un estudio que demuestra, con números, que un proyecto o una empresa puede funcionar y devolver lo que necesita invertir. Lo piden bancos, inversores y muchas convocatorias de ayudas.' },
       { q: '¿Cómo sé qué productos o clientes son rentables?', a: 'Con un análisis de costes por producto, cliente o actividad. Es justo lo que hace nuestro sistema A.D.A.' },
-      { q: '¿Me ayudan a encontrar subvenciones?', a: 'Sí. Tenemos un buscador de subvenciones y le ayudamos a preparar y tramitar las que encajan con su empresa.' },
+      { q: '¿Me ayudan a encontrar subvenciones?', a: 'Sí. Tenemos un buscador de subvenciones y te ayudamos a preparar y tramitar las que encajan con tu empresa.' },
       { q: '¿Sirve para empresas pequeñas?', a: 'Sí. Nuestros sistemas están pensados para pymes: la información se adapta al tamaño y a las necesidades de cada empresa.' },
     ],
     relacionadas: ['contable', 'fiscal', 'idi-patent-box', 'auditoria'],
@@ -365,14 +365,14 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       {
         h2: 'Auditoría de cuentas: confianza para socios, bancos y administraciones',
         parrafos: [
-          'Una auditoría de cuentas es la revisión, por parte de un auditor independiente, de las cuentas anuales de una empresa para opinar si reflejan fielmente su situación. El resultado es un informe que da confianza a socios, bancos, clientes y administraciones.',
+          'Una auditoría de cuentas es la revisión, por parte de un auditor independiente, de las cuentas anuales de una empresa para opinar si reflejan fielmente tu situación. El resultado es un informe que da confianza a socios, bancos, clientes y administraciones.',
         ],
       },
       {
         h2: 'Empresas obligadas a auditar sus cuentas',
         parrafos: [
-          'La ley obliga a auditar a las sociedades que superan determinados límites de tamaño (activo, cifra de negocios y número de trabajadores) durante dos ejercicios seguidos, y a otras entidades por su actividad o porque reciben determinadas ayudas públicas. También puede exigirla un socio minoritario en ciertos casos.',
-          'Si no sabe si su empresa está obligada, lo revisamos con sus cuentas.',
+          'La ley obliga a auditar a las sociedades que superan determinados límites de tamaño (activo, cifra de negocios y número de trabajadores) durante dos ejercicios seguidos, y a otras entidades por tu actividad o porque reciben determinadas ayudas públicas. También puede exigirla un socio minoritario en ciertos casos.',
+          'Si no sabe si tu empresa está obligada, lo revisamos con sus cuentas.',
         ],
       },
       {
@@ -389,9 +389,9 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'El proceso de auditoría, paso a paso',
         parrafos: [],
         lista: [
-          { t: 'Planificación', d: 'Conocemos su empresa y planificamos el trabajo con tiempo.' },
-          { t: 'Revisión', d: 'Comprobamos las cuentas y sus soportes, con la mínima interrupción de su actividad.' },
-          { t: 'Comunicación', d: 'Le comentamos lo que encontramos antes de emitir el informe.' },
+          { t: 'Planificación', d: 'Conocemos tu empresa y planificamos el trabajo con tiempo.' },
+          { t: 'Revisión', d: 'Comprobamos las cuentas y sus soportes, con la mínima interrupción de tu actividad.' },
+          { t: 'Comunicación', d: 'Te comentamos lo que encontramos antes de emitir el informe.' },
           { t: 'Informe', d: 'Emitimos el informe de auditoría en plazo para la aprobación y el depósito de las cuentas.' },
         ],
       },
@@ -413,7 +413,7 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       'Deducción por I+D+i y Patent Box para empresas: análisis de proyectos, documentación e informe motivado. Serveco, asesoría de empresas desde 1977.',
     h1: 'Deducción por I+D+i y Patent Box para empresas',
     lead:
-      'Muchas empresas innovan sin saber que pueden aplicar deducciones fiscales por ello. Analizamos sus proyectos, le decimos cuáles encajan y preparamos la documentación para aplicarlas con seguridad.',
+      'Muchas empresas innovan sin saber que pueden aplicar deducciones fiscales por ello. Analizamos sus proyectos, te decimos cuáles encajan y preparamos la documentación para aplicarlas con seguridad.',
     busquedaPrincipal: 'deducción por I+D+i',
     secciones: [
       {
@@ -442,10 +442,10 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'De la idea a la deducción aplicada',
         parrafos: [],
         lista: [
-          { t: 'Análisis de proyectos', d: 'Revisamos sus proyectos con perfil técnico y fiscal y le decimos cuáles pueden encajar.' },
+          { t: 'Análisis de proyectos', d: 'Revisamos sus proyectos con perfil técnico y fiscal y te decimos cuáles pueden encajar.' },
           { t: 'Documentación', d: 'Preparamos la memoria técnica y la justificación de los gastos.' },
-          { t: 'Seguridad jurídica', d: 'Le asesoramos sobre el informe motivado y las opciones para aplicar la deducción con seguridad.' },
-          { t: 'Aplicación', d: 'Coordinamos la deducción con su impuesto de sociedades.' },
+          { t: 'Seguridad jurídica', d: 'Te asesoramos sobre el informe motivado y las opciones para aplicar la deducción con seguridad.' },
+          { t: 'Aplicación', d: 'Coordinamos la deducción con tu impuesto de sociedades.' },
         ],
       },
       {
@@ -458,8 +458,8 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
     faqs: [
       { q: '¿Mi empresa puede aplicar la deducción por I+D+i si es pequeña?', a: 'Sí. El tamaño no es un requisito: lo que cuenta es que el proyecto cumpla las condiciones de investigación, desarrollo o innovación tecnológica.' },
       { q: '¿Qué diferencia hay entre I+D e innovación tecnológica?', a: 'La I+D busca conocimientos o productos sustancialmente nuevos; la innovación tecnológica, mejoras significativas sobre lo existente. Tienen tratamientos distintos y hay que clasificarlas bien.' },
-      { q: '¿Qué es el informe motivado?', a: 'Es un informe que emite la Administración sobre la calificación de un proyecto como I+D o innovación y que da seguridad jurídica ante Hacienda. Le explicamos cuándo conviene solicitarlo.' },
-      { q: '¿Puedo aplicar la deducción aunque tenga pérdidas?', a: 'Hay opciones para aprovechar la deducción en ejercicios posteriores o en determinadas condiciones. Lo estudiamos con su caso.' },
+      { q: '¿Qué es el informe motivado?', a: 'Es un informe que emite la Administración sobre la calificación de un proyecto como I+D o innovación y que da seguridad jurídica ante Hacienda. Te explicamos cuándo conviene solicitarlo.' },
+      { q: '¿Puedo aplicar la deducción aunque tenga pérdidas?', a: 'Hay opciones para aprovechar la deducción en ejercicios posteriores o en determinadas condiciones. Lo estudiamos con tu caso.' },
       { q: '¿Qué activos entran en el Patent Box?', a: 'Determinados activos intangibles, como patentes o software protegido, cumpliendo los requisitos de la ley. No todas las marcas o conocimientos entran, por eso conviene analizarlo antes.' },
     ],
     relacionadas: ['fiscal', 'financiero', 'contable'],
@@ -470,14 +470,14 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
   formacion: {
     title: 'Formación bonificada para empresas en Murcia | Serveco',
     metaDescription:
-      'Formación bonificada para empresas: cursos para su plantilla con cargo al crédito de formación y gestión completa ante FUNDAE. Serveco, desde 1977.',
+      'Formación bonificada para empresas: cursos para tu plantilla con cargo al crédito de formación y gestión completa ante FUNDAE. Serveco, desde 1977.',
     h1: 'Formación bonificada para empresas',
     lead:
-      'Su empresa dispone cada año de un crédito para formar a su plantilla. Le ayudamos a aprovecharlo: organizamos los cursos y gestionamos toda la tramitación.',
+      'Tu empresa dispone cada año de un crédito para formar a tu plantilla. Te ayudamos a aprovecharlo: organizamos los cursos y gestionamos toda la tramitación.',
     busquedaPrincipal: 'formación bonificada para empresas',
     secciones: [
       {
-        h2: 'Formación bonificada: el crédito que su empresa ya tiene',
+        h2: 'Formación bonificada: el crédito que tu empresa ya tiene',
         parrafos: [
           'Las empresas que cotizan por formación profesional disponen cada año de un crédito para formar a sus trabajadores. Ese crédito se recupera bonificando las cotizaciones a la Seguridad Social, de modo que la formación puede tener un coste muy bajo o nulo para la empresa.',
           'Muchas empresas no lo usan porque desconocen que lo tienen o por la tramitación. Nosotros nos ocupamos de ella.',
@@ -487,30 +487,30 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
         h2: 'Gestión completa de la formación bonificada',
         parrafos: [],
         lista: [
-          { t: 'Cálculo del crédito', d: 'Le decimos de cuánto crédito dispone su empresa este año.' },
-          { t: 'Plan de formación', d: 'Proponemos cursos útiles para su plantilla y su sector.' },
+          { t: 'Cálculo del crédito', d: 'Te decimos de cuánto crédito dispone tu empresa este año.' },
+          { t: 'Plan de formación', d: 'Proponemos cursos útiles para tu plantilla y tu sector.' },
           { t: 'Gestión ante FUNDAE', d: 'Comunicaciones de inicio y fin, documentación y control de la bonificación.' },
           { t: 'Aplicación en nóminas', d: 'Coordinamos la bonificación con su área laboral.' },
         ],
       },
       {
-        h2: 'Cursos para su plantilla',
+        h2: 'Cursos para tu plantilla',
         parrafos: [
-          'Formación ligada a su actividad: idiomas, informática, prevención, gestión, atención al cliente, cursos técnicos del sector y otros. Lo importante es que sirva a su empresa y a sus trabajadores.',
+          'Formación ligada a tu actividad: idiomas, informática, prevención, gestión, atención al cliente, cursos técnicos del sector y otros. Lo importante es que sirva a tu empresa y a sus trabajadores.',
         ],
       },
       {
         h2: 'Formación coordinada con su gestión laboral',
         parrafos: [
-          'La bonificación se aplica en sus cotizaciones, así que conviene que la formación y la gestión laboral vayan de la mano. Si llevamos también sus nóminas, lo coordinamos todo y la formación no se convierte en un trámite más para usted.',
+          'La bonificación se aplica en sus cotizaciones, así que conviene que la formación y la gestión laboral vayan de la mano. Si llevamos también sus nóminas, lo coordinamos todo y la formación no se convierte en un trámite más para ti.',
         ],
       },
     ],
     faqs: [
-      { q: '¿Cuánto crédito de formación tiene mi empresa?', a: 'Depende de lo que su empresa cotizó por formación profesional el año anterior y de su tamaño. Se lo calculamos sin compromiso.' },
+      { q: '¿Cuánto crédito de formación tiene mi empresa?', a: 'Depende de lo que tu empresa cotizó por formación profesional el año anterior y de su tamaño. Se lo calculamos sin compromiso.' },
       { q: '¿Qué pasa si no uso el crédito de formación?', a: 'En general, el crédito que no se usa en el año no se recupera, salvo algunas posibilidades para empresas pequeñas. Por eso conviene planificar la formación a principios de año.' },
       { q: '¿Los cursos son gratis para la empresa?', a: 'El coste se compensa con la bonificación en las cotizaciones hasta el límite de su crédito; en algunos casos la empresa debe aportar una parte. Se lo detallamos antes de empezar.' },
-      { q: '¿Pueden hacerse los cursos en línea?', a: 'Sí, hay modalidades presenciales, en línea y mixtas. Elegimos la que mejor encaje con su plantilla.' },
+      { q: '¿Podéis hacer los cursos en línea?', a: 'Sí, hay modalidades presenciales, en línea y mixtas. Elegimos la que mejor encaje con tu plantilla.' },
       { q: '¿Qué es FUNDAE?', a: 'Es la Fundación Estatal para la Formación en el Empleo, el organismo a través del que se gestiona la formación bonificada de las empresas.' },
     ],
     relacionadas: ['laboral', 'financiero'],

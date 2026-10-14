@@ -55,9 +55,9 @@ export default function IntlPortada({ lang }: { lang: 'es' | 'en' }) {
             {/* Los servicios internacionales se prestan en los seis despachos; Benidorm es el especializado. */}
             <DespachosIntl lang={lang} />
             <div className="caja">
-              <h3>{en ? 'Talk to us' : 'Hable con nosotros'}</h3>
+              <h3>{en ? 'Talk to us' : 'Habla con nosotros'}</h3>
               <p style={{ marginBottom: 14, color: 'var(--tinta-2)' }}>
-                {en ? 'Tell us about your situation and we will reply in English.' : 'Cuéntenos su situación y le responderemos en su idioma.'}
+                {en ? 'Tell us about your situation and we will reply in English.' : 'Cuéntanos tu situación y te responderemos en tu idioma.'}
               </p>
               <Link className="btn btn-marca" href={en ? EN.contact : ES.contacto}>{en ? 'Contact us' : 'Contactar'}</Link>
             </div>

@@ -44,25 +44,25 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
         {
           h2: 'Cómo trabajamos con clientes que viven fuera',
           parrafos: [
-            'No hace falta que venga a España para cada gestión. La mayoría de los trámites se preparan a distancia: nos envía la documentación por correo, resolvemos las dudas por videollamada y, cuando la normativa lo permite, actuamos en su nombre con la autorización o el poder que corresponda.',
-            'Le avisamos con tiempo de lo que tiene que presentar cada año, para que no tenga que estar pendiente del calendario fiscal español desde su país.',
+            'No hace falta que venga a España para cada gestión. La mayoría de los trámites se preparan a distancia: nos envía la documentación por correo, resolvemos las dudas por videollamada y, cuando la normativa lo permite, actuamos en tu nombre con la autorización o el poder que corresponda.',
+            'Te avisamos con tiempo de lo que tiene que presentar cada año, para que no tenga que estar pendiente del calendario fiscal español desde tu país.',
           ],
         },
         {
           h2: 'Por qué Serveco para sus asuntos en España',
           parrafos: [
-            'Somos una asesoría integral desde 1977: fiscalistas, abogados y economistas en el mismo equipo. Si vende una vivienda, la parte fiscal, la jurídica y la notarial se coordinan desde un solo interlocutor, en su idioma.',
-            'Tenemos seis despachos: Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm. En cualquiera de ellos le atendemos con estos servicios, y el de Benidorm, en plena Costa Blanca, está especializado en clientes internacionales. Y si vive fuera, lo resolvemos a distancia.',
+            'Somos una asesoría integral desde 1977: fiscalistas, abogados y economistas en el mismo equipo. Si vende una vivienda, la parte fiscal, la jurídica y la notarial se coordinan desde un solo interlocutor, en tu idioma.',
+            'Tenemos seis despachos: Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm. En cualquiera de ellos te atendemos con estos servicios, y el de Benidorm, en plena Costa Blanca, está especializado en clientes internacionales. Y si vive fuera, lo resolvemos a distancia.',
           ],
         },
       ],
       faqs: [
-        { q: '¿Tengo que pagar impuestos en España si no vivo aquí?', a: 'Si tiene una vivienda, cobra alquileres o vende un inmueble en España, normalmente sí, a través del impuesto sobre la renta de no residentes. Lo que corresponda depende de su caso y de su país de residencia.' },
-        { q: '¿Pueden atenderme en inglés?', a: 'Sí. Trabajamos en inglés por correo, teléfono y videollamada, y en persona puede acudir a cualquiera de nuestros despachos; el de Benidorm está especializado en clientes internacionales.' },
-        { q: '¿Tengo que ir al despacho de Benidorm?', a: 'No. Estos servicios se prestan en los seis despachos (Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm) y también a distancia. Elija el que le quede más cerca.' },
+        { q: '¿Tengo que pagar impuestos en España si no vivo aquí?', a: 'Si tiene una vivienda, cobra alquileres o vende un inmueble en España, normalmente sí, a través del impuesto sobre la renta de no residentes. Lo que corresponda depende de tu caso y de tu país de residencia.' },
+        { q: '¿Podéis atenderme en inglés?', a: 'Sí. Trabajamos en inglés por correo, teléfono y videollamada, y en persona puedes acudir a cualquiera de nuestros despachos; el de Benidorm está especializado en clientes internacionales.' },
+        { q: '¿Tengo que ir al despacho de Benidorm?', a: 'No. Estos servicios se prestan en los seis despachos (Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm) y también a distancia. Elige el que te quede más cerca.' },
         { q: '¿Necesito estar en España para hacer los trámites?', a: 'En la mayoría de los casos, no. Preparamos la documentación a distancia y, cuando la normativa lo permite, actuamos con su autorización o mediante poder.' },
-        { q: '¿Qué pasa con mi casa en España si fallezco?', a: 'Sus bienes en España se heredan conforme a las normas que correspondan y con el impuesto de sucesiones español. Un testamento bien planteado facilita mucho el trámite a sus herederos; lo estudiamos con usted.' },
-        { q: '¿Qué cambió para los británicos con el Brexit?', a: 'Desde la salida del Reino Unido de la Unión Europea, los ciudadanos británicos son nacionales de un tercer país a efectos de residencia y de algunos impuestos. Revisamos cómo le afecta en su caso.' },
+        { q: '¿Qué pasa con mi casa en España si fallezco?', a: 'Sus bienes en España se heredan conforme a las normas que correspondan y con el impuesto de sucesiones español. Un testamento bien planteado facilita mucho el trámite a sus herederos; lo estudiamos contigo.' },
+        { q: '¿Qué cambió para los británicos con el Brexit?', a: 'Desde la salida del Reino Unido de la Unión Europea, los ciudadanos británicos son nacionales de un tercer país a efectos de residencia y de algunos impuestos. Revisamos cómo te afecta en tu caso.' },
       ],
       validado: false,
     },
@@ -126,9 +126,9 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
     es: {
       title: 'NIE para extranjeros: cómo obtenerlo en España',
       metaDescription:
-        'Le ayudamos a obtener el NIE para comprar una vivienda, heredar, trabajar o abrir un negocio en España. Documentación, cita y seguimiento, también en inglés.',
+        'Te ayudamos a obtener el NIE para comprar una vivienda, heredar, trabajar o abrir un negocio en España. Documentación, cita y seguimiento, también en inglés.',
       h1: 'NIE para extranjeros: cómo obtenerlo en España',
-      lead: 'Preparamos su solicitud del NIE, le ayudamos con la cita y hacemos el seguimiento hasta que lo tenga. En español y en inglés.',
+      lead: 'Preparamos tu solicitud del NIE, te ayudamos con la cita y hacemos el seguimiento hasta que lo tenga. En español y en inglés.',
       busquedaPrincipal: 'obtener NIE extranjero',
       secciones: [
         {
@@ -146,29 +146,29 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
           ],
         },
         {
-          h2: 'Cómo le ayudamos con su NIE',
+          h2: 'Cómo te ayudamos con tu NIE',
           parrafos: [],
           lista: [
-            { t: 'Revisión de su caso', d: 'Le decimos qué documentación necesita según su nacionalidad y el motivo de la solicitud.' },
+            { t: 'Revisión de tu caso', d: 'Te decimos qué documentación necesita según su nacionalidad y el motivo de la solicitud.' },
             { t: 'Preparación de la solicitud', d: 'Rellenamos los formularios y dejamos lista la documentación y el justificante de la tasa.' },
-            { t: 'Cita previa', d: 'Le ayudamos a conseguir la cita y le explicamos qué llevar el día de la presentación.' },
-            { t: 'Seguimiento', d: 'Hacemos el seguimiento hasta que tenga su NIE, y le avisamos si falta algo.' },
+            { t: 'Cita previa', d: 'Te ayudamos a conseguir la cita y te explicamos qué llevar el día de la presentación.' },
+            { t: 'Seguimiento', d: 'Hacemos el seguimiento hasta que tengas tu NIE, y te avisamos si falta algo.' },
           ],
         },
         {
           h2: 'Ciudadanos de la UE y de fuera de la UE',
           parrafos: [
-            'Si es ciudadano de la Unión Europea y va a vivir en España más de tres meses, además del número tendrá que inscribirse en el registro de ciudadanos de la UE. Si es de fuera de la Unión (incluidos los británicos desde el Brexit) y va a residir aquí, su NIE irá ligado a la autorización de residencia y a la tarjeta que la acredita.',
-            'Si solo va a comprar una vivienda o a heredar, sin vivir en España, le basta con el NIE. Lo revisamos con usted para no pedir más de lo necesario.',
+            'Si es ciudadano de la Unión Europea y va a vivir en España más de tres meses, además del número tendrá que inscribirse en el registro de ciudadanos de la UE. Si es de fuera de la Unión (incluidos los británicos desde el Brexit) y va a residir aquí, tu NIE irá ligado a la autorización de residencia y a la tarjeta que la acredita.',
+            'Si solo va a comprar una vivienda o a heredar, sin vivir en España, te basta con el NIE. Lo revisamos contigo para no pedir más de lo necesario.',
           ],
         },
       ],
       faqs: [
         { q: '¿Puedo comprar una vivienda en España sin NIE?', a: 'No. El notario y el registro exigen el NIE del comprador, y lo necesitará también para pagar los impuestos de la compra.' },
         { q: '¿El NIE es lo mismo que la residencia?', a: 'No. El NIE es un número de identificación; la residencia es una autorización distinta. Puede tener NIE sin ser residente en España.' },
-        { q: '¿Se puede pedir el NIE desde fuera de España?', a: 'Sí, en el consulado español de su país de residencia, aunque los plazos y requisitos varían de un consulado a otro.' },
-        { q: '¿Puede otra persona solicitarlo por mí?', a: 'En algunos casos es posible hacerlo mediante un representante con poder. Depende de la oficina y del tipo de solicitud; lo revisamos con usted.' },
-        { q: '¿El NIE caduca?', a: 'El número en sí se mantiene, pero algunos certificados y documentos asociados pueden tener una validez limitada para ciertos trámites. Le decimos qué necesita en cada caso.' },
+        { q: '¿Se puede pedir el NIE desde fuera de España?', a: 'Sí, en el consulado español de tu país de residencia, aunque los plazos y requisitos varían de un consulado a otro.' },
+        { q: '¿Puede otra persona solicitarlo por mí?', a: 'En algunos casos es posible hacerlo mediante un representante con poder. Depende de la oficina y del tipo de solicitud; lo revisamos contigo.' },
+        { q: '¿El NIE caduca?', a: 'El número en sí se mantiene, pero algunos certificados y documentos asociados pueden tener una validez limitada para ciertos trámites. Te decimos qué necesita en cada caso.' },
       ],
       validado: false,
     },
@@ -228,7 +228,7 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
     es: {
       title: 'Impuesto de no residentes (IRNR): asesoría y declaración',
       metaDescription:
-        'Presentamos su impuesto de no residentes por tener una vivienda en España, alquilarla o venderla. Asesoría fiscal para propietarios extranjeros, también en inglés.',
+        'Presentamos tu impuesto de no residentes por tener una vivienda en España, alquilarla o venderla. Asesoría fiscal para propietarios extranjeros, también en inglés.',
       h1: 'Impuesto de no residentes (IRNR) para propietarios en España',
       lead:
         'Si vive fuera de España y tiene aquí una vivienda o ingresos, probablemente deba presentar el impuesto sobre la renta de no residentes. Nos ocupamos de hacerlo bien y a tiempo.',
@@ -245,35 +245,35 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
           h2: 'Las tres situaciones más habituales de un propietario',
           parrafos: [],
           lista: [
-            { t: 'Vivienda que usa usted o está vacía', d: 'Aunque no la alquile, la ley considera que obtiene una renta por tenerla, y hay que declararla cada año.' },
-            { t: 'Vivienda alquilada', d: 'Los alquileres se declaran por los periodos que marca la normativa. Según su país de residencia, podrá deducir o no algunos gastos.' },
-            { t: 'Venta de la vivienda', d: 'Al vender, el comprador debe retener una parte del precio a cuenta de su impuesto, y usted declara la ganancia o la pérdida. Después se regulariza la diferencia.' },
+            { t: 'Vivienda que usas o está vacía', d: 'Aunque no la alquiles, la ley considera que obtienes una renta por tenerla, y hay que declararla cada año.' },
+            { t: 'Vivienda alquilada', d: 'Los alquileres se declaran por los periodos que marca la normativa. Según tu país de residencia, podrá deducir o no algunos gastos.' },
+            { t: 'Venta de la vivienda', d: 'Al vender, el comprador debe retener una parte del precio a cuenta de tu impuesto, y declaras la ganancia o la pérdida. Después se regulariza la diferencia.' },
           ],
         },
         {
-          h2: 'Cómo le ayudamos con el IRNR',
+          h2: 'Cómo te ayudamos con el IRNR',
           parrafos: [],
           lista: [
-            { t: 'Revisión de su situación', d: 'Comprobamos qué tiene que presentar, por qué inmuebles y rentas, y si hay ejercicios pendientes.' },
-            { t: 'Declaraciones', d: 'Preparamos y presentamos sus declaraciones en plazo y le enviamos el justificante.' },
+            { t: 'Revisión de tu situación', d: 'Comprobamos qué tiene que presentar, por qué inmuebles y rentas, y si hay ejercicios pendientes.' },
+            { t: 'Declaraciones', d: 'Preparamos y presentamos sus declaraciones en plazo y te enviamos el justificante.' },
             { t: 'Venta de su vivienda', d: 'Calculamos la ganancia, revisamos la retención y tramitamos la devolución si procede.' },
-            { t: 'Calendario', d: 'Le avisamos cada año de lo que toca presentar, para que no tenga que estar pendiente desde su país.' },
-            { t: 'Regularización', d: 'Si hay años sin declarar, le explicamos cómo ponerse al día y lo tramitamos.' },
+            { t: 'Calendario', d: 'Te avisamos cada año de lo que toca presentar, para que no tenga que estar pendiente desde tu país.' },
+            { t: 'Regularización', d: 'Si hay años sin declarar, te explicamos cómo ponerte al día y lo tramitamos.' },
           ],
         },
         {
-          h2: 'Doble imposición: su país y España',
+          h2: 'Doble imposición: tu país y España',
           parrafos: [
-            'Las rentas de su vivienda en España pueden tributar también en su país de residencia. Los convenios para evitar la doble imposición que España tiene firmados con muchos países reparten quién grava qué y cómo se evita pagar dos veces. Revisamos el que le corresponde y coordinamos, si hace falta, con su asesor en su país.',
+            'Las rentas de su vivienda en España pueden tributar también en tu país de residencia. Los convenios para evitar la doble imposición que España tiene firmados con muchos países reparten quién grava qué y cómo se evita pagar dos veces. Revisamos el que le corresponde y coordinamos, si hace falta, con su asesor en tu país.',
           ],
         },
       ],
       faqs: [
         { q: '¿Tengo que declarar mi casa en España aunque no la alquile?', a: 'Normalmente sí. La normativa considera que la mera titularidad de una vivienda que no es su residencia habitual genera una renta que se declara cada año.' },
         { q: '¿Qué pasa si no he presentado el impuesto de años anteriores?', a: 'Se puede regularizar. Conviene hacerlo antes de que Hacienda lo requiera, y también antes de vender, porque se revisa en la operación.' },
-        { q: '¿Puedo deducir gastos del alquiler?', a: 'Depende de su país de residencia: la normativa permite deducir determinados gastos a residentes de la UE y del Espacio Económico Europeo. Lo revisamos con usted.' },
-        { q: '¿Necesito un representante fiscal en España?', a: 'En algunos casos la normativa lo exige y en otros es simplemente práctico. Le decimos si es su caso y podemos actuar como tal.' },
-        { q: '¿Qué ocurre con la retención cuando vendo?', a: 'El comprador retiene una parte del precio y la ingresa a Hacienda a cuenta de su impuesto. Si la retención supera lo que le toca pagar, se puede solicitar la devolución.' },
+        { q: '¿Puedo deducir gastos del alquiler?', a: 'Depende de tu país de residencia: la normativa permite deducir determinados gastos a residentes de la UE y del Espacio Económico Europeo. Lo revisamos contigo.' },
+        { q: '¿Necesito un representante fiscal en España?', a: 'En algunos casos la normativa lo exige y en otros es simplemente práctico. Te decimos si es tu caso y podemos actuar como tal.' },
+        { q: '¿Qué ocurre con la retención cuando vendo?', a: 'El comprador retiene una parte del precio y la ingresa a Hacienda a cuenta de tu impuesto. Si la retención supera lo que te toca pagar, se puede solicitar la devolución.' },
       ],
       validado: false,
     },
@@ -345,7 +345,7 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
         {
           h2: 'Un despacho en la Costa Blanca para clientes internacionales',
           parrafos: [
-            'Benidorm y la Marina Baixa concentran una de las mayores comunidades de residentes extranjeros y propietarios no residentes de España. Muchos llevan años aquí; otros vienen unos meses al año o gestionan su vivienda desde su país.',
+            'Benidorm y la Marina Baixa concentran una de las mayores comunidades de residentes extranjeros y propietarios no residentes de España. Muchos llevan años aquí; otros vienen unos meses al año o gestionan su vivienda desde tu país.',
             'Nuestro despacho de Benidorm está pensado para ellos: trámites y consultas en inglés, en persona cuando están aquí y a distancia cuando no.',
           ],
         },
@@ -370,13 +370,13 @@ export const INTL_SEO: Record<'portada' | 'nie' | 'impuesto-no-residentes' | 'be
         {
           h2: 'Cómo trabajamos',
           parrafos: [
-            'Puede venir al despacho, llamarnos o escribirnos. Si vive fuera, preparamos casi todo a distancia y le vemos en persona cuando esté en Benidorm. Detrás del despacho está toda la estructura de Serveco desde 1977: fiscalistas, abogados y economistas que trabajan sobre el mismo expediente.',
+            'Puedes venir al despacho, llamarnos o escribirnos. Si vive fuera, preparamos casi todo a distancia y te vemos en persona cuando esté en Benidorm. Detrás del despacho está toda la estructura de Serveco desde 1977: fiscalistas, abogados y economistas que trabajan sobre el mismo expediente.',
           ],
         },
       ],
       faqs: [
         { q: '¿Atienden en inglés en el despacho de Benidorm?', a: 'Sí. Atendemos en español y en inglés, en persona, por teléfono y por correo.' },
-        { q: '¿Tengo que ir al despacho para cada trámite?', a: 'No. La mayoría de las gestiones se preparan a distancia; puede venir cuando le venga bien o cuando haga falta firmar algo en persona.' },
+        { q: '¿Tengo que ir al despacho para cada trámite?', a: 'No. La mayoría de las gestiones se preparan a distancia; puedes venir cuando te venga bien o cuando haga falta firmar algo en persona.' },
         { q: '¿Llevan también la contabilidad de negocios de la zona?', a: 'Sí: contabilidad, impuestos y nóminas de hoteles, restaurantes, comercios y otros negocios de la Costa Blanca.' },
         { q: '¿Qué zonas atienden desde Benidorm?', a: 'Benidorm y la Marina Baixa, y cualquier cliente de la Costa Blanca o de fuera de España que prefiera tratar con este despacho.' },
       ],

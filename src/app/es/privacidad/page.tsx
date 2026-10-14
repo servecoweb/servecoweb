@@ -19,36 +19,36 @@ export default function Privacidad() {
 
       <h2>Formulario de contacto</h2>
       <p>
-        <strong>Qué datos tratamos:</strong> los que usted nos facilita en el formulario (nombre, correo, teléfono, empresa, tipo de
-        cliente, tamaño y sector de la empresa, área y despacho, urgencia, cómo nos conoció y su mensaje) y la página desde la que nos
-        escribe. Si ha aceptado las cookies analíticas, también la primera página de su visita y la web o campaña de procedencia.
+        <strong>Qué datos tratamos:</strong> los que nos facilitas en el formulario (nombre, correo, teléfono, empresa, tipo de
+        cliente, tamaño y sector de la empresa, área y despacho, urgencia, cómo nos conociste y tu mensaje) y la página desde la que nos
+        escribes. Si has aceptado las cookies analíticas, también la primera página de tu visita y la web o campaña de procedencia.
       </p>
       <p>
-        <strong>Para qué:</strong> atender su consulta, asignarla al área y al despacho que corresponde, hacer el seguimiento de la
-        misma (contactarle de nuevo sobre esa consulta, concertar una cita) y saber qué canales nos traen consultas. No los usamos
-        para enviarle publicidad ni los cedemos a terceros, salvo obligación legal o proveedores que los tratan por cuenta nuestra
+        <strong>Para qué:</strong> atender tu consulta, asignarla al área y al despacho que corresponde, hacer el seguimiento de la
+        misma (contactarte de nuevo sobre esa consulta, concertar una cita) y saber qué canales nos traen consultas. No los usamos
+        para enviarte publicidad ni los cedemos a terceros, salvo obligación legal o proveedores que los tratan por cuenta nuestra
         (alojamiento web, base de datos y correo electrónico), con las garantías exigidas por la normativa.
       </p>
       <p>
-        <strong>Base legal:</strong> su consentimiento, que da al enviar el formulario, y, si llega a ser cliente, las medidas
-        precontractuales que solicita.
+        <strong>Base legal:</strong> tu consentimiento, que das al enviar el formulario, y, si llegas a ser cliente, las medidas
+        precontractuales que solicitas.
       </p>
       <p>
-        <strong>Cuánto tiempo:</strong> mientras dure la gestión de su consulta y, después, durante el plazo necesario para atender
-        posibles responsabilidades. [Plazo concreto pendiente de Serveco.] Si llega a ser cliente, se aplicarán los plazos de la
+        <strong>Cuánto tiempo:</strong> mientras dure la gestión de tu consulta y, después, durante el plazo necesario para atender
+        posibles responsabilidades. [Plazo concreto pendiente de Serveco.] Si llegas a ser cliente, se aplicarán los plazos de la
         relación profesional.
       </p>
 
       <h2>Asistente virtual</h2>
       <p>
-        Las conversaciones con el asistente virtual de la web se guardan para mejorar sus respuestas y revisar su calidad. No escriba
-        en el chat datos personales ni de su caso que no quiera compartir; para su caso concreto, use el formulario.
+        Las conversaciones con el asistente virtual de la web se guardan para mejorar sus respuestas y revisar su calidad. No escribas
+        en el chat datos personales ni de tu caso que no quieras compartir; para tu caso concreto, usa el formulario.
       </p>
 
-      <h2>Sus derechos</h2>
+      <h2>Tus derechos</h2>
       <p>
-        Puede pedir acceso, rectificación, supresión, oposición, limitación y portabilidad de sus datos, y retirar su consentimiento
-        en cualquier momento, escribiendo a {EMPRESA.email}. Si considera que no hemos atendido bien su petición, puede reclamar ante
+        Puedes pedir acceso, rectificación, supresión, oposición, limitación y portabilidad de tus datos, y retirar tu consentimiento
+        en cualquier momento, escribiendo a {EMPRESA.email}. Si consideras que no hemos atendido bien tu petición, puedes reclamar ante
         la Agencia Española de Protección de Datos (aepd.es).
       </p>
 

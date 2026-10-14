@@ -30,7 +30,7 @@ const BASE: Record<Tema, Destino> = {
   contabilidad: { area: 'Área contable', link: ES.area('contable'), texto: 'Contabilidad al día, cuentas anuales y libros oficiales.' },
   legal: { area: 'Área jurídica', link: ES.area('juridico'), texto: 'Contratos, reclamaciones, sociedades y procedimientos judiciales.' },
   ayudas: { area: 'Subvenciones y ayudas', link: ES.subvenciones, texto: 'Buscador de ayudas, financiación y planes de viabilidad.' },
-  crear: { area: 'Punto PAE', link: ES.pae, texto: 'Constitución de su sociedad o alta de autónomo.' },
+  crear: { area: 'Punto PAE', link: ES.pae, texto: 'Constitución de tu sociedad o alta de autónomo.' },
 };
 
 const AJUSTES: Partial<Record<Perfil, Partial<Record<Tema, Destino>>>> = {
@@ -53,8 +53,8 @@ export default function HeroRouter() {
 
   return (
     <div className="router">
-      <h2>Qué podemos resolver por usted</h2>
-      <p>Elija dos opciones y le indicamos el área que le atiende.</p>
+      <h2>Qué podemos resolver por ti</h2>
+      <p>Elige dos opciones y te indicamos el área que te atiende.</p>
       <fieldset>
         <legend>Soy</legend>
         <div className="chips">

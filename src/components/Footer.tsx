@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Logo from './Logo';
+import Redes from './Redes';
 import BotonCookies from './BotonCookies';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
@@ -21,6 +22,7 @@ export default function Footer({ lang }: { lang: 'es' | 'en' }) {
               {EMPRESA.razonSocial}.{' '}
               {es ? 'Asesoría integral de empresas desde 1977.' : 'Business advisers since 1977.'}
             </p>
+            <Redes />
           </div>
 
           <div>

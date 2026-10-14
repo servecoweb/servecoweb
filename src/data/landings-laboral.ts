@@ -19,7 +19,7 @@ export const LANDINGS_LABORAL: Landing[] = [
         h2: 'Gestión laboral para la industria de Yecla',
         parrafos: [
           'Las empresas del mueble y del hábitat de Yecla suelen tener plantillas estables, con años de antigüedad, turnos de fábrica y un convenio colectivo del sector que marca salarios, jornada y vacaciones. A su lado, talleres, transportistas y comercios con equipos más pequeños pero con las mismas obligaciones.',
-          'Llevamos la gestión laboral para que la empresa no tenga que pensar en ella salvo cuando hay que decidir algo, y le avisamos antes de que un cambio normativo o del convenio le afecte.',
+          'Llevamos la gestión laboral para que la empresa no tenga que pensar en ella salvo cuando hay que decidir algo, y te avisamos antes de que un cambio normativo o del convenio te afecte.',
         ],
       },
       {
@@ -38,25 +38,25 @@ export const LANDINGS_LABORAL: Landing[] = [
         h2: 'Cuando bajan los pedidos',
         parrafos: [
           'La industria vive ciclos: temporadas con más pedidos de los que se pueden atender y otras en las que sobra capacidad. Antes de despedir, la ley ofrece herramientas como los expedientes temporales de regulación de empleo o las reducciones de jornada, que permiten ajustar costes sin perder a personas formadas que costaría mucho recuperar.',
-          'Le explicamos las opciones, sus requisitos y sus plazos, y las tramitamos con la parte jurídica cuando hace falta.',
+          'Te explicamos las opciones, sus requisitos y sus plazos, y las tramitamos con la parte jurídica cuando hace falta.',
         ],
       },
       {
         h2: 'Jubilaciones y relevo en la plantilla',
         parrafos: [
-          'Muchas fábricas de Yecla tienen trabajadores que se acercan a la jubilación y un oficio que no se aprende en dos días. Hay fórmulas que permiten una jubilación progresiva mientras se incorpora y forma a quien le va a sustituir. Revisamos si encajan en su empresa y cómo hacerlo bien.',
+          'Muchas fábricas de Yecla tienen trabajadores que se acercan a la jubilación y un oficio que no se aprende en dos días. Hay fórmulas que permiten una jubilación progresiva mientras se incorpora y forma a quien le va a sustituir. Revisamos si encajan en tu empresa y cómo hacerlo bien.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Una primera reunión en cualquiera de los dos despachos de Yecla, o por videollamada. Revisamos su plantilla y sus contratos y le proponemos cómo llevar la gestión laboral.'],
+        parrafos: ['Una primera reunión en cualquiera de los dos despachos de Yecla, o por videollamada. Revisamos tu plantilla y sus contratos y te proponemos cómo llevar la gestión laboral.'],
       },
     ],
     faqs: [
-      { q: '¿Qué convenio se aplica a mi fábrica de muebles?', a: 'El del sector y ámbito que corresponda a su actividad principal. Lo comprobamos al empezar, porque un convenio mal aplicado es de lo primero que se revisa en una inspección.' },
-      { q: '¿Es obligatorio registrar la jornada?', a: 'Sí, para todos los trabajadores. Le ayudamos a montar un sistema sencillo que cumpla y que no complique el día a día del taller.' },
+      { q: '¿Qué convenio se aplica a mi fábrica de muebles?', a: 'El del sector y ámbito que corresponda a tu actividad principal. Lo comprobamos al empezar, porque un convenio mal aplicado es de lo primero que se revisa en una inspección.' },
+      { q: '¿Es obligatorio registrar la jornada?', a: 'Sí, para todos los trabajadores. Te ayudamos a montar un sistema sencillo que cumpla y que no complique el día a día del taller.' },
       { q: 'Tengo un pedido grande durante unos meses. ¿Qué contrato uso?', a: 'Depende de si la necesidad es puntual o se repite cada año. Lo revisamos antes de contratar para no elegir una modalidad que luego dé problemas.' },
-      { q: '¿Me pueden llevar solo las nóminas?', a: 'Sí, aunque lo habitual es llevar toda la gestión laboral para poder avisarle a tiempo de lo que le afecta.' },
+      { q: '¿Me pueden llevar solo las nóminas?', a: 'Sí, aunque lo habitual es llevar toda la gestión laboral para poder avisarle a tiempo de lo que te afecta.' },
     ],
     cta: 'Pedir cita con el área laboral en Yecla',
     pendienteReparto: true,
@@ -94,24 +94,24 @@ export const LANDINGS_LABORAL: Landing[] = [
         h2: 'Fijos discontinuos: la plantilla que vuelve cada campaña',
         parrafos: [
           'Tras la reforma laboral, las actividades de temporada que se repiten cada año se cubren normalmente con contratos fijos discontinuos. El trabajador es fijo de la empresa, pero solo trabaja en los periodos de actividad, y hay que llamarle en el orden y la forma previstos.',
-          'Gestionarlo bien evita reclamaciones y le permite contar cada año con personas que ya conocen el trabajo. Nos ocupamos de los llamamientos, las altas y las bajas en cada periodo.',
+          'Gestionarlo bien evita reclamaciones y te permite contar cada año con personas que ya conocen el trabajo. Nos ocupamos de los llamamientos, las altas y las bajas en cada periodo.',
         ],
       },
       {
-        h2: 'Todo coordinado con su fiscalidad y sus ayudas',
+        h2: 'Todo coordinado con tu fiscalidad y sus ayudas',
         parrafos: [
           'Los costes laborales pesan mucho en una explotación o una bodega, y a veces hay ayudas a la contratación o a la formación que se pueden aprovechar. Como llevamos también la parte fiscal y financiera, lo vemos todo junto.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Llámenos o pase por el despacho de la calle Valencia antes de la próxima campaña. Revisamos su plantilla y sus contratos y organizamos la gestión.'],
+        parrafos: ['Llámanos o pase por el despacho de la calle Valencia antes de la próxima campaña. Revisamos tu plantilla y sus contratos y organizamos la gestión.'],
       },
     ],
     faqs: [
       { q: '¿Cómo contrato a los trabajadores de la vendimia?', a: 'Depende de si la necesidad se repite cada año y de la relación con cada trabajador. Lo revisamos antes de la campaña para elegir bien la modalidad.' },
       { q: '¿Cotizan igual los trabajadores del campo que los de la bodega?', a: 'No necesariamente: las labores agrarias tienen un sistema de cotización propio. Lo aplicamos según el trabajo que haga cada persona.' },
-      { q: '¿Puedo contratar a trabajadores de fuera de la UE para la campaña?', a: 'Sí, con la autorización correspondiente. Le explicamos los requisitos y los plazos, que conviene tener en cuenta con antelación.' },
+      { q: '¿Puedo contratar a trabajadores de fuera de la UE para la campaña?', a: 'Sí, con la autorización correspondiente. Te explicamos los requisitos y los plazos, que conviene tener en cuenta con antelación.' },
       { q: '¿Llevan también a las empresas que no son del campo?', a: 'Sí: comercios, talleres y empresas de servicios de Jumilla y la comarca.' },
     ],
     cta: 'Pedir cita con el área laboral en Jumilla',
@@ -151,25 +151,25 @@ export const LANDINGS_LABORAL: Landing[] = [
         h2: 'Subcontratación en obra: responsabilidad en cadena',
         parrafos: [
           'En la construcción, la empresa que subcontrata puede responder de ciertas obligaciones laborales y de Seguridad Social de sus subcontratistas, y la normativa exige requisitos específicos a las empresas que trabajan en obra. Un fallo en la cadena puede acabar en una sanción para quien no lo esperaba.',
-          'Le ayudamos a pedir y revisar la documentación de sus subcontratas y a tener la suya en regla cuando es usted quien trabaja para otro.',
+          'Te ayudamos a pedir y revisar la documentación de sus subcontratas y a tener la suya en regla cuando eres tú quien trabaja para otro.',
         ],
       },
       {
         h2: 'Despidos bien hechos',
         parrafos: [
-          'Un despido mal tramitado suele acabar costando más que el propio despido. Antes de dar el paso revisamos la causa, la forma y la liquidación, y si el trabajador reclama, nuestros abogados le defienden en la conciliación y en el juzgado.',
+          'Un despido mal tramitado suele acabar costando más que el propio despido. Antes de dar el paso revisamos la causa, la forma y la liquidación, y si el trabajador reclama, nuestros abogados te defienden en la conciliación y en el juzgado.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en el despacho de Lorca o por videollamada. Revisamos su plantilla y sus contratos y le proponemos cómo trabajar.'],
+        parrafos: ['Pide cita en el despacho de Lorca o por videollamada. Revisamos tu plantilla y sus contratos y te proponemos cómo trabajar.'],
       },
     ],
     faqs: [
       { q: '¿Atienden a empresas de Totana, Águilas o Puerto Lumbreras?', a: 'Sí. Desde Lorca llevamos empresas de todo el Valle del Guadalentín y la costa de Águilas.' },
-      { q: 'Me ha llegado una citación de la Inspección de Trabajo. ¿Qué hago?', a: 'Tráiganosla cuanto antes: revisamos qué documentación piden y le acompañamos en la comparecencia.' },
-      { q: 'Un trabajador ha denunciado su despido. ¿Pueden defenderme?', a: 'Sí. El área jurídica lleva la conciliación y, si no hay acuerdo, el juicio, coordinada con quien lleva su gestión laboral.' },
-      { q: '¿Qué documentos debo pedir a mis subcontratas?', a: 'Depende del tipo de obra y de la subcontrata. Le damos una lista concreta y la revisamos con usted.' },
+      { q: 'Me ha llegado una citación de la Inspección de Trabajo. ¿Qué hago?', a: 'Tráiganosla cuanto antes: revisamos qué documentación piden y te acompañamos en la comparecencia.' },
+      { q: 'Un trabajador ha denunciado su despido. ¿Podéis defenderme?', a: 'Sí. El área jurídica lleva la conciliación y, si no hay acuerdo, el juicio, coordinada con quien lleva tu gestión laboral.' },
+      { q: '¿Qué documentos debo pedir a mis subcontratas?', a: 'Depende del tipo de obra y de la subcontrata. Te damos una lista concreta y la revisamos contigo.' },
     ],
     cta: 'Pedir cita con el área laboral en Lorca',
     pendienteReparto: true,
@@ -207,26 +207,26 @@ export const LANDINGS_LABORAL: Landing[] = [
       {
         h2: 'Contratar a trabajadores de fuera de la Unión Europea',
         parrafos: [
-          'Buena parte de las plantillas de la zona son de otros países. Contratar a una persona de fuera de la Unión Europea exige que tenga la autorización adecuada para trabajar, y hay distintas vías según su situación. Contratar sin ella expone a la empresa a sanciones importantes.',
+          'Buena parte de las plantillas de la zona son de otros países. Contratar a una persona de fuera de la Unión Europea exige que tenga la autorización adecuada para trabajar, y hay distintas vías según tu situación. Contratar sin ella expone a la empresa a sanciones importantes.',
           'Revisamos la documentación de cada trabajador antes del alta y, cuando hace falta, tramitamos las autorizaciones junto con el área jurídica.',
         ],
       },
       {
         h2: 'Inspecciones en campaña',
         parrafos: [
-          'Las campañas agrícolas son un momento habitual de inspecciones. Tener los contratos, el registro de jornada y las altas al día es la mejor defensa. Le ayudamos a revisarlo antes de que llegue la inspección, no después.',
+          'Las campañas agrícolas son un momento habitual de inspecciones. Tener los contratos, el registro de jornada y las altas al día es la mejor defensa. Te ayudamos a revisarlo antes de que llegue la inspección, no después.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Pida cita en el despacho de la avenida Ciudad de Murcia o por videollamada, idealmente antes de la próxima campaña.'],
+        parrafos: ['Pide cita en el despacho de la avenida Ciudad de Murcia o por videollamada, idealmente antes de la próxima campaña.'],
       },
     ],
     faqs: [
-      { q: '¿Qué necesito para contratar a un trabajador marroquí o latinoamericano?', a: 'Que tenga una autorización que le permita trabajar en España. Revisamos su documentación antes del alta y le decimos qué vía corresponde si no la tiene.' },
+      { q: '¿Qué necesito para contratar a un trabajador marroquí o latinoamericano?', a: 'Que tenga una autorización que le permita trabajar en España. Revisamos su documentación antes del alta y te decimos qué vía corresponde si no la tiene.' },
       { q: '¿Cómo gestiono a los fijos discontinuos entre campañas?', a: 'Hay que llamarles en el orden y la forma previstos y darles de alta y baja en cada periodo. Nos ocupamos de todo el proceso.' },
       { q: '¿Llevan bares y restaurantes de Los Alcázares o San Javier?', a: 'Sí: contratos de temporada, nóminas y seguros sociales de negocios de toda la costa del Mar Menor.' },
-      { q: 'Tengo muchos trabajadores. ¿Pueden asumir el volumen?', a: 'Sí. Trabajamos con empresas de campaña con plantillas grandes; organizamos con usted cómo nos pasa las altas y bajas.' },
+      { q: 'Tengo muchos trabajadores. ¿Podéis asumir el volumen?', a: 'Sí. Trabajamos con empresas de campaña con plantillas grandes; organizamos contigo cómo nos pasas las altas y bajas.' },
     ],
     cta: 'Pedir cita con el área laboral en Balsicas',
     pendienteReparto: true,
@@ -270,18 +270,18 @@ export const LANDINGS_LABORAL: Landing[] = [
       {
         h2: 'La temporada alta, también para la Inspección',
         parrafos: [
-          'Los meses de más trabajo son también los de más inspecciones en hostelería: jornada real frente a la contratada, horas extra, descansos y altas. Revisamos con usted contratos, registros y nóminas antes del verano para que todo cuadre.',
+          'Los meses de más trabajo son también los de más inspecciones en hostelería: jornada real frente a la contratada, horas extra, descansos y altas. Revisamos contigo contratos, registros y nóminas antes del verano para que todo cuadre.',
         ],
       },
       {
         h2: 'Cómo empezamos',
-        parrafos: ['Venga al despacho de la calle Jaén, llámenos o escríbanos. Revisamos su plantilla y sus contratos y le proponemos cómo llevar la gestión laboral.'],
+        parrafos: ['Ven al despacho de la calle Jaén, llámenos o escríbenos. Revisamos tu plantilla y sus contratos y te proponemos cómo llevar la gestión laboral.'],
       },
     ],
     faqs: [
-      { q: '¿Puedo contratar a un camarero británico?', a: 'Sí, si tiene una autorización que le permita trabajar en España. Desde el Brexit, los británicos que no residían aquí antes necesitan una. Revisamos su caso antes del alta.' },
-      { q: '¿Qué contrato uso para la temporada de verano?', a: 'Si la necesidad se repite cada año, normalmente un fijo discontinuo. Lo revisamos con usted según su negocio.' },
-      { q: '¿Cómo registro la jornada con turnos partidos?', a: 'Con un sistema que recoja cada entrada y salida. Le ayudamos a elegir uno sencillo para su equipo.' },
+      { q: '¿Puedo contratar a un camarero británico?', a: 'Sí, si tiene una autorización que le permita trabajar en España. Desde el Brexit, los británicos que no residían aquí antes necesitan una. Revisamos tu caso antes del alta.' },
+      { q: '¿Qué contrato uso para la temporada de verano?', a: 'Si la necesidad se repite cada año, normalmente un fijo discontinuo. Lo revisamos contigo según su negocio.' },
+      { q: '¿Cómo registro la jornada con turnos partidos?', a: 'Con un sistema que recoja cada entrada y salida. Te ayudamos a elegir uno sencillo para su equipo.' },
       { q: '¿Me pueden atender en inglés?', a: 'Sí. En el despacho de Benidorm atendemos en español y en inglés.' },
     ],
     cta: 'Pedir cita con el área laboral en Benidorm',

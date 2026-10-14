@@ -22,8 +22,8 @@ export default function BuscadorExterno({ url, titulo }: { url: string; titulo: 
     <div className="caja" style={{ textAlign: 'center', padding: '40px 24px' }}>
       <h3 style={{ marginBottom: 10 }}>Buscador de subvenciones</h3>
       <p style={{ maxWidth: 520, margin: '0 auto 20px', color: 'var(--tinta-2)' }}>
-        Consulte las convocatorias abiertas. El buscador lo presta un proveedor externo (Fandit), que puede usar sus propias cookies:
-        solo se carga si usted lo abre.
+        Consulta las convocatorias abiertas. El buscador lo presta un proveedor externo (Fandit), que puede usar sus propias cookies:
+        solo se carga si tú lo abres.
       </p>
       <p style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
         <button type="button" className="btn btn-marca" onClick={() => setCargado(true)}>

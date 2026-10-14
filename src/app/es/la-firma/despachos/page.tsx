@@ -18,7 +18,7 @@ export default function Despachos() {
       <PageHead
         migas={[{ label: 'Inicio', href: ES.home }, { label: 'La firma', href: ES.firma }, { label: 'Despachos' }]}
         titulo={`${ciudadesEnLetra()}, un mismo equipo`}
-        lead="Acuda al despacho que le quede más cerca. Su expediente es el mismo en todos."
+        lead="Acude al despacho que te quede más cerca. Tu expediente es el mismo en todos."
       />
       <section>
         <div className="wrap">
@@ -26,7 +26,7 @@ export default function Despachos() {
           <div className="despachos-ayuda">
             <p>
               <strong>¿Duda entre dos despachos?</strong>
-              <span>Llame a la sede central y le orientamos.</span>
+              <span>Llama a la sede central y te orientamos.</span>
             </p>
             <div className="acciones-fila">
               <a className="btn btn-linea" href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>

@@ -59,7 +59,7 @@ export default function IntlPage({ p, lang }: { p: PaginaIntl; lang: 'es' | 'en'
               <ContenidoSeo pagina={seo} lang={lang} />
             ) : (
               <>
-                <h2>{en ? 'How we help' : 'Cómo le ayudamos'}</h2>
+                <h2>{en ? 'How we help' : 'Cómo te ayudamos'}</h2>
                 <ul>{(en ? p.puntosEn : p.puntos).map((x) => <li key={x}>{x}</li>)}</ul>
               </>
             )}

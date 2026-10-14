@@ -1,5 +1,5 @@
 /**
- * Sectores del carrusel «Conocemos su sector» de la home.
+ * Sectores del carrusel «Conocemos tu sector» de la home.
  * Los `id` coinciden con SECTORES de src/lib/crm.ts (desplegable del formulario): mismo vocabulario en web y panel.
  * Son TEXTO, no enlaces: no hay páginas por sector (cero huérfanos; páginas por sector = fuera del PDF).
  * Frases: redacción de Eskala, generales y sin cifras. PENDIENTE de validar con Serveco (qué sectores y qué decir).

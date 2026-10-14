@@ -111,7 +111,7 @@ ${fila('Idioma', c.idioma === 'en' ? 'Inglés' : 'Español')}
     await t.sendMail({
       from: desde,
       to: c.email,
-      subject: en ? 'We have received your enquiry · Serveco Asesores' : 'Hemos recibido su consulta · Serveco Asesores',
+      subject: en ? 'We have received your enquiry · Serveco Asesores' : 'Hemos recibido tu consulta · Serveco Asesores',
       html: marco(
         en ? 'Thank you for contacting us' : 'Gracias por escribirnos',
         en
@@ -119,7 +119,7 @@ ${fila('Idioma', c.idioma === 'en' ? 'Inglés' : 'Español')}
 <p style="font-size:15px;line-height:1.6">We have received your enquiry${c.area ? ` about <strong>${esc(c.area)}</strong>` : ''}. The right team will review it and reply to this email address.</p>
 <p style="font-size:15px;line-height:1.6">If it is urgent, you can call us on <strong>+34 ${esc(EMPRESA.tel)}</strong>.</p>`
           : `<p style="font-size:15px;line-height:1.6">Estimado/a ${esc(c.nombre)}:</p>
-<p style="font-size:15px;line-height:1.6">Hemos recibido su consulta${c.area ? ` sobre <strong>${esc(c.area)}</strong>` : ''}. El área que corresponde la revisará y le responderá a este correo.</p>
+<p style="font-size:15px;line-height:1.6">Hemos recibido tu consulta${c.area ? ` sobre <strong>${esc(c.area)}</strong>` : ''}. El área que corresponde la revisará y te responderá a este correo.</p>
 <p style="font-size:15px;line-height:1.6">Si es urgente, puede llamarnos al <strong>${esc(EMPRESA.tel)}</strong>.</p>`,
       ),
     });

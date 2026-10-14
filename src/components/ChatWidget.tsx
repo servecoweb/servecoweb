@@ -21,8 +21,8 @@ const TEMAS: Record<'es' | 'en', Tema[]> = {
     {
       id: 'empresa', label: 'Mi empresa',
       opciones: [
-        { label: 'Llevar la contabilidad', prompt: '¿Pueden llevar la contabilidad y los impuestos de mi empresa?' },
-        { label: 'Contratar a alguien', prompt: 'Voy a contratar a un trabajador. ¿Cómo me ayudan?' },
+        { label: 'Llevar la contabilidad', prompt: '¿Podéis llevar la contabilidad y los impuestos de mi empresa?' },
+        { label: 'Contratar a alguien', prompt: 'Voy a contratar a un trabajador. ¿Cómo me ayudáis?' },
         { label: 'Deducción I+D+i', prompt: '¿Qué es la deducción por I+D+i y cómo sé si puedo aplicarla?' },
         { label: 'Sistemas A.D.', prompt: '¿Qué son los sistemas A.D.I, A.D.P y A.D.A?' },
       ],
@@ -31,22 +31,22 @@ const TEMAS: Record<'es' | 'en', Tema[]> = {
       id: 'empezar', label: 'Empezar un negocio',
       opciones: [
         { label: 'Crear una sociedad', prompt: 'Quiero crear una sociedad. ¿Qué es el Punto PAE?' },
-        { label: 'Hacerme autónomo', prompt: 'Quiero darme de alta como autónomo. ¿Me pueden ayudar?' },
+        { label: 'Hacerme autónomo', prompt: 'Quiero darme de alta como autónomo. ¿Me podéis ayudar?' },
         { label: 'Buscar ayudas', prompt: '¿Cómo encuentro subvenciones para mi negocio?' },
       ],
     },
     {
       id: 'internacional', label: 'Extranjeros y no residentes',
       opciones: [
-        { label: 'Sacar el NIE', prompt: '¿Me ayudan a obtener el NIE?' },
+        { label: 'Sacar el NIE', prompt: '¿Me ayudáis a obtener el NIE?' },
         { label: 'Impuesto de no residentes', prompt: 'Tengo una vivienda en España y no vivo aquí. ¿Qué impuestos pago?' },
-        { label: '¿En qué despacho?', prompt: 'Soy extranjero. ¿En qué despachos me pueden atender?' },
+        { label: '¿En qué despacho?', prompt: 'Soy extranjero. ¿En qué despachos me podéis atender?' },
       ],
     },
     {
       id: 'contacto', label: 'Despachos y contacto',
       opciones: [
-        { label: '¿Dónde están?', prompt: '¿Dónde tienen despachos?' },
+        { label: '¿Dónde están?', prompt: '¿Dónde tenéis despachos?' },
         { label: 'Pedir cita', prompt: 'Quiero pedir una cita. ¿Cómo lo hago?' },
       ],
     },
@@ -78,7 +78,7 @@ const TEMAS: Record<'es' | 'en', Tema[]> = {
 };
 
 const T = {
-  es: { abrir: 'Abrir el asistente', cerrar: 'Cerrar el asistente', nuevo: 'Empezar una conversación nueva', nuevoCorto: 'Nueva', elige: 'Elija un tema:', volver: '← Volver a los temas', escribe: 'Escriba su pregunta…', enviar: 'Enviar', escribiendo: 'Escribiendo…', ayuda: '¿Le ayudamos?' },
+  es: { abrir: 'Abrir el asistente', cerrar: 'Cerrar el asistente', nuevo: 'Empezar una conversación nueva', nuevoCorto: 'Nueva', elige: 'Elige un tema:', volver: '← Volver a los temas', escribe: 'Escribe tu pregunta…', enviar: 'Enviar', escribiendo: 'Escribiendo…', ayuda: '¿Te ayudamos?' },
   en: { abrir: 'Open the assistant', cerrar: 'Close the assistant', nuevo: 'Start a new conversation', nuevoCorto: 'New', elige: 'Choose a topic:', volver: '← Back to topics', escribe: 'Type your question…', enviar: 'Send', escribiendo: 'Typing…', ayuda: 'Can we help?' },
 };
 
@@ -230,7 +230,7 @@ export default function ChatWidget({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         escribir(
           lang === 'en'
             ? `Connection lost. Call us on +34 ${EMPRESA.tel} or write to ${EMPRESA.email}.`
-            : `Se ha perdido la conexión. Llámenos al ${EMPRESA.tel} o escriba a ${EMPRESA.email}.`,
+            : `Se ha perdido la conexión. Llámanos al ${EMPRESA.tel} o escribe a ${EMPRESA.email}.`,
         );
       } finally {
         setCargando(false);

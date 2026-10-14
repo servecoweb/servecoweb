@@ -28,7 +28,7 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
         h2: 'La sede central de Serveco',
         parrafos: [
           'Serveco nació en Murcia en 1977 y aquí sigue su sede central. Desde los despachos de Gran Vía y de la calle Acisclo Díaz trabajan los responsables de las áreas y buena parte del equipo que atiende a empresas de toda la Región.',
-          'Si su empresa está en Murcia capital o en el área metropolitana (Molina de Segura, Alcantarilla, Las Torres de Cotillas, Santomera…), este es su despacho de referencia. Y si está en otra comarca, su expediente es el mismo en cualquiera de nuestras sedes.',
+          'Si tu empresa está en Murcia capital o en el área metropolitana (Molina de Segura, Alcantarilla, Las Torres de Cotillas, Santomera…), este es su despacho de referencia. Y si está en otra comarca, tu expediente es el mismo en cualquiera de nuestras sedes.',
         ],
       },
       {
@@ -52,12 +52,12 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       {
         h2: 'Cómo concertar una cita en Murcia',
         parrafos: [
-          'Le recomendamos llamar o escribir antes de venir, para que le atienda directamente la persona del área que necesita. También podemos reunirnos por videollamada si le resulta más cómodo.',
+          'Te recomendamos llamar o escribir antes de venir, para que te atienda directamente la persona del área que necesitas. También podemos reunirnos por videollamada si te resulta más cómodo.',
         ],
       },
     ],
     faqs: [
-      { q: '¿Qué diferencia hay entre los dos despachos de Murcia?', a: 'Los dos forman parte de la sede central y trabajan sobre los mismos expedientes. Al pedir cita le indicamos en cuál le atenderá la persona del área que necesita.' },
+      { q: '¿Qué diferencia hay entre los dos despachos de Murcia?', a: 'Los dos forman parte de la sede central y trabajan sobre los mismos expedientes. Al pedir cita te indicamos en cuál te atenderá la persona del área que necesita.' },
       { q: '¿Atienden a empresas de fuera de Murcia capital?', a: 'Sí. Desde Murcia trabajamos con empresas de toda la Región y, además, tenemos despachos en Yecla, Jumilla, Lorca, Balsicas y Benidorm.' },
       { q: '¿Tengo que ir en persona para darme de alta como cliente?', a: 'No es imprescindible. Podemos empezar por teléfono o videollamada y pedirle la documentación por correo.' },
       { q: '¿Puedo crear mi empresa desde el despacho de Murcia?', a: 'Sí. Somos Punto PAE: tramitamos la creación de sociedades y las altas de autónomos de forma oficial.' },
@@ -104,15 +104,15 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       {
         h2: 'Cómo concertar una cita en Yecla',
         parrafos: [
-          'Llame al despacho que le quede más cerca o escríbanos. Le recomendamos pedir cita antes de venir para que le atienda la persona del área que necesita.',
+          'Llama al despacho que te quede más cerca o escríbenos. Te recomendamos pedir cita antes de venir para que te atienda la persona del área que necesitas.',
         ],
       },
     ],
     faqs: [
-      { q: '¿En qué despacho de Yecla me atienden?', a: 'En cualquiera de los dos. Al pedir cita le indicamos cuál le conviene según el área que necesite.' },
+      { q: '¿En qué despacho de Yecla me atienden?', a: 'En cualquiera de los dos. Al pedir cita te indicamos cuál te conviene según el área que necesite.' },
       { q: '¿Trabajan con empresas del mueble que exportan?', a: 'Sí. Llevamos la fiscalidad, la contabilidad y la parte laboral de empresas industriales de la zona, incluidas las que venden fuera de España.' },
       { q: '¿Atienden también a autónomos?', a: 'Sí: impuestos trimestrales, declaración de la renta y, cuando llega el momento, el paso a sociedad.' },
-      { q: '¿Pueden llevar la empresa familiar en el relevo generacional?', a: 'Sí. Coordinamos la parte fiscal, jurídica y financiera del relevo para que la empresa pase a la siguiente generación con orden.' },
+      { q: '¿Podéis llevar la empresa familiar en el relevo generacional?', a: 'Sí. Coordinamos la parte fiscal, jurídica y financiera del relevo para que la empresa pase a la siguiente generación con orden.' },
     ],
     validado: false,
   },
@@ -153,14 +153,14 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       },
       {
         h2: 'Cómo concertar una cita en Jumilla',
-        parrafos: ['Llámenos o escríbanos y le daremos cita en el despacho o, si lo prefiere, por videollamada.'],
+        parrafos: ['Llámanos o escríbenos y le daremos cita en el despacho o, si lo prefiere, por videollamada.'],
       },
     ],
     faqs: [
       { q: '¿Llevan la contratación de temporada de la vendimia?', a: 'Sí: contratos, altas, bajas y nóminas de las campañas, con la modalidad que corresponda en cada caso.' },
       { q: '¿Trabajan con bodegas?', a: 'Sí. Llevamos la fiscalidad, la contabilidad y la parte laboral de bodegas y empresas del sector del vino.' },
-      { q: '¿Me pueden ayudar a pedir una subvención para mi explotación?', a: 'Sí. Buscamos las convocatorias que encajan con su proyecto y le ayudamos a preparar y tramitar la solicitud.' },
-      { q: '¿Atienden a agricultores autónomos?', a: 'Sí: sus impuestos, su contabilidad y, si contratan personal, sus nóminas.' },
+      { q: '¿Me pueden ayudar a pedir una subvención para mi explotación?', a: 'Sí. Buscamos las convocatorias que encajan con tu proyecto y te ayudamos a preparar y tramitar la solicitud.' },
+      { q: '¿Atienden a agricultores autónomos?', a: 'Sí: sus impuestos, tu contabilidad y, si contratan personal, sus nóminas.' },
     ],
     validado: false,
   },
@@ -201,13 +201,13 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       },
       {
         h2: 'Cómo concertar una cita en Lorca',
-        parrafos: ['Llámenos o escríbanos y le daremos cita en el despacho de la Antigua Plaza de Abastos o por videollamada.'],
+        parrafos: ['Llámanos o escríbenos y le daremos cita en el despacho de la Antigua Plaza de Abastos o por videollamada.'],
       },
     ],
     faqs: [
       { q: '¿Atienden a clientes de Águilas, Totana o Puerto Lumbreras?', a: 'Sí. Desde Lorca trabajamos con empresas y autónomos de todo el Valle del Guadalentín y la costa de Águilas.' },
-      { q: '¿Llevan empresas agrícolas y ganaderas?', a: 'Sí: su fiscalidad, su contabilidad y la contratación de las campañas.' },
-      { q: '¿Pueden reclamar una factura que no me pagan?', a: 'Sí. Nuestra área jurídica se ocupa de la reclamación, primero de forma extrajudicial y, si hace falta, en el juzgado.' },
+      { q: '¿Llevan empresas agrícolas y ganaderas?', a: 'Sí: tu fiscalidad, tu contabilidad y la contratación de las campañas.' },
+      { q: '¿Podéis reclamar una factura que no me pagan?', a: 'Sí. Nuestra área jurídica se ocupa de la reclamación, primero de forma extrajudicial y, si hace falta, en el juzgado.' },
       { q: '¿Tramitan herencias desde Lorca?', a: 'Sí: la parte jurídica y la fiscal de la herencia, coordinadas desde el mismo despacho.' },
     ],
     validado: false,
@@ -249,14 +249,14 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       },
       {
         h2: 'Cómo concertar una cita en Balsicas',
-        parrafos: ['Llámenos o escríbanos y le daremos cita en el despacho de la avenida Ciudad de Murcia o por videollamada.'],
+        parrafos: ['Llámanos o escríbenos y le daremos cita en el despacho de la avenida Ciudad de Murcia o por videollamada.'],
       },
     ],
     faqs: [
       { q: '¿Balsicas pertenece a Torre-Pacheco?', a: 'Sí, Balsicas es una pedanía de Torre-Pacheco. Desde nuestro despacho atendemos a todo el municipio y a la comarca.' },
       { q: '¿Gestionan trabajadores extranjeros para la campaña?', a: 'Sí: contratos, altas y la documentación necesaria para contratar a personas de fuera de la Unión Europea.' },
       { q: '¿Atienden negocios de hostelería del Mar Menor?', a: 'Sí: nóminas de temporada, impuestos y contabilidad de restaurantes, bares y comercios de la costa.' },
-      { q: '¿Llevan almacenes que exportan?', a: 'Sí: su contabilidad, la fiscalidad de las operaciones con el extranjero y la gestión laboral.' },
+      { q: '¿Llevan almacenes que exportan?', a: 'Sí: tu contabilidad, la fiscalidad de las operaciones con el extranjero y la gestión laboral.' },
     ],
     validado: false,
   },
@@ -296,7 +296,7 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
       },
       {
         h2: 'Cómo concertar una cita en Benidorm',
-        parrafos: ['Llámenos o escríbanos y le daremos cita en el despacho o por videollamada. Atendemos en español y en inglés.'],
+        parrafos: ['Llámanos o escríbenos y le daremos cita en el despacho o por videollamada. Atendemos en español y en inglés.'],
       },
     ],
     faqs: [

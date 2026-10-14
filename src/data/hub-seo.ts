@@ -40,7 +40,7 @@ export const HUB_SEO: Record<'es' | 'en', PaginaSeo & { guia: Situacion[] }> = {
         h2: 'Una asesoría integral: todas las áreas sobre el mismo expediente',
         parrafos: [
           'La mayoría de las decisiones de una empresa tocan varias áreas a la vez. Un despido tiene una parte laboral, otra jurídica y otra fiscal; una inversión afecta a la contabilidad, a los impuestos y a la financiación; una herencia en la empresa familiar mezcla derecho, fiscalidad y organización.',
-          'En Serveco esas áreas trabajan juntas sobre el mismo expediente. Usted trata con una persona de referencia y nosotros nos coordinamos por dentro, para que nada se quede entre dos asesores que no hablan entre sí.',
+          'En Serveco esas áreas trabajan juntas sobre el mismo expediente. Tratas con una persona de referencia y nosotros nos coordinamos por dentro, para que nada se quede entre dos asesores que no hablan entre sí.',
         ],
       },
       {
@@ -57,10 +57,10 @@ export const HUB_SEO: Record<'es' | 'en', PaginaSeo & { guia: Situacion[] }> = {
       },
     ],
     faqs: [
-      { q: '¿Tengo que contratar todas las áreas?', a: 'No. Puede empezar por la que necesite hoy; si más adelante hace falta otra, se incorpora sobre el mismo expediente.' },
-      { q: '¿Cómo sé qué área necesito?', a: 'Use la guía de esta página o cuéntenos su caso en una consulta: la dirigimos nosotros a la persona adecuada.' },
+      { q: '¿Tengo que contratar todas las áreas?', a: 'No. Puedes empezar por la que necesites hoy; si más adelante hace falta otra, se incorpora sobre el mismo expediente.' },
+      { q: '¿Cómo sé qué área necesito?', a: 'Use la guía de esta página o cuéntenos tu caso en una consulta: la dirigimos nosotros a la persona adecuada.' },
       { q: '¿Atienden a empresas de toda España?', a: 'Nuestra base está en la Región de Murcia y la Costa Blanca, pero trabajamos con empresas de otras zonas cuando el asunto se puede llevar a distancia.' },
-      { q: '¿Cómo es la primera reunión?', a: 'Nos cuenta su situación, revisamos lo urgente y le proponemos cómo trabajar y qué incluye. Puede ser en el despacho o por videollamada.' },
+      { q: '¿Cómo es la primera reunión?', a: 'Nos cuentas tu situación, revisamos lo urgente y te proponemos cómo trabajar y qué incluye. Puede ser en el despacho o por videollamada.' },
     ],
     validado: false,
   },

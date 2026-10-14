@@ -63,7 +63,7 @@ export default function ContactForm({ lang, areas, sedes, areaInicial, sedeInici
         <p className="form-aviso ok" role="status">
           {en
             ? 'Message sent. We have emailed you a confirmation; the right team will reply once it has reviewed your enquiry.'
-            : 'Consulta enviada. Le hemos enviado una confirmación por correo; el área que corresponde le responderá en cuanto la revise.'}
+            : 'Consulta enviada. Te hemos enviado una confirmación por correo; el área que corresponde te responderá en cuanto la revise.'}
         </p>
       </div>
     );
@@ -163,7 +163,7 @@ export default function ContactForm({ lang, areas, sedes, areaInicial, sedeInici
           required
           minLength={MENSAJE_MIN}
           maxLength={5000}
-          placeholder={en ? 'Tell us briefly what you need.' : 'Cuéntenos brevemente qué necesita.'}
+          placeholder={en ? 'Tell us briefly what you need.' : 'Cuéntanos brevemente qué necesitas.'}
           defaultValue={val('mensaje')}
           {...invalido('mensaje')}
         />
@@ -174,7 +174,7 @@ export default function ContactForm({ lang, areas, sedes, areaInicial, sedeInici
         className="cualificacion campo ancho"
         {...(val('tamano') || val('sector') || val('tiene_asesoria') || val('urgencia') || val('como_conocio') ? { open: true } : {})}
       >
-        <summary>{en ? 'Help us serve you better (optional)' : 'Ayúdenos a atenderle mejor (opcional)'}</summary>
+        <summary>{en ? 'Help us serve you better (optional)' : 'Ayúdanos a atenderte mejor (opcional)'}</summary>
         <div className="cualificacion-grid">
           {tipo === 'empresa' && (
             <div className="campo">

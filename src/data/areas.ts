@@ -46,7 +46,7 @@ export const AREAS: Area[] = [
     resumen: 'Nóminas, seguros sociales, contratos, despidos e inspecciones de trabajo.',
     resumenEn: 'Payroll, social security, contracts, dismissals and labour inspections.',
     intro:
-      'Gestionamos el día a día laboral de su plantilla y le acompañamos cuando hay que contratar, despedir o atender una inspección.',
+      'Gestionamos el día a día laboral de tu plantilla y te acompañamos cuando hay que contratar, despedir o atender una inspección.',
     incluye: [
       'Nóminas y seguros sociales',
       'Contratos y altas',
@@ -63,7 +63,7 @@ export const AREAS: Area[] = [
     resumen: 'Mercantil, civil, contratación, reclamaciones y procedimientos judiciales.',
     resumenEn: 'Corporate, civil, contracts, claims and court proceedings.',
     intro:
-      'Asesoramiento jurídico para empresas y particulares: contratos, sociedades, reclamaciones y defensa de sus intereses.',
+      'Asesoramiento jurídico para empresas y particulares: contratos, sociedades, reclamaciones y defensa de tus intereses.',
     incluye: [
       'Mercantil y societario',
       'Redacción y revisión de contratos',
@@ -80,7 +80,7 @@ export const AREAS: Area[] = [
     resumen: 'Contabilidad, cuentas anuales, libros oficiales y cierre del ejercicio.',
     resumenEn: 'Bookkeeping, annual accounts, statutory books and year-end closing.',
     intro:
-      'Mantenemos su contabilidad al día para que sepa cómo va la empresa durante el año, no solo en el cierre.',
+      'Mantenemos tu contabilidad al día para que sepas cómo va la empresa durante el año, no solo en el cierre.',
     incluye: ['Contabilidad', 'Cuentas anuales', 'Libros oficiales', 'Cierre del ejercicio'],
   },
   {
@@ -92,7 +92,7 @@ export const AREAS: Area[] = [
     resumen: 'Financiación, viabilidad, presupuestos y cuadros de mando con los sistemas A.D.',
     resumenEn: 'Financing, feasibility, budgets and dashboards with our A.D. systems.',
     intro:
-      'Analizamos la salud financiera de su empresa con nuestros propios sistemas A.D.I, A.D.P y A.D.A.',
+      'Analizamos la salud financiera de tu empresa con nuestros propios sistemas A.D.I, A.D.P y A.D.A.',
     incluye: [
       'A.D.I · Análisis Dinámico Intermensual',
       'A.D.P · Análisis Dinámico Presupuestario',
@@ -120,7 +120,7 @@ export const AREAS: Area[] = [
     resumen: 'Deducciones fiscales por innovación con análisis de cada proyecto.',
     resumenEn: 'Tax deductions for innovation, analysed project by project.',
     intro:
-      'Estudiamos si sus proyectos pueden aplicar las deducciones por I+D+i y el Patent Box, y preparamos la documentación.',
+      'Estudiamos si tus proyectos pueden aplicar las deducciones por I+D+i y el Patent Box, y preparamos la documentación.',
     incluye: ['Análisis de proyectos', 'Deducciones por I+D+i', 'Patent Box'],
   },
   {
@@ -129,9 +129,9 @@ export const AREAS: Area[] = [
     nombre: 'Formación',
     nombreEn: 'Training',
     grupo: 'personas',
-    resumen: 'Cursos para su plantilla, 100 % bonificables.',
+    resumen: 'Cursos para tu plantilla, 100 % bonificables.',
     resumenEn: 'Training courses for your staff, fully subsidised.',
-    intro: 'Organizamos formación para su plantilla con cargo al crédito de formación de la empresa.',
+    intro: 'Organizamos formación para tu plantilla con cargo al crédito de formación de la empresa.',
     incluye: ['Cursos 100 % bonificables', 'Gestión del crédito de formación'],
   },
 ];

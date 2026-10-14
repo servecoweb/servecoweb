@@ -109,7 +109,7 @@ export default function Header({ lang }: { lang: 'es' | 'en' }) {
                 ))}
                 <div className="destacado">
                   <h4>Sistemas A.D.</h4>
-                  <p>Nuestras herramientas propias para seguir la salud financiera de su empresa mes a mes.</p>
+                  <p>Nuestras herramientas propias para seguir la salud financiera de tu empresa mes a mes.</p>
                   <Link className="enlace" href={ES.area('financiero')}>Conocer los sistemas</Link>
                   <p style={{ marginTop: 16, marginBottom: 0 }}>
                     <Link className="enlace" href={ES.servicios}>Ver todos los servicios</Link>

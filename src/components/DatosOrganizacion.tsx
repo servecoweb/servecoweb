@@ -1,11 +1,12 @@
-import { EMPRESA, SITE_URL } from '@/data/site';
+import { EMPRESA, REDES, SITE_URL } from '@/data/site';
 import { SEDES } from '@/data/offices';
 import { ES, EN } from '@/lib/rutas';
 
 /**
  * Datos estructurados de la ORGANIZACIÓN y del SITIO WEB (toda la web, desde el layout raíz).
  * Cada despacho va como `department` con su dirección (las fichas llevan además su AccountingService).
- * PENDIENTE de Serveco: razón social completa (legalName), CIF (taxID), logo SVG y perfiles sociales (sameAs).
+ * PENDIENTE de Serveco: razón social completa (legalName), CIF (taxID) y logo SVG.
+ * sameAs: los tres perfiles que pasó el cliente el 14 oct 2026.
  * No se inventan: cuando lleguen, se añaden aquí.
  */
 export default function DatosOrganizacion() {
@@ -26,6 +27,7 @@ export default function DatosOrganizacion() {
     description:
       'Asesoría integral de empresas desde 1977: fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación. Servicios para extranjeros y no residentes.',
     knowsLanguage: ['es', 'en'],
+    sameAs: REDES.map((r) => r.url),
     address: central?.locales[0]
       ? {
           '@type': 'PostalAddress',
