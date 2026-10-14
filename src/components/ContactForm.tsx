@@ -4,7 +4,7 @@ import { useActionState, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { enviarConsulta, type EstadoForm } from '@/lib/contacto';
-import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS } from '@/lib/crm';
+import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, sedeEnEspanol } from '@/lib/crm';
 import { leerVisita } from '@/components/CapturaVisita';
 import { ES, EN } from '@/lib/rutas';
 
@@ -142,16 +142,22 @@ export default function ContactForm({ lang, areas, sedes, areaInicial, sedeInici
 
       <div className="campo">
         <label htmlFor="f-area">{en ? 'Service' : 'Área'}</label>
-        <select id="f-area" name="area" defaultValue={val('area', areaInicial ?? '')}>
-          {areas.map((a) => <option key={a}>{a}</option>)}
-          <option>{en ? 'Not sure' : 'No lo sé'}</option>
+        <select id="f-area" name="area" translate="no" defaultValue={areaEnEspanol(val('area', areaInicial ?? '')) ?? ''}>
+          {areas.map((a) => {
+            const es = areaEnEspanol(a) ?? a;
+            return <option key={es} value={es}>{a}</option>;
+          })}
+          <option value="No lo sé">{en ? 'Not sure' : 'No lo sé'}</option>
         </select>
       </div>
       <div className="campo">
         <label htmlFor="f-sede">{en ? 'Office' : 'Despacho'}</label>
-        <select id="f-sede" name="sede" defaultValue={val('sede', sedeInicial ?? '')}>
-          {sedes.map((s) => <option key={s}>{s}</option>)}
-          <option>{en ? 'Any office' : 'Me es indiferente'}</option>
+        <select id="f-sede" name="sede" translate="no" defaultValue={sedeEnEspanol(val('sede', sedeInicial ?? '')) ?? ''}>
+          {sedes.map((s) => {
+            const es = sedeEnEspanol(s) ?? s;
+            return <option key={es} value={es}>{s}</option>;
+          })}
+          <option value="Me es indiferente">{en ? 'Any office' : 'Me es indiferente'}</option>
         </select>
       </div>
 

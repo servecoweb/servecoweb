@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
-import { CONOCIO, ESTADOS, PRIORIDADES, TIPOS, etiqueta } from '@/lib/crm';
+import { CONOCIO, ESTADOS, PRIORIDADES, TIPOS, areaEnEspanol, etiqueta, sedeEnEspanol } from '@/lib/crm';
 import { MOTIVOS, type Motivo } from '@/lib/spam';
 import BotonEnviar from '@/components/admin/BotonEnviar';
 import { recuperarSpam } from './acciones';
@@ -66,7 +66,11 @@ export default async function ContactosAdmin({ searchParams }: { searchParams: S
     );
   }
 
-  const todos = (data ?? []) as Fila[];
+  const todos = ((data ?? []) as Fila[]).map((c) => ({
+    ...c,
+    area: areaEnEspanol(c.area),
+    sede: sedeEnEspanol(c.sede),
+  }));
   const q = (sp.q ?? '').toLowerCase();
   const filtrados = todos.filter(
     (c) =>

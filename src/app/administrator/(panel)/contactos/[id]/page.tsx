@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
-import { ASESORIA, CONOCIO, ESTADOS, PRIORIDADES, SECTORES, TAMANOS, TIPOS, URGENCIAS, etiqueta } from '@/lib/crm';
+import { ASESORIA, CONOCIO, ESTADOS, PRIORIDADES, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, etiqueta, sedeEnEspanol } from '@/lib/crm';
 import BotonEnviar from '@/components/admin/BotonEnviar';
 import { actualizarContacto, anadirNota } from '../acciones';
 
@@ -46,7 +46,7 @@ export default async function FichaContacto({ params, searchParams }: { params: 
         <div>
           <h1 className="text-2xl font-bold">{c.empresa || c.nombre}</h1>
           <p className="text-sm text-tinta-2">
-            {fechaHora(c.created_at)} · {etiqueta(TIPOS, c.tipo)} · {c.area ?? 'sin área'} · {c.sede ?? 'sin despacho'}
+            {fechaHora(c.created_at)} · {etiqueta(TIPOS, c.tipo)} · {areaEnEspanol(c.area) ?? 'sin área'} · {sedeEnEspanol(c.sede) ?? 'sin despacho'}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

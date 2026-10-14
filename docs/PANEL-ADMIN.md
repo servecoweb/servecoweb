@@ -2,6 +2,8 @@
 
 *25 sep 2026. Acceso: login de Supabase + email en `ADMIN_EMAILS` (`src/lib/admin.ts`). Sin email autorizado no se ve nada.*
 
+*14 oct 2026: `ADMIN_EMAILS` estaba vacío en `.env.local`; ahora `servecoweb@gmail.com`. En Vercel hay que poner la misma variable (Settings → Environment Variables) y volver a desplegar.*
+
 ## Secciones
 
 | Ruta | Qué es | Doc |
@@ -11,7 +13,7 @@
 | `/administrator/blog` | Artículos: «Redactar con IA», edición, revisión jurídica y publicación | `REDACTOR-BLOG.md` |
 | `/administrator/chatbot` | Respuestas y conversaciones del asistente con la nota del revisor | `CHATBOT.md` |
 
-Tras el login se entra al **Inicio**. El nombre «SERVECO · Panel» también lleva al Inicio.
+Tras el login se entra al **Inicio**. El menú va en una barra fija a la izquierda (molde Furgocasa y Neotérmica): Inicio, Contactos, Blog y Chatbot. La marca lleva al Inicio. En móvil el menú se abre con el botón de la barra superior. El correo, «Ver la web» y «Cerrar sesión» están al pie de esa barra.
 
 ## Inicio (dashboard)
 

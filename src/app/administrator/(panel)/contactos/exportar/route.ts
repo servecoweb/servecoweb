@@ -1,6 +1,6 @@
 import { exigirSesion } from '@/lib/admin';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
-import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, etiqueta } from '@/lib/crm';
+import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, etiqueta, sedeEnEspanol } from '@/lib/crm';
 
 /**
  * Exporta los contactos a CSV (Excel en español: separador «;» y BOM UTF-8).
@@ -43,8 +43,8 @@ export async function GET(request: Request) {
     ['Sector', (c) => etiqueta(SECTORES, c.sector as string)],
     ['Tiene asesoría', (c) => etiqueta(ASESORIA, c.tiene_asesoria as string)],
     ['Urgencia', (c) => etiqueta(URGENCIAS, c.urgencia as string)],
-    ['Área', (c) => c.area],
-    ['Despacho', (c) => c.sede],
+    ['Área', (c) => areaEnEspanol(c.area == null ? null : String(c.area))],
+    ['Despacho', (c) => sedeEnEspanol(c.sede == null ? null : String(c.sede))],
     ['Nos conoció por', (c) => etiqueta(CONOCIO, c.como_conocio as string)],
     ['Escribió desde', (c) => c.origen],
     ['Página de entrada', (c) => c.pagina_entrada],

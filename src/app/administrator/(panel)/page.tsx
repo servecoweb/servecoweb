@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { obtenerResumen, type SerieDia } from '@/lib/panel/resumen';
-import { CONOCIO, ESTADOS, PRIORIDADES, etiqueta } from '@/lib/crm';
+import { CONOCIO, ESTADOS, PRIORIDADES, areaEnEspanol, etiqueta } from '@/lib/crm';
 import { usuarioActual } from '@/lib/admin';
 
 /**
@@ -201,7 +201,7 @@ export default async function PanelInicio() {
                   <li key={x.id} className="flex flex-wrap items-center justify-between gap-2 py-2.5 text-sm">
                     <Link href={`/administrator/contactos/${x.id}`} className="min-w-0 flex-1">
                       <span className="font-semibold underline">{x.empresa || x.nombre}</span>
-                      <span className="block text-xs text-tinta-2">{fecha(x.created_at)} · {x.area ?? 'sin área'}</span>
+                      <span className="block text-xs text-tinta-2">{fecha(x.created_at)} · {areaEnEspanol(x.area) ?? 'sin área'}</span>
                     </Link>
                     <span className="flex gap-1.5">
                       <Etiqueta lista={PRIORIDADES} valor={x.prioridad} />

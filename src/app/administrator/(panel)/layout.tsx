@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { exigirSesion } from '@/lib/admin';
 import BotonSalir from '@/components/admin/BotonSalir';
+import MarcoPanel from '@/components/admin/MarcoPanel';
 
 // El panel nunca se cachea: cada visita comprueba la sesión.
 export const dynamic = 'force-dynamic';
@@ -23,26 +23,5 @@ export default async function PanelLayout({ children }: { children: React.ReactN
     );
   }
 
-  return (
-    <div className="min-h-screen bg-niebla text-tinta">
-      <header className="bg-tinta text-white">
-        <div className="mx-auto flex max-w-web flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3">
-          <Link href="/administrator" className="font-extrabold tracking-wide">SERVECO · Panel</Link>
-          <nav className="flex gap-5 text-sm">
-            {/* Solo secciones que existen. */}
-            <Link href="/administrator" className="hover:underline">Inicio</Link>
-            <Link href="/administrator/contactos" className="hover:underline">Contactos</Link>
-            <Link href="/administrator/blog" className="hover:underline">Blog</Link>
-            <Link href="/administrator/chatbot" className="hover:underline">Chatbot</Link>
-          </nav>
-          <div className="ml-auto flex items-center gap-4 text-sm">
-            <span className="text-white/70">{usuario.email}</span>
-            <Link href="/es" className="text-white/70 hover:text-white">Ver web</Link>
-            <BotonSalir claro />
-          </div>
-        </div>
-      </header>
-      <main className="mx-auto max-w-web px-6 py-8">{children}</main>
-    </div>
-  );
+  return <MarcoPanel email={usuario.email ?? ''}>{children}</MarcoPanel>;
 }

@@ -4,7 +4,7 @@
 
 ## Qué hace
 
-1. **Formulario con cualificación** (`src/components/ContactForm.tsx`): tipo (particular / autónomo / empresa), tamaño y sector (solo negocio), ¿tiene asesoría?, urgencia, cómo nos conoció. **Todo opcional** salvo nombre, correo, mensaje y consentimiento (cada campo obligatorio de más resta envíos).
+1. **Formulario con cualificación** (`src/components/ContactForm.tsx`): tipo (particular / autónomo / empresa), tamaño y sector (solo negocio), ¿tiene asesoría?, urgencia, cómo nos conoció. **Todo opcional** salvo nombre, correo, mensaje y consentimiento (cada campo obligatorio de más resta envíos). El área y el despacho se guardan siempre en español (`areaEnEspanol` / `sedeEnEspanol` en `src/lib/crm.ts`): el formulario inglés muestra «Tax» pero guarda «Fiscal», y el desplegable lleva `translate="no"` para que el traductor del navegador no convierta la opción en croata o árabe. El mensaje sigue en el idioma en que lo escribió la persona.
 2. **Origen de la visita** (`src/components/CapturaVisita.tsx`): página de entrada, web de procedencia y campaña (`utm_*`). **Solo si el visitante aceptó las cookies analíticas** (se guarda en `sessionStorage`; si retira el permiso, se borra). Sin permiso, solo los `utm` de la página actual, sin guardar nada.
 3. **Prioridad automática** (`calcularPrioridad` en `src/lib/crm.ts`):
    - **Alta:** tiene un plazo o requerimiento · o negocio que quiere cambiar de asesoría · o empresa de 50+ trabajadores.

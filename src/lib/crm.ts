@@ -3,6 +3,8 @@
  * el guardado (servidor) y el panel /administrator/contactos. Sin imports de servidor.
  * Doc: docs/CRM-CONTACTOS.md.
  */
+import { AREAS } from '@/data/areas';
+import { SEDES } from '@/data/offices';
 type Opcion = { valor: string; es: string; en: string };
 
 export const TIPOS: Opcion[] = [
@@ -98,4 +100,40 @@ export function calcularPrioridad(c: {
 /** Valida que un valor esté en la lista (lo que llega del navegador no es de fiar). */
 export function valido(lista: Opcion[], v: string): string | null {
   return lista.some((o) => o.valor === v) ? v : null;
+}
+
+/**
+ * Área y despacho siempre en español en el panel y en la base de datos.
+ * El inglés del formulario («Tax») y lo que ya tradujo el navegador (croata, árabe…)
+ * se devuelve al nombre de la ficha. Lo que no reconocemos se deja igual.
+ */
+const AREA_AJENA: Record<string, string> = {
+  tax: 'Fiscal',
+  fiskalni: 'Fiscal',
+  'تَعَب': 'Laboral',
+  'تعب': 'Laboral',
+};
+
+const SEDE_AJENA: Record<string, string> = {
+  'لوركا': 'Lorca',
+};
+
+const igual = (a: string, b: string) => a.trim().toLowerCase() === b.trim().toLowerCase();
+
+export function areaEnEspanol(valor: string | null | undefined): string | null {
+  const t = (valor ?? '').trim();
+  if (!t) return null;
+  const propia = AREAS.find((a) => a.nombre === t || igual(a.nombreEn, t) || igual(a.slug, t) || igual(a.slugEn, t));
+  if (propia) return propia.nombre;
+  if (t === 'No lo sé' || igual(t, 'not sure')) return 'No lo sé';
+  return AREA_AJENA[t] ?? AREA_AJENA[t.toLowerCase()] ?? t;
+}
+
+export function sedeEnEspanol(valor: string | null | undefined): string | null {
+  const t = (valor ?? '').trim();
+  if (!t) return null;
+  const propia = SEDES.find((s) => s.ciudad === t || igual(s.ciudad, t) || igual(s.slug, t));
+  if (propia) return propia.ciudad;
+  if (t === 'Me es indiferente' || igual(t, 'any office')) return 'Me es indiferente';
+  return SEDE_AJENA[t] ?? t;
 }

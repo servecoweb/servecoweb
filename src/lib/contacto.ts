@@ -2,7 +2,7 @@
 
 import { after } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
-import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, calcularPrioridad, valido } from '@/lib/crm';
+import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, calcularPrioridad, sedeEnEspanol, valido } from '@/lib/crm';
 import { enviarCorreosConsulta } from '@/lib/correo';
 import { detectarSpam, type Motivo } from '@/lib/spam';
 
@@ -107,8 +107,8 @@ export async function enviarConsulta(_prev: EstadoForm, formData: FormData): Pro
     empresa: tipo !== 'particular' ? texto('empresa', 200) || null : null,
     email,
     telefono: telefono || null,
-    area: texto('area', 100) || null,
-    sede: texto('sede', 100) || null,
+    area: areaEnEspanol(texto('area', 100)),
+    sede: sedeEnEspanol(texto('sede', 100)),
     mensaje,
     idioma: en ? 'en' : 'es',
     origen: texto('origen') || null,

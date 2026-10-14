@@ -114,13 +114,17 @@
 
   /* ---------- Barra superior ---------- */
   .util { background: var(--tinta); color: rgba(255, 255, 255, 0.78); font-size: 14px; }
-  .util .wrap { display: flex; justify-content: space-between; align-items: center; min-height: 40px; gap: 16px; }
-  .util .wrap > nav { display: flex; gap: 22px; }
+  .util .wrap {
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+    min-height: 40px; gap: 16px;
+  }
+  .util-marca { display: flex; align-items: center; gap: 8px; grid-column: 1; justify-self: start; min-width: 0; }
+  .util .wrap > nav { display: flex; gap: 22px; grid-column: 2; justify-self: center; }
   .util a:hover { color: #fff; }
   .idioma { display: flex; gap: 2px; }
   .idioma a { padding: 2px 7px; border-radius: 4px; }
   .idioma a[aria-current] { background: rgba(255, 255, 255, 0.14); color: #fff; }
-  .util-lado { display: flex; align-items: center; gap: 10px; flex: none; }
+  .util .idioma { grid-column: 3; justify-self: end; }
   .redes { display: flex; align-items: center; gap: 2px; margin-top: 14px; }
   .util .redes { margin-top: 0; }
   .redes a {
@@ -542,6 +546,9 @@
   footer.pie-web .logo b { color: #fff; }
   footer.pie-web .logo small { color: rgba(255, 255, 255, 0.6); }
   footer.pie-web .logo { margin-bottom: 16px; }
+  footer.pie-web .redes { gap: 4px; margin-left: -8px; }
+  footer.pie-web .redes a { width: 40px; height: 40px; }
+  footer.pie-web .redes svg { width: 22px; height: 22px; }
   .pie-base { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding-top: 22px; font-size: 14px; }
   .pie-base a { text-decoration: underline; }
   footer.pie-web .redes a:hover,
@@ -637,8 +644,7 @@
   @media (max-width: 560px) {
     .equipo, .intl ul, .pie { grid-template-columns: 1fr; }
     /* Barra superior en móvil: solo el selector de idioma (el teléfono está en contacto y en el pie). */
-    .util .wrap > span { display: none; }
-    .util .wrap { justify-content: flex-end; }
+    .util-marca > span { display: none; }
     .hero .datos { gap: 22px; }
     .page-head .datos { grid-template-columns: 1fr 1fr; }
     .router { padding: 22px; }

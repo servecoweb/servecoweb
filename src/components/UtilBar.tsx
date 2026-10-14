@@ -7,7 +7,10 @@ export default function UtilBar({ lang }: { lang: 'es' | 'en' }) {
   return (
     <div className="util">
       <div className="wrap">
-        <span>{es ? 'Asesoría integral de empresas desde 1977' : 'Business advisers in Spain since 1977'}</span>
+        <div className="util-marca">
+          <Redes />
+          <span>{es ? 'Asesoría integral de empresas desde 1977' : 'Business advisers in Spain since 1977'}</span>
+        </div>
         <nav aria-label={es ? 'Accesos rápidos' : 'Quick links'}>
           {es && (
             <>
@@ -19,12 +22,9 @@ export default function UtilBar({ lang }: { lang: 'es' | 'en' }) {
           )}
           <a href={telHref(EMPRESA.tel)}>{EMPRESA.tel}</a>
         </nav>
-        <div className="util-lado">
-          <Redes />
-          <div className="idioma" aria-label={es ? 'Idioma' : 'Language'}>
-            <Link href="/es" lang="es" aria-current={es ? 'true' : undefined}>ES</Link>
-            <Link href="/en" lang="en" aria-current={!es ? 'true' : undefined}>EN</Link>
-          </div>
+        <div className="idioma" aria-label={es ? 'Idioma' : 'Language'}>
+          <Link href="/es" lang="es" aria-current={es ? 'true' : undefined}>ES</Link>
+          <Link href="/en" lang="en" aria-current={!es ? 'true' : undefined}>EN</Link>
         </div>
       </div>
     </div>
