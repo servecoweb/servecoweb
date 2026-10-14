@@ -35,7 +35,7 @@
 
 | Página | Revisar |
 |---|---|
-| `/es` y `/en` | Hero (contraste del texto sobre la foto), carrusel «Conocemos su sector» (3 tarjetas + la 4.ª asomando en escritorio, 1,5 en móvil, flechas, las 5 escenas nuevas si ya se generaron), tarjetas internacionales (`AccesosIntl`: que se vean clicables), bloque de blog (si está vacío, que no quede un hueco: ocultar o mensaje) |
+| `/es` y `/en` | Hero (contraste del texto sobre la foto), carrusel «Conocemos tu sector» (3 tarjetas + la 4.ª asomando en escritorio, 1,5 en móvil, flechas, las 5 escenas nuevas si ya se generaron), tarjetas internacionales (`AccesosIntl`: que se vean clicables), bloque de blog (si está vacío, que no quede un hueco: ocultar o mensaje). Franja negra: iconos a la izquierda, accesos en el centro, idioma a la derecha, sin lema (decisión 45) |
 | `/es/servicios/[area]` (8) | Plantilla larga: H1, lista de servicios, FAQs, aside de áreas relacionadas |
 | `/en/services/[area]` (8) | Igual que la española |
 | `/es/internacional` y `/en/international` | Tarjetas arriba + escena + contenido; aside de Benidorm |

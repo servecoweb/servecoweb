@@ -1,7 +1,7 @@
 # servecoweb — web de Serveco Asesores
 
 Next.js 16.3.3 · React 19.2.8 · TypeScript · Tailwind 4.3 · Supabase · OpenAI (GPT-6).
-Estado a **1 oct 2026**. Repositorio: `https://github.com/servecoweb/servecoweb`. Vercel, pendiente.
+Estado de stack a **1 oct 2026**; comentarios del cliente del **14 oct** en las decisiones 43-45 de `../PLAN-ARRANQUE-WEB.md`. Repositorio: `https://github.com/servecoweb/servecoweb`. En `main`: `c0691a8` (franja blanca, trato de tú y redes) y `276a16e` (franja sin lema, iconos a la izquierda, iconos del pie a 22 px y gestión del equipo).
 
 Documentación: `AGENTS.md` (reglas para agentes, **leer primero**) · `../PLAN-ARRANQUE-WEB.md` (decisiones, pendientes y **bitácora de sesiones**) · `../ESTRATEGIA-SEO.md` (URLs y landings) · `../PLAN-SEO-PAGINAS.md` (qué debe tener cada página) · `docs/CHATBOT.md` · `docs/REDACTOR-BLOG.md` · `docs/CRM-CONTACTOS.md` · `docs/PANEL-ADMIN.md` · `docs/ENCARGO-CURSOR-DISENO.md` (diseño y blog, para Cursor) · `../EDITORIAL-BLOG.md`.
 Diseño de referencia: `plantillas html/serveco-00-base-corporativa.html`.
@@ -52,7 +52,7 @@ src/
   components/             Header, Footer, HeroFondo, HeroRouter, EscenaFoto, SectoresCarrusel, AccesosIntl, IntlPortada, IntlPage,
                           DespachosIntl, ServiciosHub, DatosOrganizacion (schema de la firma),
                           ContenidoSeo (pieza SEO común), BuscadorExterno (iframe solo bajo demanda), OfficesList, ContactForm, CapturaVisita,
-                          ChatWidget, CookieBanner, Analitica, MapaWeb, PageHead, LegalPage, admin/
+                          ChatWidget, CookieBanner, Analitica, MapaWeb, PageHead, LegalPage, Redes, UtilBar, admin/
   data/
     areas.ts              datos base de las 8 áreas
     areas-seo.ts          CONTENIDO SEO de las 8 áreas (H1, H2, servicios, FAQs) · validado: false
@@ -64,7 +64,7 @@ src/
     landings.ts           reúne las 12 landings: landings-fiscal.ts · landings-laboral.ts · landings-juridico.ts (tipo en landings-tipos.ts)
     redirecciones.json    301 del WordPress (lo genera seo:redirecciones; lo lee next.config.mjs)
     escenas.ts            qué escena va en cada página (18: 13 generadas + 5 de sectores pendientes)
-    sectores.ts           carrusel «Conocemos su sector» (8 sectores, mismos id que el formulario)
+    sectores.ts           carrusel «Conocemos tu sector» (8 sectores, mismos id que el formulario)
     offices.ts internacional.ts team.ts posts.ts site.ts
   lib/
     rutas.ts              TODAS las URLs
@@ -121,3 +121,4 @@ Las claves de Supabase y OpenAI se pegaron en un chat el 24 sep: **rotarlas ante
 - Política de privacidad: **borrador** (`/es/privacidad`) que cubre el formulario y su seguimiento; la valida Serveco. La inglesa sigue siendo plantilla.
 - `public/hero-sala-src.mp4`: vídeo retirado del hero, se puede borrar.
 - Indexación abierta desde el 9 oct 2026: `robots.ts` permite el rastreo (panel y API, no) y el `noindex` global de `layout.tsx` está quitado. Las previews de Vercel siguen cerradas. Las legales llevan `noindex`.
+- **14 oct, cliente.** Español de tú (el inglés no). Artículos ya publicados, sin reescribir. Redes: Instagram, LinkedIn y Facebook (`REDES` en `src/data/site.ts`). Franja negra: iconos a la izquierda, accesos en el centro, idioma a la derecha, sin lema. Pie: los mismos iconos a 22 px. En `main` desde `c0691a8` y `276a16e`.

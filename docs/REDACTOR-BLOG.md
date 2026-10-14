@@ -53,4 +53,5 @@ Sin `temperature` (GPT-5.x y 6 no la admiten). Cambiables con `BLOG_REDACTOR_MOD
 - Panel `/administrator/blog` sin probar (login, edición, publicar con firma).
 - Editor de texto: hoy es Markdown en un `textarea` (la propuesta decía TinyMCE). Funciona y es más seguro con el redactor; TinyMCE solo si Serveco lo pide.
 - Formación de 1 h (H4.3) cuando esté en producción.
+- **14 oct:** los artículos nuevos hablan de tú (criterio en `editorial.ts` y en `EDITORIAL-BLOG.md`). Los ya publicados en Supabase siguen en usted hasta que se reescriban. No lanzar `--reescribir` por este cambio si no lo pide Narciso.
 - Programados: aparecen en la web al llegar su fecha, pero el chatbot los aprende en la siguiente ingesta («Actualizar conocimiento» o al guardar otro artículo).

@@ -77,3 +77,4 @@
 - Nombre y avatar: los decide Serveco (H5.3).
 - Teléfono y email de la ficha salen de `src/data/site.ts` (no hay tabla de empresa).
 - Hecho: al guardar un artículo publicado en `/administrator/blog`, se actualiza el conocimiento del chat (H7.3).
+- **14 oct:** el prompt y el saludo pasan a trato de tú. **No se ha vuelto a lanzar `chat:ingest`:** los fragmentos ya cargados pueden seguir citando el usted de antes. Cuando se ingiera, correr también `chat:probar`.
