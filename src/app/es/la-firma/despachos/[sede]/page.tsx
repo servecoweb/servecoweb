@@ -8,7 +8,7 @@ import { AREAS } from '@/data/areas';
 import { SEDES, comoLlegar, getSede } from '@/data/offices';
 import { SEDES_SEO } from '@/data/sedes-seo';
 import { LANDINGS } from '@/data/landings';
-import { EQUIPO } from '@/data/team';
+import { leerEquipo } from '@/lib/equipo';
 import { EMPRESA, SITE_URL, telHref } from '@/data/site';
 import { ES, idiomas } from '@/lib/rutas';
 
@@ -45,7 +45,7 @@ export default async function FichaSede({ params }: { params: Params }) {
   const seo = SEDES_SEO[s.slug];
 
   const landings = LANDINGS.filter((l) => l.sede === s.slug);
-  const personas = EQUIPO.filter((p) => p.sedeSlug === s.slug);
+  const personas = (await leerEquipo()).filter((p) => p.sedeSlug === s.slug);
   const url = `${SITE_URL}${ES.sede(s.slug)}`;
   const region = s.zona === 'Costa de Alicante' ? 'Alicante' : 'Región de Murcia';
 

@@ -7,10 +7,7 @@ export default function UtilBar({ lang }: { lang: 'es' | 'en' }) {
   return (
     <div className="util">
       <div className="wrap">
-        <div className="util-marca">
-          <Redes />
-          <span>{es ? 'Asesoría integral de empresas desde 1977' : 'Business advisers in Spain since 1977'}</span>
-        </div>
+        <Redes />
         <nav aria-label={es ? 'Accesos rápidos' : 'Quick links'}>
           {es && (
             <>

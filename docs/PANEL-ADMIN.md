@@ -10,10 +10,11 @@
 |---|---|---|
 | `/administrator` | **Inicio (dashboard)**: lo primero al entrar | este archivo |
 | `/administrator/contactos` | Mini-CRM de consultas: embudo, ficha, notas, seguimiento, exportación, bandeja de spam | `CRM-CONTACTOS.md` |
+| `/administrator/equipo` | Personas de la web: alta, cargo, departamento, despacho, foto, portada y visible | `src/lib/equipo.ts` |
 | `/administrator/blog` | Artículos: «Redactar con IA», edición, revisión jurídica y publicación | `REDACTOR-BLOG.md` |
 | `/administrator/chatbot` | Respuestas y conversaciones del asistente con la nota del revisor | `CHATBOT.md` |
 
-Tras el login se entra al **Inicio**. El menú va en una barra fija a la izquierda (molde Furgocasa y Neotérmica): Inicio, Contactos, Blog y Chatbot. La marca lleva al Inicio. En móvil el menú se abre con el botón de la barra superior. El correo, «Ver la web» y «Cerrar sesión» están al pie de esa barra.
+Tras el login se entra al **Inicio**. El menú va en una barra fija a la izquierda (molde Furgocasa y Neotérmica): Inicio, Contactos, Equipo, Blog y Chatbot. La marca lleva al Inicio. En móvil el menú se abre con el botón de la barra superior. El correo, «Ver la web» y «Cerrar sesión» están al pie de esa barra.
 
 ## Inicio (dashboard)
 

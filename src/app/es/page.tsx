@@ -11,7 +11,7 @@ import { AREAS } from '@/data/areas';
 import { escena } from '@/data/escenas';
 import { SECTORES_HOME } from '@/data/sectores';
 import { SEDES, ciudadesEnLetra } from '@/data/offices';
-import { EQUIPO } from '@/data/team';
+import { leerEquipo } from '@/lib/equipo';
 import { articulosPublicados, fechaLarga } from '@/lib/blog/publico';
 import { EMPRESA, telHref } from '@/data/site';
 import { ES, EN, idiomas } from '@/lib/rutas';
@@ -37,7 +37,7 @@ const TARJETAS_SECTOR = SECTORES_HOME.map((s) => ({
 }));
 
 export default async function HomeEs() {
-  const ultimos = await articulosPublicados(3);
+  const [ultimos, equipo] = await Promise.all([articulosPublicados(3), leerEquipo()]);
   return (
     <>
       {/* HERO — texto pedido por el cliente (9 oct): consultoría y asesoría legal integral. */}
@@ -159,7 +159,7 @@ export default async function HomeEs() {
             <Link href={ES.equipo} className="btn btn-linea">Ver todo el equipo</Link>
           </div>
           <div className="equipo">
-            {EQUIPO.filter((p) => p.destacado).map((p) => (
+            {equipo.filter((p) => p.destacado).map((p) => (
               <Link className="persona" href={ES.equipo} key={p.nombre}>
                 <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
                 <div>

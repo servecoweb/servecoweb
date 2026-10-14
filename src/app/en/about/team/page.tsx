@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import PageHead from '@/components/PageHead';
-import { DEPARTAMENTOS, EQUIPO } from '@/data/team';
+import { DEPARTAMENTOS, leerEquipo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: EN.team, languages: idiomas(ES.equipo, EN.team) },
 };
 
-export default function Team() {
+export default async function Team() {
+  const equipo = await leerEquipo();
   return (
     <>
       <PageHead
@@ -20,7 +21,7 @@ export default function Team() {
       <section>
         <div className="wrap">
           {DEPARTAMENTOS.map((d) => {
-            const gente = EQUIPO.filter((p) => p.departamento === d.id);
+            const gente = equipo.filter((p) => p.departamento === d.id);
             return (
               <div className="equipo-bloque" key={d.id}>
                 <h2>{d.en}</h2>

@@ -4,7 +4,7 @@ import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA, telHref } from '@/data/site';
-import { EQUIPO } from '@/data/team';
+import { leerEquipo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: ES.firma, languages: idiomas(ES.firma, EN.about) },
 };
 
-export default function LaFirma() {
+export default async function LaFirma() {
+  const equipo = await leerEquipo();
   return (
     <>
       <PageHead
@@ -172,7 +173,7 @@ export default function LaFirma() {
           </div>
           <aside>
             <div className="firma-socios">
-              {EQUIPO.filter((p) => p.destacado).map((p) => (
+              {equipo.filter((p) => p.destacado).map((p) => (
                 <Link className="persona" href={ES.equipo} key={p.nombre}>
                   <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
                   <div>

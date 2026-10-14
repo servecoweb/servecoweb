@@ -99,7 +99,7 @@ Proyecto `hmhqzyhxyojuyyozjwuv`, **org del cliente «Serveco» (Free)** → nunc
 | 0007 bandeja de spam (`contact_spam`) | **Pendiente de aplicar** |
 
 Tablas: `offices`, `office_locations`, `service_areas`, `seo_landings`, `intl_pages`, `team_members`, `blog_articles`, `contact_submissions`, `contact_notas`, `contact_spam`, `chat_threads`, `chat_messages`, `chatbot_kb`, `chat_reviews`.
-**La web aún lee de `src/data/`** áreas, sedes, landings y equipo. El blog y el chat ya leen de Supabase. El contenido de `areas-seo.ts` todavía no está en el conocimiento del chatbot.
+**La web aún lee de `src/data/`** áreas, sedes y landings. El equipo, el blog y el chat leen de Supabase (el equipo, si la base falla, vuelve a `src/data/team.ts`). El contenido de `areas-seo.ts` todavía no está en el conocimiento del chatbot.
 
 ## Variables (`.env.local`, nunca al repo; nombres en `.env.example`)
 

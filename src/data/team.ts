@@ -3,6 +3,7 @@
  * Cargos y fotos tal como están en esa página. El texto de casino inyectado en una ficha no se ha copiado.
  * No hay despacho asignado: la página antigua no dice en qué sede trabaja cada persona.
  * La portada solo enseña a los socios fundadores (`destacado`).
+ * Reserva: la web lee Supabase (`src/lib/equipo.ts`) y, si falla, esta lista.
  */
 export type Departamento = 'fiscal' | 'financiero' | 'juridico' | 'laboral' | 'administracion';
 
