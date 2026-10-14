@@ -18,7 +18,7 @@
    - Filtros por prioridad, área, despacho y búsqueda; tabla con responsable y fecha de seguimiento (en rojo si vence).
    - **Exportar a Excel** (CSV con «;» y BOM, mismos filtros).
    - **¿De dónde salen los clientes?**: consultas y clientes por «cómo nos conoció» y % de conversión.
-7. **Ficha** `/administrator/contactos/[id]`: mensaje, datos, cualificación, origen, botones «Responder por correo» y «Llamar», gestión (estado, prioridad, responsable, «volver a contactar el») y **notas con historial** (cada cambio de estado, prioridad, responsable o fecha deja una nota automática con quién lo hizo). **Las consultas no se borran: se descartan.**
+7. **Ficha** `/administrator/contactos/[id]`: mensaje, datos, cualificación, origen, botones «Responder por correo» y «Llamar», gestión (estado, prioridad, responsable, «volver a contactar el») y **notas con historial** (cada cambio de estado, prioridad, responsable o fecha deja una nota automática con quién lo hizo). Si no es un cliente: **Descartar** (sigue en la lista), **Marcar como spam** (30 días en la bandeja, recuperable) o **Eliminar** (se borra, con las notas).
 
 ## Archivos
 
@@ -70,6 +70,7 @@
 | Cadenas aleatorias, palabras sin vocales | `iNgXrKYUMiecBwtr` | Bandeja de spam |
 | Gmail con 4+ puntos | Alias generados | Bandeja de spam |
 | Venta comercial | Redactores, enlaces, demos, «desde X €/mes», Calendly | Bandeja de spam |
+| **Pide trabajo** (14 oct) | «Estoy buscando trabajo», «looking for a job» | Bandeja de spam |
 | **Ofertas de SEO / diseño web** (nuevo) | «primera página de Google», «posicionamiento web»… | Bandeja de spam |
 | 2+ enlaces | Spam de enlaces | Bandeja de spam |
 | **Alfabeto ajeno** (nuevo) | Mensajes en cirílico, chino, árabe… (Serveco atiende en ES/EN) | Bandeja de spam |

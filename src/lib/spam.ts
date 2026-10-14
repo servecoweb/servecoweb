@@ -24,9 +24,11 @@ export type Motivo =
   | 'gmail_puntos'
   | 'pitch_marketing'
   | 'oferta_seo_web'
+  | 'busca_empleo'
   | 'exceso_enlaces'
   | 'alfabeto_ajeno'
-  | 'duplicado';
+  | 'duplicado'
+  | 'manual';
 
 export const MOTIVOS: Record<Motivo, string> = {
   honeypot: 'Rellenó un campo invisible (bot)',
@@ -37,9 +39,11 @@ export const MOTIVOS: Record<Motivo, string> = {
   gmail_puntos: 'Gmail con muchos puntos (alias generado)',
   pitch_marketing: 'Venta comercial (redactores, enlaces, demos, precios)',
   oferta_seo_web: 'Oferta de SEO / diseño web',
+  busca_empleo: 'Pide trabajo, no asesoría',
   exceso_enlaces: 'Dos o más enlaces en el mensaje',
   alfabeto_ajeno: 'Texto en alfabeto cirílico, chino, etc.',
   duplicado: 'Misma consulta repetida en pocos minutos',
+  manual: 'Marcada como spam desde el panel',
 };
 
 const MIN_MS = 3000;
@@ -83,6 +87,11 @@ function parecePitchMarketing(m: string): boolean {
   return enlaces.some((l) => /pricing|demo|youtube\.com|youtu\.be|bit\.ly|wa\.me/.test(l));
 }
 
+/** Quien pide un puesto de trabajo no es un cliente de la asesoría. */
+function buscaEmpleo(m: string): boolean {
+  return /estoy buscando trabajo|busco trabajo|looking for (a )?(job|work)\b|busca(r|ndo)? empleo/.test(m);
+}
+
 /** Ofertas de SEO y diseño web: a una asesoría le llegan a diario; ningún cliente escribe así. */
 function pareceOfertaSeoWeb(m: string): boolean {
   return /primera p[aá]gina de google|posicionamiento (web|seo|en google)|mejorar (su|tu) posicionamiento|(auditor[ií]a|an[aá]lisis) seo (gratuit|gratis)|dise[nñ]o (de p[aá]ginas? )?web (profesional|a medida|econ[oó]mic)|redise[nñ]o de (su|tu) (web|p[aá]gina)|first page of google|seo (services|audit|agency)|web design services|increase (your )?(traffic|sales|ranking)/.test(
@@ -113,6 +122,7 @@ export function detectarSpam(i: SpamInput): { spam: false } | { spam: true; moti
   if (alfabetoAjeno(`${i.nombre} ${i.mensaje}`)) return { spam: true, motivo: 'alfabeto_ajeno' };
 
   const m = i.mensaje.toLowerCase();
+  if (buscaEmpleo(m)) return { spam: true, motivo: 'busca_empleo' };
   if (parecePitchMarketing(m)) return { spam: true, motivo: 'pitch_marketing' };
   if (pareceOfertaSeoWeb(m)) return { spam: true, motivo: 'oferta_seo_web' };
   if ((m.match(/https?:\/\//g) ?? []).length >= 2) return { spam: true, motivo: 'exceso_enlaces' };

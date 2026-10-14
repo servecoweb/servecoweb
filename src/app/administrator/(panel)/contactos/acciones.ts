@@ -9,7 +9,8 @@ import { MOTIVOS, type Motivo } from '@/lib/spam';
 
 /**
  * Acciones del mini-CRM (/administrator/contactos). Cada cambio de estado o prioridad deja
- * una nota automática en el historial con quién lo hizo. Las consultas no se borran: se descartan.
+ * una nota automática en el historial con quién lo hizo. Por defecto se descartan.
+ * Desde la ficha también se pueden marcar como spam (30 días, recuperables) o eliminar.
  */
 const texto = (f: FormData, k: string) => String(f.get(k) ?? '').trim();
 
@@ -88,5 +89,69 @@ export async function recuperarSpam(formData: FormData): Promise<void> {
   await c.from('contact_spam').delete().eq('id', spamId);
 
   revalidatePath('/administrator/contactos');
+  revalidatePath('/administrator');
   redirect(`/administrator/contactos/${nueva.id}?ok=${encodeURIComponent('Recuperada. Conteste al visitante: no recibió confirmación.')}`);
+}
+
+/** La deja en el embudo, en Descartado, con nota. Sigue en la lista. */
+export async function descartarContacto(formData: FormData): Promise<void> {
+  const usuario = await exigirAdmin();
+  const id = texto(formData, 'id');
+  const c = db();
+  const { data: antes } = await c.from('contact_submissions').select('estado').eq('id', id).maybeSingle();
+  if (!antes) redirect('/administrator/contactos');
+  if (antes.estado !== 'descartado') {
+    const { error } = await c
+      .from('contact_submissions')
+      .update({ estado: 'descartado', estado_desde: new Date().toISOString() })
+      .eq('id', id);
+    if (error) redirect(`/administrator/contactos/${id}?error=${encodeURIComponent(error.message)}`);
+    await c.from('contact_notas').insert({
+      contact_id: id,
+      autor: usuario.email ?? 'panel',
+      tipo: 'estado',
+      texto: `Estado: ${antes.estado} → descartado. No es una consulta de cliente.`,
+    });
+  }
+  revalidatePath('/administrator/contactos');
+  revalidatePath('/administrator');
+  redirect(`/administrator/contactos/${id}?ok=${encodeURIComponent('Descartada.')}`);
+}
+
+/** Sale de la lista y queda 30 días en la bandeja de spam, por si hay que recuperarla. */
+export async function marcarSpam(formData: FormData): Promise<void> {
+  await exigirAdmin();
+  const id = texto(formData, 'id');
+  const c = db();
+  const { data: fila } = await c.from('contact_submissions').select('*').eq('id', id).maybeSingle();
+  if (!fila) redirect('/administrator/contactos');
+
+  const { id: _id, updated_at: _actualizado, ...datos } = fila as Record<string, unknown>;
+  const { error } = await c.from('contact_spam').insert({
+    motivo: 'manual',
+    email: fila.email,
+    nombre: fila.nombre,
+    extracto: String(fila.mensaje ?? '').slice(0, 300),
+    datos,
+    created_at: fila.created_at,
+  });
+  if (error) redirect(`/administrator/contactos/${id}?error=${encodeURIComponent(error.message)}`);
+
+  const { error: borrado } = await c.from('contact_submissions').delete().eq('id', id);
+  if (borrado) redirect(`/administrator/contactos/${id}?error=${encodeURIComponent(borrado.message)}`);
+
+  revalidatePath('/administrator/contactos');
+  revalidatePath('/administrator');
+  redirect(`/administrator/contactos?ok=${encodeURIComponent('Marcada como spam. Queda 30 días en la bandeja, por si hay que recuperarla.')}`);
+}
+
+/** Se borra la consulta y sus notas. No queda en la bandeja de spam. */
+export async function eliminarContacto(formData: FormData): Promise<void> {
+  await exigirAdmin();
+  const id = texto(formData, 'id');
+  const { error } = await db().from('contact_submissions').delete().eq('id', id);
+  if (error) redirect(`/administrator/contactos/${id}?error=${encodeURIComponent(error.message)}`);
+  revalidatePath('/administrator/contactos');
+  revalidatePath('/administrator');
+  redirect(`/administrator/contactos?ok=${encodeURIComponent('Consulta eliminada.')}`);
 }

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import { ASESORIA, CONOCIO, ESTADOS, PRIORIDADES, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, etiqueta, sedeEnEspanol } from '@/lib/crm';
 import BotonEnviar from '@/components/admin/BotonEnviar';
-import { actualizarContacto, anadirNota } from '../acciones';
+import { actualizarContacto, anadirNota, descartarContacto, eliminarContacto, marcarSpam } from '../acciones';
 
 /** Ficha de una consulta del mini-CRM: datos, cualificación, origen, gestión e historial. */
 export const dynamic = 'force-dynamic';
@@ -131,6 +131,41 @@ export default async function FichaContacto({ params, searchParams }: { params: 
             <p className="text-xs text-tinta-2">En este estado desde {fechaHora(c.estado_desde ?? c.created_at)}.</p>
             <BotonEnviar texto="Guardar" trabajando="Guardando…" />
           </form>
+
+          <div className="space-y-3 rounded-xl border border-linea bg-papel p-5">
+            <h2 className="font-bold">Si no es un cliente</h2>
+            <p className="text-sm text-tinta-2">Descartar la deja en la lista. Marcar como spam la aparta 30 días, por si hay que recuperarla. Eliminar la borra del todo, con sus notas.</p>
+            <div className="flex flex-wrap gap-2">
+              {c.estado !== 'descartado' && (
+                <form action={descartarContacto}>
+                  <input type="hidden" name="id" value={c.id} />
+                  <BotonEnviar
+                    texto="Descartar"
+                    trabajando="Descartando…"
+                    className="rounded-lg border border-linea bg-papel px-4 py-2 text-sm font-semibold hover:border-tinta disabled:opacity-60"
+                  />
+                </form>
+              )}
+              <form action={marcarSpam}>
+                <input type="hidden" name="id" value={c.id} />
+                <BotonEnviar
+                  texto="Marcar como spam"
+                  trabajando="Apartando…"
+                  confirmar="Esta consulta saldrá de la lista y quedará 30 días en la bandeja de spam."
+                  className="rounded-lg border border-linea bg-papel px-4 py-2 text-sm font-semibold hover:border-tinta disabled:opacity-60"
+                />
+              </form>
+              <form action={eliminarContacto}>
+                <input type="hidden" name="id" value={c.id} />
+                <BotonEnviar
+                  texto="Eliminar"
+                  trabajando="Eliminando…"
+                  confirmar="Se borra esta consulta y sus notas. No se puede recuperar."
+                  className="rounded-lg border border-red-200 bg-papel px-4 py-2 text-sm font-semibold text-red-800 hover:border-red-400 disabled:opacity-60"
+                />
+              </form>
+            </div>
+          </div>
 
           <div className="rounded-xl border border-linea bg-papel p-5">
             <h2 className="mb-3 font-bold">Notas e historial</h2>
