@@ -140,12 +140,14 @@ export default async function ContactosAdmin({ searchParams }: { searchParams: S
       {pendientes.length > 0 && (
         <div className="rounded-xl border-2 border-marca bg-marca-suave p-5">
           <h2 className="mb-2 font-bold">Seguimientos para hoy o vencidos ({pendientes.length})</h2>
-          <ul className="space-y-1 text-sm">
+          <ul className="divide-y divide-marca/20 text-sm">
             {pendientes.slice(0, 10).map((c) => (
               <li key={c.id}>
-                <Link href={`/administrator/contactos/${c.id}`} className="underline">{c.empresa || c.nombre}</Link>
-                {' · '}
-                {c.seguimiento_el && fechaCorta(c.seguimiento_el)} · {c.responsable ?? 'sin responsable'}
+                <Link href={`/administrator/contactos/${c.id}`} className="-mx-2 block rounded-md px-2 py-1.5 hover:bg-papel">
+                  <span className="font-semibold">{c.empresa || c.nombre}</span>
+                  {' · '}
+                  {c.seguimiento_el && fechaCorta(c.seguimiento_el)} · {c.responsable ?? 'sin responsable'}
+                </Link>
               </li>
             ))}
           </ul>
@@ -179,47 +181,45 @@ export default async function ContactosAdmin({ searchParams }: { searchParams: S
         {Object.values(sp).some(Boolean) && <Link href="/administrator/contactos" className="underline">Quitar filtros</Link>}
       </div>
 
-      {/* Tabla */}
+      {/* Lista: la fila entera abre la ficha, como en Equipo. */}
       <div className="overflow-x-auto rounded-xl border border-linea bg-papel">
-        <table className="w-full min-w-[860px] text-left text-sm">
-          <thead className="border-b border-linea bg-niebla text-xs text-tinta-2">
-            <tr>
-              <th className="px-4 py-3">Fecha</th>
-              <th className="px-4 py-3">Contacto</th>
-              <th className="px-4 py-3">Tipo</th>
-              <th className="px-4 py-3">Área · despacho</th>
-              <th className="px-4 py-3">Prioridad</th>
-              <th className="px-4 py-3">Estado</th>
-              <th className="px-4 py-3">Responsable</th>
-              <th className="px-4 py-3">Seguimiento</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtrados.map((c) => {
-              const vencido = c.seguimiento_el && c.seguimiento_el <= hoy() && c.estado !== 'cliente' && c.estado !== 'descartado';
-              return (
-                <tr key={c.id} className="border-b border-niebla last:border-0 hover:bg-niebla">
-                  <td className="whitespace-nowrap px-4 py-3">{fechaCorta(c.created_at)}</td>
-                  <td className="px-4 py-3">
-                    <Link href={`/administrator/contactos/${c.id}`} className="font-semibold underline">{c.empresa || c.nombre}</Link>
-                    <p className="text-xs text-tinta-2">{c.empresa ? `${c.nombre} · ` : ''}{c.email}</p>
-                  </td>
-                  <td className="px-4 py-3">{etiqueta(TIPOS, c.tipo)}</td>
-                  <td className="px-4 py-3">{c.area ?? '—'} · {c.sede ?? '—'}</td>
-                  <td className="px-4 py-3"><Etiqueta lista={PRIORIDADES} valor={c.prioridad} /></td>
-                  <td className="px-4 py-3"><Etiqueta lista={ESTADOS} valor={c.estado} /></td>
-                  <td className="px-4 py-3">{c.responsable ?? <span className="text-tinta-2">—</span>}</td>
-                  <td className={`whitespace-nowrap px-4 py-3 ${vencido ? 'font-semibold text-red-700' : ''}`}>
-                    {c.seguimiento_el ? fechaCorta(c.seguimiento_el) : '—'}
-                  </td>
-                </tr>
-              );
-            })}
-            {filtrados.length === 0 && (
-              <tr><td colSpan={8} className="px-4 py-10 text-center text-tinta-2">No hay consultas con estos filtros.</td></tr>
-            )}
-          </tbody>
-        </table>
+        <div className="min-w-[980px] text-sm">
+          <div className="grid grid-cols-[4.5rem_minmax(12rem,1.5fr)_5.5rem_minmax(9rem,1.1fr)_6.5rem_7.5rem_7.5rem_6.5rem] gap-3 border-b border-linea bg-niebla px-4 py-3 text-xs text-tinta-2">
+            <span>Fecha</span>
+            <span>Contacto</span>
+            <span>Tipo</span>
+            <span>Área · despacho</span>
+            <span>Prioridad</span>
+            <span>Estado</span>
+            <span>Responsable</span>
+            <span>Seguimiento</span>
+          </div>
+          {filtrados.map((c) => {
+            const vencido = c.seguimiento_el && c.seguimiento_el <= hoy() && c.estado !== 'cliente' && c.estado !== 'descartado';
+            return (
+              <Link
+                key={c.id}
+                href={`/administrator/contactos/${c.id}`}
+                className="grid grid-cols-[4.5rem_minmax(12rem,1.5fr)_5.5rem_minmax(9rem,1.1fr)_6.5rem_7.5rem_7.5rem_6.5rem] items-center gap-3 border-b border-niebla px-4 py-3 last:border-0 hover:bg-niebla"
+              >
+                <span className="whitespace-nowrap">{fechaCorta(c.created_at)}</span>
+                <span className="min-w-0">
+                  <span className="block font-semibold">{c.empresa || c.nombre}</span>
+                  <span className="block truncate text-xs text-tinta-2">{c.empresa ? `${c.nombre} · ` : ''}{c.email}</span>
+                </span>
+                <span>{etiqueta(TIPOS, c.tipo)}</span>
+                <span>{c.area ?? '—'} · {c.sede ?? '—'}</span>
+                <span><Etiqueta lista={PRIORIDADES} valor={c.prioridad} /></span>
+                <span><Etiqueta lista={ESTADOS} valor={c.estado} /></span>
+                <span>{c.responsable ?? <span className="text-tinta-2">—</span>}</span>
+                <span className={`whitespace-nowrap ${vencido ? 'font-semibold text-red-700' : ''}`}>
+                  {c.seguimiento_el ? fechaCorta(c.seguimiento_el) : '—'}
+                </span>
+              </Link>
+            );
+          })}
+          {filtrados.length === 0 && <p className="px-4 py-10 text-center text-tinta-2">No hay consultas con estos filtros.</p>}
+        </div>
       </div>
 
       {/* Conversión */}

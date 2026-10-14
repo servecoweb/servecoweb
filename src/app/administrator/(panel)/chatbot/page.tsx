@@ -133,83 +133,79 @@ export default async function ChatbotAdmin({ searchParams }: { searchParams: SP 
 
       {vista === 'respuestas' && (
         <div className="overflow-x-auto rounded-xl border border-linea bg-papel">
-          <table className="w-full min-w-[760px] text-left text-sm">
-            <thead className="border-b border-linea bg-niebla text-xs text-tinta-2">
-              <tr>
-                <th className="px-4 py-3">Fecha</th>
-                <th className="px-4 py-3">Pregunta</th>
-                <th className="px-4 py-3">Respuesta</th>
-                <th className="px-4 py-3">Nota del revisor</th>
-              </tr>
-            </thead>
-            <tbody>
-              {respuestas
-                .filter((x) => !sp.calidad || calidadDe(nota.get(x.id)?.score).id === sp.calidad)
-                .map((x) => (
-                  <tr key={x.id} className="border-b border-niebla align-top last:border-0">
-                    <td className="whitespace-nowrap px-4 py-3 text-xs text-tinta-2">
-                      <Link href={`/administrator/chatbot?hilo=${x.thread_id}`} className="underline">{fecha(x.created_at)}</Link>
-                    </td>
-                    <td className="max-w-[220px] px-4 py-3 font-medium">{preguntaDe(x)}</td>
-                    <td className="max-w-[420px] px-4 py-3">
+          <div className="min-w-[760px] text-sm">
+            <div className="grid grid-cols-[7.5rem_minmax(10rem,0.8fr)_minmax(14rem,1.4fr)_minmax(8rem,0.7fr)] gap-3 border-b border-linea bg-niebla px-4 py-3 text-xs text-tinta-2">
+              <span>Fecha</span>
+              <span>Pregunta</span>
+              <span>Respuesta</span>
+              <span>Nota del revisor</span>
+            </div>
+            {respuestas
+              .filter((x) => !sp.calidad || calidadDe(nota.get(x.id)?.score).id === sp.calidad)
+              .map((x) => {
+                const pregunta = preguntaDe(x);
+                return (
+                  <div key={x.id} className="relative border-b border-niebla last:border-0 hover:bg-niebla">
+                    <Link
+                      href={`/administrator/chatbot?hilo=${x.thread_id}`}
+                      className="absolute inset-0"
+                      aria-label={`Abrir la conversación: ${pregunta.slice(0, 90) || 'sin pregunta'}`}
+                    />
+                    <div inert className="pointer-events-none grid grid-cols-[7.5rem_minmax(10rem,0.8fr)_minmax(14rem,1.4fr)_minmax(8rem,0.7fr)] items-start gap-3 px-4 py-3">
+                      <span className="whitespace-nowrap text-xs text-tinta-2">{fecha(x.created_at)}</span>
+                      <span className="font-medium">{pregunta}</span>
                       <div className="chat-markdown line-clamp-6" dangerouslySetInnerHTML={{ __html: aHtml(x.content) }} />
-                    </td>
-                    <td className="max-w-[240px] px-4 py-3">
-                      <Nota score={nota.get(x.id)?.score} />
-                      {nota.get(x.id)?.notes && <p className="mt-1.5 text-xs text-tinta-2">{nota.get(x.id)?.notes}</p>}
-                    </td>
-                  </tr>
-                ))}
-              {respuestas.length === 0 && (
-                <tr><td colSpan={4} className="px-4 py-10 text-center text-tinta-2">Todavía no hay conversaciones. Pruebe el chat en la web.</td></tr>
-              )}
-            </tbody>
-          </table>
+                      <span>
+                        <Nota score={nota.get(x.id)?.score} />
+                        {nota.get(x.id)?.notes && <span className="mt-1.5 block text-xs text-tinta-2">{nota.get(x.id)?.notes}</span>}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            {respuestas.length === 0 && <p className="px-4 py-10 text-center text-tinta-2">Todavía no hay conversaciones. Pruebe el chat en la web.</p>}
+          </div>
         </div>
       )}
 
       {vista === 'conversaciones' && (
         <div className="overflow-x-auto rounded-xl border border-linea bg-papel">
-          <table className="w-full min-w-[700px] text-left text-sm">
-            <thead className="border-b border-linea bg-niebla text-xs text-tinta-2">
-              <tr>
-                <th className="px-4 py-3">Último mensaje</th>
-                <th className="px-4 py-3">Primera pregunta</th>
-                <th className="px-4 py-3">Idioma</th>
-                <th className="px-4 py-3">Preguntas</th>
-                <th className="px-4 py-3">Nota media</th>
-              </tr>
-            </thead>
-            <tbody>
-              {hilos
-                .map((h) => {
-                  const msgs = porHilo.get(h.id) ?? [];
-                  const notas = msgs.filter((x) => x.role === 'assistant').map((x) => nota.get(x.id)?.score).filter((n): n is number => typeof n === 'number');
-                  return {
-                    h,
-                    ultimo: msgs[msgs.length - 1]?.created_at ?? h.created_at,
-                    primera: msgs.find((x) => x.role === 'user')?.content ?? '',
-                    preguntas: msgs.filter((x) => x.role === 'user').length,
-                    media: notas.length ? notas.reduce((a, b) => a + b, 0) / notas.length : null,
-                  };
-                })
-                .sort((a, b) => (a.ultimo < b.ultimo ? 1 : -1))
-                .map(({ h, ultimo, primera, preguntas, media }) => (
-                  <tr key={h.id} className="border-b border-niebla last:border-0 hover:bg-niebla">
-                    <td className="whitespace-nowrap px-4 py-3 text-xs text-tinta-2">{fecha(ultimo)}</td>
-                    <td className="px-4 py-3">
-                      <Link href={`/administrator/chatbot?hilo=${h.id}`} className="font-medium underline">{primera || '(sin texto)'}</Link>
-                    </td>
-                    <td className="px-4 py-3 uppercase">{h.idioma}</td>
-                    <td className="px-4 py-3">{preguntas}</td>
-                    <td className="px-4 py-3">{media === null ? <Nota score={null} /> : <span className="font-semibold">{media.toFixed(1)} / 10</span>}</td>
-                  </tr>
-                ))}
-              {hilos.length === 0 && (
-                <tr><td colSpan={5} className="px-4 py-10 text-center text-tinta-2">Todavía no hay conversaciones.</td></tr>
-              )}
-            </tbody>
-          </table>
+          <div className="min-w-[700px] text-sm">
+            <div className="grid grid-cols-[8.5rem_minmax(12rem,1.6fr)_5rem_5.5rem_7rem] gap-3 border-b border-linea bg-niebla px-4 py-3 text-xs text-tinta-2">
+              <span>Último mensaje</span>
+              <span>Primera pregunta</span>
+              <span>Idioma</span>
+              <span>Preguntas</span>
+              <span>Nota media</span>
+            </div>
+            {hilos
+              .map((h) => {
+                const msgs = porHilo.get(h.id) ?? [];
+                const notas = msgs.filter((x) => x.role === 'assistant').map((x) => nota.get(x.id)?.score).filter((n): n is number => typeof n === 'number');
+                return {
+                  h,
+                  ultimo: msgs[msgs.length - 1]?.created_at ?? h.created_at,
+                  primera: msgs.find((x) => x.role === 'user')?.content ?? '',
+                  preguntas: msgs.filter((x) => x.role === 'user').length,
+                  media: notas.length ? notas.reduce((a, b) => a + b, 0) / notas.length : null,
+                };
+              })
+              .sort((a, b) => (a.ultimo < b.ultimo ? 1 : -1))
+              .map(({ h, ultimo, primera, preguntas, media }) => (
+                <Link
+                  key={h.id}
+                  href={`/administrator/chatbot?hilo=${h.id}`}
+                  className="grid grid-cols-[8.5rem_minmax(12rem,1.6fr)_5rem_5.5rem_7rem] items-center gap-3 border-b border-niebla px-4 py-3 last:border-0 hover:bg-niebla"
+                >
+                  <span className="whitespace-nowrap text-xs text-tinta-2">{fecha(ultimo)}</span>
+                  <span className="font-medium">{primera || '(sin texto)'}</span>
+                  <span className="uppercase">{h.idioma}</span>
+                  <span>{preguntas}</span>
+                  <span>{media === null ? <Nota score={null} /> : <span className="font-semibold">{media.toFixed(1)} / 10</span>}</span>
+                </Link>
+              ))}
+            {hilos.length === 0 && <p className="px-4 py-10 text-center text-tinta-2">Todavía no hay conversaciones.</p>}
+          </div>
         </div>
       )}
 

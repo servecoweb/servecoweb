@@ -92,48 +92,46 @@ export default async function BlogAdmin({ searchParams }: { searchParams: SP }) 
       </form>
 
       <div className="overflow-x-auto rounded-xl border border-linea bg-papel">
-        <table className="w-full min-w-[760px] text-left text-sm">
-          <thead className="border-b border-linea bg-niebla text-xs text-tinta-2">
-            <tr>
-              <th className="px-4 py-3">Artículo</th>
-              <th className="px-4 py-3">Área</th>
-              <th className="px-4 py-3">Estado</th>
-              <th className="px-4 py-3">Revisión</th>
-              <th className="px-4 py-3">Avisos</th>
-            </tr>
-          </thead>
-          <tbody>
-            {(data ?? []).map((a) => {
-              const est = ESTADOS[String(a.status)] ?? ESTADOS.draft;
-              const avisos = (a.avisos as { nivel: string }[] | null) ?? [];
-              const graves = avisos.filter((x) => x.nivel === 'grave').length;
-              return (
-                <tr key={a.id} className="border-b border-niebla last:border-0 hover:bg-niebla">
-                  <td className="px-4 py-3">
-                    <Link href={`/administrator/blog/${a.id}`} className="font-semibold underline">{a.title}</Link>
-                    <p className="text-xs text-tinta-2">/es/blog/{a.slug}{a.cover_url ? '' : ' · sin portada'}</p>
-                  </td>
-                  <td className="px-4 py-3">{a.category || '—'}</td>
-                  <td className="px-4 py-3">
-                    <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${est.clase}`}>{est.texto}</span>
-                    {a.published_at && a.status !== 'draft' && (
-                      <p className="mt-1 text-xs text-tinta-2">{new Date(String(a.published_at)).toLocaleDateString('es-ES')}</p>
-                    )}
-                  </td>
-                  <td className="px-4 py-3 text-xs">{a.revisado_por || <span className="text-tinta-2">Pendiente</span>}</td>
-                  <td className="px-4 py-3 text-xs">
-                    {graves > 0 ? <span className="font-semibold text-red-700">{graves} grave(s)</span> : null}
-                    {avisos.length - graves > 0 ? <span className="ml-2 text-amber-700">{avisos.length - graves} aviso(s)</span> : null}
-                    {avisos.length === 0 ? <span className="text-green-700">Ninguno</span> : null}
-                  </td>
-                </tr>
-              );
-            })}
-            {(data ?? []).length === 0 && (
-              <tr><td colSpan={5} className="px-4 py-10 text-center text-tinta-2">Todavía no hay artículos.</td></tr>
-            )}
-          </tbody>
-        </table>
+        <div className="min-w-[760px] text-sm">
+          <div className="grid grid-cols-[minmax(16rem,1.6fr)_8rem_8rem_9rem_8rem] gap-3 border-b border-linea bg-niebla px-4 py-3 text-xs text-tinta-2">
+            <span>Artículo</span>
+            <span>Área</span>
+            <span>Estado</span>
+            <span>Revisión</span>
+            <span>Avisos</span>
+          </div>
+          {(data ?? []).map((a) => {
+            const est = ESTADOS[String(a.status)] ?? ESTADOS.draft;
+            const avisos = (a.avisos as { nivel: string }[] | null) ?? [];
+            const graves = avisos.filter((x) => x.nivel === 'grave').length;
+            return (
+              <Link
+                key={a.id}
+                href={`/administrator/blog/${a.id}`}
+                className="grid grid-cols-[minmax(16rem,1.6fr)_8rem_8rem_9rem_8rem] items-center gap-3 border-b border-niebla px-4 py-3 last:border-0 hover:bg-niebla"
+              >
+                <span className="min-w-0">
+                  <span className="block font-semibold">{a.title}</span>
+                  <span className="block truncate text-xs text-tinta-2">/es/blog/{a.slug}{a.cover_url ? '' : ' · sin portada'}</span>
+                </span>
+                <span>{a.category || '—'}</span>
+                <span>
+                  <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${est.clase}`}>{est.texto}</span>
+                  {a.published_at && a.status !== 'draft' && (
+                    <span className="mt-1 block text-xs text-tinta-2">{new Date(String(a.published_at)).toLocaleDateString('es-ES')}</span>
+                  )}
+                </span>
+                <span className="text-xs">{a.revisado_por || <span className="text-tinta-2">Pendiente</span>}</span>
+                <span className="text-xs">
+                  {graves > 0 ? <span className="font-semibold text-red-700">{graves} grave(s)</span> : null}
+                  {avisos.length - graves > 0 ? <span className="ml-2 text-amber-700">{avisos.length - graves} aviso(s)</span> : null}
+                  {avisos.length === 0 ? <span className="text-green-700">Ninguno</span> : null}
+                </span>
+              </Link>
+            );
+          })}
+          {(data ?? []).length === 0 && <p className="px-4 py-10 text-center text-tinta-2">Todavía no hay artículos.</p>}
+        </div>
       </div>
     </div>
   );
