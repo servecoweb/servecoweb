@@ -4,6 +4,7 @@ import { after } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import { ASESORIA, CONOCIO, SECTORES, TAMANOS, TIPOS, URGENCIAS, areaEnEspanol, calcularPrioridad, sedeEnEspanol, valido } from '@/lib/crm';
 import { enviarCorreosConsulta } from '@/lib/correo';
+import { guardarCandidatura } from '@/lib/candidaturas-guardar';
 import { detectarSpam, type Motivo } from '@/lib/spam';
 
 /**
@@ -23,6 +24,8 @@ export type CampoForm = 'nombre' | 'email' | 'telefono' | 'mensaje' | 'gdpr';
 export type EstadoForm = {
   ok: boolean;
   error: string | null;
+  /** Llegó pidiendo empleo o prácticas: se guardó en candidaturas, no en consultas. */
+  candidatura?: boolean;
   campos?: Partial<Record<CampoForm, string>>;
   valores?: Record<string, string>;
 };
@@ -130,15 +133,27 @@ export async function enviarConsulta(_prev: EstadoForm, formData: FormData): Pro
   // 1b) Por contenido o duplicado → bandeja de spam 30 días (se puede recuperar desde el panel).
   let motivo: Motivo | null = null;
   const veredicto = detectarSpam({ nombre, email, mensaje, empresa: fila.empresa ?? '', website: '', fax: '', inicio });
+  if (veredicto.spam && veredicto.motivo === 'busca_empleo') {
+    const guardada = await guardarCandidatura({
+      nombre,
+      email,
+      telefono: telefono || null,
+      tipo: /pr[aá]cticas|ciclo formativo|grado superior/.test(mensaje.toLowerCase()) ? 'practicas' : 'empleo',
+      area: null,
+      mensaje,
+      idioma: en ? 'en' : 'es',
+      origen: 'contacto',
+    });
+    if (!guardada) return errorGuardado;
+    return { ok: true, error: null, candidatura: true };
+  }
   if (veredicto.spam) motivo = veredicto.motivo;
   if (!motivo) {
-    const haceDiez = new Date(Date.now() - 10 * 60 * 1000).toISOString();
     const { data: repetido } = await db
       .from('contact_submissions')
       .select('id')
       .eq('email', email)
       .eq('mensaje', mensaje)
-      .gte('created_at', haceDiez)
       .limit(1);
     if (repetido && repetido.length > 0) motivo = 'duplicado';
   }

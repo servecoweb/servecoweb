@@ -10,11 +10,12 @@ import BotonSalir from '@/components/admin/BotonSalir';
  * fija en escritorio, y en móvil se abre con el botón de menú.
  */
 
-type Item = { href: string; label: string; exact?: boolean; icono: 'inicio' | 'contactos' | 'equipo' | 'blog' | 'chat' };
+type Item = { href: string; label: string; exact?: boolean; icono: 'inicio' | 'contactos' | 'candidatos' | 'equipo' | 'blog' | 'chat' };
 
 const ITEMS: Item[] = [
   { href: '/administrator', label: 'Inicio', exact: true, icono: 'inicio' },
   { href: '/administrator/contactos', label: 'Contactos', icono: 'contactos' },
+  { href: '/administrator/candidatos', label: 'Candidatos', icono: 'candidatos' },
   { href: '/administrator/equipo', label: 'Equipo', icono: 'equipo' },
   { href: '/administrator/blog', label: 'Blog', icono: 'blog' },
   { href: '/administrator/chatbot', label: 'Chatbot', icono: 'chat' },
@@ -39,6 +40,14 @@ function Icono({ nombre }: { nombre: Item['icono'] | 'web' | 'cerrar' | 'menu' }
         <circle cx="9" cy="7" r="3" />
         <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
         <path d="M16 3.13a3 3 0 0 1 0 5.74" />
+      </svg>
+    );
+  }
+  if (nombre === 'candidatos') {
+    return (
+      <svg {...comun} className="h-5 w-5 shrink-0">
+        <rect x="3" y="7" width="18" height="13" rx="2" />
+        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
       </svg>
     );
   }

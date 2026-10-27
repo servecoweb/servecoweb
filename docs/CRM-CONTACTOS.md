@@ -28,6 +28,9 @@
 | `src/lib/crm.ts` | Opciones (ES/EN), estados, prioridades, `calcularPrioridad`, `etiqueta`, `valido`. Compartido por formulario, guardado, correos y panel |
 | `src/lib/contacto.ts` | Server action del formulario (anti-spam en dos fases, guardado, nota, correos) |
 | `src/lib/spam.ts` | Filtro anti-spam y textos de cada motivo |
+| `src/lib/candidatos.ts` · `src/lib/candidatura.ts` · `src/lib/candidaturas-guardar.ts` | Opciones, formulario y guardado de empleo y prácticas (`candidaturas`) |
+| `src/app/es/trabaja-con-nosotros/` · `src/app/en/work-with-us/` | Página pública. Enlace en el formulario de contacto y en el pie |
+| `src/app/administrator/(panel)/candidatos/` | Lista aparte, con estado |
 | `src/lib/correo.ts` | Par de correos |
 | `src/components/ContactForm.tsx` · `CapturaVisita.tsx` | Formulario y origen de la visita |
 | `src/app/administrator/(panel)/contactos/` | Lista, ficha, acciones, `exportar/route.ts` |
@@ -69,12 +72,12 @@
 | Menos de 3 s / más de 24 h | Bots rápidos y reenvíos | Descartado sin guardar |
 | Cadenas aleatorias, palabras sin vocales | `iNgXrKYUMiecBwtr` | Bandeja de spam |
 | Gmail con 4+ puntos | Alias generados | Bandeja de spam |
-| Venta comercial | Redactores, enlaces, demos, «desde X €/mes», Calendly | Bandeja de spam |
-| **Pide trabajo** (14 oct) | «Estoy buscando trabajo», «looking for a job» | Bandeja de spam |
+| Venta comercial | Redactores, enlaces, demos, «desde X €/mes», Calendly, la carta de Dubái aunque cambie una frase («large-scale project», «mutually beneficial», «company profile») y quien vende a la propia asesoría el registro horario «sin coste» (27 oct) | Bandeja de spam |
+| **Pide trabajo** (14 oct, ampliado 27 oct) | «Estoy buscando trabajo», currículum, CV, prácticas, ciclo formativo, grado superior. No basta «trabajar» ni «entrevista»: un cliente puede querer seguir trabajando en España | **No es spam.** Se guarda en `candidaturas` y se ve en `/administrator/candidatos`. La web tiene `/es/trabaja-con-nosotros` y `/en/work-with-us` |
 | **Ofertas de SEO / diseño web** (nuevo) | «primera página de Google», «posicionamiento web»… | Bandeja de spam |
 | 2+ enlaces | Spam de enlaces | Bandeja de spam |
 | **Alfabeto ajeno** (nuevo) | Mensajes en cirílico, chino, árabe… (Serveco atiende en ES/EN) | Bandeja de spam |
-| **Duplicado** (nuevo) | Mismo correo y mensaje en 10 min | Bandeja de spam |
+| **Duplicado** | El mismo correo y el mismo mensaje, aunque pasen días | Bandeja de spam |
 
 **Bandeja «Filtrado como spam»** (plegada al final de `/administrator/contactos`): lo filtrado por contenido se guarda **30 días** en `contact_spam` (migración `0007`) con su motivo, y se puede **recuperar con un clic** (pasa a contactos con una nota; el visitante no recibió confirmación, hay que contestarle). Se limpia sola. Los bots evidentes no se guardan (no hay riesgo de falso positivo y llenarían la tabla).
 

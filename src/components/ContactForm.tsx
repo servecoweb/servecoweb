@@ -61,10 +61,21 @@ export default function ContactForm({ lang, areas, sedes, areaInicial, sedeInici
     return (
       <div className="lead" style={{ display: 'block' }}>
         <p className="form-aviso ok" role="status">
-          {en
-            ? 'Message sent. We have emailed you a confirmation; the right team will reply once it has reviewed your enquiry.'
-            : 'Consulta enviada. Te hemos enviado una confirmación por correo; el área que corresponde te responderá en cuanto la revise.'}
+          {estado.candidatura
+            ? en
+              ? 'We received your message as a job application, not as a client enquiry. If it fits, we will write to you.'
+              : 'Hemos recibido tu mensaje como candidatura, no como consulta de cliente. Si encaja, te escribimos.'
+            : en
+              ? 'Message sent. We have emailed you a confirmation; the right team will reply once it has reviewed your enquiry.'
+              : 'Consulta enviada. Te hemos enviado una confirmación por correo; el área que corresponde te responderá en cuanto la revise.'}
         </p>
+        {estado.candidatura && (
+          <p style={{ marginTop: 12 }}>
+            <Link className="enlace" href={en ? EN.workWithUs : ES.trabaja}>
+              {en ? 'You can also use the jobs form' : 'También puedes usar el formulario de empleo'}
+            </Link>
+          </p>
+        )}
       </div>
     );
   }

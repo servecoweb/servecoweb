@@ -41,6 +41,13 @@ export default function Privacy() {
         relationship apply.
       </p>
 
+      <h2>Jobs and internships</h2>
+      <p>
+        If you write to us about a job or an internship, we process your name, email, phone if you leave one, the type of application,
+        the area and your message. We use it to see whether it fits what the firm needs and, if it does, to write to you. The basis is
+        your consent. We keep it while the application is reviewed. [Specific period pending from Serveco.]
+      </p>
+
       <h2>Virtual assistant</h2>
       <p>
         Conversations with the website’s virtual assistant are stored to improve its answers and check their quality. Please do not

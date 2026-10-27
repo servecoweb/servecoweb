@@ -39,6 +39,13 @@ export default function Privacidad() {
         relación profesional.
       </p>
 
+      <h2>Empleo y prácticas</h2>
+      <p>
+        Si nos escribes para trabajar o hacer prácticas, tratamos tu nombre, correo, teléfono si lo dejas, el tipo de candidatura, el
+        área y el mensaje. Sirve para valorar si encaja con lo que el despacho necesita y, si es así, para escribirte. La base es tu
+        consentimiento. Lo guardamos mientras se valora la candidatura. [Plazo concreto pendiente de Serveco.]
+      </p>
+
       <h2>Asistente virtual</h2>
       <p>
         Las conversaciones con el asistente virtual de la web se guardan para mejorar sus respuestas y revisar su calidad. No escribas

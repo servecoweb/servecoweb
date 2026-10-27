@@ -4,6 +4,7 @@ import ContactForm from '@/components/ContactForm';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
+import Link from 'next/link';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -22,6 +23,16 @@ export default function Contact() {
       />
       <section className="contacto">
         <div className="wrap">
+          <aside className="aviso-empleo">
+            <div>
+              <p className="kicker">Jobs and internships</p>
+              <h2>The jobs form is a different one</h2>
+              <p>Want to work with us? This form is for clients. If you are looking for a job or an internship, use the other one.</p>
+            </div>
+            <Link className="btn btn-marca" href={`${EN.workWithUs}#formulario`}>
+              Go to the jobs form
+            </Link>
+          </aside>
           <div>
             <h2>Call or write to us</h2>
             <div className="via">

@@ -4,6 +4,7 @@ import ContactForm from '@/components/ContactForm';
 import { AREAS } from '@/data/areas';
 import { SEDES } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
+import Link from 'next/link';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -22,6 +23,16 @@ export default function Contacto() {
       />
       <section className="contacto">
         <div className="wrap">
+          <aside className="aviso-empleo">
+            <div>
+              <p className="kicker">Empleo y prácticas</p>
+              <h2>El formulario de empleo es otro</h2>
+              <p>¿Quieres trabajar con nosotros? Este formulario es para clientes. Si buscas empleo o unas prácticas, usa el otro.</p>
+            </div>
+            <Link className="btn btn-marca" href={`${ES.trabaja}#formulario`}>
+              Ir al formulario de empleo
+            </Link>
+          </aside>
           <div>
             <h2>Llámanos o escríbenos</h2>
             <div className="via">

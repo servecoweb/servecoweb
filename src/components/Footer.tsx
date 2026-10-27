@@ -45,6 +45,7 @@ export default function Footer({ lang }: { lang: 'es' | 'en' }) {
                   <li><Link href={ES.firma}>Quiénes somos</Link></li>
                   <li><Link href={ES.equipo}>Equipo</Link></li>
                   <li><Link href={ES.blog}>Blog</Link></li>
+                  <li><Link href={ES.trabaja}>Trabaja con nosotros</Link></li>
                   <li><Link href={ES.internacional}>Internacional</Link></li>
                   <li><Link href={ES.mapaWeb}>Mapa web</Link></li>
                   <li><Link href={EN.home} lang="en">English</Link></li>
@@ -55,6 +56,7 @@ export default function Footer({ lang }: { lang: 'es' | 'en' }) {
                   <li><Link href={EN.team}>Our team</Link></li>
                   <li><Link href={EN.international}>International clients</Link></li>
                   <li><Link href={EN.contact}>Contact</Link></li>
+                  <li><Link href={EN.workWithUs}>Work with us</Link></li>
                   <li><Link href={EN.sitemap}>Sitemap</Link></li>
                   <li><Link href={ES.home} lang="es">Español</Link></li>
                 </>

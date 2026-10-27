@@ -83,13 +83,21 @@ function parecePitchMarketing(m: string): boolean {
   if (/guest posts?|link building|backlinks?|dofollow|do-follow|write for (us|your website)|sponsored post/.test(m)) return true;
   if (/prueba gratuita|tarjeta bancaria|demo r[aá]pida|agend(ar|a) (una )?demo|free trial|book a (demo|call)/.test(m)) return true;
   if (/desde\s+\d+([.,]\d+)?\s*€\s*\/\s*(mes|factura|año|empleado|usuario)/.test(m)) return true;
+  // Carta en serie (Dubái, 10, 14 y 26 oct): cambia una frase y vuelve a entrar.
+  if (/potential business opportunities|mutually beneficial|share information about your products|purchasing and supply|large-scale project|company profile|commercial terms/.test(m)) return true;
+  // Venta a la propia asesoría (23 oct, registro horario «sin coste»). Un cliente que pide el trámite no escribe así.
+  if (/registro horario/.test(m) && /sin coste|whatsapp|nos encargamos/.test(m)) return true;
+  if (/implantaci[oó]n sin coste/.test(m)) return true;
   const enlaces = m.match(/https?:\/\/[^\s]+/g) ?? [];
   return enlaces.some((l) => /pricing|demo|youtube\.com|youtu\.be|bit\.ly|wa\.me/.test(l));
 }
 
-/** Quien pide un puesto de trabajo no es un cliente de la asesoría. */
-function buscaEmpleo(m: string): boolean {
-  return /estoy buscando trabajo|busco trabajo|looking for (a )?(job|work)\b|busca(r|ndo)? empleo/.test(m);
+/**
+ * Quien pide un puesto o unas prácticas no es un cliente. No basta «trabajar» ni «entrevista»:
+ * un cliente puede querer seguir trabajando en España o pedir una reunión.
+ */
+export function buscaEmpleo(m: string): boolean {
+  return /estoy buscando trabajo|busco trabajo|looking for (a )?(job|work|employment)\b|busca(r|ndo)? empleo|curr[ií]culum|\bcv\b|enviar mi cv|per[ií]odo de pr[aá]cticas|pr[aá]cticas del ciclo|ciclo formativo|grado superior|convenio de pr[aá]cticas|en pr[aá]cticas|oferta de empleo/.test(m);
 }
 
 /** Ofertas de SEO y diseño web: a una asesoría le llegan a diario; ningún cliente escribe así. */
