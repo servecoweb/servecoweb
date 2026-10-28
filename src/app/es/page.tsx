@@ -11,7 +11,7 @@ import { AREAS } from '@/data/areas';
 import { escena } from '@/data/escenas';
 import { SECTORES_HOME } from '@/data/sectores';
 import { SEDES, ciudadesEnLetra } from '@/data/offices';
-import { leerEquipo } from '@/lib/equipo';
+import { leerEquipo, partesCargo } from '@/lib/equipo';
 import { articulosPublicados, fechaLarga } from '@/lib/blog/publico';
 import { EMPRESA, telHref } from '@/data/site';
 import { ES, EN, idiomas } from '@/lib/rutas';
@@ -159,15 +159,19 @@ export default async function HomeEs() {
             <Link href={ES.equipo} className="btn btn-linea">Ver todo el equipo</Link>
           </div>
           <div className="equipo">
-            {equipo.filter((p) => p.destacado).map((p) => (
-              <Link className="persona" href={ES.equipo} key={p.nombre}>
-                <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
-                <div>
-                  <h3>{p.nombre}</h3>
-                  <p>{p.cargo}</p>
-                </div>
-              </Link>
-            ))}
+            {equipo.filter((p) => p.destacado).map((p) => {
+              const { puesto, titulos } = partesCargo(p.cargo);
+              return (
+                <Link className="persona" href={ES.equipo} key={p.nombre}>
+                  <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                  <div>
+                    <h3>{p.nombre}</h3>
+                    {puesto && <p className="persona-puesto">{puesto}</p>}
+                    <p className="persona-titulos">{titulos.map((t) => <span key={t}>{t}</span>)}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

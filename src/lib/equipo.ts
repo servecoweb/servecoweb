@@ -39,6 +39,21 @@ type Fila = {
   published: boolean | null;
 };
 
+/**
+ * «Socio Fundador · Economista, Auditor de Cuentas» → puesto «Socio Fundador» y una titulación por línea.
+ * No se parte por « y »: rompería «Administración y Dirección de Empresas».
+ */
+export function partesCargo(cargo: string): { puesto: string | null; titulos: string[] } {
+  const [a, ...resto] = cargo.split(' · ');
+  const puesto = resto.length > 0 ? a.trim() : null;
+  const titulos = (resto.length > 0 ? resto.join(' · ') : a)
+    .split(/\s*(?:,\s|\.\s|\s[–-]\s|\/)\s*/)
+    .map((t) => t.trim().replace(/\.$/, ''))
+    .filter(Boolean)
+    .map((t) => t.charAt(0).toUpperCase() + t.slice(1));
+  return { puesto, titulos };
+}
+
 export function departamentoDe(area: string | null | undefined): Departamento {
   if (area && (AREAS_DEPTO as readonly string[]).includes(area)) return area as Departamento;
   return 'administracion';

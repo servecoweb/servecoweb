@@ -4,7 +4,7 @@ import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
 import { SEDES } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA, telHref } from '@/data/site';
-import { leerEquipo } from '@/lib/equipo';
+import { leerEquipo, partesCargo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -173,15 +173,19 @@ export default async function LaFirma() {
           </div>
           <aside>
             <div className="firma-socios">
-              {equipo.filter((p) => p.destacado).map((p) => (
-                <Link className="persona" href={ES.equipo} key={p.nombre}>
-                  <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
-                  <div>
-                    <h3>{p.nombre}</h3>
-                    <p>{p.cargo}</p>
-                  </div>
-                </Link>
-              ))}
+              {equipo.filter((p) => p.destacado).map((p) => {
+                const { puesto, titulos } = partesCargo(p.cargo);
+                return (
+                  <Link className="persona" href={ES.equipo} key={p.nombre}>
+                    <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                    <div>
+                      <h3>{p.nombre}</h3>
+                      {puesto && <p className="persona-puesto">{puesto}</p>}
+                      <p className="persona-titulos">{titulos.map((t) => <span key={t}>{t}</span>)}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
             <div className="caja">
               <h3>En la práctica</h3>

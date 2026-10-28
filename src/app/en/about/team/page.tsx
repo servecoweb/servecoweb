@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import PageHead from '@/components/PageHead';
-import { DEPARTAMENTOS, leerEquipo } from '@/lib/equipo';
+import { DEPARTAMENTOS, leerEquipo, partesCargo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
@@ -26,13 +26,17 @@ export default async function Team() {
               <div className="equipo-bloque" key={d.id}>
                 <h2>{d.en}</h2>
                 <div className="equipo equipo-fichas">
-                  {gente.map((p) => (
-                    <div className="persona" key={p.nombre}>
-                      <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
-                      <h3>{p.nombre}</h3>
-                      <p>{p.cargoEn}</p>
-                    </div>
-                  ))}
+                  {gente.map((p) => {
+                    const { puesto, titulos } = partesCargo(p.cargoEn);
+                    return (
+                      <div className="persona" key={p.nombre}>
+                        <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                        <h3>{p.nombre}</h3>
+                        {puesto && <p className="persona-puesto">{puesto}</p>}
+                        <p className="persona-titulos">{titulos.map((t) => <span key={t}>{t}</span>)}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );

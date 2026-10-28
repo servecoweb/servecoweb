@@ -337,6 +337,10 @@
   .persona .foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
   .persona h3 { font-size: 18px; }
   .persona p { font-size: 15px; color: var(--tinta-2); }
+  .persona h3 { text-wrap: balance; }
+  .persona .persona-puesto { margin-top: 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--naranja-texto); }
+  .persona .persona-titulos { margin-top: 2px; font-size: 14px; line-height: 1.4; }
+  .persona .persona-titulos span { display: block; }
   .equipo-bloque { margin-top: 36px; }
   .equipo-bloque h2 { font-size: 26px; margin-bottom: 16px; }
   .equipo-fichas .persona { display: flex; flex-direction: column; gap: 8px; }
