@@ -514,7 +514,21 @@
   .texto ol:not(.pasos) { list-style: decimal; padding-left: 22px; margin-bottom: 16px; }
   .texto li { margin-bottom: 6px; }
 
-  /* Editor del panel: el texto se ve maquetado. El vacío enseña el aviso del placeholder. */
+  /* Editor del panel: el mismo cuerpo que la web. El panel no va dentro de .web,
+     así que el párrafo copia el ancho de :where(.web) p. */
+  .editor-cuerpo .ProseMirror {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--tinta);
+  }
+  .editor-cuerpo .ProseMirror p { max-width: 68ch; }
+  .editor-cuerpo .ProseMirror h2,
+  .editor-cuerpo .ProseMirror h3 {
+    max-width: none;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
   .editor-cuerpo .ProseMirror p.is-empty:first-child::before,
   .editor-cuerpo .ProseMirror p.is-editor-empty:first-child::before {
     content: attr(data-placeholder);

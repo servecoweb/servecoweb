@@ -16,6 +16,10 @@ function redireccionesWordPress() {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    // El tope por defecto de una acción es 1 MB. Las fotos del equipo y las portadas subidas a mano llegan a 4 MB.
+    serverActions: { bodySizeLimit: '4mb' },
+  },
   async redirects() {
     return [
       // La raíz del dominio lleva al español (308: Google consolida la home en /es).

@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import BotonEnviar from '@/components/admin/BotonEnviar';
-import { descartarBorrador, guardarArticulo, nuevaPortada } from '../acciones';
+import { descartarBorrador, guardarArticulo, nuevaPortada, subirPortada } from '../acciones';
+import EditorCuerpo from './editor';
 
 /** /administrator/blog/[id]: revisar, editar, regenerar portada, firmar revisión y publicar. */
 export const dynamic = 'force-dynamic';
@@ -59,20 +60,35 @@ export default async function EditarArticulo({ params, searchParams }: { params:
         {/* ── Columna izquierda: portada + texto ── */}
         <div className="space-y-6">
           <div className="rounded-xl border border-linea bg-papel p-5">
-            <h2 className="mb-3 font-bold">Portada</h2>
+            <h2 className="mb-1 font-bold">Portada</h2>
+            <p className="mb-3 text-sm text-tinta-2">Genérela con la IA o sustituya la que hay por una imagen propia.</p>
             {a.cover_url ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={String(a.cover_url)} alt={String(a.cover_alt ?? '')} className="mb-3 w-full rounded-lg" />
+              <img src={String(a.cover_url)} alt={String(a.cover_alt ?? '')} className="mb-4 max-h-96 w-full rounded-lg object-contain bg-niebla" />
             ) : (
-              <p className="mb-3 rounded-lg bg-niebla p-6 text-center text-sm text-tinta-2">Sin portada</p>
+              <p className="mb-4 rounded-lg bg-niebla p-6 text-center text-sm text-tinta-2">Sin portada</p>
             )}
-            <form action={nuevaPortada} className="flex flex-col gap-2 sm:flex-row">
+            <form action={nuevaPortada} className="space-y-2">
+              <p className="text-sm font-semibold">Generar con IA</p>
+              <div className="flex flex-col gap-2 sm:flex-row">
+                <input type="hidden" name="id" value={a.id} />
+                <input name="brief" placeholder="Opcional: describa la escena que quiere" className={campo} />
+                <BotonEnviar
+                  texto="Generar portada"
+                  trabajando="Generando…"
+                  className="whitespace-nowrap rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+                />
+              </div>
+            </form>
+            <form action={subirPortada} className="mt-4 space-y-2 border-t border-linea pt-4">
+              <label className="block text-sm font-semibold" htmlFor="portada">Subir una imagen propia</label>
               <input type="hidden" name="id" value={a.id} />
-              <input name="brief" placeholder="Opcional: describa la escena que quiere" className={campo} />
+              <input id="portada" name="imagen" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" required className={campo} />
+              <p className="text-xs text-tinta-2">JPG, PNG o WebP, hasta 4 MB. Sustituye la portada actual. El texto alternativo se edita más abajo.</p>
               <BotonEnviar
-                texto="Nueva portada"
-                trabajando="Generando…"
-                className="whitespace-nowrap rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+                texto="Usar esta imagen"
+                trabajando="Subiendo…"
+                className="rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
               />
             </form>
           </div>
@@ -106,9 +122,9 @@ export default async function EditarArticulo({ params, searchParams }: { params:
               <input id="cover_alt" name="cover_alt" defaultValue={a.cover_alt ?? ''} className={campo} />
             </div>
             <div>
-              <label className={etiqueta} htmlFor="body_md">Cuerpo (Markdown: ## apartado, - lista, [texto](/ruta))</label>
-              <textarea id="body_md" name="body_md" defaultValue={a.body_md ?? ''} rows={28} className={`${campo} font-mono text-sm`} />
-              <p className="mt-1 text-xs text-tinta-2">Al guardar se vuelven a pasar los controles automáticos (enlaces, longitud, riesgos).</p>
+              <label className={etiqueta} htmlFor="cuerpo">Cuerpo</label>
+              <EditorCuerpo html={String(a.body ?? '')} markdown={String(a.body_md ?? '')} />
+              <p className="mt-1 text-xs text-tinta-2">El mismo HTML que en la web. Al guardar se vuelven a pasar los controles automáticos (enlaces, longitud, riesgos).</p>
             </div>
 
             <div className="space-y-4 rounded-lg border-2 border-marca bg-marca-suave p-4">

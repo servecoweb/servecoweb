@@ -107,16 +107,70 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
   redirect(`${ruta}?ok=${encodeURIComponent('Guardado.')}`);
 }
 
+function mensajePortadaIa(err: unknown): string {
+  const bruto = err instanceof Error ? err.message : String(err);
+  if (/expired_secret_key|API key has expired/i.test(bruto)) {
+    return 'No se pudo generar la portada: la clave de OpenAI ha caducado. Puede subir una imagen propia.';
+  }
+  if (/Falta OPENAI_API_KEY|invalid_api_key|Incorrect API key/i.test(bruto)) {
+    return 'No se pudo generar la portada: no hay una clave de OpenAI válida. Puede subir una imagen propia.';
+  }
+  return `No se pudo generar la portada: ${bruto}`;
+}
+
+function refrescarPortada(id: string, slug: string) {
+  revalidatePath(`/administrator/blog/${id}`);
+  revalidatePath('/administrator/blog');
+  revalidatePath('/es');
+  revalidatePath('/es/blog');
+  if (slug) revalidatePath(`/es/blog/${slug}`);
+}
+
 export async function nuevaPortada(formData: FormData): Promise<void> {
   await exigirAdmin();
   const id = texto(formData, 'id');
+  const c = db();
+  const { data: art } = await c.from('blog_articles').select('slug').eq('id', id).maybeSingle();
   try {
-    await regenerarPortada(db(), id, texto(formData, 'brief') || undefined);
+    await regenerarPortada(c, id, texto(formData, 'brief') || undefined);
   } catch (err) {
-    conError(`/administrator/blog/${id}`, `No se pudo generar la portada: ${err instanceof Error ? err.message : err}`);
+    conError(`/administrator/blog/${id}`, mensajePortadaIa(err));
   }
-  revalidatePath(`/administrator/blog/${id}`);
+  refrescarPortada(id, String(art?.slug ?? ''));
   redirect(`/administrator/blog/${id}?ok=${encodeURIComponent('Portada nueva generada.')}`);
+}
+
+/** Sustituye la portada por un archivo del despacho. No llama a OpenAI. */
+export async function subirPortada(formData: FormData): Promise<void> {
+  await exigirAdmin();
+  const id = texto(formData, 'id');
+  const ruta = `/administrator/blog/${id}`;
+  const archivo = formData.get('imagen');
+  if (!(archivo instanceof File) || archivo.size === 0) conError(ruta, 'Elija una imagen.');
+  if (archivo.size > 4 * 1024 * 1024) conError(ruta, 'La imagen pesa más de 4 MB.');
+  const porTipo: Record<string, string> = { 'image/jpeg': 'jpg', 'image/jpg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+  const nombre = archivo.name.toLowerCase();
+  const ext =
+    porTipo[archivo.type] ||
+    (nombre.endsWith('.png') ? 'png' : nombre.endsWith('.webp') ? 'webp' : nombre.endsWith('.jpg') || nombre.endsWith('.jpeg') ? 'jpg' : '');
+  if (!ext) conError(ruta, 'La imagen tiene que ser JPG, PNG o WebP.');
+  const contentType = ext === 'png' ? 'image/png' : ext === 'webp' ? 'image/webp' : 'image/jpeg';
+
+  const c = db();
+  const { data: art } = await c.from('blog_articles').select('slug').eq('id', id).maybeSingle();
+  if (!art) conError('/administrator/blog', 'Artículo no encontrado.');
+
+  const storageRuta = `covers/${art.slug}-${Date.now()}.${ext}`;
+  const cuerpo = Buffer.from(await archivo.arrayBuffer());
+  const subida = await c.storage.from('blog').upload(storageRuta, cuerpo, { contentType, upsert: true });
+  if (subida.error) conError(ruta, `No se pudo subir la portada: ${subida.error.message}`);
+
+  const url = c.storage.from('blog').getPublicUrl(storageRuta).data.publicUrl;
+  const { error } = await c.from('blog_articles').update({ cover_url: url, cover_prompt: null }).eq('id', id);
+  if (error) conError(ruta, `No se pudo guardar la portada: ${error.message}`);
+
+  refrescarPortada(id, String(art.slug));
+  redirect(`${ruta}?ok=${encodeURIComponent('Portada sustituida por su imagen.')}`);
 }
 
 /** Solo borradores: lo publicado no se borra desde aquí (se despublica pasándolo a borrador). */

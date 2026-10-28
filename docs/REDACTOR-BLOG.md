@@ -12,6 +12,7 @@ Línea editorial y temas: `../EDITORIAL-BLOG.md` (en la W).
 | `src/lib/blog/openai.ts` | Llamadas a OpenAI: reintentos, respuesta vacía, búsqueda en background, imágenes |
 | `src/lib/blog/controles.ts` | Controles automáticos (código): retira enlaces no permitidos, genera avisos |
 | `src/lib/blog/portada.ts` | Portada `gpt-image-2` → Storage «blog» |
+| `blog/acciones.ts` → `subirPortada` | Sustituye la portada por un JPG, PNG o WebP del despacho (hasta 4 MB), sin OpenAI |
 | `src/lib/blog/publico.ts` | Lectura pública (solo publicado y con fecha pasada; reserva en `src/data/posts.ts`) |
 | `src/app/administrator/(panel)/blog/` | Panel: lista, «Redactar con IA», ficha de edición, revisión y publicación |
 | `src/app/es/blog/` | Blog público (dinámico) con portada, FAQs, fuentes, firma de revisión y schema `Article` + `FAQPage` |
@@ -44,6 +45,15 @@ Sin `temperature` (GPT-5.x y 6 no la admiten). Cambiables con `BLOG_REDACTOR_MOD
 - Un artículo: 2-5 min. Las páginas del panel del blog llevan `maxDuration = 300`. **En Vercel Hobby hace falta Fluid Compute** para pasar de 60 s; si no, usar `npm run blog:redactar` en local.
 - Coste orientativo por artículo: ~1 € (texto con búsqueda + portada). Comprobar con los primeros en el panel de OpenAI.
 
+## Portada propia (28 oct 2026)
+
+En la ficha del artículo hay dos caminos, los dos sustituyen `cover_url`:
+
+- **Generar portada:** OpenAI, como hasta ahora (`regenerarPortada`).
+- **Usar esta imagen:** archivo JPG, PNG o WebP de hasta 4 MB. Se guarda en el bucket `blog`, ruta `covers/{slug}-{marca}.{ext}`. No usa la clave de OpenAI. `cover_prompt` queda vacío para que esa imagen no entre en el muro de escenas de las portadas siguientes. El texto alternativo sigue en el formulario del artículo.
+
+El tope de las acciones del servidor pasa de 1 MB a 4 MB (`next.config.mjs`), el mismo límite que la foto del equipo.
+
 ## Pendiente / conocido
 
 - **24 sep, criterio de Narciso:** apartados en forma de pregunta + bloque de FAQs = texto de interrogatorio que suena a IA. Prompts cambiados (apartados descriptivos; FAQs distintas de los apartados) + control nuevo. **Los artículos generados antes del cambio (el de I+D+i) pueden traer apartados en pregunta:** revisarlos en el panel (al guardar, el control avisa) o reescribirlos.
@@ -51,7 +61,8 @@ Sin `temperature` (GPT-5.x y 6 no la admiten). Cambiables con `BLOG_REDACTOR_MOD
 - **`gpt-image-2.5-sunburst` confirmado** con la cuenta de Serveco: las 13 escenas de la web salieron en WebP (la reserva `gpt-image-2` da PNG). **Falta probar la subida al bucket `blog`** (primera portada).
 - Mientras los 3 de ejemplo estén en borrador, **el blog público y el bloque de blog de la home están vacíos**: publicar al menos uno (con «Revisado por») antes de enseñar la web.
 - Panel `/administrator/blog` sin probar (login, edición, publicar con firma).
-- Editor de texto: hoy es Markdown en un `textarea` (la propuesta decía TinyMCE). Funciona y es más seguro con el redactor; TinyMCE solo si Serveco lo pide.
+- Editor del panel (28 oct): carga el HTML de `body`, el mismo que la web, con apartados, listas, negrita y enlaces. Al guardar sigue saliendo Markdown en `body_md` (lo leen los controles) y el HTML se regenera. No es TinyMCE.
 - Formación de 1 h (H4.3) cuando esté en producción.
 - **14 oct:** los artículos nuevos hablan de tú (criterio en `editorial.ts` y en `EDITORIAL-BLOG.md`). Los ya publicados en Supabase siguen en usted hasta que se reescriban. No lanzar `--reescribir` por este cambio si no lo pide Narciso.
 - Programados: aparecen en la web al llegar su fecha, pero el chatbot los aprende en la siguiente ingesta («Actualizar conocimiento» o al guardar otro artículo).
+- **28 oct, producción:** al generar una portada, OpenAI respondió `expired_secret_key` («Your API key has expired») con el modelo `gpt-image-2.5-sunburst`. La clave **está** en el servidor y ha caducado: hace falta una `OPENAI_API_KEY` nueva en Vercel y un redespliegue. Mientras tanto, el despacho puede subir su imagen. El panel ya no vuelca el JSON de OpenAI en la barra de dirección cuando la clave ha caducado.
