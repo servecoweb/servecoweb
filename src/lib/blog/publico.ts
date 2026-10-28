@@ -1,5 +1,6 @@
 import { supabasePublico } from '@/lib/supabase/servidor';
 import { POSTS } from '@/data/posts';
+import { AREAS } from '@/data/areas';
 
 /**
  * Lectura PÚBLICA del blog (clave publicable → RLS: solo publicado y con fecha ya pasada).
@@ -10,6 +11,7 @@ export type ArticuloPublico = {
   titulo: string;
   seoTitle: string | null;
   categoria: string;
+  areaSlug: string | null;
   fecha: string; // ISO
   extracto: string;
   meta: string;
@@ -23,7 +25,7 @@ export type ArticuloPublico = {
 };
 
 const CAMPOS =
-  'slug, title, seo_title, category, published_at, excerpt, meta_description, body, cover_url, cover_alt, faqs, fuentes, actualizado_a, revisado_por';
+  'slug, title, seo_title, category, area_slug, published_at, excerpt, meta_description, body, cover_url, cover_alt, faqs, fuentes, actualizado_a, revisado_por';
 
 type Fila = Record<string, unknown>;
 
@@ -34,6 +36,7 @@ function mapear(f: Fila): ArticuloPublico {
     titulo: String(f.title),
     seoTitle: (f.seo_title as string | null) ?? null,
     categoria: String(f.category ?? ''),
+    areaSlug: (f.area_slug as string | null) ?? null,
     fecha: String(f.published_at ?? new Date().toISOString()),
     extracto: String(f.excerpt ?? ''),
     meta: String(f.meta_description || f.excerpt || ''),
@@ -54,6 +57,7 @@ function reserva(): ArticuloPublico[] {
     titulo: p.titulo,
     seoTitle: null,
     categoria: p.categoria,
+    areaSlug: AREAS.find((a) => a.nombre.toLowerCase() === p.categoria.trim().toLowerCase())?.slug ?? null,
     fecha: `${p.fecha}T09:00:00Z`,
     extracto: p.extracto,
     meta: p.extracto,
@@ -100,6 +104,16 @@ export async function articuloPublicado(slug: string): Promise<ArticuloPublico |
     return reserva().find((p) => p.slug === slug) ?? null;
   }
   return data ? mapear(data) : null;
+}
+
+/** El artículo pertenece a un área del menú (por `area_slug` o, si no hay, por el nombre de la categoría). */
+export function perteneceAlArea(
+  p: { categoria: string; areaSlug: string | null },
+  area: { slug: string; nombre: string },
+): boolean {
+  if (p.areaSlug) return p.areaSlug === area.slug;
+  const c = p.categoria.trim().toLowerCase();
+  return c === area.slug || c === area.nombre.toLowerCase();
 }
 
 export function fechaLarga(iso: string): string {

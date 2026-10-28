@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { AREAS } from '@/data/areas';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import BotonEnviar from '@/components/admin/BotonEnviar';
 import { descartarBorrador, guardarArticulo, nuevaPortada, subirPortada } from '../acciones';
-import EditorCuerpo, { FichasArticulo, type FichaArticulo } from './editor';
+import EditorCuerpo, { ElegirPortada, FichasArticulo, type FichaArticulo } from './editor';
 
 /** /administrator/blog/[id]: revisar, editar, regenerar portada, firmar revisión y publicar. */
 export const dynamic = 'force-dynamic';
@@ -17,7 +18,7 @@ const etiqueta = 'mb-1 block text-sm font-semibold';
 
 function fichaInicial(error?: string, ok?: string): FichaArticulo {
   const t = `${error ?? ''} ${ok ?? ''}`.toLowerCase();
-  if (t.includes('título') || t.includes('titulo')) return 'titulos';
+  if (t.includes('título') || t.includes('titulo') || t.includes('categoría') || t.includes('categoria')) return 'titulos';
   if (t.includes('portada') || t.includes('imagen')) return 'portada';
   if (t.includes('abogado') || t.includes('fecha') || t.includes('publicar') || t.includes('programar')) return 'publicacion';
   return 'contenido';
@@ -39,6 +40,10 @@ export default async function EditarArticulo({ params, searchParams }: { params:
   const { data: a } = await db.from('blog_articles').select('*').eq('id', id).maybeSingle();
   if (!a) notFound();
 
+  const categoriaActual =
+    AREAS.find((x) => x.slug === a.area_slug)?.slug ??
+    AREAS.find((x) => x.nombre.toLowerCase() === String(a.category ?? '').trim().toLowerCase())?.slug ??
+    '';
   const avisos = (a.avisos as { nivel: 'grave' | 'aviso'; texto: string }[]) ?? [];
   const puntos = (a.puntos_revision as string[]) ?? [];
   const fuentes = (a.fuentes as { titulo: string; url: string }[]) ?? [];
@@ -92,10 +97,9 @@ export default async function EditarArticulo({ params, searchParams }: { params:
                   </div>
                 </form>
                 <form action={subirPortada} className="mt-4 space-y-2 border-t border-linea pt-4">
-                  <label className="block text-sm font-semibold" htmlFor="portada">Subir una imagen propia</label>
                   <input type="hidden" name="id" value={a.id} />
-                  <input id="portada" name="imagen" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" required className={campo} />
-                  <p className="text-xs text-tinta-2">JPG, PNG o WebP, hasta 4 MB. Sustituye la portada actual.</p>
+                  <ElegirPortada />
+                  <p className="text-xs text-tinta-2">JPG, PNG o WebP, hasta 4 MB.</p>
                   <BotonEnviar
                     texto="Usar esta imagen"
                     trabajando="Subiendo…"
@@ -121,6 +125,18 @@ export default async function EditarArticulo({ params, searchParams }: { params:
             }
             titulos={
               <div className="space-y-4">
+                <div>
+                  <label className={etiqueta} htmlFor="area">Categoría</label>
+                  <select id="area" name="area" defaultValue={categoriaActual} className={campo}>
+                    {!categoriaActual && (
+                      <option value="">{a.category ? `${a.category} (no está en las áreas)` : 'Sin categoría'}</option>
+                    )}
+                    {AREAS.map((x) => (
+                      <option key={x.slug} value={x.slug}>{x.nombre}</option>
+                    ))}
+                  </select>
+                  <p className="mt-1 text-xs text-tinta-2">En el blog público se filtra por esta categoría. Se guarda con «Guardar artículo».</p>
+                </div>
                 <div>
                   <label className={etiqueta} htmlFor="title">Título (H1)</label>
                   <input id="title" name="title" defaultValue={a.title} className={campo} />

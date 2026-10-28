@@ -10,7 +10,7 @@ import { ESCENA_AREA } from '@/data/escenas';
 import { SEDES } from '@/data/offices';
 import { LANDINGS } from '@/data/landings';
 import { AVISO_INTERNO, EMPRESA, SITE_URL } from '@/data/site';
-import { articulosPublicados } from '@/lib/blog/publico';
+import { articulosPublicados, perteneceAlArea } from '@/lib/blog/publico';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 /**
@@ -48,7 +48,7 @@ export default async function AreaPage({ params }: { params: Params }) {
 
   const landings = LANDINGS.filter((l) => l.area === a.slug);
   const relacionadas = (seo?.relacionadas ?? []).map((s) => AREAS.find((x) => x.slug === s)).filter(Boolean) as typeof AREAS;
-  const articulos = (await articulosPublicados()).filter((p) => p.categoria === a.nombre).slice(0, 3);
+  const articulos = (await articulosPublicados()).filter((p) => perteneceAlArea(p, a)).slice(0, 3);
 
   const url = `${SITE_URL}${ES.area(a.slug)}`;
   const servicioLd = {

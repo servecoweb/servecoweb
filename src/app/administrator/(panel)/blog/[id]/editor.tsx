@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
@@ -84,6 +84,59 @@ export default function EditorCuerpo({ html, markdown }: { html: string; markdow
         <div className="texto articulo min-h-[28rem] px-4 py-3 text-tinta-2">Cargando el texto…</div>
       )}
     </div>
+  );
+}
+
+/** Vista previa local al elegir el archivo, antes de pulsar «Usar esta imagen». */
+export function ElegirPortada() {
+  const [vista, setVista] = useState<string | null>(null);
+  const [aviso, setAviso] = useState('');
+  const previo = useRef<string | null>(null);
+
+  useEffect(() => () => {
+    if (previo.current) URL.revokeObjectURL(previo.current);
+  }, []);
+
+  function alElegir(archivo: File | undefined) {
+    if (previo.current) URL.revokeObjectURL(previo.current);
+    previo.current = null;
+    setVista(null);
+    if (!archivo) {
+      setAviso('');
+      return;
+    }
+    const nombre = archivo.name.toLowerCase();
+    const vale = archivo.type.startsWith('image/') || /\.(jpe?g|png|webp)$/.test(nombre);
+    if (!vale) {
+      setAviso('La imagen tiene que ser JPG, PNG o WebP.');
+      return;
+    }
+    const url = URL.createObjectURL(archivo);
+    previo.current = url;
+    setVista(url);
+    setAviso(archivo.size > 4 * 1024 * 1024 ? 'Pesa más de 4 MB. Elija una más ligera antes de usarla.' : '');
+  }
+
+  return (
+    <>
+      <label className="block text-sm font-semibold" htmlFor="portada">Subir una imagen propia</label>
+      <input
+        id="portada"
+        name="imagen"
+        type="file"
+        accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp"
+        required
+        className="w-full rounded-lg border border-linea px-3 py-2.5 text-base outline-none focus:border-marca"
+        onChange={(e) => alElegir(e.target.files?.[0])}
+      />
+      {aviso && <p className="text-sm text-red-700">{aviso}</p>}
+      {vista && (
+        <figure>
+          <img src={vista} alt="Vista previa de la imagen elegida" className="max-h-96 w-full rounded-lg object-contain bg-niebla" />
+          <figcaption className="mt-1 text-xs text-tinta-2">Vista previa. Aún no sustituye la portada: pulse «Usar esta imagen».</figcaption>
+        </figure>
+      )}
+    </>
   );
 }
 

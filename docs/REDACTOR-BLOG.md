@@ -50,7 +50,7 @@ Sin `temperature` (GPT-5.x y 6 no la admiten). Cambiables con `BLOG_REDACTOR_MOD
 En la ficha del artículo hay dos caminos, los dos sustituyen `cover_url`:
 
 - **Generar portada:** OpenAI, como hasta ahora (`regenerarPortada`).
-- **Usar esta imagen:** archivo JPG, PNG o WebP de hasta 4 MB. Se guarda en el bucket `blog`, ruta `covers/{slug}-{marca}.{ext}`. No usa la clave de OpenAI. `cover_prompt` queda vacío para que esa imagen no entre en el muro de escenas de las portadas siguientes. El texto alternativo sigue en el formulario del artículo.
+- **Usar esta imagen:** archivo JPG, PNG o WebP de hasta 4 MB. Al elegirlo se ve una vista previa en el navegador, antes de pulsar el botón. Se guarda en el bucket `blog`, ruta `covers/{slug}-{marca}.{ext}`. No usa la clave de OpenAI. `cover_prompt` queda vacío para que esa imagen no entre en el muro de escenas de las portadas siguientes. El texto alternativo sigue en el formulario del artículo.
 
 El tope de las acciones del servidor pasa de 1 MB a 4 MB (`next.config.mjs`), el mismo límite que la foto del equipo.
 
@@ -61,7 +61,8 @@ El tope de las acciones del servidor pasa de 1 MB a 4 MB (`next.config.mjs`), el
 - **`gpt-image-2.5-sunburst` confirmado** con la cuenta de Serveco: las 13 escenas de la web salieron en WebP (la reserva `gpt-image-2` da PNG). **Falta probar la subida al bucket `blog`** (primera portada).
 - Mientras los 3 de ejemplo estén en borrador, **el blog público y el bloque de blog de la home están vacíos**: publicar al menos uno (con «Revisado por») antes de enseñar la web.
 - Panel `/administrator/blog` sin probar (login, edición, publicar con firma).
-- Editor del panel (28 oct): carga el HTML de `body`, el mismo que la web, con apartados, listas, negrita y enlaces. Al guardar sigue saliendo Markdown en `body_md` (lo leen los controles) y el HTML se regenera. No es TinyMCE. La ficha va en pestañas (Contenido, Portada, Títulos y metadatos, Publicación); «Guardar artículo» vale para todas.
+- Editor del panel (28 oct): carga el HTML de `body`, el mismo que la web, con apartados, listas, negrita y enlaces. Al guardar sigue saliendo Markdown en `body_md` (lo leen los controles) y el HTML se regenera. No es TinyMCE. La ficha va en pestañas (Contenido, Portada, Títulos y metadatos, Publicación); «Guardar artículo» vale para todas. En Títulos y metadatos se cambia la **categoría** (las 8 áreas). Se guarda en `category` (nombre) y `area_slug`.
+- Listado público `/es/blog` (28 oct): botones para filtrar por categoría (`?area=fiscal`, `laboral`, `juridico`…). Solo salen las áreas que tienen artículos publicados. «Todas» quita el filtro. En el artículo, la miga de la categoría vuelve a ese listado.
 - Formación de 1 h (H4.3) cuando esté en producción.
 - **14 oct:** los artículos nuevos hablan de tú (criterio en `editorial.ts` y en `EDITORIAL-BLOG.md`). Los ya publicados en Supabase siguen en usted hasta que se reescriban. No lanzar `--reescribir` por este cambio si no lo pide Narciso.
 - Programados: aparecen en la web al llegar su fecha, pero el chatbot los aprende en la siguiente ingesta («Actualizar conocimiento» o al guardar otro artículo).

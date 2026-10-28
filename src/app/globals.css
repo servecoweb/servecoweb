@@ -350,6 +350,14 @@
   .filtro-zona button { font: 500 15px var(--fuente); min-height: 44px; padding: 9px 16px; border: 1px solid var(--linea); border-radius: 99px; background: var(--papel); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
   .filtro-zona button:hover { border-color: var(--tinta); }
   .filtro-zona button[aria-pressed="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+  .filtro-zona a {
+    display: inline-flex; align-items: center; font: 500 15px var(--fuente); min-height: 44px; padding: 9px 16px;
+    border: 1px solid var(--linea); border-radius: 99px; background: var(--papel); color: var(--tinta); text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .filtro-zona a:hover { border-color: var(--tinta); }
+  .filtro-zona a[aria-current="page"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+  .filtro-zona a:focus-visible { outline: 2px solid var(--naranja); outline-offset: 2px; }
   .despachos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .despacho {
     position: relative; display: flex; flex-direction: column;

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHead from '@/components/PageHead';
-import { articuloPublicado, articulosPublicados, fechaLarga } from '@/lib/blog/publico';
+import { articuloPublicado, articulosPublicados, fechaLarga, perteneceAlArea } from '@/lib/blog/publico';
+import { AREAS } from '@/data/areas';
 import { SITE_URL, EMPRESA } from '@/data/site';
 import { ES, idiomas } from '@/lib/rutas';
 
@@ -35,6 +36,7 @@ export default async function Articulo({ params }: { params: Params }) {
   const p = await articuloPublicado(slug);
   if (!p) notFound();
 
+  const area = AREAS.find((a) => perteneceAlArea(p, a));
   const otros = (await articulosPublicados(4)).filter((x) => x.slug !== p.slug).slice(0, 3);
   const vigencia = p.actualizadoA ? fechaLarga(`${p.actualizadoA}T12:00:00`) : fechaLarga(p.fecha);
 
@@ -64,7 +66,12 @@ export default async function Articulo({ params }: { params: Params }) {
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <PageHead
-        migas={[{ label: 'Inicio', href: ES.home }, { label: 'Blog', href: ES.blog }, { label: p.categoria || 'Artículo' }]}
+        migas={[
+          { label: 'Inicio', href: ES.home },
+          { label: 'Blog', href: ES.blog },
+          ...(area ? [{ label: area.nombre, href: `${ES.blog}?area=${area.slug}` }] : []),
+          { label: p.titulo },
+        ]}
         titulo={p.titulo}
         lead={`${p.categoria ? `${p.categoria} · ` : ''}${fechaLarga(p.fecha)}`}
       />

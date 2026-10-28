@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
 import { exigirAdmin } from '@/lib/admin';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
+import { AREAS } from '@/data/areas';
 import { redactarArticulo, reprocesar, slugificar } from '@/lib/blog/redactor';
 import { regenerarPortada } from '@/lib/blog/portada';
 import { ingestarConocimiento } from '@/lib/chatbot/ingesta';
@@ -51,7 +52,7 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
   const ruta = `/administrator/blog/${id}`;
   const c = db();
 
-  const { data: actual } = await c.from('blog_articles').select('fuentes, slug, published_at').eq('id', id).single();
+  const { data: actual } = await c.from('blog_articles').select('fuentes, slug, published_at, area_slug').eq('id', id).single();
   if (!actual) conError('/administrator/blog', 'Artículo no encontrado.');
 
   const titulo = texto(formData, 'title');
@@ -73,6 +74,8 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
 
   const { md, html, avisos } = reprocesar(texto(formData, 'body_md'), (actual.fuentes as { titulo: string; url: string }[]) ?? []);
   const slug = slugificar(texto(formData, 'slug') || String(actual.slug));
+  const area = AREAS.find((x) => x.slug === texto(formData, 'area'));
+  if (texto(formData, 'area') && !area) conError(ruta, 'Elija una categoría del listado.');
 
   const { error } = await c
     .from('blog_articles')
@@ -86,6 +89,7 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
       body: html,
       avisos,
       cover_alt: texto(formData, 'cover_alt') || null,
+      ...(area ? { category: area.nombre, area_slug: area.slug } : {}),
       status: estado,
       published_at: publicado,
       revisado_por: revisadoPor || null,
@@ -105,8 +109,12 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
   }
 
   revalidatePath('/administrator/blog');
+  revalidatePath('/es');
   revalidatePath('/es/blog');
   revalidatePath(`/es/blog/${slug}`);
+  if (area) revalidatePath(`/es/servicios/${area.slug}`);
+  const areaPrevia = String(actual.area_slug ?? '');
+  if (areaPrevia && areaPrevia !== area?.slug) revalidatePath(`/es/servicios/${areaPrevia}`);
   redirect(`${ruta}?ok=${encodeURIComponent('Guardado.')}`);
 }
 
