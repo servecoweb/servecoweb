@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import BotonEnviar from '@/components/admin/BotonEnviar';
 import { descartarBorrador, guardarArticulo, nuevaPortada, subirPortada } from '../acciones';
-import EditorCuerpo from './editor';
+import EditorCuerpo, { FichasArticulo, type FichaArticulo } from './editor';
 
 /** /administrator/blog/[id]: revisar, editar, regenerar portada, firmar revisión y publicar. */
 export const dynamic = 'force-dynamic';
@@ -14,6 +14,14 @@ type SP = Promise<{ error?: string; ok?: string }>;
 
 const campo = 'w-full rounded-lg border border-linea px-3 py-2.5 text-base outline-none focus:border-marca';
 const etiqueta = 'mb-1 block text-sm font-semibold';
+
+function fichaInicial(error?: string, ok?: string): FichaArticulo {
+  const t = `${error ?? ''} ${ok ?? ''}`.toLowerCase();
+  if (t.includes('título') || t.includes('titulo')) return 'titulos';
+  if (t.includes('portada') || t.includes('imagen')) return 'portada';
+  if (t.includes('abogado') || t.includes('fecha') || t.includes('publicar') || t.includes('programar')) return 'publicacion';
+  return 'contenido';
+}
 
 function aLocal(iso: string | null): string {
   if (!iso) return '';
@@ -57,106 +65,118 @@ export default async function EditarArticulo({ params, searchParams }: { params:
       {sp.ok && <p className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">{sp.ok}</p>}
 
       <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-        {/* ── Columna izquierda: portada + texto ── */}
+        {/* ── Columna izquierda: pestañas al modo Joomla ── */}
         <div className="space-y-6">
-          <div className="rounded-xl border border-linea bg-papel p-5">
-            <h2 className="mb-1 font-bold">Portada</h2>
-            <p className="mb-3 text-sm text-tinta-2">Genérela con la IA o sustituya la que hay por una imagen propia.</p>
-            {a.cover_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={String(a.cover_url)} alt={String(a.cover_alt ?? '')} className="mb-4 max-h-96 w-full rounded-lg object-contain bg-niebla" />
-            ) : (
-              <p className="mb-4 rounded-lg bg-niebla p-6 text-center text-sm text-tinta-2">Sin portada</p>
-            )}
-            <form action={nuevaPortada} className="space-y-2">
-              <p className="text-sm font-semibold">Generar con IA</p>
-              <div className="flex flex-col gap-2 sm:flex-row">
+          <FichasArticulo
+            inicial={fichaInicial(sp.error, sp.ok)}
+            action={guardarArticulo}
+            portada={
+              <>
+                <p className="mb-3 text-sm text-tinta-2">Genérela con la IA o sustituya la que hay por una imagen propia.</p>
+                {a.cover_url ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={String(a.cover_url)} alt={String(a.cover_alt ?? '')} className="mb-4 max-h-96 w-full rounded-lg object-contain bg-niebla" />
+                ) : (
+                  <p className="mb-4 rounded-lg bg-niebla p-6 text-center text-sm text-tinta-2">Sin portada</p>
+                )}
+                <form action={nuevaPortada} className="space-y-2">
+                  <p className="text-sm font-semibold">Generar con IA</p>
+                  <div className="flex flex-col gap-2 sm:flex-row">
+                    <input type="hidden" name="id" value={a.id} />
+                    <input name="brief" placeholder="Opcional: describa la escena que quiere" className={campo} />
+                    <BotonEnviar
+                      texto="Generar portada"
+                      trabajando="Generando…"
+                      className="whitespace-nowrap rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+                    />
+                  </div>
+                </form>
+                <form action={subirPortada} className="mt-4 space-y-2 border-t border-linea pt-4">
+                  <label className="block text-sm font-semibold" htmlFor="portada">Subir una imagen propia</label>
+                  <input type="hidden" name="id" value={a.id} />
+                  <input id="portada" name="imagen" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" required className={campo} />
+                  <p className="text-xs text-tinta-2">JPG, PNG o WebP, hasta 4 MB. Sustituye la portada actual.</p>
+                  <BotonEnviar
+                    texto="Usar esta imagen"
+                    trabajando="Subiendo…"
+                    className="rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
+                  />
+                </form>
+              </>
+            }
+            altPortada={
+              <div>
+                <label className={etiqueta} htmlFor="cover_alt">Texto alternativo de la portada</label>
+                <input id="cover_alt" name="cover_alt" defaultValue={a.cover_alt ?? ''} className={campo} />
+                <p className="mt-1 text-xs text-tinta-2">Se guarda con «Guardar artículo», no al subir la imagen.</p>
+              </div>
+            }
+            contenido={
+              <div>
                 <input type="hidden" name="id" value={a.id} />
-                <input name="brief" placeholder="Opcional: describa la escena que quiere" className={campo} />
-                <BotonEnviar
-                  texto="Generar portada"
-                  trabajando="Generando…"
-                  className="whitespace-nowrap rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
-                />
+                <label className={etiqueta} htmlFor="cuerpo">Cuerpo</label>
+                <EditorCuerpo html={String(a.body ?? '')} markdown={String(a.body_md ?? '')} />
+                <p className="mt-1 text-xs text-tinta-2">El mismo HTML que en la web. Al guardar se vuelven a pasar los controles automáticos (enlaces, longitud, riesgos).</p>
               </div>
-            </form>
-            <form action={subirPortada} className="mt-4 space-y-2 border-t border-linea pt-4">
-              <label className="block text-sm font-semibold" htmlFor="portada">Subir una imagen propia</label>
-              <input type="hidden" name="id" value={a.id} />
-              <input id="portada" name="imagen" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" required className={campo} />
-              <p className="text-xs text-tinta-2">JPG, PNG o WebP, hasta 4 MB. Sustituye la portada actual. El texto alternativo se edita más abajo.</p>
-              <BotonEnviar
-                texto="Usar esta imagen"
-                trabajando="Subiendo…"
-                className="rounded-lg border border-linea bg-papel px-4 py-2.5 text-sm font-semibold disabled:opacity-60"
-              />
-            </form>
-          </div>
-
-          <form id="editar" action={guardarArticulo} className="space-y-4 rounded-xl border border-linea bg-papel p-5">
-            <input type="hidden" name="id" value={a.id} />
-            <div>
-              <label className={etiqueta} htmlFor="title">Título (H1)</label>
-              <input id="title" name="title" defaultValue={a.title} required className={campo} />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label className={etiqueta} htmlFor="seo_title">Título para Google (≤ 60)</label>
-                <input id="seo_title" name="seo_title" defaultValue={a.seo_title ?? ''} maxLength={70} className={campo} />
-              </div>
-              <div>
-                <label className={etiqueta} htmlFor="slug">URL (/es/blog/…)</label>
-                <input id="slug" name="slug" defaultValue={a.slug} className={campo} />
-              </div>
-            </div>
-            <div>
-              <label className={etiqueta} htmlFor="excerpt">Extracto (≤ 200)</label>
-              <textarea id="excerpt" name="excerpt" defaultValue={a.excerpt ?? ''} maxLength={220} rows={2} className={campo} />
-            </div>
-            <div>
-              <label className={etiqueta} htmlFor="meta_description">Meta description (140-160)</label>
-              <textarea id="meta_description" name="meta_description" defaultValue={a.meta_description ?? ''} maxLength={170} rows={2} className={campo} />
-            </div>
-            <div>
-              <label className={etiqueta} htmlFor="cover_alt">Texto alternativo de la portada</label>
-              <input id="cover_alt" name="cover_alt" defaultValue={a.cover_alt ?? ''} className={campo} />
-            </div>
-            <div>
-              <label className={etiqueta} htmlFor="cuerpo">Cuerpo</label>
-              <EditorCuerpo html={String(a.body ?? '')} markdown={String(a.body_md ?? '')} />
-              <p className="mt-1 text-xs text-tinta-2">El mismo HTML que en la web. Al guardar se vuelven a pasar los controles automáticos (enlaces, longitud, riesgos).</p>
-            </div>
-
-            <div className="space-y-4 rounded-lg border-2 border-marca bg-marca-suave p-4">
-              <h2 className="font-bold">Revisión jurídica y publicación</h2>
-              <div>
-                <label className={etiqueta} htmlFor="revisado_por">Revisado por (abogado de Serveco)</label>
-                <input
-                  id="revisado_por"
-                  name="revisado_por"
-                  defaultValue={a.revisado_por ?? ''}
-                  placeholder="Nombre y apellidos"
-                  className={campo}
-                />
-                <p className="mt-1 text-xs text-tinta-2">Obligatorio para publicar o programar. Al firmar, confirma que ha comprobado los puntos de la derecha.</p>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+            }
+            titulos={
+              <div className="space-y-4">
                 <div>
-                  <label className={etiqueta} htmlFor="status">Estado</label>
-                  <select id="status" name="status" defaultValue={a.status} className={campo}>
-                    <option value="draft">Borrador (no visible)</option>
-                    <option value="scheduled">Programado</option>
-                    <option value="published">Publicado</option>
-                  </select>
+                  <label className={etiqueta} htmlFor="title">Título (H1)</label>
+                  <input id="title" name="title" defaultValue={a.title} className={campo} />
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className={etiqueta} htmlFor="seo_title">Título para Google (≤ 60)</label>
+                    <input id="seo_title" name="seo_title" defaultValue={a.seo_title ?? ''} maxLength={70} className={campo} />
+                  </div>
+                  <div>
+                    <label className={etiqueta} htmlFor="slug">URL (/es/blog/…)</label>
+                    <input id="slug" name="slug" defaultValue={a.slug} className={campo} />
+                  </div>
                 </div>
                 <div>
-                  <label className={etiqueta} htmlFor="published_at">Fecha (si es programado)</label>
-                  <input id="published_at" name="published_at" type="datetime-local" defaultValue={aLocal(a.published_at as string | null)} className={campo} />
+                  <label className={etiqueta} htmlFor="excerpt">Extracto (≤ 200)</label>
+                  <textarea id="excerpt" name="excerpt" defaultValue={a.excerpt ?? ''} maxLength={220} rows={2} className={campo} />
+                </div>
+                <div>
+                  <label className={etiqueta} htmlFor="meta_description">Meta description (140-160)</label>
+                  <textarea id="meta_description" name="meta_description" defaultValue={a.meta_description ?? ''} maxLength={170} rows={2} className={campo} />
                 </div>
               </div>
-              <BotonEnviar texto="Guardar" trabajando="Guardando…" />
-            </div>
-          </form>
+            }
+            publicacion={
+              <div className="space-y-4 rounded-lg border-2 border-marca bg-marca-suave p-4">
+                <h2 className="font-bold">Revisión jurídica y publicación</h2>
+                <div>
+                  <label className={etiqueta} htmlFor="revisado_por">Revisado por (abogado de Serveco)</label>
+                  <input
+                    id="revisado_por"
+                    name="revisado_por"
+                    defaultValue={a.revisado_por ?? ''}
+                    placeholder="Nombre y apellidos"
+                    className={campo}
+                  />
+                  <p className="mt-1 text-xs text-tinta-2">Obligatorio para publicar o programar. Al firmar, confirma que ha comprobado los puntos de la derecha.</p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className={etiqueta} htmlFor="status">Estado</label>
+                    <select id="status" name="status" defaultValue={a.status} className={campo}>
+                      <option value="draft">Borrador (no visible)</option>
+                      <option value="scheduled">Programado</option>
+                      <option value="published">Publicado</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className={etiqueta} htmlFor="published_at">Fecha (si es programado)</label>
+                    <input id="published_at" name="published_at" type="datetime-local" defaultValue={aLocal(a.published_at as string | null)} className={campo} />
+                  </div>
+                </div>
+              </div>
+            }
+            guardar={<BotonEnviar texto="Guardar artículo" trabajando="Guardando…" />}
+          />
 
           {a.status === 'draft' && (
             <form action={descartarBorrador}>

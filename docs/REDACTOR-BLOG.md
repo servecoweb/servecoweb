@@ -61,7 +61,7 @@ El tope de las acciones del servidor pasa de 1 MB a 4 MB (`next.config.mjs`), el
 - **`gpt-image-2.5-sunburst` confirmado** con la cuenta de Serveco: las 13 escenas de la web salieron en WebP (la reserva `gpt-image-2` da PNG). **Falta probar la subida al bucket `blog`** (primera portada).
 - Mientras los 3 de ejemplo estén en borrador, **el blog público y el bloque de blog de la home están vacíos**: publicar al menos uno (con «Revisado por») antes de enseñar la web.
 - Panel `/administrator/blog` sin probar (login, edición, publicar con firma).
-- Editor del panel (28 oct): carga el HTML de `body`, el mismo que la web, con apartados, listas, negrita y enlaces. Al guardar sigue saliendo Markdown en `body_md` (lo leen los controles) y el HTML se regenera. No es TinyMCE.
+- Editor del panel (28 oct): carga el HTML de `body`, el mismo que la web, con apartados, listas, negrita y enlaces. Al guardar sigue saliendo Markdown en `body_md` (lo leen los controles) y el HTML se regenera. No es TinyMCE. La ficha va en pestañas (Contenido, Portada, Títulos y metadatos, Publicación); «Guardar artículo» vale para todas.
 - Formación de 1 h (H4.3) cuando esté en producción.
 - **14 oct:** los artículos nuevos hablan de tú (criterio en `editorial.ts` y en `EDITORIAL-BLOG.md`). Los ya publicados en Supabase siguen en usted hasta que se reescriban. No lanzar `--reescribir` por este cambio si no lo pide Narciso.
 - Programados: aparecen en la web al llegar su fecha, pero el chatbot los aprende en la siguiente ingesta («Actualizar conocimiento» o al guardar otro artículo).

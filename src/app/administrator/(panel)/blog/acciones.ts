@@ -54,6 +54,9 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
   const { data: actual } = await c.from('blog_articles').select('fuentes, slug, published_at').eq('id', id).single();
   if (!actual) conError('/administrator/blog', 'Artículo no encontrado.');
 
+  const titulo = texto(formData, 'title');
+  if (titulo.length < 3) conError(ruta, 'Escriba el título del artículo.');
+
   const estado = texto(formData, 'status');
   const revisadoPor = texto(formData, 'revisado_por');
   if (estado !== 'draft' && !revisadoPor) {
@@ -74,7 +77,7 @@ export async function guardarArticulo(formData: FormData): Promise<void> {
   const { error } = await c
     .from('blog_articles')
     .update({
-      title: texto(formData, 'title'),
+      title: titulo,
       seo_title: texto(formData, 'seo_title') || null,
       slug,
       excerpt: texto(formData, 'excerpt'),
