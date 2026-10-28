@@ -39,10 +39,10 @@ export const ESCENAS: Escena[] = [
   {
     id: 'juridico',
     archivo: '/escenas/area-juridico.webp',
-    alt: 'Escalinata de un juzgado mediterráneo vista desde la calle',
-    altEn: 'Steps of a Mediterranean courthouse seen from the street',
+    alt: 'Contrato sobre un vade negro, con un bolígrafo y unas gafas',
+    altEn: 'A contract on a black blotter, with a pen and reading glasses',
     brief:
-      'Escalinata de piedra de un palacio de justicia en una ciudad mediterránea, vista desde la acera, mañana clara. Una carpeta de cartón apoyada en un escalón. Sin personas reconocibles, sin mazo, sin balanza.',
+      'Primer plano de un folio de contrato, sin texto legible, sobre un vade de piel negro. Un bolígrafo negro y unas gafas de lectura. Luz lateral. Sin personas, sin fachada, sin mazo ni balanza.',
   },
   {
     id: 'contable',

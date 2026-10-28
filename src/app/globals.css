@@ -248,6 +248,17 @@
   .escena { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radio); display: block; }
   .escena-figura { margin: 0 0 28px; }
   .escena-figura figcaption { margin-top: 8px; font-size: 13px; color: var(--gris-marca); }
+  .escena-marco { position: relative; container-type: inline-size; }
+  .escena-marco .escena { border-radius: var(--radio); }
+  /* Recuadro del cliente: naranja de marca, texto blanco en mayúsculas, abajo a la derecha. */
+  .texto .escena-gancho {
+    position: absolute; right: 4%; bottom: 7%; width: 62%; max-width: none; margin: 0;
+    padding: 0.7em 0.75em 0.62em; border-radius: 10px;
+    background: color-mix(in srgb, var(--naranja) 88%, transparent);
+    color: #fff; font-weight: 800; font-size: clamp(14px, 4.4cqi, 26px);
+    line-height: 1.15; letter-spacing: 0.01em; text-align: center; text-transform: uppercase;
+    text-wrap: balance; white-space: pre-line;
+  }
   .escenas-tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; }
   .escenas-tres .escena-figura { margin: 0; }
 

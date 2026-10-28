@@ -99,7 +99,16 @@ export default async function AreaPage({ params }: { params: Params }) {
       <section>
         <div className="wrap dos">
           <div className="texto">
-            {ESCENA_AREA[a.slug] && <EscenaFoto id={ESCENA_AREA[a.slug]} />}
+            {ESCENA_AREA[a.slug] && (
+              <EscenaFoto
+                id={ESCENA_AREA[a.slug]}
+                gancho={
+                  a.slug === 'juridico'
+                    ? 'El contrato.\n¿Lo revisas antes\nde firmarlo?'
+                    : undefined
+                }
+              />
+            )}
             {AVISO_INTERNO && seo && !seo.validado && (
               <p className="aviso">Texto pendiente de validar por el área {a.nombre.toLowerCase()} de Serveco.</p>
             )}
