@@ -18,6 +18,8 @@ export type ArticuloPublico = {
   html: string;
   portada: string | null;
   portadaAlt: string;
+  /** Recuadro naranja sobre la portada. Solo los artículos que lo traen. */
+  gancho: string | null;
   faqs: { q: string; a: string }[];
   fuentes: { titulo: string; url: string }[];
   actualizadoA: string | null;
@@ -43,6 +45,7 @@ function mapear(f: Fila): ArticuloPublico {
     html: String(f.body ?? ''),
     portada: (f.cover_url as string | null) ?? null,
     portadaAlt: String(f.cover_alt ?? ''),
+    gancho: null,
     faqs: (f.faqs as ArticuloPublico['faqs']) ?? [],
     fuentes: (f.fuentes as ArticuloPublico['fuentes']) ?? [],
     actualizadoA: (f.actualizado_a as string | null) ?? null,
@@ -64,6 +67,7 @@ function reserva(): ArticuloPublico[] {
     html: p.cuerpo.map((x) => `<p>${x}</p>`).join(''),
     portada: null,
     portadaAlt: '',
+    gancho: null,
     faqs: [],
     fuentes: [],
     actualizadoA: null,

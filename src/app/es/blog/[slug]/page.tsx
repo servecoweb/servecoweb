@@ -79,8 +79,11 @@ export default async function Articulo({ params }: { params: Params }) {
         <div className="wrap dos">
           <article>
             {p.portada && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={p.portada} alt={p.portadaAlt} className="mb-8 w-full rounded-marca" />
+              <div className="escena-marco mb-8">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.portada} alt={p.portadaAlt} className="w-full rounded-marca" />
+                {p.gancho && <p className="escena-gancho">{p.gancho}</p>}
+              </div>
             )}
             <div className="texto articulo" dangerouslySetInnerHTML={{ __html: p.html }} />
 
