@@ -235,9 +235,9 @@ export const LANDINGS_LABORAL: Landing[] = [
   {
     area: 'laboral',
     sede: 'benidorm',
-    title: 'Asesoría laboral en Benidorm para hostelería y comercio | Serveco',
+    title: 'Asesoría laboral en Benidorm: nóminas y seguros sociales',
     metaDescription:
-      'Asesoría laboral en Benidorm: nóminas, contratos de temporada, fijos discontinuos, trabajadores extranjeros e inspecciones para hoteles, restaurantes y comercios. También en inglés.',
+      'Gestión de nóminas y seguros sociales en Benidorm: contratos de temporada, fijos discontinuos, trabajadores extranjeros e inspecciones. También en inglés.',
     h1: 'Asesoría laboral en Benidorm',
     lead: 'Nóminas, contratos de temporada y trabajadores de muchos países para hoteles, restaurantes y comercios de Benidorm y la Marina Baixa. También en inglés.',
     busquedaPrincipal: 'asesoría laboral en Benidorm',

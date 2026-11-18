@@ -67,9 +67,9 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
 
   // ───────────────────────────────────────────────────────────── YECLA
   yecla: {
-    title: 'Asesoría y gestoría en Yecla | Serveco Asesores',
+    title: 'Asesoría y gestoría en Yecla | Autónomos y empresas | Serveco',
     metaDescription:
-      'Dos despachos de Serveco en Yecla (calle Pío Baroja y calle Esteban Díaz): asesoría fiscal, laboral y contable para empresas del Altiplano, industria y empresa familiar.',
+      'Asesoría y gestoría en Yecla (Pío Baroja y Esteban Díaz): impuestos de autónomos, nóminas, contabilidad e industria. Despachos de Serveco desde 1977.',
     h1: 'Asesoría de empresas en Yecla',
     lead:
       'Dos despachos en Yecla, en la calle Pío Baroja y en la calle Esteban Díaz, al servicio de las empresas y autónomos del Altiplano.',
@@ -119,9 +119,9 @@ export const SEDES_SEO: Record<string, SedeSeo> = {
 
   // ───────────────────────────────────────────────────────────── JUMILLA
   jumilla: {
-    title: 'Asesoría y gestoría en Jumilla | Serveco Asesores',
+    title: 'Asesoría y gestoría en Jumilla | Autónomos y bodegas',
     metaDescription:
-      'Despacho de Serveco en Jumilla, calle Valencia: asesoría fiscal, laboral y contable para bodegas, agricultores, empresas y autónomos de la comarca.',
+      'Asesoría y gestoría en Jumilla (calle Valencia): contabilidad de autónomos, nóminas, impuestos para empresas, agricultores y bodegas.',
     h1: 'Asesoría de empresas en Jumilla',
     lead: 'Nuestro despacho de la calle Valencia atiende a bodegas, explotaciones agrícolas, comercios, empresas y autónomos de Jumilla y su comarca.',
     busquedaPrincipal: 'asesoría en Jumilla',

@@ -16,11 +16,11 @@ import { articulosPublicados, fechaLarga } from '@/lib/blog/publico';
 import { EMPRESA, telHref } from '@/data/site';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
-// Metadatos: marca + búsqueda regional (la ficha de Murcia persigue «asesoría en Murcia»; las áreas, «… en Murcia»).
+// Metadatos: marca delante para que «serveco» / «serveco asesores» consolide en la home (sin pisar la ficha de Murcia).
 export const metadata: Metadata = {
-  title: { absolute: 'Asesoría de empresas en la Región de Murcia | Serveco' },
+  title: { absolute: 'Serveco Asesores | Consultoría y asesoría de empresas' },
   description:
-    'Asesoría integral de empresas desde 1977: fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación. Nueve despachos en Murcia, Yecla, Jumilla, Lorca, Balsicas, Benidorm y Madrid.',
+    'Serveco Asesores: consultoría y asesoría integral para empresas desde 1977. Fiscal, laboral, jurídico, contable y financiero en Murcia, Alicante y Madrid.',
   alternates: { canonical: '/es', languages: idiomas('/es', '/en') },
 };
 
@@ -71,8 +71,8 @@ export default async function HomeEs() {
             <div>
               <h2>Ocho áreas que trabajan juntas</h2>
               <p>
-                Economistas, abogados, ingenieros y técnicos superiores comparten el expediente de tu empresa. No hace
-                falta repetir la historia en cada departamento.
+                En Serveco, economistas, abogados, ingenieros y técnicos superiores comparten el expediente de tu
+                empresa. No hace falta repetir la historia en cada departamento.
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default async function HomeEs() {
           <div className="cabecera">
             <div>
               <h2>{despachosEnLetra()}, un mismo equipo</h2>
-              <p>Acude al despacho que te quede más cerca. Tu expediente es el mismo en todos.</p>
+              <p>Acude al despacho de Serveco que te quede más cerca. Tu expediente es el mismo en todos.</p>
             </div>
           </div>
           <OfficesList sedes={SEDES} />

@@ -9,7 +9,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'Contacto',
-  description: 'Escribe a Serveco Asesores: te responde el área que corresponde desde el despacho que elijas.',
+  description: 'Pide cita o escríbenos: te responde el área que corresponde desde el despacho que elijas.',
   alternates: { canonical: ES.contacto, languages: idiomas(ES.contacto, EN.contact) },
 };
 

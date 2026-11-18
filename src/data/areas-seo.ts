@@ -292,9 +292,9 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
 
   // ───────────────────────────────────────────────────────────── FINANCIERO
   financiero: {
-    title: 'Asesoramiento financiero para empresas | Serveco Murcia',
+    title: 'Asesor financiero para empresas en Murcia | Serveco',
     metaDescription:
-      'Asesoramiento financiero para pymes en Murcia: financiación, planes de viabilidad, presupuestos y cuadros de mando con los sistemas A.D. de Serveco.',
+      'Asesor financiero para empresas y pymes en Murcia: financiación bancaria, planes de viabilidad, presupuestos y sistemas A.D. de Serveco.',
     h1: 'Asesoramiento financiero para empresas en Murcia',
     lead:
       'Analizamos la salud financiera de tu empresa con nuestros propios sistemas A.D. y te ayudamos a conseguir financiación, preparar presupuestos y decidir inversiones con números reales.',

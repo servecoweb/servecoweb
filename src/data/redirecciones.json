@@ -20,11 +20,6 @@
     "permanent": true
   },
   {
-    "source": "/about-video-ad-formats-youtube-help",
-    "destination": "/es/la-firma",
-    "permanent": true
-  },
-  {
     "source": "/accion-de-reembolso-entre-progenitores-por-los-gastos-del-hijo-comun-asumidos-en-exclusiva-por-uno-de-ellos",
     "destination": "/es/servicios/fiscal",
     "permanent": true
@@ -100,18 +95,8 @@
     "permanent": true
   },
   {
-    "source": "/avis-en-compagnie-de-crowngreen-salle-de-jeu-machines-a",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
     "source": "/aviso-legal",
     "destination": "/es/aviso-legal",
-    "permanent": true
-  },
-  {
-    "source": "/avtorizatsiya-i-vosstanovlenie-dostupa-k-lichnomu-kabinetu",
-    "destination": "/es/internacional/nie",
     "permanent": true
   },
   {
@@ -185,28 +170,13 @@
     "permanent": true
   },
   {
-    "source": "/besplatno-mozhno-skachat-prilozhenie-bukmekerskoy-kontory",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
-    "source": "/besplatno-mozhno-zagruzit-ofitsialnoe-prilozhenie",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
-    "source": "/besplatno-zagruzit-ofitsialnoe-prilozhenie-bukmekerskoy",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
-    "source": "/besplatno-zagruzit-ofitsialnoe-prilozhenie-bukmekerskoy-2",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
     "source": "/blog",
     "destination": "/es/blog",
+    "permanent": true
+  },
+  {
+    "source": "/blog/rectificacion-de-facturas-de-iva",
+    "destination": "/es/servicios/fiscal",
     "permanent": true
   },
   {
@@ -387,11 +357,6 @@
   {
     "source": "/consulta-el-estado-de-la-devolucion-de-la-renta",
     "destination": "/es/servicios/fiscal",
-    "permanent": true
-  },
-  {
-    "source": "/consumers-deal-with-hard-time-advising-legal-grass-away-from",
-    "destination": "/es/servicios/juridico",
     "permanent": true
   },
   {
@@ -800,16 +765,6 @@
     "permanent": true
   },
   {
-    "source": "/igry-i-prilozheniya-dlya-android-mobilnoe-prilozhenie-ot",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
-    "source": "/il-meglio-dei-casa-rolino-da-gioco-legali-aams-in-italia",
-    "destination": "/es/servicios/juridico",
-    "permanent": true
-  },
-  {
     "source": "/ilp-la-recogida-de-firmas-con-validez-juridica",
     "destination": "/es/servicios/juridico",
     "permanent": true
@@ -1130,11 +1085,6 @@
     "permanent": true
   },
   {
-    "source": "/legale-anbieter-im-vergleich",
-    "destination": "/es/servicios/juridico",
-    "permanent": true
-  },
-  {
     "source": "/legalizacion-de-libros-de-los-empresarios",
     "destination": "/es/servicios/juridico",
     "permanent": true
@@ -1142,11 +1092,6 @@
   {
     "source": "/legalizacion-libros-de-los-empresarios",
     "destination": "/es/servicios/juridico",
-    "permanent": true
-  },
-  {
-    "source": "/les-plateformes-les-plus-fiables-et-rentables-pour-2026-ont",
-    "destination": "/es/servicios/fiscal",
     "permanent": true
   },
   {
@@ -1242,11 +1187,6 @@
   {
     "source": "/murcia-busca-a-los-emprendedores-del-mes",
     "destination": "/es/punto-pae",
-    "permanent": true
-  },
-  {
-    "source": "/na-ofitsialnom-resurse-melbetru-predstavlena-legalnaya",
-    "destination": "/es/servicios/juridico",
     "permanent": true
   },
   {
@@ -1705,28 +1645,8 @@
     "permanent": true
   },
   {
-    "source": "/site-de-jeux-en-ligne-legal-et-reconnu",
-    "destination": "/es/servicios/juridico",
-    "permanent": true
-  },
-  {
-    "source": "/skachat-prilozhenie-parimatch-na-android-i-ayfon-besplatno",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
     "source": "/sobre-la-ley-de-emprendedores-y-otras-novedades-legislativas-importantes",
     "destination": "/es/punto-pae",
-    "permanent": true
-  },
-  {
-    "source": "/sposoby-avtorizatsii-i-vosstanovlenie-dostupa-v-lichnyy",
-    "destination": "/es/internacional/nie",
-    "permanent": true
-  },
-  {
-    "source": "/sravnenie-veb-raznovidnost-ili-skachat-mobilnoe-addenda",
-    "destination": "/es/internacional/nie",
     "permanent": true
   },
   {
@@ -7520,11 +7440,6 @@
     "permanent": true
   },
   {
-    "source": "/top-10-legalnykh-bukmekerskikh-kontor-rossii-2026-goda-s",
-    "destination": "/es/servicios/juridico",
-    "permanent": true
-  },
-  {
     "source": "/tramites-para-constituir-una-empresa",
     "destination": "/es/la-firma",
     "permanent": true
@@ -7592,11 +7507,6 @@
   {
     "source": "/tributos-y-separacion-de-poderes",
     "destination": "/es/servicios/fiscal",
-    "permanent": true
-  },
-  {
-    "source": "/v-2026-godu-v-rossii-predstavleny-10-luchshikh-legalnykh",
-    "destination": "/es/servicios/juridico",
     "permanent": true
   },
   {

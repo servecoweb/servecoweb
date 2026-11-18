@@ -10,7 +10,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: 'La firma desde 1977',
   description:
-    'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 70 profesionales y despachos en Murcia, Alicante y Madrid.',
+    'Firma de asesoramiento empresarial desde 1977, con más de 70 profesionales y nueve despachos en Murcia, Alicante y Madrid.',
   alternates: { canonical: ES.firma, languages: idiomas(ES.firma, EN.about) },
 };
 
@@ -20,8 +20,8 @@ export default async function LaFirma() {
     <>
       <PageHead
         migas={[{ label: 'Inicio', href: ES.home }, { label: 'La firma' }]}
-        titulo="Una firma regional de asesoramiento empresarial desde 1977"
-        lead="Serveco acompaña a empresas, autónomos y empresas familiares en la Región de Murcia, en Benidorm y en Madrid. La fiscalidad, las nóminas, la contabilidad y los contratos los lleva el mismo equipo."
+        titulo="Una firma de asesoramiento empresarial desde 1977"
+        lead="Asesoramos a empresas, autónomos y empresas familiares en la Región de Murcia, en Benidorm y en Madrid. La fiscalidad, las nóminas, la contabilidad y los contratos los lleva el mismo equipo."
         cifras={[
           { valor: String(EMPRESA.fundacion), etiqueta: 'Año de fundación' },
           { valor: EMPRESA.profesionales, etiqueta: 'Profesionales' },
@@ -119,7 +119,7 @@ export default async function LaFirma() {
           <div className="cabecera">
             <div>
               <h2>Herramientas propias de la firma</h2>
-              <p>Serveco desarrolló tres sistemas para decidir con números, no solo con el cierre anual.</p>
+              <p>Tres sistemas desarrollados internamente para decidir con números, no solo con el cierre anual.</p>
             </div>
           </div>
           <div className="ad-lista">
@@ -148,16 +148,16 @@ export default async function LaFirma() {
       <section>
         <div className="wrap dos">
           <div className="texto">
-            <h2>A quién acompaña Serveco</h2>
+            <h2>A quién acompañamos</h2>
             <p>
               Pymes, empresas familiares y autónomos de la Región de Murcia, y quienes compran, heredan o residen en la
               costa de Alicante. Quien va a constituir una sociedad puede empezar por el{' '}
-              <Link className="enlace" href={ES.pae}>Punto PAE</Link>, del que Serveco es punto oficial.
+              <Link className="enlace" href={ES.pae}>Punto PAE</Link>, del que somos punto oficial.
             </p>
             <p>
               Las ocho áreas —fiscal, laboral, jurídica, contable, financiera, auditoría, I+D+i y formación— están en{' '}
               <Link className="enlace" href={ES.servicios}>servicios</Link>. Los nombres y las fotos son los que
-              Serveco tiene hoy en su web; un cargo o una foto se corrigen en{' '}
+              la firma tiene hoy en su web; un cargo o una foto se corrigen en{' '}
               <Link className="enlace" href={ES.equipo}>equipo</Link>.
             </p>
             {AVISO_INTERNO && (
