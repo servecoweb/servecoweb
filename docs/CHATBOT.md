@@ -16,7 +16,7 @@
 | `src/lib/chatbot/markdown.ts` | Markdown seguro de las burbujas (escapa HTML). |
 | `src/lib/chatbot/ui.ts` | Lo único que va al navegador: nombre, subtítulo, saludo. **El prompt no se envía al navegador.** |
 | `src/app/api/chat/route.ts` | Endpoint SSE (`thread`, `delta`, `done`). |
-| `src/components/ChatWidget.tsx` | Widget (molde Andrea): arranca cerrado, temas sugeridos, «↺ Nueva», ajustes iPhone. |
+| `src/components/ChatWidget.tsx` | Widget (molde Andrea): arranca cerrado, temas sugeridos, «↺ Nueva», ajustes iPhone. **Oculto en la web pública** (`CHAT_PUBLICO = false`, 18 nov 2026: sin crédito de OpenAI). El panel y `/api/chat` se quedan. |
 | `src/app/administrator/(panel)/chatbot/` | Panel: respuestas, conversaciones, hilo, «Revisar pendientes», «Actualizar conocimiento». |
 | `scripts/ingest-chatbot-kb.ts` | `npm run chat:ingest` |
 | `scripts/probar-chatbot.ts` | `npm run chat:probar`: **24 preguntas** difíciles (14 ES, 9 EN, 1 alemán) calificadas por el revisor. No guarda en BD. |

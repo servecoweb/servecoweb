@@ -12,7 +12,11 @@ import { EMPRESA, telHref } from '@/data/site';
  *  · Hilo en sessionStorage + BD.
  *  · iPhone: input text-base (sin zoom), sin autofocus en móvil, no baja al fondo solo con el saludo.
  *  · Móvil: pulsar un enlace interno minimiza el panel.
+ *
+ * 18 nov 2026: oculto en la web pública mientras no hay crédito de OpenAI.
+ * El panel `/administrator/chatbot` y `/api/chat` se quedan. Para volver a mostrarlo: `CHAT_PUBLICO = true`.
  */
+const CHAT_PUBLICO = false;
 type Turno = { role: 'user' | 'assistant'; content: string };
 type Tema = { id: string; label: string; opciones: { label: string; prompt: string }[] };
 
@@ -83,6 +87,11 @@ const T = {
 };
 
 export default function ChatWidget({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  if (!CHAT_PUBLICO) return null;
+  return <ChatWidgetActivo lang={lang} />;
+}
+
+function ChatWidgetActivo({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const t = T[lang];
   const temas = TEMAS[lang];
   const K = `serveco_chat_${lang}`;
