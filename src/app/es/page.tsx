@@ -10,7 +10,7 @@ import EscenaFoto from '@/components/EscenaFoto';
 import { AREAS } from '@/data/areas';
 import { escena } from '@/data/escenas';
 import { SECTORES_HOME } from '@/data/sectores';
-import { SEDES, ciudadesEnLetra } from '@/data/offices';
+import { SEDES, contarDespachos, despachosEnLetra } from '@/data/offices';
 import { leerEquipo, partesCargo } from '@/lib/equipo';
 import { articulosPublicados, fechaLarga } from '@/lib/blog/publico';
 import { EMPRESA, telHref } from '@/data/site';
@@ -20,7 +20,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: { absolute: 'Asesoría de empresas en la Región de Murcia | Serveco' },
   description:
-    'Asesoría integral de empresas desde 1977: fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación. Seis despachos en Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm.',
+    'Asesoría integral de empresas desde 1977: fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación. Nueve despachos en Murcia, Yecla, Jumilla, Lorca, Balsicas, Benidorm y Madrid.',
   alternates: { canonical: '/es', languages: idiomas('/es', '/en') },
 };
 
@@ -57,7 +57,7 @@ export default async function HomeEs() {
             <div className="datos">
               <div><b>{EMPRESA.fundacion}</b>Año de fundación</div>
               <div><b>{EMPRESA.profesionales}</b>Profesionales</div>
-              <div><b>{SEDES.length}</b>Ciudades con despacho</div>
+              <div><b>{contarDespachos()}</b>Despachos</div>
             </div>
           </div>
           <HeroRouter />
@@ -181,7 +181,7 @@ export default async function HomeEs() {
         <div className="wrap">
           <div className="cabecera">
             <div>
-              <h2>{ciudadesEnLetra()}, un mismo equipo</h2>
+              <h2>{despachosEnLetra()}, un mismo equipo</h2>
               <p>Acude al despacho que te quede más cerca. Tu expediente es el mismo en todos.</p>
             </div>
           </div>

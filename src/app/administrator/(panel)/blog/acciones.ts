@@ -26,6 +26,30 @@ function conError(ruta: string, msg: string): never {
   redirect(`${ruta}?error=${encodeURIComponent(msg)}`);
 }
 
+/** Borrador vacío: lo escribe una persona del despacho, sin pasar por la IA. */
+export async function crearArticuloManual(): Promise<void> {
+  await exigirAdmin();
+  const sello = new Date().toISOString().replace(/\D/g, '').slice(0, 14);
+  const { data, error } = await db()
+    .from('blog_articles')
+    .insert({
+      slug: `borrador-${sello}`,
+      title: 'Artículo sin título',
+      excerpt: '',
+      body: '',
+      body_md: '',
+      category: '',
+      status: 'draft',
+      author: 'Serveco Asesores',
+      actualizado_a: new Date().toISOString().slice(0, 10),
+    })
+    .select('id')
+    .single();
+  if (error || !data) conError('/administrator/blog', `No se pudo crear el artículo: ${error?.message ?? 'sin identificador'}`);
+  revalidatePath('/administrator/blog');
+  redirect(`/administrator/blog/${data.id}?ok=${encodeURIComponent('Borrador en blanco. Escriba el título y el texto, y guarde.')}`);
+}
+
 export async function redactarConIA(formData: FormData): Promise<void> {
   await exigirAdmin();
   const tema = texto(formData, 'tema');

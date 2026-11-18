@@ -11,7 +11,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: { absolute: 'English-speaking business and tax advisers in Spain | Serveco' },
   description:
-    'Tax, accounting, payroll and legal advice in Spain, in English, since 1977. NIE, non-resident tax and property for expats. Six offices in Murcia and Alicante.',
+    'Tax, accounting, payroll and legal advice in Spain, in English, since 1977. NIE, non-resident tax and property for expats. Offices in Murcia, Alicante and Madrid.',
   alternates: { canonical: EN.home, languages: idiomas(ES.home, EN.home) },
 };
 
@@ -68,7 +68,7 @@ export default function HomeEn() {
           <div className="cabecera">
             <div>
               <h2>Our offices</h2>
-              <p>International clients are welcome at all six offices. Our Benidorm office specialises in non-residents and expats.</p>
+              <p>International clients are welcome at every office, including Madrid. Our Benidorm office specialises in non-residents and expats.</p>
             </div>
             <Link href={EN.offices} className="btn btn-linea">See all offices</Link>
           </div>

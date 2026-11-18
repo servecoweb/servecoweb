@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { supabaseAdmin } from '@/lib/supabase/servidor';
 import { AREAS } from '@/data/areas';
 import BotonEnviar from '@/components/admin/BotonEnviar';
-import { redactarConIA } from './acciones';
+import { crearArticuloManual, redactarConIA } from './acciones';
 
 /**
  * /administrator/blog (H4.3 + H7.1). Lista de artículos + «Redactar con IA».
@@ -43,8 +43,20 @@ export default async function BlogAdmin({ searchParams }: { searchParams: SP }) 
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Blog</h1>
-        <p className="text-sm text-tinta-2">Todo artículo nace como borrador. Para publicarlo, un abogado de Serveco debe revisarlo y firmar la revisión.</p>
+        <p className="text-sm text-tinta-2">
+          Puede redactarlo la IA o escribirlo alguien del despacho. En los dos casos nace como borrador: para publicarlo, un abogado de Serveco debe revisarlo y firmar la revisión.
+        </p>
       </div>
+
+      <form action={crearArticuloManual} className="flex flex-col gap-3 rounded-xl border border-linea bg-papel p-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="text-lg font-bold">Escribir el artículo</h2>
+          <p className="text-sm text-tinta-2">
+            Abre un borrador vacío, como en WordPress: negrita, cursiva, títulos H2 y H3, listas y enlaces. El título del artículo es el H1 de la página.
+          </p>
+        </div>
+        <BotonEnviar texto="Nuevo artículo" trabajando="Abriendo…" />
+      </form>
 
       {sp.error && <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">{sp.error}</p>}
       {sp.ok && <p className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">{sp.ok}</p>}

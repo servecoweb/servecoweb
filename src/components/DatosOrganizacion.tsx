@@ -1,5 +1,5 @@
 import { EMPRESA, REDES, SITE_URL } from '@/data/site';
-import { SEDES } from '@/data/offices';
+import { SEDES, regionDe } from '@/data/offices';
 import { ES, EN } from '@/lib/rutas';
 
 /**
@@ -11,7 +11,7 @@ import { ES, EN } from '@/lib/rutas';
  */
 export default function DatosOrganizacion() {
   const central = SEDES.find((s) => s.central) ?? SEDES[0];
-  const region = (zona: string) => (zona === 'Costa de Alicante' ? 'Alicante' : 'Región de Murcia');
+  const region = regionDe;
 
   const organizacion = {
     '@context': 'https://schema.org',
@@ -40,10 +40,11 @@ export default function DatosOrganizacion() {
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Región de Murcia' },
       { '@type': 'AdministrativeArea', name: 'Provincia de Alicante' },
+      { '@type': 'AdministrativeArea', name: 'Comunidad de Madrid' },
       { '@type': 'Country', name: 'España' },
     ],
     department: SEDES.flatMap((s) =>
-      s.locales.map((l) => ({
+      s.locales.filter((l) => l.direccion && l.tel).map((l) => ({
         '@type': 'AccountingService',
         name: `${EMPRESA.razonSocial} · ${s.ciudad}`,
         url: `${SITE_URL}${ES.sede(s.slug)}`,

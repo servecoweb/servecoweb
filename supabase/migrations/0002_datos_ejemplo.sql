@@ -17,7 +17,8 @@ insert into public.offices (slug, ciudad, zona, central, orden) values
   ('jumilla',  'Jumilla',  'Región de Murcia',  false, 2),
   ('lorca',    'Lorca',    'Región de Murcia',  false, 3),
   ('balsicas', 'Balsicas', 'Región de Murcia',  false, 4),
-  ('benidorm', 'Benidorm', 'Costa de Alicante', false, 5)
+  ('benidorm', 'Benidorm', 'Costa de Alicante', false, 5),
+  ('madrid',   'Madrid',   'Madrid',            false, 6)
 on conflict (slug) do update set
   ciudad = excluded.ciudad, zona = excluded.zona, central = excluded.central, orden = excluded.orden;
 

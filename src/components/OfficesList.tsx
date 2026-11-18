@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { comoLlegar, type Sede } from '@/data/offices';
+import { comoLlegar, contarDespachos, type Sede } from '@/data/offices';
 import { telHref } from '@/data/site';
 import { ES } from '@/lib/rutas';
 
 const ZONAS_EN: Record<string, string> = {
   'Región de Murcia': 'Region of Murcia',
   'Costa de Alicante': 'Alicante coast',
+  Madrid: 'Madrid',
 };
 
 const IconoPin = () => (
@@ -31,7 +32,7 @@ export default function OfficesList({ sedes, lang = 'es' }: { sedes: Sede[]; lan
   const [zona, setZona] = useState<string>('');
   const visibles = sedes.filter((s) => !zona || s.zona === zona);
   const nombreZona = (z: string) => (en ? ZONAS_EN[z] ?? z : z);
-  const nLocales = sedes.reduce((n, s) => n + s.locales.length, 0);
+  const nLocales = contarDespachos(sedes);
 
   return (
     <>
@@ -56,17 +57,23 @@ export default function OfficesList({ sedes, lang = 'es' }: { sedes: Sede[]; lan
               {s.central && <span className="central">{en ? 'Head office' : 'Sede central'}</span>}
             </div>
             <h3>{en ? s.ciudad : <Link href={ES.sede(s.slug)}>{s.ciudad}</Link>}</h3>
-            <ul className="despacho-locales">
-              {s.locales.map((l) => (
-                <li key={l.direccion}>
-                  <address><IconoPin />{l.direccion}</address>
-                  <a className="tel" href={telHref(l.tel)}><IconoTel />{en ? '+34 ' : ''}{l.tel}</a>
-                  <a className="llegar" href={comoLlegar(l.direccion, s.ciudad)} target="_blank" rel="noopener noreferrer">
-                    {en ? 'Directions' : 'Cómo llegar'} <span aria-hidden="true">↗</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {s.locales.length === 0 ? (
+              <p className="despacho-pendiente">
+                {en ? 'Address to be confirmed.' : 'Dirección pendiente de confirmar.'}
+              </p>
+            ) : (
+              <ul className="despacho-locales">
+                {s.locales.map((l) => (
+                  <li key={l.direccion}>
+                    <address><IconoPin />{l.direccion}</address>
+                    <a className="tel" href={telHref(l.tel)}><IconoTel />{en ? '+34 ' : ''}{l.tel}</a>
+                    <a className="llegar" href={comoLlegar(l.direccion, s.ciudad)} target="_blank" rel="noopener noreferrer">
+                      {en ? 'Directions' : 'Cómo llegar'} <span aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
             {!en && (
               <Link className="despacho-ver" href={ES.sede(s.slug)}>
                 Ver el despacho de {s.ciudad} <span aria-hidden="true">→</span>

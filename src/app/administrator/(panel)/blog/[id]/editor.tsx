@@ -60,10 +60,10 @@ export default function EditorCuerpo({ html, markdown }: { html: string; markdow
       <input ref={campo} type="hidden" id="body_md" name="body_md" defaultValue={markdownListo} />
       <div className="flex flex-wrap gap-1 border-b border-linea bg-niebla p-2">
         <button type="button" className={btn(!!editor?.isActive('heading', { level: 2 }))} onClick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}>
-          Apartado
+          H2
         </button>
         <button type="button" className={btn(!!editor?.isActive('heading', { level: 3 }))} onClick={() => editor?.chain().focus().toggleHeading({ level: 3 }).run()}>
-          Subapartado
+          H3
         </button>
         <button type="button" className={btn(!!editor?.isActive('bold'))} onClick={() => editor?.chain().focus().toggleBold().run()}>
           Negrita

@@ -14,8 +14,8 @@ export default function DespachosIntl({ lang }: { lang: 'es' | 'en' }) {
       <h3>{en ? 'Where we can see you' : 'Dónde te atendemos'}</h3>
       <p style={{ marginBottom: 12, color: 'var(--tinta-2)' }}>
         {en
-          ? 'At any of our six offices, or remotely if you live abroad.'
-          : 'En cualquiera de nuestros seis despachos, o a distancia si vive fuera.'}
+          ? 'At any of our offices, including Madrid, or remotely if you live abroad.'
+          : 'En cualquiera de nuestros despachos, también en Madrid, o a distancia si vive fuera.'}
       </p>
       <ul className="lista-simple">
         {SEDES.map((s) => (

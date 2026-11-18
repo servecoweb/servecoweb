@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
-import { SEDES } from '@/data/offices';
+import { contarDespachos } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA } from '@/data/site';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
   title: 'About us',
   description:
-    'Serveco: a regional business advisory firm since 1977, with 70+ professionals and offices in six cities across Murcia and Alicante.',
+    'Serveco: a business advisory firm since 1977, with 70+ professionals and offices in Murcia, Alicante and Madrid.',
   alternates: { canonical: EN.about, languages: idiomas(ES.firma, EN.about) },
 };
 
@@ -19,11 +19,11 @@ export default function About() {
       <PageHead
         migas={[{ label: 'Home', href: EN.home }, { label: 'About us' }]}
         titulo="A regional business advisory firm since 1977"
-        lead="Serveco advises companies, the self-employed and family businesses in the Region of Murcia and in Benidorm. Tax, payroll, accounts and contracts are handled by the same team."
+        lead="Serveco advises companies, the self-employed and family businesses in the Region of Murcia, in Benidorm and in Madrid. Tax, payroll, accounts and contracts are handled by the same team."
         cifras={[
           { valor: String(EMPRESA.fundacion), etiqueta: 'Founded' },
           { valor: EMPRESA.profesionales, etiqueta: 'Professionals' },
-          { valor: String(SEDES.length), etiqueta: 'Cities with an office' },
+          { valor: String(contarDespachos()), etiqueta: 'Offices' },
           { valor: 'EN', etiqueta: 'We work in English' },
         ]}
       />
@@ -62,7 +62,7 @@ export default function About() {
             </article>
             <article className="pilar">
               <h3>Close to the business</h3>
-              <p>Offices in Murcia, Yecla, Jumilla, Lorca, Balsicas and Benidorm. The standard of service is the same in all six.</p>
+              <p>Offices in Murcia, Yecla, Jumilla, Lorca, Balsicas, Benidorm and Madrid. The standard of service is the same in all of them.</p>
               <Link className="ir" href={EN.offices}>Offices <span aria-hidden="true">→</span></Link>
             </article>
             <article className="pilar">

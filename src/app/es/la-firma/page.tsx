@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import EscenaFoto from '@/components/EscenaFoto';
 import PageHead from '@/components/PageHead';
-import { SEDES } from '@/data/offices';
+import { SEDES, contarDespachos } from '@/data/offices';
 import { AVISO_INTERNO, EMPRESA, telHref } from '@/data/site';
 import { leerEquipo, partesCargo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
@@ -10,7 +10,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: 'La firma desde 1977',
   description:
-    'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 70 profesionales y despachos en seis ciudades de Murcia y Alicante.',
+    'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 70 profesionales y despachos en Murcia, Alicante y Madrid.',
   alternates: { canonical: ES.firma, languages: idiomas(ES.firma, EN.about) },
 };
 
@@ -21,11 +21,11 @@ export default async function LaFirma() {
       <PageHead
         migas={[{ label: 'Inicio', href: ES.home }, { label: 'La firma' }]}
         titulo="Una firma regional de asesoramiento empresarial desde 1977"
-        lead="Serveco acompaña a empresas, autónomos y empresas familiares en la Región de Murcia y en Benidorm. La fiscalidad, las nóminas, la contabilidad y los contratos los lleva el mismo equipo."
+        lead="Serveco acompaña a empresas, autónomos y empresas familiares en la Región de Murcia, en Benidorm y en Madrid. La fiscalidad, las nóminas, la contabilidad y los contratos los lleva el mismo equipo."
         cifras={[
           { valor: String(EMPRESA.fundacion), etiqueta: 'Año de fundación' },
           { valor: EMPRESA.profesionales, etiqueta: 'Profesionales' },
-          { valor: String(SEDES.length), etiqueta: 'Ciudades con despacho' },
+          { valor: String(contarDespachos()), etiqueta: 'Despachos' },
           { valor: 'PAE', etiqueta: 'Punto de atención al emprendedor' },
         ]}
       />
@@ -72,8 +72,8 @@ export default async function LaFirma() {
             <article className="pilar">
               <h3>Cerca de la empresa</h3>
               <p>
-                Hay despacho en Murcia, Yecla, Jumilla, Lorca, Balsicas y Benidorm. El estándar de servicio es el mismo
-                en los seis.
+                Hay despacho en Murcia, Yecla, Jumilla, Lorca, Balsicas, Benidorm y Madrid. El estándar de servicio es el mismo
+                en todos.
               </p>
               <Link className="ir" href={ES.despachos}>Ver despachos <span aria-hidden="true">→</span></Link>
             </article>
@@ -93,7 +93,7 @@ export default async function LaFirma() {
         <div className="wrap">
           <div className="cabecera">
             <div>
-              <h2>Seis despachos y el mismo expediente</h2>
+              <h2>Nueve despachos y el mismo expediente</h2>
               <p>
                 La red no es una lista de oficinas sueltas. Quien entra por Yecla o por Benidorm tiene detrás al equipo
                 de la firma. La sede central está en Murcia.

@@ -19,7 +19,7 @@ export function GET() {
 
   const texto = `# ${EMPRESA.razonSocial}
 
-> Asesoría integral de empresas fundada en ${EMPRESA.fundacion}, con seis despachos en la Región de Murcia y la Costa Blanca (${SEDES.map((s) => s.ciudad).join(', ')}). Fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación, coordinados sobre el mismo expediente. Servicios para extranjeros y no residentes en todos los despachos, en español y en inglés; el de Benidorm está especializado en clientes internacionales.
+> Asesoría integral de empresas fundada en ${EMPRESA.fundacion}, con despachos en ${SEDES.map((s) => s.ciudad).join(', ')}. Fiscal, laboral, jurídico, contable, financiero, auditoría, I+D+i y formación, coordinados sobre el mismo expediente. Servicios para extranjeros y no residentes en todos los despachos, en español y en inglés; el de Benidorm está especializado en clientes internacionales. Madrid está abierto; su dirección aún no se publica.
 
 Datos de contacto: teléfono ${EMPRESA.tel} · ${EMPRESA.email} · formulario en ${u(ES.contacto)} (inglés: ${u(EN.contact)}).
 Los contenidos de esta web son informativos y generales: no sustituyen el estudio de cada caso por un profesional.
@@ -43,7 +43,7 @@ ${INTL.map((p) => {
 
 ## Despachos / Offices
 
-${SEDES.map((s) => `- [${s.ciudad}](${u(ES.sede(s.slug))}): ${s.locales.map((l) => `${l.direccion}, tel. ${l.tel}`).join(' · ')}`).join('\n')}
+${SEDES.map((s) => `- [${s.ciudad}](${u(ES.sede(s.slug))}): ${s.locales.length ? s.locales.map((l) => `${l.direccion}, tel. ${l.tel}`).join(' · ') : 'dirección pendiente de confirmar'}`).join('\n')}
 - All offices in English: ${u(EN.offices)}
 
 ## Otras páginas

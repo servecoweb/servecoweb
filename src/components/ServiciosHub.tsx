@@ -94,14 +94,14 @@ export default function ServiciosHub({ lang }: { lang: 'es' | 'en' }) {
                 {en ? (
                   <>
                     <li><Link href={EN.international}>Non-residents and expats</Link></li>
-                    <li><Link href={EN.offices}>Our six offices</Link></li>
+                    <li><Link href={EN.offices}>Our offices</Link></li>
                   </>
                 ) : (
                   <>
                     <li><Link href={ES.subvenciones}>Subvenciones y ayudas</Link></li>
                     <li><Link href={ES.pae}>Punto PAE · crear una empresa</Link></li>
                     <li><Link href={ES.internacional}>Internacional y no residentes</Link></li>
-                    <li><Link href={ES.despachos}>Nuestros seis despachos</Link></li>
+                    <li><Link href={ES.despachos}>Nuestros despachos</Link></li>
                   </>
                 )}
               </ul>

@@ -14,6 +14,8 @@ export type Sede = {
   ciudad: string;
   zona: string;
   central?: boolean;
+  /** Despacho real cuya calle y teléfono aún no ha pasado el cliente. No se inventan. */
+  pendiente?: boolean;
   locales: Local[];
 };
 
@@ -61,8 +63,13 @@ export const SEDES: Sede[] = [
     zona: 'Costa de Alicante',
     locales: [{ direccion: 'Calle Jaén, 1 (esq. Avda. de Europa)', tel: '665 912 758' }],
   },
-  // Ejemplo futuro, solo con despacho real:
-  // { slug: 'madrid', ciudad: 'Madrid', zona: 'Madrid', locales: [{ direccion: '…', tel: '…' }] },
+  {
+    slug: 'madrid',
+    ciudad: 'Madrid',
+    zona: 'Madrid',
+    pendiente: true,
+    locales: [],
+  },
 ];
 
 /** Enlace a Google Maps en otra pestaña. Nunca incrustar el mapa: instalaría cookies sin consentimiento. */
@@ -73,11 +80,23 @@ export function getSede(slug: string): Sede | undefined {
   return SEDES.find((s) => s.slug === slug);
 }
 
+/** Un local es un despacho. Madrid, aún sin dirección, cuenta como uno. */
+export function contarDespachos(sedes: Sede[] = SEDES): number {
+  return sedes.reduce((n, s) => n + (s.locales.length || 1), 0);
+}
+
+export function regionDe(zona: string): string {
+  if (zona === 'Costa de Alicante') return 'Alicante';
+  if (zona === 'Madrid') return 'Madrid';
+  return 'Región de Murcia';
+}
+
 const NUMEROS = ['cero', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez'];
 
-/** "Seis ciudades" / "Siete ciudades"… para titulares que no se desactualizan. */
-export function ciudadesEnLetra(): string {
-  const n = SEDES.length;
+/** "Nueve despachos en España"… para titulares que no se desactualizan. */
+export function despachosEnLetra(sedes: Sede[] = SEDES): string {
+  const n = contarDespachos(sedes);
   const palabra = NUMEROS[n] ?? String(n);
-  return palabra.charAt(0).toUpperCase() + palabra.slice(1) + (n === 1 ? ' ciudad' : ' ciudades');
+  const titulo = palabra.charAt(0).toUpperCase() + palabra.slice(1);
+  return `${titulo} ${n === 1 ? 'despacho' : 'despachos'} en España`;
 }

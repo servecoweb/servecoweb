@@ -5,7 +5,7 @@ import PageHead from '@/components/PageHead';
 import ContactForm from '@/components/ContactForm';
 import { ContenidoSeo, EsquemasSeo } from '@/components/ContenidoSeo';
 import { AREAS } from '@/data/areas';
-import { SEDES, comoLlegar, getSede } from '@/data/offices';
+import { SEDES, comoLlegar, getSede, regionDe } from '@/data/offices';
 import { SEDES_SEO } from '@/data/sedes-seo';
 import { LANDINGS } from '@/data/landings';
 import { leerEquipo } from '@/lib/equipo';
@@ -32,8 +32,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!s) return {};
   const seo = SEDES_SEO[s.slug];
   return {
-    title: { absolute: seo?.title ?? `Asesoría en ${s.ciudad} | Serveco Asesores` },
-    description: seo?.metaDescription ?? `Despacho de Serveco Asesores en ${s.ciudad}: ${s.locales.map((l) => l.direccion).join(' y ')}.`,
+    title: { absolute: seo?.title ?? (s.pendiente ? `Despacho de Serveco en ${s.ciudad}` : `Asesoría en ${s.ciudad} | Serveco Asesores`) },
+    description: seo?.metaDescription ?? (s.locales.length
+      ? `Despacho de Serveco Asesores en ${s.ciudad}: ${s.locales.map((l) => l.direccion).join(' y ')}.`
+      : `Despacho de Serveco Asesores en ${s.ciudad}. La dirección se publicará cuando el despacho la confirme.`),
     alternates: { canonical: ES.sede(s.slug), languages: idiomas(ES.sede(s.slug)) },
   };
 }
@@ -47,10 +49,10 @@ export default async function FichaSede({ params }: { params: Params }) {
   const landings = LANDINGS.filter((l) => l.sede === s.slug);
   const personas = (await leerEquipo()).filter((p) => p.sedeSlug === s.slug);
   const url = `${SITE_URL}${ES.sede(s.slug)}`;
-  const region = s.zona === 'Costa de Alicante' ? 'Alicante' : 'Región de Murcia';
+  const region = regionDe(s.zona);
 
-  // Negocio local: una entidad por cada local (Murcia y Yecla tienen dos).
-  const locales = s.locales.map((l) => ({
+  // Negocio local: una entidad por cada local con dirección (Murcia y Yecla tienen dos). Madrid, aún sin calle, no entra.
+  const locales = s.locales.filter((l) => l.direccion && l.tel).map((l) => ({
     '@context': 'https://schema.org',
     '@type': 'AccountingService',
     name: s.locales.length > 1 ? `${EMPRESA.razonSocial} · ${s.ciudad} (${l.direccion})` : `${EMPRESA.razonSocial} · ${s.ciudad}`,
@@ -86,7 +88,9 @@ export default async function FichaSede({ params }: { params: Params }) {
       <PageHead
         migas={[{ label: 'Inicio', href: ES.home }, { label: 'La firma', href: ES.firma }, { label: 'Despachos', href: ES.despachos }, { label: s.ciudad }]}
         titulo={seo?.h1 ?? `Serveco en ${s.ciudad}`}
-        lead={seo?.lead ?? (s.central ? 'Sede central de la firma.' : `Despacho de Serveco Asesores en ${s.ciudad}.`)}
+        lead={seo?.lead ?? (s.pendiente
+          ? `Despacho de Serveco en ${s.ciudad}. La dirección se publicará en cuanto el despacho la confirme.`
+          : s.central ? 'Sede central de la firma.' : `Despacho de Serveco Asesores en ${s.ciudad}.`)}
       />
 
       <section>
@@ -114,6 +118,16 @@ export default async function FichaSede({ params }: { params: Params }) {
           </div>
 
           <aside>
+            {s.pendiente && (
+              <div className="caja">
+                <h3>Despacho de {s.ciudad}</h3>
+                <p style={{ marginBottom: 12 }}>
+                  El despacho está abierto. La calle y el teléfono propio se publicarán cuando Serveco los confirme.
+                  Mientras, pide cita en el {EMPRESA.tel}.
+                </p>
+                <a className="btn btn-linea" href={telHref(EMPRESA.tel)}>Llamar al {EMPRESA.tel}</a>
+              </div>
+            )}
             {s.locales.map((l) => (
               <div className="caja" key={l.direccion}>
                 <h3>{s.locales.length > 1 ? l.direccion : `Despacho de ${s.ciudad}`}</h3>

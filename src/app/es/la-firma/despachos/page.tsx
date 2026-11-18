@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import OfficesList from '@/components/OfficesList';
-import { SEDES, ciudadesEnLetra } from '@/data/offices';
+import { SEDES, despachosEnLetra } from '@/data/offices';
 import { EMPRESA, telHref } from '@/data/site';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
@@ -17,7 +17,7 @@ export default function Despachos() {
     <>
       <PageHead
         migas={[{ label: 'Inicio', href: ES.home }, { label: 'La firma', href: ES.firma }, { label: 'Despachos' }]}
-        titulo={`${ciudadesEnLetra()}, un mismo equipo`}
+        titulo={`${despachosEnLetra()}, un mismo equipo`}
         lead="Acude al despacho que te quede más cerca. Tu expediente es el mismo en todos."
       />
       <section>

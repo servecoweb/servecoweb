@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import OfficesList from '@/components/OfficesList';
-import { SEDES } from '@/data/offices';
+import { SEDES, contarDespachos } from '@/data/offices';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Our offices in Murcia and Alicante | Serveco' },
+  title: { absolute: 'Our offices in Spain | Serveco' },
   description:
-    'Six Serveco offices in the Region of Murcia and on the Costa Blanca. Services for non-residents and expats (NIE, non-resident tax, wills, property) at all of them.',
+    'Serveco offices in the Region of Murcia, on the Costa Blanca and in Madrid. Services for non-residents and expats (NIE, non-resident tax, wills, property) at all of them.',
   alternates: { canonical: EN.offices, languages: idiomas(ES.despachos, EN.offices) },
 };
 
@@ -17,8 +17,8 @@ export default function Offices() {
     <>
       <PageHead
         migas={[{ label: 'Home', href: EN.home }, { label: 'About us', href: EN.about }, { label: 'Offices' }]}
-        titulo={`${SEDES.length} cities, one team`}
-        lead="Visit the office nearest to you. Your file is the same in all of them, and all six can help international clients."
+        titulo={`${contarDespachos()} offices across Spain, one team`}
+        lead="Visit the office nearest to you. Your file is the same in all of them, and every office can help international clients."
       />
       <section>
         <div className="wrap">
