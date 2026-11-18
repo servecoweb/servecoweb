@@ -8,7 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
  * Acepta el nombre del taller (NEXT_PUBLIC_GA_MEASUREMENT_ID) o el que ya está en Vercel (NEXT_PUBLIC_GA_ID).
  */
 export function idMedicion() {
-  return process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || '';
+  return (process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || '').trim();
 }
 
 /** Primer HTML. Misma clave que consentimiento.ts. */

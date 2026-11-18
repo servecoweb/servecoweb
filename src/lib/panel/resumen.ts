@@ -136,6 +136,7 @@ export async function obtenerResumen() {
 
   // ── Estado del sistema (sin mostrar valores, solo si está configurado)
   const smtp = Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && process.env.CONTACT_TO);
+  const gaId = (process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || '').trim();
   const sistema = [
     { nombre: 'Base de datos (Supabase)', ok: true, detalle: 'Conectada' },
     { nombre: 'OpenAI (chat y redactor)', ok: Boolean(process.env.OPENAI_API_KEY), detalle: process.env.OPENAI_API_KEY ? 'Clave configurada' : 'Falta OPENAI_API_KEY' },
@@ -149,7 +150,7 @@ export async function obtenerResumen() {
       ok: smtp,
       detalle: smtp ? 'Configurado' : 'Sin configurar: las consultas se guardan, pero no llegan correos',
     },
-    { nombre: 'Google Analytics', ok: Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID), detalle: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID ? 'Activo (con consentimiento)' : 'Sin ID de medición' },
+    { nombre: 'Google Analytics', ok: Boolean(gaId), detalle: gaId ? 'Activo (con consentimiento)' : 'Sin ID de medición' },
     { nombre: 'Bandeja de spam', ok: !spamRes.error, detalle: spamRes.error ? 'Falta la migración 0007' : 'Activa (30 días)' },
     { nombre: 'Administradores', ok: emailsAdmin().length > 0, detalle: `${emailsAdmin().length} con acceso` },
   ];
