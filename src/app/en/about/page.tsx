@@ -9,7 +9,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: 'About us',
   description:
-    'Serveco: a regional business advisory firm since 1977, with 30+ professionals and offices in six cities across Murcia and Alicante.',
+    'Serveco: a regional business advisory firm since 1977, with 70+ professionals and offices in six cities across Murcia and Alicante.',
   alternates: { canonical: EN.about, languages: idiomas(ES.firma, EN.about) },
 };
 

@@ -11,7 +11,7 @@ export const EMPRESA = {
   razonSocial: 'Serveco Asesores S.L.P.',
   marca: 'SERVECO',
   fundacion: 1977,
-  profesionales: '30+',
+  profesionales: '70+',
   tel: '968 90 90 20',
   email: 'serveco@serveco.es',
   buscadorSubvenciones: 'https://serveco.fandit.es',

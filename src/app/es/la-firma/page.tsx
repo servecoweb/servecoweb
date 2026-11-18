@@ -10,7 +10,7 @@ import { ES, EN, idiomas } from '@/lib/rutas';
 export const metadata: Metadata = {
   title: 'La firma desde 1977',
   description:
-    'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 30 profesionales y despachos en seis ciudades de Murcia y Alicante.',
+    'Serveco Asesores: firma de asesoramiento empresarial desde 1977, con más de 70 profesionales y despachos en seis ciudades de Murcia y Alicante.',
   alternates: { canonical: ES.firma, languages: idiomas(ES.firma, EN.about) },
 };
 

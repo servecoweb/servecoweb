@@ -78,7 +78,7 @@ export const AREAS_SEO: Record<string, AreaSeo> = {
       {
         h2: 'Por qué elegir Serveco como asesor fiscal en Murcia',
         parrafos: [
-          'Llevamos desde 1977 asesorando a empresas de la Región de Murcia. Somos más de treinta profesionales, entre economistas, abogados, ingenieros y técnicos, y trabajamos coordinados sobre el mismo expediente: si una decisión fiscal afecta a sus nóminas o a sus contratos, lo vemos a la vez.',
+          'Llevamos desde 1977 asesorando a empresas de la Región de Murcia. Somos más de setenta profesionales, entre economistas, abogados, ingenieros y técnicos, y trabajamos coordinados sobre el mismo expediente: si una decisión fiscal afecta a sus nóminas o a sus contratos, lo vemos a la vez.',
           `Tenemos despachos en ${DESPACHOS}, así que puede tratar con nosotros en persona sin desplazarse a la capital. Y contamos con herramientas propias de análisis financiero (los sistemas A.D.) que nos permiten planificar con los números reales de tu empresa, mes a mes.`,
         ],
       },

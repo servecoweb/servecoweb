@@ -47,7 +47,7 @@ export const AREAS_SEO_EN: Record<string, PaginaSeo & { relacionadas: string[] }
       {
         h2: 'Why Serveco',
         parrafos: [
-          `Advising businesses in Spain since 1977, with more than thirty professionals and offices in ${OFFICES}. One point of contact, in English, backed by the whole firm.`,
+          `Advising businesses in Spain since 1977, with more than seventy professionals and offices in ${OFFICES}. One point of contact, in English, backed by the whole firm.`,
         ],
       },
     ],
