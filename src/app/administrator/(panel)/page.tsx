@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { obtenerResumen, type SerieDia } from '@/lib/panel/resumen';
 import { CONOCIO, ESTADOS, PRIORIDADES, areaEnEspanol, etiqueta } from '@/lib/crm';
-import { usuarioActual } from '@/lib/admin';
 
 /**
  * /administrator — PANEL DE INICIO. Lo primero al entrar: qué requiere atención hoy, cómo van
@@ -63,13 +62,20 @@ function Barras({ serie, titulo, total }: { serie: SerieDia[]; titulo: string; t
         <h3 className="font-bold">{titulo}</h3>
         <span className="text-sm text-tinta-2">{total} en 30 días</span>
       </div>
-      <div className="flex h-28 items-end gap-[3px]" role="img" aria-label={`${titulo}: ${total} en los últimos 30 días`}>
-        {serie.map((s) => (
-          <div key={s.dia} className="group relative flex-1" title={`${fecha(s.dia)}: ${s.valor}`}>
-            <div className={`w-full rounded-t ${s.valor ? 'bg-marca' : 'bg-niebla'}`} style={{ height: `${Math.max(4, (s.valor / max) * 100)}%` }} />
-          </div>
-        ))}
-      </div>
+      {total === 0 ? (
+        <p className="flex h-28 items-center text-sm text-tinta-2">Sin movimiento en estos 30 días.</p>
+      ) : (
+        <div className="flex h-28 items-end gap-[3px]" role="img" aria-label={`${titulo}: ${total} en los últimos 30 días`}>
+          {serie.map((s) => (
+            <div key={s.dia} className="flex h-full min-w-0 flex-1 items-end" title={`${fecha(s.dia)}: ${s.valor}`}>
+              <div
+                className={`w-full rounded-t ${s.valor ? 'bg-marca' : 'bg-niebla'}`}
+                style={{ height: `${Math.max(s.valor ? 12 : 4, (s.valor / max) * 100)}%` }}
+              />
+            </div>
+          ))}
+        </div>
+      )}
       <div className="mt-1 flex justify-between text-xs text-tinta-2">
         <span>{fecha(serie[0]?.dia ?? new Date().toISOString())}</span>
         <span>hoy</span>
@@ -84,11 +90,10 @@ function Etiqueta({ lista, valor }: { lista: readonly { valor: string; texto: st
 }
 
 export default async function PanelInicio() {
-  const [r, usuario] = await Promise.all([obtenerResumen(), usuarioActual()]);
+  const r = await obtenerResumen();
   if (!r) return <p>Falta configurar Supabase.</p>;
   const { contactos: c, chat, blog, sistema, spam7 } = r;
 
-  const nombre = (usuario?.email ?? '').split('@')[0];
   const hoy = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' });
   const pendientesTotal =
     (c?.altasSinAtender.length ?? 0) + (c?.nuevos ?? 0) + (c?.vencidos.length ?? 0) + (chat?.sinCalificar ?? 0) + (blog?.borradores.length ?? 0);
@@ -99,10 +104,7 @@ export default async function PanelInicio() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-sm capitalize text-tinta-2">{hoy}</p>
-          <h1 className="text-2xl font-bold">
-            {saludo()}
-            {nombre ? `, ${nombre}` : ''}
-          </h1>
+          <h1 className="text-2xl font-bold">{saludo()}</h1>
         </div>
         <div className="flex flex-wrap gap-2">
           <Link href="/administrator/contactos" className="rounded-lg bg-marca px-4 py-2 text-sm font-semibold text-tinta hover:bg-marca-hover">
