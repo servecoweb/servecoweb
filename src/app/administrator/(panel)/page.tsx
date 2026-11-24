@@ -94,16 +94,17 @@ export default async function PanelInicio() {
   if (!r) return <p>Falta configurar Supabase.</p>;
   const { contactos: c, chat, blog, sistema, spam7 } = r;
 
-  const hoy = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' });
+  const hoyTexto = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Madrid' });
+  const hoy = hoyTexto.charAt(0).toUpperCase() + hoyTexto.slice(1);
   const pendientesTotal =
-    (c?.altasSinAtender.length ?? 0) + (c?.nuevos ?? 0) + (c?.vencidos.length ?? 0) + (chat?.sinCalificar ?? 0) + (blog?.borradores.length ?? 0);
+    (c?.altasSinAtender.length ?? 0) + (c?.nuevos ?? 0) + (c?.vencidos.length ?? 0) + (chat?.sinCalificar ?? 0) + (blog?.borradores.length ?? 0) + (r.candidatosNuevos ?? 0);
 
   return (
     <div className="space-y-8">
       {/* Cabecera */}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-sm capitalize text-tinta-2">{hoy}</p>
+          <p className="text-sm text-tinta-2">{hoy}</p>
           <h1 className="text-2xl font-bold">{saludo()}</h1>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -155,7 +156,15 @@ export default async function PanelInicio() {
               href="/administrator/blog"
             />
           )}
-          {spam7 !== null && <Tarea n={spam7} texto="Mensajes filtrados como spam (7 días)" ayuda="Revise que no haya un cliente real" href="/administrator/contactos" tono="info" />}
+          {r.candidatosNuevos !== null && (
+            <Tarea
+              n={r.candidatosNuevos}
+              texto="Candidaturas sin mirar"
+              ayuda="Empleo y prácticas, aparte de las consultas de clientes"
+              href="/administrator/candidatos?estado=nuevo"
+            />
+          )}
+          {spam7 !== null && <Tarea n={spam7} texto="Mensajes filtrados como spam (7 días)" ayuda="Revise que no haya un cliente real" href="/administrator/contactos?ver=spam#spam" tono="info" />}
         </div>
       </section>
 

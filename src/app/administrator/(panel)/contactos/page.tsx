@@ -11,7 +11,7 @@ import { recuperarSpam } from './acciones';
  */
 export const dynamic = 'force-dynamic';
 
-type SP = Promise<{ estado?: string; prioridad?: string; area?: string; sede?: string; q?: string; ok?: string; error?: string }>;
+type SP = Promise<{ estado?: string; prioridad?: string; area?: string; sede?: string; q?: string; ok?: string; error?: string; ver?: string }>;
 
 type Fila = {
   id: string;
@@ -31,7 +31,8 @@ type Fila = {
 };
 
 const fechaCorta = (iso: string) => new Date(iso).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: '2-digit' });
-const hoy = () => new Date().toISOString().slice(0, 10);
+const hoy = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Madrid' });
+const plano = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 function Etiqueta({ lista, valor }: { lista: readonly { valor: string; texto: string; clase: string }[]; valor: string }) {
   const e = lista.find((x) => x.valor === valor);
@@ -39,7 +40,7 @@ function Etiqueta({ lista, valor }: { lista: readonly { valor: string; texto: st
 }
 
 export default async function ContactosAdmin({ searchParams }: { searchParams: SP }) {
-  const { ok: aviso, error: fallo, ...sp } = await searchParams;
+  const { ok: aviso, error: fallo, ver, ...sp } = await searchParams;
   const db = supabaseAdmin();
   if (!db) return <p>Falta configurar Supabase.</p>;
 
@@ -71,14 +72,14 @@ export default async function ContactosAdmin({ searchParams }: { searchParams: S
     area: areaEnEspanol(c.area),
     sede: sedeEnEspanol(c.sede),
   }));
-  const q = (sp.q ?? '').toLowerCase();
+  const q = plano(sp.q ?? '').trim();
   const filtrados = todos.filter(
     (c) =>
       (!sp.estado || c.estado === sp.estado) &&
       (!sp.prioridad || c.prioridad === sp.prioridad) &&
       (!sp.area || c.area === sp.area) &&
       (!sp.sede || c.sede === sp.sede) &&
-      (!q || [c.nombre, c.empresa, c.email].some((v) => (v ?? '').toLowerCase().includes(q))),
+      (!q || [c.nombre, c.empresa, c.email].some((v) => plano(v ?? '').includes(q))),
   );
 
   const recuento = (estado: string) => todos.filter((c) => c.estado === estado).length;
@@ -256,7 +257,7 @@ export default async function ContactosAdmin({ searchParams }: { searchParams: S
       </div>
 
       {/* Bandeja de spam */}
-      <details className="rounded-xl border border-linea bg-papel p-5">
+      <details id="spam" open={ver === 'spam'} className="rounded-xl border border-linea bg-papel p-5">
         <summary className="cursor-pointer font-bold">
           Filtrado como spam ({(spam ?? []).length}) <span className="font-normal text-tinta-2">· últimos 30 días</span>
         </summary>

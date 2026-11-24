@@ -1,87 +1,53 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { EditorContent, useEditor } from '@tiptap/react';
-import StarterKit from '@tiptap/starter-kit';
-import Placeholder from '@tiptap/extension-placeholder';
-import { Markdown } from '@tiptap/markdown';
+import { marked } from 'marked';
+import TurndownService from 'turndown';
+
+const Tiny = dynamic(() => import('@tinymce/tinymce-react').then((m) => m.Editor), { ssr: false });
+
+const aMarkdown = new TurndownService({ headingStyle: 'atx', bulletListMarker: '-', emDelimiter: '*' });
 
 /**
- * El cuerpo que se edita es el HTML publicado (`body`), el mismo que pinta la web.
- * El campo oculto sigue siendo Markdown: al guardar, los controles y el redactor leen eso.
+ * TinyMCE edita el HTML publicado (`body`).
+ * El campo oculto sigue en Markdown: al guardar, los controles y el redactor leen eso.
  */
 export default function EditorCuerpo({ html, markdown }: { html: string; markdown: string }) {
   const campo = useRef<HTMLInputElement>(null);
   const htmlListo = String(html ?? '').trim();
   const markdownListo = String(markdown ?? '');
-  const usarHtml = htmlListo.length > 0;
-
-  const editor = useEditor({
-    immediatelyRender: false,
-    extensions: [
-      StarterKit.configure({
-        heading: { levels: [2, 3] },
-        link: { openOnClick: false, autolink: false },
-      }),
-      Placeholder.configure({ placeholder: 'Escribe el artículo…' }),
-      Markdown,
-    ],
-    content: usarHtml ? htmlListo : markdownListo,
-    contentType: usarHtml ? 'html' : 'markdown',
-    editorProps: {
-      attributes: {
-        id: 'cuerpo',
-        class: 'texto articulo min-h-[28rem] px-1 py-2 outline-none',
-        'aria-label': 'Cuerpo del artículo',
-      },
-    },
-    onUpdate: ({ editor: ed }) => {
-      if (campo.current) campo.current.value = ed.getMarkdown();
-    },
-  });
-
-  const btn = (activo: boolean) =>
-    `rounded-md px-2.5 py-1 text-sm font-semibold ${activo ? 'bg-tinta text-white' : 'hover:bg-white'}`;
-
-  const ponerEnlace = () => {
-    if (!editor) return;
-    const previo = editor.getAttributes('link').href as string | undefined;
-    const url = window.prompt('Dirección del enlace', previo ?? 'https://');
-    if (url === null) return;
-    if (url.trim() === '') {
-      editor.chain().focus().extendMarkRange('link').unsetLink().run();
-      return;
-    }
-    editor.chain().focus().extendMarkRange('link').setLink({ href: url.trim() }).run();
-  };
+  const inicial = htmlListo || (marked.parse(markdownListo, { async: false }) as string);
+  const clave = process.env.NEXT_PUBLIC_TINYMCE_API_KEY;
 
   return (
-    <div className="editor-cuerpo overflow-hidden rounded-lg border border-linea">
+    <div className="editor-cuerpo overflow-hidden rounded-lg border border-linea bg-papel">
       <input ref={campo} type="hidden" id="body_md" name="body_md" defaultValue={markdownListo} />
-      <div className="flex flex-wrap gap-1 border-b border-linea bg-niebla p-2">
-        <button type="button" className={btn(!!editor?.isActive('heading', { level: 2 }))} onClick={() => editor?.chain().focus().toggleHeading({ level: 2 }).run()}>
-          H2
-        </button>
-        <button type="button" className={btn(!!editor?.isActive('heading', { level: 3 }))} onClick={() => editor?.chain().focus().toggleHeading({ level: 3 }).run()}>
-          H3
-        </button>
-        <button type="button" className={btn(!!editor?.isActive('bold'))} onClick={() => editor?.chain().focus().toggleBold().run()}>
-          Negrita
-        </button>
-        <button type="button" className={btn(!!editor?.isActive('italic'))} onClick={() => editor?.chain().focus().toggleItalic().run()}>
-          Cursiva
-        </button>
-        <button type="button" className={btn(!!editor?.isActive('bulletList'))} onClick={() => editor?.chain().focus().toggleBulletList().run()}>
-          Lista
-        </button>
-        <button type="button" className={btn(!!editor?.isActive('link'))} onClick={ponerEnlace}>
-          Enlace
-        </button>
-      </div>
-      {editor ? (
-        <EditorContent editor={editor} className="px-3 py-2" />
+      {clave ? (
+        <Tiny
+          apiKey={clave}
+          initialValue={inicial}
+          onEditorChange={(contenido) => {
+            if (campo.current) campo.current.value = aMarkdown.turndown(contenido);
+          }}
+          init={{
+            height: 640,
+            menubar: false,
+            branding: false,
+            promotion: false,
+            statusbar: false,
+            language: 'es',
+            plugins: 'lists link autoresize',
+            toolbar: 'blocks bold italic bullist numlist link undo redo',
+            block_formats: 'Párrafo=p; Apartado=h2; Subapartado=h3',
+            convert_urls: false,
+            relative_urls: false,
+            content_style:
+              'body { font-family: system-ui, sans-serif; font-size: 17px; line-height: 1.6; color: #232527; margin: 16px; } h2 { font-size: 26px; } h3 { font-size: 20px; }',
+          }}
+        />
       ) : (
-        <div className="texto articulo min-h-[28rem] px-4 py-3 text-tinta-2">Cargando el texto…</div>
+        <p className="p-4 text-sm text-red-700">Falta NEXT_PUBLIC_TINYMCE_API_KEY en .env.local.</p>
       )}
     </div>
   );

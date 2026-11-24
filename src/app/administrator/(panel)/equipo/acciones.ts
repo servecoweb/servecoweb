@@ -34,7 +34,7 @@ async function subirFoto(id: string, archivo: FormDataEntryValue | null, actual:
   const ruta = `${id}.${ext}`;
   const cuerpo = Buffer.from(await archivo.arrayBuffer());
   const cliente = db();
-  const opciones = { upsert: true, contentType: archivo.type, cacheControl: '60' };
+  const opciones = { upsert: true, contentType: archivo.type, cacheControl: '0' };
   let subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, opciones);
   if (subida.error && /bucket|not found/i.test(subida.error.message)) {
     await cliente.storage.createBucket('equipo', { public: true });

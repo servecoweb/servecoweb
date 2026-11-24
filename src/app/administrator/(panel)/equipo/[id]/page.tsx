@@ -20,7 +20,10 @@ export default async function EditarPersona({ params, searchParams }: { params: 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
       <Link href="/administrator/equipo" className="text-sm underline">← Volver al equipo</Link>
-      <h1 className="text-2xl font-bold">{miembro.nombre}</h1>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-2xl font-bold">{miembro.nombre}</h1>
+        <a href="/es/la-firma/equipo" target="_blank" rel="noreferrer" className="text-sm font-semibold underline">Ver en la web</a>
+      </div>
       {sp.error && <p className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">{sp.error}</p>}
       {sp.ok && <p className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">{sp.ok}</p>}
       <FormularioEquipo miembro={miembro} action={guardarMiembro} />

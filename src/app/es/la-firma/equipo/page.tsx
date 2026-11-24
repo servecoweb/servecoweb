@@ -3,6 +3,8 @@ import PageHead from '@/components/PageHead';
 import { DEPARTAMENTOS, leerEquipo, partesCargo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Equipo',
   description: 'Las personas de Serveco Asesores, por departamento: fiscal, financiero, jurídico, laboral y administración.',

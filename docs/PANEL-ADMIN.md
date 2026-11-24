@@ -24,7 +24,8 @@ Archivos: `src/app/administrator/(panel)/page.tsx` (vista) y `src/lib/panel/resu
    - Consultas de prioridad alta sin atender · consultas nuevas · seguimientos para hoy o vencidos.
    - Respuestas del chat sin calificar · respuestas incorrectas (30 días).
    - Artículos en borrador (y cuántos con avisos graves).
-   - Mensajes filtrados como spam (7 días), para revisar que no haya un cliente real.
+   - Candidaturas de empleo y prácticas sin mirar.
+   - Mensajes filtrados como spam (7 días), para revisar que no haya un cliente real. El enlace abre la bandeja.
    Si todo está a cero, el título pasa a «Todo al día».
 2. **Últimos 30 días** frente a los 30 anteriores: consultas, clientes ganados, conversaciones del chat, preguntas al chat, nota media del chat (con reparto bien / mejorable / mal) y artículos publicados.
 3. **Gráficas** de consultas y conversaciones por día (30 días).

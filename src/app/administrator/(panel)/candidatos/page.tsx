@@ -53,6 +53,16 @@ function nombreVisible(nombre: string) {
     .join(' ');
 }
 
+/** «+34722695390» → «+34 722 695 390». Si no es un móvil español, se deja como llegó. */
+function telefonoVisible(tel: string) {
+  const d = tel.replace(/[^\d+]/g, '');
+  const m = d.match(/^(\+34)?(\d{9})$/);
+  if (!m) return tel.trim();
+  const n = m[2];
+  const cuerpo = `${n.slice(0, 3)} ${n.slice(3, 6)} ${n.slice(6)}`;
+  return m[1] ? `+34 ${cuerpo}` : cuerpo;
+}
+
 const iniciales = (nombre: string) =>
   nombre
     .split(' ')
@@ -86,13 +96,14 @@ export default async function CandidatosAdmin({ searchParams }: { searchParams: 
   }
 
   const todos = (data ?? []) as Fila[];
-  const q = (sp.q ?? '').toLowerCase().trim();
+  const plano = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const q = plano(sp.q ?? '').trim();
   const lista = todos.filter(
     (c) =>
       (!sp.estado || c.estado === sp.estado) &&
       (!sp.tipo || c.tipo === sp.tipo) &&
       (!sp.area || c.area === sp.area) &&
-      (!q || [c.nombre, c.email, c.telefono, c.mensaje].some((v) => (v ?? '').toLowerCase().includes(q))),
+      (!q || [c.nombre, c.email, c.telefono, c.mensaje].some((v) => plano(v ?? '').includes(q))),
   );
   const recuento = (estado: string) => todos.filter((c) => c.estado === estado).length;
   const sinMirar = recuento('nuevo');
@@ -150,31 +161,44 @@ export default async function CandidatosAdmin({ searchParams }: { searchParams: 
         ))}
       </div>
 
-      {/* Filtros */}
-      <div className="flex flex-wrap items-center gap-2 text-sm">
-        <span className="text-tinta-2">Busca:</span>
-        {TIPOS_CANDIDATURA.map((t) => (
-          <Link key={t.valor} href={filtro('tipo', t.valor)} className={chip(sp.tipo === t.valor)}>
-            {t.es}
-          </Link>
-        ))}
-        {areas.length > 0 && <span className="ml-3 text-tinta-2">Área:</span>}
-        {areas.map((a) => (
-          <Link key={a} href={filtro('area', a)} className={chip(sp.area === a)}>
-            {a}
-          </Link>
-        ))}
-        <form className="flex w-full gap-2 sm:ml-auto sm:w-auto" action="/administrator/candidatos">
+      <div className="space-y-3 rounded-xl border border-linea bg-papel p-4">
+        <form action="/administrator/candidatos" className="flex gap-2">
           {Object.entries(sp).filter(([k, v]) => k !== 'q' && v).map(([k, v]) => <input key={k} type="hidden" name={k} value={v} />)}
           <input
             name="q"
             type="search"
             defaultValue={sp.q ?? ''}
-            placeholder="Buscar nombre, correo o texto"
-            className="w-full rounded-lg border sm:w-64 border-linea bg-papel px-3 py-1.5 outline-none focus:border-marca"
+            placeholder="Nombre, correo o texto del mensaje"
+            aria-label="Buscar candidaturas"
+            className="min-w-0 flex-1 rounded-lg border border-linea bg-papel px-3 py-2 text-base outline-none focus:border-marca"
           />
+          <button type="submit" className="shrink-0 rounded-lg bg-tinta px-4 py-2 text-sm font-semibold text-white">Buscar</button>
         </form>
-        {hayFiltros && <Link href="/administrator/candidatos" className="underline">Quitar filtros</Link>}
+
+        <div className="flex flex-wrap items-center gap-2 text-sm">
+          <span className="w-16 shrink-0 text-tinta-2">Tipo</span>
+          {TIPOS_CANDIDATURA.map((t) => (
+            <Link key={t.valor} href={filtro('tipo', t.valor)} className={chip(sp.tipo === t.valor)}>
+              {t.es}
+            </Link>
+          ))}
+        </div>
+
+        {areas.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 text-sm">
+            <span className="w-16 shrink-0 text-tinta-2">Área</span>
+            {areas.map((a) => (
+              <Link key={a} href={filtro('area', a)} className={chip(sp.area === a)}>
+                {a}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="flex items-center justify-between text-sm text-tinta-2">
+        <p>{hayFiltros ? `${lista.length} de ${todos.length} candidaturas` : 'Las más recientes, arriba.'}</p>
+        {hayFiltros && <Link href="/administrator/candidatos" className="font-semibold text-tinta underline">Quitar filtros</Link>}
       </div>
 
       {lista.length === 0 ? (
@@ -234,7 +258,7 @@ export default async function CandidatosAdmin({ searchParams }: { searchParams: 
                     <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                       <a className="text-tinta-2 hover:text-tinta hover:underline" href={`mailto:${c.email}`}>{c.email}</a>
                       {c.telefono && (
-                        <a className="text-tinta-2 hover:text-tinta hover:underline" href={`tel:${c.telefono.replace(/\s/g, '')}`}>{c.telefono}</a>
+                        <a className="text-tinta-2 hover:text-tinta hover:underline" href={`tel:${c.telefono.replace(/\s/g, '')}`}>{telefonoVisible(c.telefono)}</a>
                       )}
                     </p>
 

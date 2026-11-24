@@ -3,6 +3,8 @@ import PageHead from '@/components/PageHead';
 import { DEPARTAMENTOS, leerEquipo, partesCargo } from '@/lib/equipo';
 import { ES, EN, idiomas } from '@/lib/rutas';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Our team',
   description: 'The people at Serveco, by department: tax, financial, legal, employment and administration.',

@@ -28,9 +28,9 @@ const enVentana = (iso: string, desde: number, hasta = 0) => iso >= hace(desde) 
 export async function obtenerResumen() {
   const db = supabaseAdmin();
   if (!db) return null;
-  const hoy = clave(new Date().toISOString());
+  const hoy = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/Madrid' });
 
-  const [contactosRes, abiertosRes, spamRes, hilosRes, preguntasRes, respuestasRes, notasRes, blogRes, kbRes] = await Promise.all([
+  const [contactosRes, abiertosRes, spamRes, hilosRes, preguntasRes, respuestasRes, notasRes, blogRes, kbRes, candRes] = await Promise.all([
     db
       .from('contact_submissions')
       .select('id, created_at, nombre, empresa, area, estado, prioridad, como_conocio, estado_desde')
@@ -56,6 +56,7 @@ export async function obtenerResumen() {
     db.from('chat_reviews').select('message_id, score, notes, created_at').limit(5000),
     db.from('blog_articles').select('id, title, status, published_at, avisos, updated_at'),
     db.from('chatbot_kb').select('id', { count: 'exact', head: true }),
+    db.from('candidaturas').select('id', { count: 'exact', head: true }).eq('estado', 'nuevo'),
   ]);
 
   // ── Contactos
@@ -84,6 +85,7 @@ export async function obtenerResumen() {
         }
       : null;
   const spam7 = spamRes.error ? null : spamRes.count ?? 0;
+  const candidatosNuevos = candRes.error ? null : candRes.count ?? 0;
 
   // ── Chat
   const hilos = hilosRes.error ? null : hilosRes.data ?? [];
@@ -155,7 +157,7 @@ export async function obtenerResumen() {
     { nombre: 'Administradores', ok: emailsAdmin().length > 0, detalle: `${emailsAdmin().length} con acceso` },
   ];
 
-  return { contactos: cont, spam7, chat, blog, sistema };
+  return { contactos: cont, spam7, candidatosNuevos, chat, blog, sistema };
 }
 
 export type Resumen = NonNullable<Awaited<ReturnType<typeof obtenerResumen>>>;
