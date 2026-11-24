@@ -26,6 +26,7 @@ export default function EditorCuerpo({ html, markdown }: { html: string; markdow
       {clave ? (
         <Tiny
           apiKey={clave}
+          cloudChannel="8"
           initialValue={inicial}
           onEditorChange={(contenido) => {
             if (campo.current) campo.current.value = aMarkdown.turndown(contenido);
@@ -35,11 +36,25 @@ export default function EditorCuerpo({ html, markdown }: { html: string; markdow
             menubar: false,
             branding: false,
             promotion: false,
-            statusbar: false,
             language: 'es',
-            plugins: 'lists link autoresize',
-            toolbar: 'blocks bold italic bullist numlist link undo redo',
             block_formats: 'Párrafo=p; Apartado=h2; Subapartado=h3',
+            plugins: [
+              'accordion', 'advlist', 'anchor', 'autolink', 'autoresize', 'autosave',
+              'charmap', 'code', 'codesample', 'directionality', 'emoticons', 'fullscreen',
+              'help', 'image', 'importcss', 'insertdatetime', 'link', 'lists', 'media',
+              'nonbreaking', 'pagebreak', 'preview', 'quickbars', 'save', 'searchreplace',
+              'table', 'visualblocks', 'visualchars', 'wordcount',
+              'suggestededits', // El abogado propone cambios sin pisar el texto del artículo
+              'revisionhistory', // Deja constancia de cada cambio del borrador jurídico
+              'exportword', // Saca el borrador a Word para revisarlo fuera del panel
+              'powerpaste', // Pega un escrito de Word sin arrastrar el formato del documento
+              'tableofcontents', // Índice de los apartados en artículos largos
+              'footnotes', // Notas al pie para citas de norma y doctrina
+              'importword', // Trae un .docx del despacho y lo deja como cuerpo del artículo
+            ],
+            toolbar: 'undo redo | blocks | bold italic | bullist numlist | link table | importword exportword | suggestededits revisionhistory | tableofcontents footnotes | searchreplace fullscreen',
+            revisionhistory_fetch: () => Promise.resolve([]),
+            paste_data_images: false,
             convert_urls: false,
             relative_urls: false,
             content_style:
