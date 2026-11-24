@@ -1,6 +1,7 @@
 import { DEPARTAMENTOS, type Miembro } from '@/lib/equipo';
 import { SEDES } from '@/data/offices';
 import BotonEnviar from '@/components/admin/BotonEnviar';
+import { CampoFoto } from './campo-foto';
 
 const campo = 'w-full rounded-lg border border-linea px-3 py-2.5 text-base outline-none focus:border-marca';
 
@@ -46,11 +47,7 @@ export function FormularioEquipo({
           <label htmlFor="orden" className="mb-1 block text-sm font-semibold">Orden en el departamento</label>
           <input id="orden" name="orden" type="number" min={1} defaultValue={miembro?.orden ?? 1} className={campo} />
         </div>
-        <div>
-          <label htmlFor="foto" className="mb-1 block text-sm font-semibold">Foto</label>
-          <input id="foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" className={campo} />
-          {miembro?.foto && <img src={miembro.foto} alt="" className="mt-3 h-24 w-24 rounded-lg object-cover" />}
-        </div>
+        <CampoFoto actual={miembro?.foto} campo={campo} />
       </div>
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" name="destacado" defaultChecked={miembro?.destacado ?? false} />

@@ -29,16 +29,20 @@ async function subirFoto(id: string, archivo: FormDataEntryValue | null, actual:
   if (archivo.size > 4 * 1024 * 1024) conError(`/administrator/equipo/${id}`, 'La foto pesa más de 4 MB.');
   if (!archivo.type.startsWith('image/')) conError(`/administrator/equipo/${id}`, 'La foto tiene que ser una imagen.');
   const ext = archivo.type === 'image/png' ? 'png' : archivo.type === 'image/webp' ? 'webp' : 'jpg';
+  // El archivo siempre se llama como la persona. Si la dirección no cambia, el navegador
+  // enseña la foto anterior hasta una hora. El ?v= obliga a pedir la nueva.
   const ruta = `${id}.${ext}`;
   const cuerpo = Buffer.from(await archivo.arrayBuffer());
   const cliente = db();
-  let subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, { upsert: true, contentType: archivo.type });
+  const opciones = { upsert: true, contentType: archivo.type, cacheControl: '60' };
+  let subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, opciones);
   if (subida.error && /bucket|not found/i.test(subida.error.message)) {
     await cliente.storage.createBucket('equipo', { public: true });
-    subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, { upsert: true, contentType: archivo.type });
+    subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, opciones);
   }
   if (subida.error) conError(`/administrator/equipo/${id}`, `No se pudo guardar la foto: ${subida.error.message}`);
-  return cliente.storage.from('equipo').getPublicUrl(ruta).data.publicUrl;
+  const publica = cliente.storage.from('equipo').getPublicUrl(ruta).data.publicUrl;
+  return `${publica}?v=${Date.now()}`;
 }
 
 function datos(f: FormData, foto: string) {
