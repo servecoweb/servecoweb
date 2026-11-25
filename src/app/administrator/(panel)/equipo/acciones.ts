@@ -2,6 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
+import sharp from 'sharp';
 import { exigirAdmin } from '@/lib/admin';
 import { filaDesdeFormulario } from '@/lib/equipo';
 import { EN, ES } from '@/lib/rutas';
@@ -24,25 +25,47 @@ function refrescar() {
   revalidatePath('/es/la-firma/despachos/[sede]', 'page');
 }
 
+/** Lado largo máximo. Cubre la ficha del equipo en pantalla retina; no se amplía una foto más pequeña. */
+const FOTO_LADO = 800;
+const TIPOS_FOTO = new Set(['image/jpeg', 'image/png', 'image/webp']);
+
+/** Endereza según la cámara, limita el lado largo y guarda WebP. */
+async function prepararFoto(archivo: File, rutaError: string): Promise<Buffer> {
+  if (!TIPOS_FOTO.has(archivo.type)) conError(rutaError, 'La foto tiene que ser JPG, PNG o WebP.');
+  try {
+    return await sharp(Buffer.from(await archivo.arrayBuffer()))
+      .rotate()
+      .resize(FOTO_LADO, FOTO_LADO, { fit: 'inside', withoutEnlargement: true })
+      .webp({ quality: 80 })
+      .toBuffer();
+  } catch {
+    conError(rutaError, 'No se pudo preparar la foto. Pruebe con otro JPG, PNG o WebP.');
+  }
+}
+
 async function subirFoto(id: string, archivo: FormDataEntryValue | null, actual: string) {
   if (!(archivo instanceof File) || archivo.size === 0) return actual || null;
-  if (archivo.size > 4 * 1024 * 1024) conError(`/administrator/equipo/${id}`, 'La foto pesa más de 4 MB.');
-  if (!archivo.type.startsWith('image/')) conError(`/administrator/equipo/${id}`, 'La foto tiene que ser una imagen.');
-  const ext = archivo.type === 'image/png' ? 'png' : archivo.type === 'image/webp' ? 'webp' : 'jpg';
+  const rutaError = `/administrator/equipo/${id}`;
+  if (archivo.size > 4 * 1024 * 1024) conError(rutaError, 'La foto pesa más de 4 MB.');
+  const cuerpo = await prepararFoto(archivo, rutaError);
   // El archivo siempre se llama como la persona. Si la dirección no cambia, el navegador
-  // enseña la foto anterior hasta una hora. El ?v= obliga a pedir la nueva.
-  const ruta = `${id}.${ext}`;
-  const cuerpo = Buffer.from(await archivo.arrayBuffer());
+  // enseña la foto anterior. El ?v= obliga a pedir la nueva.
+  const ruta = `${id}.webp`;
   const cliente = db();
-  const opciones = { upsert: true, contentType: archivo.type, cacheControl: '0' };
+  const opciones = { upsert: true, contentType: 'image/webp', cacheControl: '0' };
   let subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, opciones);
   if (subida.error && /bucket|not found/i.test(subida.error.message)) {
     await cliente.storage.createBucket('equipo', { public: true });
     subida = await cliente.storage.from('equipo').upload(ruta, cuerpo, opciones);
   }
-  if (subida.error) conError(`/administrator/equipo/${id}`, `No se pudo guardar la foto: ${subida.error.message}`);
+  if (subida.error) conError(rutaError, `No se pudo guardar la foto: ${subida.error.message}`);
   const publica = cliente.storage.from('equipo').getPublicUrl(ruta).data.publicUrl;
   return `${publica}?v=${Date.now()}`;
+}
+
+/** El JPG o PNG anterior deja de servir cuando la ficha ya apunta al WebP. */
+async function quitarOriginal(id: string) {
+  await db().storage.from('equipo').remove([`${id}.jpg`, `${id}.jpeg`, `${id}.png`]);
 }
 
 function datos(f: FormData, foto: string) {
@@ -69,8 +92,12 @@ export async function crearMiembro(formData: FormData): Promise<void> {
     .select('id')
     .single();
   if (error || !data) conError('/administrator/equipo/nuevo', error?.message ?? 'No se pudo crear.');
-  const foto = await subirFoto(data.id, formData.get('foto'), '');
-  if (foto) await db().from('team_members').update({ foto_url: foto }).eq('id', data.id);
+  const archivo = formData.get('foto');
+  const foto = await subirFoto(data.id, archivo, '');
+  if (foto) {
+    const guardada = await db().from('team_members').update({ foto_url: foto }).eq('id', data.id);
+    if (!guardada.error && archivo instanceof File && archivo.size > 0) await quitarOriginal(data.id);
+  }
   refrescar();
   redirect(`/administrator/equipo/${data.id}?ok=${encodeURIComponent('Persona añadida.')}`);
 }
@@ -81,9 +108,11 @@ export async function guardarMiembro(formData: FormData): Promise<void> {
   const nombre = texto(formData, 'nombre');
   if (!id) conError('/administrator/equipo', 'Ficha no encontrada.');
   if (nombre.length < 3) conError(`/administrator/equipo/${id}`, 'Escriba el nombre completo.');
-  const foto = await subirFoto(id, formData.get('foto'), texto(formData, 'foto_actual'));
+  const archivo = formData.get('foto');
+  const foto = await subirFoto(id, archivo, texto(formData, 'foto_actual'));
   const { error } = await db().from('team_members').update(datos(formData, foto ?? '')).eq('id', id);
   if (error) conError(`/administrator/equipo/${id}`, error.message);
+  if (archivo instanceof File && archivo.size > 0) await quitarOriginal(id);
   refrescar();
   redirect(`/administrator/equipo/${id}?ok=${encodeURIComponent('Cambios guardados.')}`);
 }

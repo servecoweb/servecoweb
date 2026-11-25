@@ -10,7 +10,7 @@
 |---|---|---|
 | `/administrator` | **Inicio (dashboard)**: lo primero al entrar | este archivo |
 | `/administrator/contactos` | Mini-CRM de consultas: embudo, ficha, notas, seguimiento, exportación, bandeja de spam | `CRM-CONTACTOS.md` |
-| `/administrator/equipo` | Personas de la web: alta, cargo, departamento, despacho, foto, portada y visible | `src/lib/equipo.ts` |
+| `/administrator/equipo` | Personas de la web: alta, cargo, departamento, despacho, foto, portada y visible. La foto (JPG, PNG o WebP, hasta 4 MB) se publica a 800 px de lado largo, en WebP | `src/lib/equipo.ts` |
 | `/administrator/blog` | Artículos: «Nuevo artículo» (borrador en blanco, negrita, H2, H3, listas y enlaces) o «Redactar con IA», categoría, portada (generar con IA o subir imagen propia), revisión jurídica y publicación. El título del artículo es el H1 | `REDACTOR-BLOG.md` |
 | `/administrator/chatbot` | Respuestas y conversaciones del asistente con la nota del revisor | `CHATBOT.md` |
 

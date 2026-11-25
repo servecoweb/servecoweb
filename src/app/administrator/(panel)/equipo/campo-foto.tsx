@@ -53,10 +53,10 @@ export function CampoFoto({ actual, campo }: { actual?: string; campo: string })
       {aviso && <p className="mt-2 text-xs text-red-700">{aviso}</p>}
       <p className="mt-2 text-xs text-tinta-2">
         {previa
-          ? 'Esta es la foto que acaba de elegir. Ya se ve aquí. El nombre del archivo no importa. Pulse Guardar para publicarla.'
+          ? 'Esta es la foto que acaba de elegir. Ya se ve aquí. Pulse Guardar para publicarla: se ajusta el tamaño y se guarda en WebP.'
           : actual
-            ? 'Esta es la foto publicada. Al elegir otra, la verá aquí al momento.'
-            : 'Todavía no hay foto. JPG, PNG o WebP, hasta 4 MB.'}
+            ? 'Esta es la foto publicada. Al elegir otra, la verá aquí al momento. Al guardar se ajusta el tamaño y se publica en WebP.'
+            : 'Todavía no hay foto. JPG, PNG o WebP, hasta 4 MB. Al guardar se ajusta el tamaño y se publica en WebP.'}
       </p>
       {(previa || actual) && (
         <img

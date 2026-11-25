@@ -32,7 +32,7 @@ export default async function Team() {
                     const { puesto, titulos } = partesCargo(p.cargoEn);
                     return (
                       <div className="persona" key={p.nombre}>
-                        <div className="foto">{p.foto ? <img src={p.foto} alt="" /> : null}</div>
+                        <div className="foto">{p.foto ? <img src={p.foto} alt="" loading="lazy" decoding="async" /> : null}</div>
                         <h3>{p.nombre}</h3>
                         {puesto && <p className="persona-puesto">{puesto}</p>}
                         <p className="persona-titulos">{titulos.map((t) => <span key={t}>{t}</span>)}</p>
